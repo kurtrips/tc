@@ -1,0 +1,21 @@
+bin\Debug\HermesScheduleItemEntities.dll
+bin\Debug\HermesScheduleItemEntities.pdb
+bin\Debug\Hermes Entity Validation.dll
+bin\Debug\TopCoder.Services.WCF.GenericNotes.dll
+bin\Debug\TopCoder.Services.WCF.Schedule.Item.dll
+bin\Debug\TopCoder.Util.ConfigurationManager.dll
+bin\Debug\TopCoder.Util.ExceptionManager.dll
+bin\Debug\TopCoder.Util.ExceptionManager.SDE.dll
+bin\Debug\TopCoder.Util.Indexing.dll
+bin\Debug\WcfBase.dll
+bin\Debug\log4net.dll
+bin\Debug\TopCoder.Data.ConnectionFactory.dll
+bin\Debug\TopCoder.Services.WCF.GenericNotesClient.dll
+bin\Debug\TopCoder.Util.IDGenerator.dll
+bin\Debug\TopCoder.LoggingWrapper.dll
+bin\Debug\TopCoder.Util.ObjectFactory.dll
+bin\Debug\TopCoder.Services.WCF.Schedule.Item.pdb
+bin\Debug\WcfBase.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\HermesScheduleItemEntities.dll
+obj\Debug\HermesScheduleItemEntities.pdb

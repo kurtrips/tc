@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+          .tbl {
+          border-left:1px solid black;
+          width:90%;
+          }
+          .sequence {
+          background-color:#6CA5C1;
+          }
+          .all {
+          background-color:#CC5252;
+          }
+          .choice {
+          background-color:#FFFF66;
+          }
+          .attribute {
+          background-color:#33CC66;
+          }
+          .attributecontent {
+          background-color:#33CC66;
+          display: inline-block;
+          text-align:center;
+          width:45%;
+          border-width: 1px;
+          border-style: solid;
+          }
+          .marginleft {
+          margin-left:25px;
+          }
+          .margintoptop {
+          margin-top:50px;
+          }
+          .restriction {
+          background-color:#BEBEB8;
+          }
+          .tblcontent {
+          display: inline-block;
+          text-align:center;
+          width:24%;
+          border-width: 1px;
+          border-style: solid;
+          }
+          .enumeration {
+          text-align:center;
+          border-width: 1px;
+          border-style: solid;
+          }
+        </style>
+<title>Output HTML</title>
+</head>
+<body>
+<div class="margintoptop">
+<a href="#" name="VendorUpload">VendorUpload</a>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">AgencyName</span><span class="tblcontent">xs:string</span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">CampaignInvoice</span><span class="tblcontent"><a href="#campaignInvoice">campaignInvoice</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">unbounded</span>
+</div>
+</div>
+</div>
+<div class="margintoptop">
+<a href="#" name="campaignInvoice">campaignInvoice</a>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">Channel</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">channel</span><span class="tblcontent"><a href="#campaignChannel">campaignChannel</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">detail</span><span class="tblcontent">xs:string</span><span class="tblcontent">0</span><span class="tblcontent">
+                1
+              </span>
+</div>
+</div>
+</div>
+<div>
+<span class="tblcontent">InvoiceInfo</span><span class="tblcontent"><a href="#invoice">invoice</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">Assets</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">Asset</span><span class="tblcontent"><a href="#asset">asset</a></span><span class="tblcontent">0</span><span class="tblcontent">unbounded</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="attribute">attributes</div>
+<div class="attribute">
+<span class="attributecontent marginleft"><b>Name</b></span><span class="attributecontent"><b>Type</b></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">CampaignID</span><span class="attributecontent">xs:string</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">CampaignName</span><span class="attributecontent">xs:string</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">BUName</span><span class="attributecontent">xs:string</span>
+</div>
+<div class="margintoptop">
+<a href="#" name="invoice">invoice</a>
+</div>
+<div class="attribute">attributes</div>
+<div class="attribute">
+<span class="attributecontent marginleft"><b>Name</b></span><span class="attributecontent"><b>Type</b></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">InvoiceNumber</span><span class="attributecontent">xs:long</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">InvoiceDate</span><span class="attributecontent">xs:date</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">InvoiceAmount</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="margintoptop">
+<a href="#" name="asset">asset</a>
+</div>
+<div class="all">all</div>
+<div class="all">
+<div class="tbl all marginleft">
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+<div>
+<span class="tblcontent">AssetType</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div class="choice">choice</div>
+<div class="choice">
+<div class="tbl choice marginleft">
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+<div>
+<span class="tblcontent">TraditionalType</span><span class="tblcontent"><a href="#tradionalAssetType">tradionalAssetType</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">DigitalAssetType</span><span class="tblcontent"><a href="#digitalAssetType">digitalAssetType</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">AssetType</span><span class="tblcontent"><a href="#allAssetTypes">allAssetTypes</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+</div>
+</div>
+<div>
+<span class="tblcontent">PricingType</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div class="choice">choice</div>
+<div class="choice">
+<div class="tbl choice marginleft">
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+<div>
+<span class="tblcontent">type</span><span class="tblcontent"><a href="#pricingType">pricingType</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">detail</span><span class="tblcontent">xs:string</span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+</div>
+</div>
+<div>
+<span class="tblcontent">AssetItemOutputs</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">HourlyCostAssetItemOutput</span><span class="tblcontent"><a href="#hourlyCostAssetItemOutput">hourlyCostAssetItemOutput</a></span><span class="tblcontent">0</span><span class="tblcontent">unbounded</span>
+</div>
+<div>
+<span class="tblcontent">PassthroughCostAssetItemOutput</span><span class="tblcontent"><a href="#passthroughCostAssetItemOutput">passthroughCostAssetItemOutput</a></span><span class="tblcontent">0</span><span class="tblcontent">unbounded</span>
+</div>
+<div>
+<span class="tblcontent">AdditionalServicesCostAssetItemOutput</span><span class="tblcontent"><a href="#additionalServicesCostAssetItemOutput">additionalServicesCostAssetItemOutput</a></span><span class="tblcontent">0</span><span class="tblcontent">unbounded</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="attribute">attributes</div>
+<div class="attribute">
+<span class="attributecontent marginleft"><b>Name</b></span><span class="attributecontent"><b>Type</b></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">AssetID</span><span class="attributecontent">xs:long</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">IsComplex</span><span class="attributecontent">xs:boolean</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">IsPartOfCampaign</span><span class="attributecontent">xs:boolean</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">IsMultiChannel</span><span class="attributecontent">xs:boolean</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">ComplexityLevel</span><span class="attributecontent"><a href="#complexityLevel">complexityLevel</a></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">ModificationQuantity</span><span class="attributecontent">xs:int</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">VariationQuantity</span><span class="attributecontent">xs:int</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">PricePerUnit</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">Quantity</span><span class="attributecontent">xs:int</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">AdjuestedQuantity</span><span class="attributecontent">xs:int</span>
+</div>
+<div class="margintoptop">
+<a href="#" name="hourlyCostAssetItemOutput">hourlyCostAssetItemOutput</a>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">FunctionalTitle</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">title</span><span class="tblcontent"><a href="#functionalTitle">functionalTitle</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">detail</span><span class="tblcontent">xs:string</span><span class="tblcontent">0</span><span class="tblcontent">
+                1
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="attribute">attributes</div>
+<div class="attribute">
+<span class="attributecontent marginleft"><b>Name</b></span><span class="attributecontent"><b>Type</b></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">HourleyRate</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">TotalHoursBilled</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">PrecentageAllocation</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">HoursBilled</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="margintoptop">
+<a href="#" name="passthroughCostAssetItemOutput">passthroughCostAssetItemOutput</a>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">Description</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">1</span><span class="tblcontent">unbounded</span>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">text</span><span class="tblcontent"><a href="#passThrough">passThrough</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">detail</span><span class="tblcontent">xs:string</span><span class="tblcontent">0</span><span class="tblcontent">
+                1
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="attribute">attributes</div>
+<div class="attribute">
+<span class="attributecontent marginleft"><b>Name</b></span><span class="attributecontent"><b>Type</b></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">ProviderName</span><span class="attributecontent">xs:string</span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">Price</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="margintoptop">
+<a href="#" name="additionalServicesCostAssetItemOutput">additionalServicesCostAssetItemOutput</a>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">Description</span><span class="tblcontent">
+                see inline type below
+              </span><span class="tblcontent">1</span><span class="tblcontent">unbounded</span>
+</div>
+<div class="sequence">sequence</div>
+<div class="sequence">
+<div class="tbl sequence marginleft">
+<div>
+<div>
+<span class="tblcontent"><b>Name</b></span><span class="tblcontent"><b>Type</b></span><span class="tblcontent"><b>Min Occurs</b></span><span class="tblcontent"><b>Max Occurs</b></span>
+</div>
+</div>
+<div>
+<span class="tblcontent">text</span><span class="tblcontent"><a href="#functionalTitle">functionalTitle</a></span><span class="tblcontent">
+                1
+              </span><span class="tblcontent">
+                1
+              </span>
+</div>
+<div>
+<span class="tblcontent">detail</span><span class="tblcontent">xs:string</span><span class="tblcontent">0</span><span class="tblcontent">
+                1
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="attribute">attributes</div>
+<div class="attribute">
+<span class="attributecontent marginleft"><b>Name</b></span><span class="attributecontent"><b>Type</b></span>
+</div>
+<div class="attribute">
+<span class="attributecontent marginleft">Price</span><span class="attributecontent">xs:float</span>
+</div>
+<div class="margintoptop">
+<a href="#" name="campaignChannel">campaignChannel</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Traditional</div>
+<div class="enumeration marginleft restriction">Digital - Standard</div>
+<div class="enumeration marginleft restriction">Digital - Hosting</div>
+<div class="enumeration marginleft restriction">Digital - Mobile Applications</div>
+<div class="enumeration marginleft restriction">Multiple</div>
+<div class="enumeration marginleft restriction">Other</div>
+<div class="margintoptop">
+<a href="#" name="allAssetTypes">allAssetTypes</a>
+</div>
+<div class="restriction">
+      union of types <b>tradionalAssetType digitalAssetType</b>
+</div>
+<div class="margintoptop">
+<a href="#" name="tradionalAssetType">tradionalAssetType</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Application</div>
+<div class="enumeration marginleft restriction">Booklet</div>
+<div class="enumeration marginleft restriction">Bookmark/Take One</div>
+<div class="enumeration marginleft restriction">Breaker</div>
+<div class="enumeration marginleft restriction">Brochure</div>
+<div class="enumeration marginleft restriction">CD/DVD Packaging</div>
+<div class="enumeration marginleft restriction">Coupon/Certificate/Buckslip</div>
+<div class="enumeration marginleft restriction">Covers</div>
+<div class="enumeration marginleft restriction">Envelope</div>
+<div class="enumeration marginleft restriction">Flyer</div>
+<div class="enumeration marginleft restriction">Flyer/Sales Sheet</div>
+<div class="enumeration marginleft restriction">Folders</div>
+<div class="enumeration marginleft restriction">Gift Card Design</div>
+<div class="enumeration marginleft restriction">Insert</div>
+<div class="enumeration marginleft restriction">Invitation (with envelope)</div>
+<div class="enumeration marginleft restriction">Job Aid</div>
+<div class="enumeration marginleft restriction">Letter and Envelope</div>
+<div class="enumeration marginleft restriction">Logos</div>
+<div class="enumeration marginleft restriction">Media Packaging</div>
+<div class="enumeration marginleft restriction">Newsletter</div>
+<div class="enumeration marginleft restriction">Postcard</div>
+<div class="enumeration marginleft restriction">Poster</div>
+<div class="enumeration marginleft restriction">Riser</div>
+<div class="enumeration marginleft restriction">Sales Sheet</div>
+<div class="enumeration marginleft restriction">Self-Mailer</div>
+<div class="enumeration marginleft restriction">Signage/POP</div>
+<div class="enumeration marginleft restriction">Staffing Plan Only</div>
+<div class="enumeration marginleft restriction">Static Clings/Register Stickers</div>
+<div class="enumeration marginleft restriction">Table Tents/Countercards</div>
+<div class="enumeration marginleft restriction">Tactical Print Ad</div>
+<div class="enumeration marginleft restriction">Terms And Conditions</div>
+<div class="enumeration marginleft restriction">Other</div>
+<div class="margintoptop">
+<a href="#" name="digitalAssetType">digitalAssetType</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">3-5 Page Sitelet w/ HTML Development</div>
+<div class="enumeration marginleft restriction">Amexweb image assets (headers, card art, charts, etc.)</div>
+<div class="enumeration marginleft restriction">Animated Homepage Module</div>
+<div class="enumeration marginleft restriction">Animated Web Banner</div>
+<div class="enumeration marginleft restriction">Format Presentation</div>
+<div class="enumeration marginleft restriction">HTML Email</div>
+<div class="enumeration marginleft restriction">HTML/Text Email</div>
+<div class="enumeration marginleft restriction">Letter/ Text Email</div>
+<div class="enumeration marginleft restriction">Logos</div>
+<div class="enumeration marginleft restriction">Rich-Media Page / Module</div>
+<div class="enumeration marginleft restriction">Rich-Media Tool / Demo</div>
+<div class="enumeration marginleft restriction">Single HTML Page w/ HTML Development</div>
+<div class="enumeration marginleft restriction">Single HTML Page w/ Specification Document</div>
+<div class="enumeration marginleft restriction">Splashpage</div>
+<div class="enumeration marginleft restriction">Staffing Plan Only</div>
+<div class="enumeration marginleft restriction">Static Homepage Module</div>
+<div class="enumeration marginleft restriction">Static Web Banner</div>
+<div class="enumeration marginleft restriction">Web Banner Ads/Interstitials (Pop-ups, Pop-unders etc.)</div>
+<div class="enumeration marginleft restriction">Other</div>
+<div class="margintoptop">
+<a href="#" name="pricingType">pricingType</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Output based</div>
+<div class="enumeration marginleft restriction">Labor based</div>
+<div class="enumeration marginleft restriction">Output + Labor Based</div>
+<div class="enumeration marginleft restriction">3rd Party Pass-Through</div>
+<div class="enumeration marginleft restriction">Fixed fee</div>
+<div class="margintoptop">
+<a href="#" name="complexityLevel">complexityLevel</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Animated Homepage Module</div>
+<div class="margintoptop">
+<a href="#" name="functionalTitle">functionalTitle</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Account Coordinator</div>
+<div class="enumeration marginleft restriction">Account Director</div>
+<div class="enumeration marginleft restriction">Account Executive</div>
+<div class="enumeration marginleft restriction">Account Manager</div>
+<div class="enumeration marginleft restriction">Account Supervisor/COO/Sr. Account Exec</div>
+<div class="enumeration marginleft restriction">Administrative Personnel</div>
+<div class="enumeration marginleft restriction">Application Developer</div>
+<div class="enumeration marginleft restriction">Art buyer</div>
+<div class="enumeration marginleft restriction">Art Director</div>
+<div class="enumeration marginleft restriction">Assistant Account Executive</div>
+<div class="enumeration marginleft restriction">Business Analyst</div>
+<div class="enumeration marginleft restriction">Copywriter</div>
+<div class="enumeration marginleft restriction">Creative Director</div>
+<div class="enumeration marginleft restriction">Designer</div>
+<div class="enumeration marginleft restriction">Director of Account Planning</div>
+<div class="enumeration marginleft restriction">Director of Technologies</div>
+<div class="enumeration marginleft restriction">DTP Production Specialist</div>
+<div class="enumeration marginleft restriction">Editor</div>
+<div class="enumeration marginleft restriction">Information Architect</div>
+<div class="enumeration marginleft restriction">Lead Designer</div>
+<div class="enumeration marginleft restriction">Media - Paid Specialist </div>
+<div class="enumeration marginleft restriction">Media - SEO</div>
+<div class="enumeration marginleft restriction">Media buyer</div>
+<div class="enumeration marginleft restriction">Media Director</div>
+<div class="enumeration marginleft restriction">Media Planner</div>
+<div class="enumeration marginleft restriction">Media Supervisor</div>
+<div class="enumeration marginleft restriction">Production Director</div>
+<div class="enumeration marginleft restriction">Production Manager</div>
+<div class="enumeration marginleft restriction">Programmer</div>
+<div class="enumeration marginleft restriction">Project Manager</div>
+<div class="enumeration marginleft restriction">Proofreader</div>
+<div class="enumeration marginleft restriction">QA Specialist</div>
+<div class="enumeration marginleft restriction">Researcher</div>
+<div class="enumeration marginleft restriction">Sr. Art Director</div>
+<div class="enumeration marginleft restriction">Sr. Copywriter</div>
+<div class="enumeration marginleft restriction">Sr. Producer</div>
+<div class="enumeration marginleft restriction">Sr. Information Architect</div>
+<div class="enumeration marginleft restriction">Sr. Planner</div>
+<div class="enumeration marginleft restriction">Sr. Programmer/Information Architect</div>
+<div class="enumeration marginleft restriction">Strategic Planner</div>
+<div class="enumeration marginleft restriction">Technical Director</div>
+<div class="enumeration marginleft restriction">Technical Project Manager</div>
+<div class="enumeration marginleft restriction">Traffic Manager</div>
+<div class="enumeration marginleft restriction">Web Designer</div>
+<div class="enumeration marginleft restriction">Web Developer</div>
+<div class="enumeration marginleft restriction">Other</div>
+<div class="margintoptop">
+<a href="#" name="passThrough">passThrough</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Stock Image</div>
+<div class="enumeration marginleft restriction">Mailing Shipping</div>
+<div class="enumeration marginleft restriction">Printing</div>
+<div class="enumeration marginleft restriction">Promotional Material</div>
+<div class="enumeration marginleft restriction">Tech Development</div>
+<div class="enumeration marginleft restriction">Other</div>
+<div class="margintoptop">
+<a href="#" name="passThroughTraditional">passThroughTraditional</a>
+</div>
+<div class="restriction">
+      restriction of type <b>xs:string</b>
+</div>
+<div class="enumeration marginleft restriction">Enumeration Name</div>
+<div class="enumeration marginleft restriction">Application</div>
+<div class="enumeration marginleft restriction">Booklet</div>
+<div class="enumeration marginleft restriction">Bookmark/Take One</div>
+<div class="enumeration marginleft restriction">Breaker</div>
+<div class="enumeration marginleft restriction">Brochure</div>
+<div class="enumeration marginleft restriction">CD/DVD Packaging</div>
+<div class="enumeration marginleft restriction">Coupon/Certificate/Buckslip</div>
+<div class="enumeration marginleft restriction">Covers</div>
+<div class="enumeration marginleft restriction">Envelope</div>
+<div class="enumeration marginleft restriction">Flyer</div>
+<div class="enumeration marginleft restriction">Flyer/Sales Sheet</div>
+<div class="enumeration marginleft restriction">Folders</div>
+<div class="enumeration marginleft restriction">Gift Card Design</div>
+<div class="enumeration marginleft restriction">Insert</div>
+<div class="enumeration marginleft restriction">Invitation (with envelope)</div>
+<div class="enumeration marginleft restriction">Job Aid</div>
+<div class="enumeration marginleft restriction">Letter and Envelope</div>
+<div class="enumeration marginleft restriction">Logos</div>
+<div class="enumeration marginleft restriction">Media Packaging</div>
+<div class="enumeration marginleft restriction">Newsletter</div>
+<div class="enumeration marginleft restriction">Postcard</div>
+<div class="enumeration marginleft restriction">Poster</div>
+<div class="enumeration marginleft restriction">Riser</div>
+<div class="enumeration marginleft restriction">Sales Sheet</div>
+<div class="enumeration marginleft restriction">Self-Mailer</div>
+<div class="enumeration marginleft restriction">Signage/POP</div>
+<div class="enumeration marginleft restriction">Staffing Plan Only</div>
+<div class="enumeration marginleft restriction">Static Clings/Register Stickers</div>
+<div class="enumeration marginleft restriction">Table Tents/Countercards</div>
+<div class="enumeration marginleft restriction">Tactical Print Ad</div>
+<div class="enumeration marginleft restriction">Terms And Conditions</div>
+<div class="enumeration marginleft restriction">Other</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+<doc attrExtEnt="entExt">Hello, !
+</doc>

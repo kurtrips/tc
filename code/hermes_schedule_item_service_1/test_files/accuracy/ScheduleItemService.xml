@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigManager>
+	<namespace name="HermesNS.TC.Services.ScheduleItem.HermesScheduleItemService">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="EmptyClient">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>    </value>
+		</property>
+		<property name="contactInformationServiceKey">
+		    <value>ContactInformationService</value>
+		</property>
+		<property name="companyServiceKey">
+		    <value>CompanyService</value>
+		</property>
+		<property name="logger">
+		    <value>Logger</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="MissClient">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="contactInformationServiceKey">
+		    <value>ContactInformationService</value>
+		</property>
+		<property name="companyServiceKey">
+		    <value>CompanyService</value>
+		</property>
+		<property name="logger">
+		    <value>Logger</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="EmptyGeneric">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="contactInformationServiceKey">
+		    <value>ContactInformationService</value>
+		</property>
+		<property name="companyServiceKey">
+		    <value>CompanyService</value>
+		</property>
+		<property name="logger">
+		    <value>Logger</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>   </value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="MissGeneric">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="contactInformationServiceKey">
+		    <value>ContactInformationService</value>
+		</property>
+		<property name="companyServiceKey">
+		    <value>CompanyService</value>
+		</property>
+		<property name="logger">
+		    <value>Logger</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="InvalidPersistence">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>INVALID</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="EmptyPersistence">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="persistence">
+		    <value>    </value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="MissPersistence">
+		<property name="objectFactoryNamespace">
+		    <value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="InvalidObjectFactory">
+		<property name="objectFactoryNamespace">
+		    <value>INVALID</value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="EmptyObjectFactory">
+		<property name="objectFactoryNamespace">
+		    <value>   </value>
+		</property>
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+	</namespace>
+	<namespace name="NoObjectFactory">
+		<property name="persistence">
+		    <value>MockPersistence</value>
+		</property>
+		<property name="auditClientKey">
+			<value>AuditClient</value>
+		</property>
+		<property name="genericNotesClientKey">
+		    <value>GenericClient</value>
+		</property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>
+	</namespace>
+
+  <!--Object definition for the HermesLogger-->
+  <namespace name="ObjectDefinition.TestHermesLoggerKey">
+    <property name="type_name">
+      <value>HermesNS.TC.LoggingWrapperPublisher.HermesLogger</value>
+    </property>
+    <property name="assembly">
+      <value>Hermes_Services_for_TopCoder.dll</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.TestHermesLoggerKey.parameters">
+    <property name="p1:string">
+      <value>SomeLogger</value>
+    </property>
+  </namespace>
+  <namespace name="HermesNS.TC.DAAB">
+    <property name="default_profile_key">
+      <value>ProfileKey</value>
+    </property>
+  </namespace>
+  <namespace name="HermesNS.TC.LoggingWrapperPublisher">
+    <property name="object_factory_namespace">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+    <property name="generic_exception_manager_key">
+      <value>GenericExceptionManagerKey</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.GenericExceptionManagerKey">
+    <property name="type_name">
+      <value>HermesNS.TC.LoggingWrapperPublisher.DefaultGenericExceptionManager</value>
+    </property>
+    <property name="assembly">
+      <value>Hermes_Services_for_TopCoder.dll</value>
+    </property>
+  </namespace>  
+</ConfigManager>

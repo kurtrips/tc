@@ -1,0 +1,116 @@
+<?php
+
+require_once ('LeaderboardAbstraction.php');
+
+function leaderboard_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#leaderboard":
+      return '<p>'.  t("Displays links to nodes created on this date") .'</p>';
+      break;
+  }
+}
+
+function leaderboard_menu() {
+
+    drupal_add_js(drupal_get_path('module', 'leaderboard') .'/leaderboard.js');
+    
+    $items = array();
+
+    $items['leaderboard/view_leaderboard'] = array(
+        'title' => 'Leaderboard',
+        'page callback' => 'view_leaderboard',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+     );
+     
+    $items['leaderboard/get_leaderboard_json'] = array(
+        'page callback' => 'get_leaderboard_json',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+     );     
+
+    return $items;
+}
+
+function view_leaderboard() {
+	$abstraction = new LeaderboardAbstraction;
+	$leaderboardItems = $abstraction->getLeaderboard();
+	
+    $header = array('Player', 'Game', 'Score');
+    $rows = array();
+    foreach ($leaderboardItems as $item) {
+    	$rows[] = array($item->player, $item->game, $item->score);
+    }
+    
+    return theme('table', array(
+    	'header' => $header,
+    	'rows' => $rows,
+    	'attributes' => array ('id' => 'leaderboardTable')
+    ));
+}
+
+function get_leaderboard_json() {
+	$abstraction = new LeaderboardAbstraction;
+	$leaderboardItems = $abstraction->getLeaderboard();
+
+    return drupal_json_output($leaderboardItems);
+}
+
+/*
+function leaderboard_block_info() {
+  $blocks['leaderboard'] = array(
+    'info' => t('The Leaderboard'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  return $blocks;
+}
+
+
+function leaderboard_block_view($delta = '') {
+  echo $delta;
+  switch($delta){
+    case 'current_posts':
+    case 'leaderboard':
+      $block['subject'] = t('The Leaderboard');
+      if(user_access('access content')){
+        //Use our custom function to retrieve data.
+        $result = leaderboard_contents();
+        //Array to contain items for the block to render.
+        $items = array();
+        //Iterate over the resultset and format as links.
+        foreach ($result as $node){
+          $items[] = array(
+            'data' => l($node->title, 'node/' . $node->nid),
+          );
+        }
+     
+        if (empty($items)) { //No content in the last week.
+          $block['content'] = t('No posts available.'); 
+        }
+        else {
+          //Pass data through theme function.
+          $block['content'] = theme('item_list', array(
+            'items' => $items));
+        }
+      }
+  }
+  return $block;
+}
+
+function leaderboard_contents(){
+  //Get today's date.
+  $today = getdate();
+  //Calculate the date a week ago.
+  $start_time = mktime(0, 0, 0,$today['mon'],($today['mday'] - 7), $today['year']);
+  //Get all posts from one week ago to the present.
+  $end_time = time();
+
+  //Use Database API to retrieve current posts.
+  $query = db_select('node', 'n')
+    ->fields('n', array('nid', 'title', 'created'))
+    ->condition('status', 1) //Published.
+    ->condition('created', array($start_time, $end_time), 'BETWEEN')
+    ->orderBy('created', 'DESC') //Most recent first.
+    ->execute();
+  return $query; 
+}*/

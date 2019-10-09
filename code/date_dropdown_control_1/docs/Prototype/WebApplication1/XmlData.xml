@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <ListItem Text="Text 1"></ListItem>
+  <ListItem Text="Another Text"></ListItem>
+  <ListItem Text="Text Entry"></ListItem>
+  <ListItem Text="Data from XML file"></ListItem>
+</Items>

@@ -1,0 +1,1 @@
+exec utplsql.test('schedule_item', recompile_in=>false);

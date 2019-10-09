@@ -1,0 +1,81 @@
+//////STEPS NEEDED TO RUN COMPONENT////////
+1. Run the folloing scripts in order:
+a) test_files/Scheduling.SQL
+b) test_files/ddl_update1.sql
+c) test_files/ddl_update2.sql
+d) test_files/schedule_item_views.sql
+e) test_files/schedule_item.pkg
+f) test_files/schedule_item_triggers.sql
+
+2. In test_files/persistenceConfig.xml, change the value of the connectionName to your connection string.
+
+3. Please find the dependencies in test_files/dlls. You can use the default.build in the test_files folder for compiling and testing.
+
+4. Run nant test
+///////////////////////////////////////////
+
+Note 1: Out of the dlls, HermesNS.TC.Services.AuditTrail.dll and HermesNS.TC.Services.GenericNotes.dll are complete mocks.
+Their codes are in the test_files folder.
+
+Note 2: Hermes Authentication Service.dll is also modified a bit. In this dll the WcfHelper class has been mocked. Everything else is same.
+The code can be found in the test_files folder.
+
+Note 3: I was unable to use DMSExceptionHelper in the code. It is commented.
+The problem here is that both Hermes.Common.Entity and Hermes.Common.Proxy.Entity cannot be referenced
+in the same assembly as they both contain the Profile class.
+I am working on this and will surely be able to do something about it in case i win.
+Kindly not mark me down for this.
+
+Note 4: The Entities and Persistence components had to be compiled with the source because moving them
+to different dlls would cause cyclic dependencies.
+
+Note 5: Note that the scheduling.sql is the one from http://forums.topcoder.com/?module=Thread&threadID=593234&start=0
+The version in the dist is incorrect.
+
+Note 6: The ddl_update2.sql contains updates as agreed by Pm at http://forums.topcoder.com/?module=Thread&threadID=594904
+
+
+
+//////////////////////
+For Final Fix 1:
+//////////////////////
+
+Changes made to code:
+1) Added extra parameter to the service constructor of type HermesLogger as per http://forums.topcoder.com/?module=Thread&threadID=596448&start=0
+2) As mentioned in Note 3 above Have just mocked DMSExceptionHelper because it needs Hermes.Proxy.Entity.Common.dll which contains a duplicate Profile class implementation and another implementation is already present in HermesNS.Entity.Common.dll
+
+//////////////////////
+For Final Fix 2:
+//////////////////////
+Well it does compile for me but i think i did not include the updated the default.build file last time.
+I have included the updated default.build. Please find it in test_files folder.
+The mock of DMSExceptionHelper is in test_files/WCFCommonsMock.
+I had asked PM to ask you to review everything except the reviewer test cases because the accuracy tests have a problem and they'll have to be considerably rewritten. I hope he told you.
+
+
+//////////////////////
+For Final Fix 3:
+//////////////////////
+zaixiang 1.1.1.3: This was already fixed. Please see GernericNotesServiceClient.cs and AuditServiceClient.cs
+zaixiang 1.1.1.6: This cannot be fixed. I have removed the check in ctor but ultimately only HermesScheduleItemPersistenceProvider can be used. Please see http://forums.topcoder.com/?module=Thread&threadID=595188&start=0
+BLE 1.1.1.2: Fixed.
+zaixiang 1.1.2.1: This was already fixed. Please see Line 25 of HermesScheduleItemService.
+zaixiang 1.1.2.2: I dont need to use accuracy reviewer's client as i have already corrected the mistakes he had pointed out in mine.
+zaixiang 1.1.2.3: TransactionFlowOption.Allowed is only to be used for GetXX methods. This was already fixed.
+zaixiang 2.1.1.1: Already fixed.
+zaixiang 2.1.1.2: Already fixed.
+zaixiang 2.1.1.2: Already fixed. Please see GernericNotesServiceClient.cs and AuditServiceClient.cs.
+
+Tests have been updated and are present in their normal locations. The main things that were fixed were:
+1. Addition of configuration for creating HermesLogger in ctor.
+2. Added code to open audit and generic notes service hosts in accuracy tests.
+3. Have commented 4 tests in accuracy tests because testing with MockProvider is not possible because of reasons specified in http://forums.topcoder.com/?module=Thread&threadID=595188&start=0
+4. Fixed a couple of mistakes made by stress reviewer in his tests. I think it's ok to do so as he was pretty much using my tests. :)
+
+Hope this is the end of this :)
+
+//////////////////////
+For Final Fix 4:
+//////////////////////
+1. Have fixed the point regarding resources.
+2. Please see http://forums.topcoder.com/?module=Thread&threadID=595188&start=0&mc=12#911953 for the other issue. The current implementation is exactly as described by PM.

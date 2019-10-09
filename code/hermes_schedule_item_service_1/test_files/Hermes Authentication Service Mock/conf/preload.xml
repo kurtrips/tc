@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ConfigManager SYSTEM "cm.dtd">
+
+<ConfigManager>
+    <namespace name="TopCoder.Util.ConfigurationManager">
+        <property name="preload">
+        </property>
+  </namespace>
+</ConfigManager>

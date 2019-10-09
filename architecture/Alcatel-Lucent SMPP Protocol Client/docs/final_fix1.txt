@@ -1,0 +1,69 @@
+It is not clear how you cover all the necesary SMPP commands.
+Based on this thread: http://forums.topcoder.com/?module=Thread&threadID=692313
+query_sm is not supported by the Net_SMPP_Client and I do not see exatcly how this is covered by your implementation.
+
+Response: Identified missing classed and added them in SMPP Classes CD and implementation detail in section 1.3.2 of CS
+
+---------------
+
+1) Process SMPP requests and send back response" is generic use case, which doesn't cover use case like "Process SMPP Bind Request and Response" and etc. 
+2) Use case should list what SMPP commands are handled by the client. 
+
+Response: Added use cases
+
+-----------------
+
+The sequence about creation of SMPP_Protocol_Client should be shown.
+
+Response: Done
+
+-------------------
+
+Singleton is used in this design. There is only 1 instance of SMPP_Protocol_Client. It is obtained by calling SMPP_Protocol_Client#getInstance
+
+Response: I am not sure whether you mean that singleton should not be used or the whether singleton is not used in its truest sense (i.e. just one instance)
+If former, then it is needed. see explanation in http://forums.topcoder.com/?module=Thread&threadID=693596&start=0
+If latter, then yes it not singleton in truest sense but it si singleton in the sense that there can be just one instance per carrier
+
+-------------------
+
+The demo doesn't provide command line details to run Client_Outbind_Listener, such as missing server ip and port.
+At the same time, it doesn't define clear document about what may be prompt in front of user at command line. 
+
+Response: Shown command line options in demo. Also described command line options in UML doc. 
+
+--------------------
+
+The architecture UML mandates that the constructor of SMPP_Protocol_Client is public. It is meant to be instantiated directly. Modification of architecture UML requires approval.
+
+Response: This cannot be done. See http://forums.topcoder.com/?module=Thread&threadID=693596&start=0
+
+--------------------
+
+Only when user instructs, it would start to listen to the socket. Otherwise, it should not listen. 
+
+Response: I am not sure if you mean the outbind_listener or the client's socket.
+If former, then obviously this is in user's hand because launching the command line tool is manual.
+If latter, then see step 4 of impl details of processRequest
+
+------------------------
+
+Hm but I don't see a need to execute it in command line. This component does not need to provide command line interface. 
+
+Response: It is needed. See http://forums.topcoder.com/?module=Thread&threadID=693596&start=0
+
+-------------------------
+
+1) A custom exception needs to be defined for Protocol_Client#processRequest. This is the usual TC approach. Also, it helps the user to use the API since he knows what exception to expect.
+2) Another exception is also needed to indicate configuration error 
+
+Response: Done and added to docs
+
+--------------------------
+
+SMPP_Protocol_Client#_netSmppClient and _configArray need to mention if it can be empty or not.
+
+Response: Added to doc
+
+------------------------
+  

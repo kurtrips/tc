@@ -1,0 +1,5 @@
+bin\Debug\Calypso.RDTP.dll
+bin\Debug\Calypso.RDTP.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Calypso.RDTP.dll
+obj\Debug\Calypso.RDTP.pdb

@@ -1,0 +1,1041 @@
+message tPassword
+{
+	optional string password = 1;
+}
+
+message tNetworkSettings
+{
+    optional uint32 StaticIP = 1;
+    optional string IPAddress = 2;
+    optional string NetworkMask = 3;
+    optional string GatewayAddress = 4;
+}
+
+message tSiteCodes
+{
+	optional uint32 SiteNumber = 1;
+}
+
+message tSnappCardFormat
+{
+    optional uint32 VersionRequired         = 1;
+    optional uint32 SiteRequired            = 2;
+    optional uint32 TokenType               = 3;          
+    optional uint32 VersionPosition         = 4;
+    optional uint32 VersionLength           = 5;
+    optional uint32 SitePosition            = 6; 
+    optional uint32 SiteLength              = 7;
+    optional uint32 IDPosition              = 8;
+    optional uint32 IDLength                = 9;
+    optional uint32 ParityOddStart          = 10;
+    optional uint32 ParityOddLength         = 11;
+    optional uint32 ParityEvenStart         = 12;
+    optional uint32 ParityEvenLength        = 13;
+    optional uint32 ParityOddPosition       = 14;
+    optional uint32 ParityEvenPosition       = 15;
+    optional uint32 WeigBitsMagCharsPerCard = 16;     
+    optional uint32 BitsPerChar             = 17;          
+}
+
+message tTokenFormat
+{
+    repeated tSiteCodes SiteCodes = 1;
+    optional tSnappCardFormat CardFormat = 2;
+}
+
+message tName
+{
+	optional bytes Name = 1;
+}
+
+message  tLocalPublic 
+{
+    optional tPassword SystemID                = 1;         
+    optional tPassword ThirdPartyPassword      = 2;       
+    optional uint32 SnappBaudRate              = 3;      
+    optional uint32 CondoBaudRate              = 4;      
+    optional uint32 ACSync                     = 5;             
+    optional uint32 FallBackMode               = 6;       
+    optional uint32 FireAccessOverride         = 7; 
+    optional uint32 AutoUpdateCardVersion      = 8;      
+    optional uint32 MultiTenantSystem          = 9;  
+    optional uint32 SinglePanel                = 10;        
+    optional uint32 NumAlarmsPerPointMax       = 11;      
+
+    optional uint32 SirenTime                  = 12;         
+    optional uint32 RingBack                   = 13;           
+    optional uint32 FastRestore                = 14;        
+    optional uint32 DelayScreenFlag            = 15;    
+
+    repeated tTokenFormat TokenFormat          = 16;     
+
+    optional tName SystemMessage               = 17;     
+
+    optional uint32 CondoDisplayOffset         = 18;
+    optional uint32 future_AreaReportingOffset = 19;  
+    optional uint32 AreaDisplayOffset          = 20;
+    optional uint32 PointDisplayOffset         = 21;
+    optional uint32 DoorDisplayOffset          = 22;
+    optional uint32 bCAPLDisplayOffset         = 23;
+
+    optional uint32 PanelBuildingNumber        = 24;
+
+    optional uint32 LCDMenuStyle               = 25;       
+    optional uint32 ACBrownOutMode             = 26;     
+    optional uint32 MenuStyle                  = 27;
+
+    optional uint32 ACReferenceVoltage         = 28;
+    optional uint32 BatterySize                = 29;
+
+    optional uint32 ACPO_ConfirmedAlarmTimeout = 30; 
+
+    optional uint32 ExpectedPanelType          = 31;  
+    optional uint32 VBUS_PanelNumOutputs       = 32;
+    optional uint32 EnableWallTamper           = 33;   
+
+    optional uint32 PanelNumInputs             = 34;     
+    optional uint32 Paging_NumOutputs          = 35;  
+
+    optional uint32 PanelNumOutputs            = 36;    
+    optional uint32 STU_8OP_NumOutputs         = 37; 
+    optional uint32 AllowPortExpanders         = 38;
+
+    optional uint32 STU_8OP_OutputBase         = 39;   
+    optional uint32 VBUS_PanelOutputBase       = 40; 
+    optional uint32 Paging_OutputBase          = 41;    
+
+    optional uint32 DelinquentArmingThreshold  = 42;   
+    optional uint32 ReportDelinquentArming     = 43;     
+
+    optional uint32 AreaGroupMode              = 44;      
+    optional uint32 ACPOConfirmed_ResetService = 45;
+    optional uint32 ACPOConfirmed_ResetMaster  = 46;
+    optional uint32 ACPOConfirmed_ResetManaged = 47;
+    optional uint32 ACPOConfirmed_ResetRemote  = 48;
+    optional uint32 ACPOUnconfirmedResetMode   = 49;   
+
+    optional uint32 VBUSMode                   = 50;
+    optional uint32 VBUSSpeed                  = 51;
+}
+
+message tAreaCounter
+{
+        optional uint32 Maximum            = 1;      
+        optional uint32 ResetOnDisarmToOff = 2;    
+        optional uint32 ResetOnArmToOn     = 3;        
+        optional uint32 ResetBeforeInWin   = 4;       
+        optional uint32 Minimum            = 5;        
+}
+
+message tAreaExtendedAutoArm
+{
+        optional uint32 Mode         = 1;           
+        optional uint32 WarningLevel = 2;   
+        optional uint32 Level        = 3;          
+        optional uint32 OnlyIfOutWin = 4;   
+}
+message tAreaActivity
+{
+        optional uint32 Timeout            = 1;        
+        optional uint32 IncludeEERoute_FAP = 2;     
+        optional uint32 IncludeDoors       = 3;   
+        optional uint32 AlarmOnNoActivity  = 4;      
+}
+message tAreaMap
+{
+	optional bytes theBits = 1;
+}
+
+message tBadgeLCDKeypad
+{
+    optional uint32 Schedule                  = 1;         
+    optional uint32 SingleBadgeMode_InWindow  = 2;       
+    optional uint32 SingleBadgeMode_OutWindow = 3;      
+    optional uint32 HoldBadgeMode_InWindow    = 4; 
+    optional uint32 HoldBadgeMode_OutWindow   = 5;
+    optional uint32 HoldBadgeTime             = 6;  
+    optional uint32 HoldPinPromptMode         = 7;
+    optional uint32 BadgeHoldMode             = 8;  
+    optional uint32 DisarmAlwaysRequirePIN    = 9; 
+    optional uint32 DoorNum                   = 10;        
+    optional uint32 AccessControl             = 11;  
+    optional uint32 InOrOutReader             = 12;  
+    optional uint32 InOutStation              = 13;   
+    optional tReaderConfig ReaderConfig       = 14;
+}
+
+message tLCDKeypad
+{
+    optional tAreaMap AnnuAreaMap          = 1;       
+    optional tAreaMap ArmDisarmMap         = 2;      
+    optional tAreaMap ExitDelayMap         = 3;      
+    optional uint32 DefaultDisplayMode     = 4; 
+    optional uint32 ArmedLEDDisplay        = 5;    
+    optional uint32 ArmingToneMode         = 6;     
+    optional uint32 AutoDisarmAllOnSilence = 7;     
+    optional uint32 VerifyUserMode         = 8;     
+    optional uint32 TripleCardMode         = 9;     
+    optional tBadgeLCDKeypad Badge         = 10;
+}
+
+message tHeldForcedMagConfig
+{
+    optional uint32 HeldOpenProcessing_Tx         = 1;
+    optional uint32 HeldOpenProcessing_Siren      = 2;
+    optional uint32 HeldOpenProcessing_Sonalert   = 3;
+    optional uint32 ForcedOpenProcessing_Tx       = 4;
+    optional uint32 ForcedOpenProcessing_Siren    = 5;
+    optional uint32 TurnStyle                     = 6;
+    optional uint32 ForcedOpenProcessing_Sonalert = 7;
+    optional uint32 MagLockProcessing_Tx          = 8;
+    optional uint32 MagLockProcessing_Siren       = 9;
+    optional uint32 MagLockProcessing_Sonalert    = 10;
+    optional uint32 ForcedOpenProcessingSchedule  = 11;
+    optional uint32 HeldOpenProcessingSchedule    = 12;
+}
+
+message tDoorPodConfig
+{
+    optional uint32 UnlockTime                                = 1;         
+    optional uint32 Reserved1                                 = 2;          
+    optional uint32 PanelProcessRTE                           = 3;    
+    optional uint32 ChallengedDHOTime                         = 4;
+    optional uint32 DoorProcessing                            = 5;     
+    optional uint32 RequestToExitRequired                     = 6;
+    optional uint32 DoorHeldOpenTime                          = 7;
+    optional uint32 AuxInputMode                              = 8;       
+    optional uint32 ReaderTamperRequired                      = 9;
+    optional uint32 DoorAlarmTime                             = 10;      
+    optional uint32 AlarmOutputMode                           = 11;    
+    optional uint32 LEDMode                                   = 12;                                    
+    optional uint32 ChallengedUnlockTime                      = 13;
+    optional uint32 ProcessReaderTamperInputAsPanelInputPoint = 14;
+    optional uint32 DoorCircuit                               = 15;        
+    optional uint32 RTECircuit                                = 16;          
+    optional uint32 ReaderTamperCircuit                       = 17;
+    optional uint32 AuxCircuit                                = 18;         
+    optional uint32 DoorForceHeldTime                         = 19;  
+    optional uint32 DoNotLockOnDoorClosure                    = 20;     
+    optional uint32 InsertionReader                           = 21;    
+    optional uint32 ForceBuzzerClearsOnClosure                = 22; 
+}
+
+message tReaderConfig
+{
+    /// \todo need CardMode also?
+    enum ReaderMode
+    {
+        READER_NORMAL = 0;
+        READER_DUAL_CUSTODY = 1;
+        READER_ESCORT = 2;
+        READER_TOGGLE_ALL = 3;
+        READER_TOGGLE_AUTHORIZED = 4;
+    }
+
+    optional uint32 Area                   = 1;               
+    optional uint32 Antipassback           = 2;       
+    optional uint32 LockoutInWindow        = 3;    
+    optional uint32 Defined                = 4;
+    optional uint32 CommandStation         = 5;
+    optional uint32 ClassMapInWindow       = 6;   
+    optional uint32 ClassMapOutWindow      = 7;  
+    optional uint32 LogAPBViolationOnly    = 8;
+    optional uint32 ReaderModeInWindow     = 9; 
+    optional uint32 ReaderModeOutWindow    = 10;
+    optional uint32 CardModeInWindow       = 11;   
+    optional uint32 CardModeOutWindow      = 12;  
+    optional uint32 GroupNumber            = 13;        
+    optional uint32 ReaderModeSchedule     = 14;
+    optional uint32 ClassMapSchedule       = 15;
+    optional uint32 LockoutSchedule        = 16;
+    optional uint32 CardModeSchedule       = 17;
+    optional uint32 EnableDisableCardTypes = 18; 
+    optional uint32 EnableClassChecking    = 19;
+    optional uint32 EnableDisableMode      = 20;  
+    optional uint32 IsEnablingReader       = 21;   
+    optional uint32 UnlockOnEnableDisable  = 22;
+}
+
+
+message tDoorInterlock
+{
+    optional uint32 DoorNum1     = 1;          
+    optional uint32 DoorNum2     = 2;          
+    optional uint32 DoorNum3     = 3;          
+    optional uint32 InterLockReq = 4;      
+    optional uint32 Delay        = 5;               
+}
+
+message tDoor
+{
+    optional uint32 Pod                               = 1;                
+    optional uint32 ElevatorController                = 2; 
+    optional uint32 PodDoorIndex                      = 3;       
+    optional uint32 spare                             = 4;
+    optional tDoorPodConfig PodConfigData             = 5;
+    optional uint32 UnlockModeSchedule                = 6; 
+    optional uint32 UnlockInWindow                    = 7;     
+    optional uint32 UnlockOutWindow                   = 8;    
+    optional uint32 Arming_Level                      = 9;            
+    optional uint32 DetectWanderingPatient            = 10;
+    optional uint32 LockOnWanderingPatient            = 11; 
+    optional uint32 PodTokenFormat                    = 12;     
+    optional uint32 InOutStation                      = 13;       
+    optional uint32 DoNotUnlockOnPanelRTE             = 14;
+    optional uint32 LogRTE                            = 15;                  
+    optional uint32 EntryDetection                    = 16;     
+    repeated tReaderConfig ReaderConfig               = 17;
+    optional tDoorInterlock Interlock                 = 18;
+    optional tHeldForcedMagConfig HeldForcedMagConfig = 19;
+}
+
+message tCard
+{
+    required bytes Key = 1;
+}
+
+message tUserCondoFloor
+{
+    optional uint32 FloorNumber = 1;
+    optional uint32 AdditionFlr = 2;
+}
+
+message tArea
+{
+    optional uint32 EntryDelay                      = 1;
+    optional uint32 APBAutoReset                    = 2;
+    optional uint32 ExitDelay                       = 3;
+    optional uint32 PreAlarmDelay                   = 4;      
+    optional uint32 GarageDelay                     = 5;
+    optional uint32 WorkLatePtDelta                 = 6;    
+    optional uint32 APB_SecureEE                    = 7;       
+    optional uint32 APB_NoOutsideCheck              = 8; 
+    optional uint32 StayFail2Exit                   = 9;      
+    optional uint32 LimitToMidnight                 = 10;   
+    optional uint32 AlarmFail2Exit                  = 11;    
+    optional uint32 TerminateExitDelay              = 12;
+    optional uint32 RequireHotKeyPIN                = 13;  
+    optional uint32 ReportMode                      = 14;        
+    optional uint32 DualCustody                     = 15;
+    optional uint32 OpenInterlock                   = 16;
+    optional uint32 TXFail2Close                    = 17;
+    optional uint32 AutoArmFail2Close               = 18;
+    optional uint32 UnauthorizedOpens               = 19;
+    optional uint32 AutoArmDoorClose                = 20;
+    optional uint32 Defined                         = 21;
+    optional uint32 OutOfWindowOpen                 = 22;   
+    optional uint32 InWindowOpen                    = 23;
+    optional uint32 AutoSchdStayMode                = 24;  
+    optional uint32 AutoStayModeSchedule            = 25;
+    optional uint32 Schedule                        = 26;
+    optional tAreaCounter Counter                   = 27;            
+    optional tAreaExtendedAutoArm ExtendedAutoArm   = 28;
+    optional tAreaActivity Activity                 = 29;
+    optional uint32 ExtendedAutoArmDelay            = 30;      
+    optional uint32 BadCard_LockoutAllUsers         = 31;
+    optional uint32 BadCard_GenerateTones           = 32;
+    optional uint32 AutoDisarmToOffBlind            = 33;      
+    optional uint32 ArmWarningMode                  = 34;    
+    optional uint32 F2ExitMode                      = 35;        
+    optional uint32 ExtendDelayOnF2EXIT             = 36;
+    optional uint32 MultiTenant                     = 37;       
+    optional uint32 IncrementMode                   = 38;     
+    optional uint32 BellSquawkOnArming              = 39;
+    optional uint32 AutoDisarmOnValidTokenInWindow  = 40;    
+    optional uint32 AutoDisarmOnValidTokenOutWindow = 41;   
+    optional uint32 ArmingRules                     = 42;       
+    optional uint32 DisarmingRules                  = 43;    
+    optional uint32 ArmingPriority                  = 44;    
+    optional uint32 DisarmingPriority               = 45; 
+    optional tAreaMap CommonToAreaMap               = 46;  
+    optional tAreaMap PriorityToAreaMap             = 47;
+}
+
+message tSupports
+{
+    optional uint32 Intrusion      = 1;
+    optional uint32 Access         = 2;
+    optional uint32 CentralStation = 3;
+    optional uint32 SuitePods      = 4;
+    optional uint32 Elevator       = 5;
+    optional uint32 Version        = 6;
+}
+
+message tBadCardPinDetection
+{
+    optional uint32 Timer        = 1;          
+    optional uint32 Transmit     = 2;        
+    optional uint32 NumDiffUsers = 3;   
+    optional uint32 MaxBadCard   = 4;     
+    optional uint32 BadCardMode  = 5;    
+    optional uint32 MaxBadPin    = 6;      
+    optional uint32 LockoutTime  = 7;    
+}
+
+message tPoint
+{
+    optional uint32 Circuit    = 1;            
+    optional uint32 Type       = 2;               
+    optional uint32 Area       = 3;               
+    optional uint32 BufferArea = 4;         
+}
+
+message tCondoPoint
+{
+    optional uint32 Type    = 1;
+    optional uint32 Circuit = 2;
+}
+message tCondoOutput
+{
+    optional uint32 Value = 1;
+}
+message tCondoUnit
+{
+    optional uint32 EntryDelay          = 1;
+    optional uint32 RequireHotKeyPIN    = 2;   
+    optional uint32 StayFail2Exit       = 3;      
+    optional uint32 TerminateExitDelay  = 4; 
+    optional uint32 ExitDelay           = 5;
+    optional uint32 RequirePinToArm     = 6;    
+    optional uint32 TxOnFailToExit      = 7;
+    optional uint32 PINDuress           = 8;          
+    optional uint32 GarageDelay         = 9;
+    optional uint32 PIN5Digit           = 10;         
+    optional uint32 AllowForceArm       = 11;
+    optional uint32 SirenTime           = 12;
+    optional uint32 BellSquawkOnArming  = 13; 
+    optional uint32 DualCustody         = 14;        
+    optional uint32 AutoArmDoorClose    = 15;
+    optional tAreaActivity Activity     = 16;
+}
+
+message tIOConfig
+{
+    repeated tCondoPoint Point        = 1;
+    repeated tCondoOutput Output      = 2;
+    optional uint32 SingleBadgeMode   = 3;    
+    optional uint32 HoldBadgeMode     = 4;      
+    optional uint32 HoldBadgeTime     = 5;      
+    optional uint32 HoldPinPromptMode = 6;  
+    optional uint32 BadgeHoldMode     = 7;      
+    optional uint32 AutoSilence       = 8;        
+    optional uint32 DisarmPINRequired = 9;  
+    optional uint32 LimitedPowerRF    = 10;     
+    optional uint32 BackLightMode     = 11;      
+}
+message tWindow
+{
+    optional uint32 Open       = 1;           
+    optional uint32 Close      = 2;          
+    optional uint32 WeekdayMap = 3;
+}
+
+message tFloorMap
+{
+    repeated uint32 FloorMap = 1;
+}
+message tFloorDesecure
+{
+    optional uint32 Schedule = 1;
+    optional tFloorMap Map   = 2;
+}
+message tSharedDataConfig
+{
+    optional uint32 Users    = 1;
+    optional uint32 Holidays = 2;
+}
+message tSharedUserRange
+{
+    optional uint32 UserStart = 1;
+    optional uint32 UserEnd   = 2;
+    optional uint32 AuthStart = 3;
+    optional uint32 AuthEnd   = 4;  
+}
+message tSharedHolidayRange
+{
+    optional uint32 Start = 1;
+    optional uint32 End   = 2;  
+}
+
+message tBandDefinition
+{                      
+    optional uint32 ATBand1     = 1;  
+    optional uint32 ATBand2     = 2;
+    optional uint32 ATBand3     = 3;
+    optional uint32 ATBand4     = 4;
+    optional uint32 ATBand5     = 5;           
+    optional uint32 CircuitType = 6;
+} 
+
+message tBandThresholds
+{
+    optional uint32 TopOfBand1 = 1; 
+    optional uint32 TopOfBand2 = 2; 
+    optional uint32 TopOfBand3 = 3; 
+    optional uint32 TopOfBand4 = 4; 
+}
+
+message tBandDefinitionSP14
+{                               
+    optional uint32 atBand1     = 1;           
+    optional uint32 atBand2     = 2;
+    optional uint32 atBand3     = 3;
+    optional uint32 atBand4     = 4;
+    optional uint32 atBand5     = 5;
+    optional uint32 atBand6     = 6;
+    optional uint32 atBand7     = 7;
+    optional uint32 atBand8     = 8;
+    optional uint32 atBand9     = 9;
+    optional uint32 circuitType = 10;
+} 
+
+message tBandThresholdsSP14
+{
+    optional uint32 topOfBand1  = 1;
+    optional uint32 topOfBand2  = 2;     
+    optional uint32 topOfBand3  = 3;     
+    optional uint32 topOfBand4  = 4;     
+    optional uint32 topOfBand5  = 5;     
+    optional uint32 topOfBand6  = 6;     
+    optional uint32 topOfBand7  = 7;     
+    optional uint32 topOfBand8  = 8;     
+} 
+
+
+message tBandFallBackSP14
+{
+    repeated tName circuitName                  = 1;
+    repeated tBandDefinitionSP14 bandDefinition = 2;
+    repeated tBandThresholdsSP14 bandThresholds = 3;
+    repeated uint32 fallBackCardUser            = 4;
+}
+
+message tElevatorPodConfig
+{
+    optional uint32 DesecureTime       = 1;       
+    optional uint32 FallBackMode       = 2;       
+    optional uint32 LEDMode            = 3;            
+    optional uint32 FireRequired       = 4;       
+    optional uint32 BypassRequired     = 5;     
+    optional uint32 PanicRequired      = 6;      
+    optional uint32 RdrTmprRequired    = 7;    
+    optional uint32 CallButtonMonitor  = 8;  
+    optional uint32 DescureOnCommFail  = 9;  
+    optional uint32 RlysOffWhenDescure = 10; 
+    optional uint32 FireCircuit        = 11; 
+    optional uint32 BypassCircuit      = 12;
+    optional uint32 RdrTmprCircuit     = 13;
+    optional uint32 PanicCircuit       = 14;
+    optional uint32 FireFloor          = 15;          
+    optional uint32 InsertionReader    = 16;
+} 
+
+message tElevator
+{                               
+    optional uint32 Pod                   = 1;                
+    optional uint32 ElevatorController    = 2; 
+    optional uint32 PodDoorIndex          = 3;       
+    optional uint32 PodTokenFormat        = 4;     
+    optional uint32 CabDesecureInWindow   = 5; 
+    optional tFloorMap ElevatorFloorMap   = 6; 
+    optional tElevatorPodConfig PodConfig = 7;
+    optional tReaderConfig ReaderConfig   = 8;     
+    optional uint32 CabDesecureSchedule   = 9;
+    optional uint32 ID                    = 10;
+} 
+
+
+//=============================================================================
+
+message tSystem
+{
+    optional tLocalPublic LocalPublic = 1;
+    optional uint32 ID                  = 2;
+}
+message tSIDCommon
+{
+    optional uint32 PIN5Digit                         = 1;          
+    optional uint32 PINDuress                         = 2;          
+    optional uint32 MemoryModel                       = 3;
+    optional uint32 ServicePinMode                    = 4;     
+    optional uint32 UserLogOnMode                     = 5;      
+    optional uint32 DisplayCardNum                    = 6;     
+    optional uint32 EscortReqdMode                    = 7;     
+    optional uint32 BlindReEnrollment                 = 8;  
+    optional uint32 PanicTokenSendsDuress             = 9;
+    optional tSupports AccountSetup                   = 10;
+    optional tBadCardPinDetection BadCardPinDetection = 11;
+    optional uint32 xLKeypadLockCode                  = 12; 
+    optional uint32 LanguageSet                       = 13;        
+    optional uint32 RemoteFWUpload                    = 14;     
+    optional uint32 PointResetTime                    = 15;     
+    optional uint32 ArmingRules                       = 16;        
+    optional uint32 DealerID                          = 17;
+    optional uint32 ID                                = 18;
+}
+message tAreaWithName
+{
+    optional tName Name   = 1;
+    optional tArea Config = 2;
+    optional uint32 ID    = 3;
+}
+message tPod
+{
+    optional uint32 Area          = 1;               
+    optional uint32 Level         = 2;              
+    optional uint32 ToneWarnings  = 3;       
+    optional uint32 TamperMonitor = 4;      
+    optional uint32 Inputs        = 5;             
+    optional uint32 Outputs       = 6;            
+    optional uint32 SerialNumber  = 7;        
+    optional uint32 PodType       = 8;              
+    repeated uint32 AppPodInfo    = 9;
+    optional tLCDKeypad LCDKeypad = 10;   
+    optional uint32 ID            = 11;
+}
+message tPointWithName
+{
+    optional tPoint Config = 1;
+    optional tName Name    = 2;
+    optional uint32 ID     = 3;
+}
+message tPointType
+{
+    optional uint32 Level      = 1;
+    optional uint32 Preprocess = 2;
+    optional uint32 Class      = 3;         
+    optional uint32 Siren      = 4;         
+    optional uint32 Bypass     = 5;        
+    optional uint32 Chime      = 6;         
+    optional uint32 Sonalert   = 7;      
+    optional uint32 Transmit   = 8;      
+    optional uint32 Warning    = 9;       
+    optional uint32 ID         = 10; 
+}
+message tOutputDefault
+{
+    repeated uint32 Word = 1;
+    optional uint32 ID   = 2; 
+}
+message tAuthority
+{
+    optional tName Name           = 1; 
+    repeated uint32 AreaProfile   = 2;
+    optional uint32 UserEditGroup = 3;
+    optional uint32 Defined       = 4;
+    optional uint32 FloorGroup    = 5;
+    repeated uint32 ExAreaProfile = 6;
+    optional uint32 ID            = 7; 
+}
+message tUser
+{
+    optional tCard  Card                      = 1;                   
+    optional uint32 PrimaryAuthority          = 2;       
+    optional uint32 SecondaryAuthority        = 3;     
+    optional uint32 CardVersion               = 4;             
+    optional uint32 PIN                       = 5;                    
+    optional tUserCondoFloor CondoFloorNumber = 6;
+    optional uint32 StartDate                 = 7;          
+    optional uint32 Language                  = 8;            
+    optional uint32 Challenged                = 9;          
+    optional uint32 MultiTenant               = 10;         
+    optional uint32 EndDate                   = 11;            
+    optional uint32 Void                      = 12;                
+    optional uint32 PendingEnrollment         = 13;   
+    optional uint32 ValidationForSecondary    = 14;
+    optional tName Name                       = 15;    
+    optional uint32 ID                        = 16; 
+}
+message tPointTypeCustom
+{
+    optional tPointType Custom = 1;
+    optional uint32 ID         = 2; 
+}
+message tHoliday
+{
+    optional uint32 StartMonth = 1;
+    optional uint32 StartDay   = 2;
+    optional uint32 Range      = 3;     
+    optional uint32 Type       = 4;      
+    optional uint32 EndMonth   = 5;
+    optional uint32 EndDay     = 6;
+    optional uint32 NumDays    = 7;
+    optional uint32 ID         = 8; 
+}
+message tSchedule
+{
+    repeated tWindow Window             = 1; 
+    repeated uint32 HolidaySchedule     = 2; 
+    optional uint32 Defined             = 3;
+    optional uint32 MidnightHolidayMode = 4;
+    optional uint32 ID                  = 5; 
+}
+message tDoorWithName
+{
+    optional tName Name   = 1;
+    optional tDoor Config = 2;
+    optional uint32 ID    = 3; 
+}
+message tCondo
+{
+    optional uint32 SerialNumber        = 1;        
+    optional tUserCondoFloor CondoFloor = 2; 
+    optional tName Name                 = 3;                 
+    optional uint32 CondoPodType        = 4;       
+    optional uint32 AllowRemoteSilence  = 5; 
+    optional uint32 AllowRemoteArm      = 6;     
+    optional uint32 AllowRemoteDisarm   = 7;  
+    optional uint32 Superintendent      = 8;     
+    optional uint32 Defined             = 9;            
+    optional tCondoUnit Unit            = 10;            
+    optional tIOConfig IOConfig         = 11;
+    optional uint32 CondoUserOffset     = 12;     
+    optional tPassword DigitalAccountID = 13; 
+    optional uint32 DigitalReportMode   = 14;  
+    optional uint32 PreAlarmDelay       = 15;      
+    optional uint32 ID                  = 16; 
+}
+message tLog
+{
+    required uint32 AreaDateTime  = 1;
+    required uint32 Type          = 2;
+    required uint32 Extra         = 3;
+    optional uint32 ID            = 4; 
+}
+message tFloor
+{
+    optional uint32 BackUp_FloorDefn         = 1;
+    repeated tFloorDesecure Desecure         = 2;
+    optional tFloorMap FloorDesecureSchedule = 3;
+    optional uint32 ID                       = 4; 
+}
+message tSharedData
+{
+    optional tSharedDataConfig Config       = 1;
+    repeated tSharedUserRange UserSet       = 2;
+    repeated tSharedHolidayRange HolidaySet = 3;
+    optional uint32 ID                      = 4; 
+}
+
+message tIntrusionAttributes
+{
+    optional uint32 Defined         = 1;   
+    optional uint32 EmergencyOff    = 2;      
+    optional uint32 Isolate         = 3;   
+    optional uint32 Bypass          = 4;    
+    optional uint32 AutoLiftBypass  = 5;    
+    optional uint32 Test            = 6;      
+    optional uint32 ServiceTest     = 7;       
+    optional uint32 SilenceAlarm    = 8;      
+    optional uint32 Status          = 9;    
+    optional uint32 History         = 10;   
+    optional uint32 FKeysPIN        = 11;  
+    optional uint32 WorkLate        = 12;  
+    optional uint32 SuspendSchedule = 13;   
+}
+
+message tAccessAttributes
+{
+    optional uint32 Access_Off       = 1;  
+    optional uint32 Access_Stay      = 2; 
+    optional uint32 Access_On        = 3; 
+    optional uint32 Escort           = 4;    
+    optional uint32 Visitor          = 5;   
+    optional uint32 MasterOverride   = 6;  
+    optional uint32 WanderingPatient = 7;
+    optional uint32 ResetDoorAlarm   = 8;  
+    optional uint32 PanicToken       = 9;      
+}
+
+message tScheduledAttributes
+{
+    optional uint32 On          = 1;        
+    optional uint32 Off         = 2;       
+    optional uint32 Stay        = 3;      
+    optional uint32 OffNotStay  = 4;
+    optional uint32 AutoAllOff  = 5; 
+    optional uint32 DoorCommand = 6;
+    optional uint32 DoorClassA  = 7; 
+    optional uint32 DoorClassB  = 8; 
+    optional uint32 DoorClassC  = 9; 
+}
+
+message tProfile
+{
+    optional tName Name                     = 1;
+    optional tIntrusionAttributes Intrusion = 2;
+    optional tAccessAttributes Access       = 3;
+    repeated uint32 Schedule                = 4;
+    optional tScheduledAttributes Scheduled = 5;
+    optional uint32 GroupNumber             = 6;
+    optional uint32 GroupMode               = 7;          
+    optional uint32 ID                      = 8; 
+}
+message tUserEdit
+{
+    optional tName Name             = 1;
+    repeated tSharedUserRange Range = 2;
+    optional uint32 ID              = 3; 
+}
+message tAuthFloorMap
+{
+    repeated uint32 Map = 1;
+    optional uint32 ID  = 2; 
+}
+message tCommunications
+{
+    optional tPassword TelcoAccountNum_Primary = 1;  
+    optional tPassword TelcoAccountNum_Daytime = 2;  
+    optional uint32 TelcoRequiredModemType     = 3;
+    optional uint32 TelcoAlarmReportMode       = 4;       
+    optional uint32 TelcoPriortizedReporting   = 5;   
+    optional uint32 TelcoNeverAllowBlindDial   = 6;   
+    optional uint32 TelcoCountry               = 7;       
+    optional uint32 TelcoFormat                = 8;       
+    optional uint32 TelcoSequence              = 9;     
+    optional uint32 TelcoCommsTestMode         = 10;
+    optional uint32 TelcoNormalCommsTestDelay  = 11; 
+    optional uint32 TelcoBackupCommsTestDelay  = 12;
+    optional uint32 TelcoCommsTestDay          = 13; 
+    optional uint32 TelcoCommsTestHour         = 14;
+    optional uint32 TelcoCommsTestMinute       = 15;
+    optional uint32 TelcoDaytimeMode           = 16;
+    optional uint32 TelcoDaytimeSchedule       = 17;
+    optional tName TelcoPrimaryTelNum          = 18;
+    optional tName TelcoBackupTelNum           = 19;
+    optional tName TelcoDaytimeNum             = 20;      
+    optional tName TelcoModemInitString        = 21; 
+    optional uint32 STU_8OP_SupportsLineFail   = 22;   
+    optional uint32 STU_8OP_LineFailPolarity   = 23;   
+    optional uint32 PagingMode                 = 24;         
+    optional uint32 PagingOutputData           = 25;   
+    optional uint32 TelcoUseCustomCodes        = 26;
+    optional tName PagingTelNum                = 27; 
+    optional tName PagingTelNu                 = 28;  
+    optional uint32 HSCMode                    = 29;            
+    optional uint32 HSCTimeout                 = 30;         
+    optional uint32 HSCFullReportByArea        = 31;
+    optional uint32 SIPBaudRate                = 32;        
+    optional uint32 HSC_SIPAutoSet             = 33;     
+    optional tPassword SIPAccount              = 34;      
+    optional uint32 HostConnectionType         = 35; 
+    optional uint32 HostBaudRate               = 36;       
+    optional uint32 HostSharedPhoneLineMode    = 37;
+    optional uint32 HostNumRingsToAnswer       = 38;
+    optional uint32 HostReportingMode          = 39;  
+    optional uint32 HostAnsweringMachineDefeat = 40;
+    optional uint32 HostConfigCallBackOnly     = 41;
+    optional uint32 MultiTenantTelcoMode       = 42;
+    optional uint32 CondoTelcoMode             = 43;     
+    optional tName ConfigTelNum                = 44; 
+    optional tName HostTelNum                  = 45;   
+    optional tName HostModemInitString         = 46;
+    optional uint32 ConfigDialOutMode          = 47;  
+    optional uint32 ID                         = 48; 
+}
+message tAreaGroups
+{
+    optional uint32 Mode  = 1;
+    optional tName Name   = 2; 
+    optional tAreaMap Map = 3;
+    optional uint32 ID    = 4; 
+}
+
+message tBand_FallBack
+{
+    repeated tName CircuitName              = 1;
+    repeated tBandDefinition BandDefinition = 2;
+    repeated tBandThresholds BandThresholds = 3;
+    repeated uint32 FallBackCardUser        = 4;
+    optional uint32 ID                      = 5; 
+}
+message tCustomTelco
+{
+    optional uint32 MessageType  = 1;
+    optional tName CustomMessage = 2;
+    optional uint32 ID           = 3; 
+}
+
+
+message tPanelConfig
+{
+    optional tSystem system                         = 1;
+    optional tCommunications communications         = 2;
+    optional tSIDCommon sidCommon                   = 3;
+    repeated tPoint point                           = 4;
+    repeated tPod pod                               = 5;
+    repeated tDoor door                             = 6;
+    repeated tElevator elevator                     = 7;
+    repeated tArea area                             = 8;
+    repeated tPointType pointCustom                 = 9;
+    repeated tPointType pointPseudo                 = 10;
+    repeated tAreaGroups areaGroups                 = 11;
+    optional tBand_FallBack bandFallBackUser        = 12;
+    optional tBandFallBackSP14 bandFallBackUserSP14 = 13;
+    repeated tCustomTelco customTelco               = 14;
+    optional tSharedData share                      = 15;
+    repeated tHoliday holiday                       = 16;
+    optional tFloor floor                           = 17;
+    repeated tName name                             = 18; 
+} 
+
+
+//=============================================================================
+
+
+/*!
+ ********************************************************************
+ * \brief Firmware Versions 
+ ********************************************************************           
+ */
+message firmwareVersionsReturn
+{
+    enum eFirmwareVersionsStatus
+    {
+        FWR_GET_VERSIONS_OK = 0;
+        FWR_GET_VERSIONS_FLAGSERROR = 1;
+    }
+    
+    message tFirmwareVersions
+    {
+        required uint32 bootloader = 1;
+        required uint32 linuxKernel = 2;
+        required uint32 rootFileSystem = 3;
+        required uint32 application = 4;
+        required uint32 embeddedOnguard = 5;
+        required uint32 future1 = 6; 
+        required uint32 future2 = 7;
+        required uint32 ioBoard = 8;
+    }
+
+    required eFirmwareVersionsStatus result = 1;
+    required tFirmwareVersions versions   = 2;
+}
+
+/*!
+ ********************************************************************
+ * \brief Firmware Initiate Update 
+ ********************************************************************
+ */
+message firmwareUpdateInitiateArg
+{
+    message tFirmwareSizes
+    {
+        required uint32 bootloader = 1;
+        required uint32 linuxKernel = 2;
+        required uint32 rootFileSystem = 3;
+        required uint32 application = 4;
+        required uint32 embeddedOnguard = 5;
+        optional uint32 future1 = 6;
+        optional uint32 future2 = 7;
+        required uint32 ioBoard = 8;
+    }
+    
+    required uint32 components = 1;//each bit SET indicates one of the component update initiation, LSB - Bootloader
+    required tFirmwareSizes sizes = 2;//size of each component
+}
+
+message firmwareUpdateInitiateReturn
+{
+    enum eFirmwareUpdateInitiateStatus
+    {
+
+        FWR_INITIATE_OK = 0;                          
+        FWR_INITIATE_ALREADY_IN_PROGRESS = 1; // rpc FwUpdateInitiate already called       
+        FWR_INITIATE_NO_COMPONENTS = 2;       // No components were specified 
+        FWR_INITIATE_UNKNOWN_COMPONENT = 3;   // One of the future components was specified
+        FWR_INITIATE_BOOTLOADER_SIZE = 4;     // Bootloader firmware size too large
+        FWR_INITIATE_LINUX_KERNEL_SIZE  = 5;  // Linux kernel firmware size too large
+        FWR_INITIATE_RFS_SIZE = 6;            // Root filesystem size too large
+        FWR_INITIATE_APP_SIZE = 7;            // Application image size too large
+        FWR_INITIATE_EOG_SIZE = 8;            // Embedded OnGuard image size too large
+        FWR_INITIATE_IO_SIZE = 11;            // IO board firmware size too large
+    }
+    
+    required eFirmwareUpdateInitiateStatus result = 1;
+}
+ 
+/*!
+ ********************************************************************
+ * \brief Firmware Transfer Component
+ ********************************************************************
+ */
+message firmwareTransferComponentArg
+{
+    required uint32 type = 1;
+    required uint32 version = 2;
+    required uint32 crc = 3;    
+    required bytes data = 4; // The component image data (of size given in FwUpdateInitiate rpc)
+}
+
+message firmwareTransferComponentReturn
+{
+    enum firmwareTransferComponentStatus
+    {
+        FWR_TRANSFER_OK = 0;       
+        FWR_TRANSFER_NO_INIT = 1;    // rpc FwUpdateInitiate not called
+        FWR_TRANSFER_BAD_TYPE = 2;   // The type parameter is invalid
+        FWR_TRANSFER_UNEXPECTED = 3; // The type parameter was not specified during rpc FwUpdateInitiate
+        FWR_TRANSFER_DUPLICATE = 4;  // The component has already been transfered
+        FWR_TRANSFER_BADCRC = 5;     // The crc of the component doesn't match
+    }
+    
+    required firmwareTransferComponentStatus result = 1;
+}
+
+/*!
+ ********************************************************************
+ * \brief Firmware update commit
+ ********************************************************************
+ */
+message firmwareCommitReturn
+{
+    enum firmwareCommitResult
+    {
+        FWR_COMMIT_OK = 0;      
+        FWR_COMMIT_NO_INIT = 1;    // rpc FwUpdateInitiate not called
+        FWR_COMMIT_MISSING = 2;    // Some of the components specified in rpc FwUpdateInitiate was not sent
+        FWR_COMMIT_FLAGSERROR = 3; // Hardware error reading/writing the bootflags partiton
+        FWR_COMMIT_FAILED = 4;     // Hardware error flashing partiton
+        FWR_COMMIT_IOFAILED = 5;   // Hardware error flashing I/O board
+    }
+    
+    enum firmwareCommitStatus
+    {
+        FWR_COMMIT_STATUS_NOREBOOT = 0; // Board will not reboot
+        FWR_COMMIT_STATUS_REBOOT = 1;   // Board will reboot   
+    }
+
+    required firmwareCommitResult result = 1;
+    required firmwareCommitStatus status = 2;
+}
+
+/*!
+ ********************************************************************
+ * \brief Firmware check consistency return
+ ********************************************************************
+ */
+message firmwareCheckConsistencyReturn
+{
+    enum firmwareCheckConsistencyResult
+    {
+        FWR_CHECK_OK = 0;                   // Firmware OK
+        FWR_CHECK_BOOTLOADER_FAILED = 1;    // Bootloader failed to flash a primary partition     
+        FWR_CHECK_RECOVER_FAILED = 2;       // Recovery from an interrupted backup flash failed     
+        FWR_CHECK_BOOT_FLAGSERROR = 3;      // Hardware error reading/writing the bootflags partiton 
+    }
+    
+    required firmwareCheckConsistencyResult result = 1;
+}
+
+/*!
+ ********************************************************************
+ * \brief Proxy for "void"
+ ********************************************************************
+ */
+message firmwareVoidArgument
+{
+    optional uint32 argument = 1;
+}
+
+

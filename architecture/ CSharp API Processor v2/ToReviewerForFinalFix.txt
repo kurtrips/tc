@@ -1,0 +1,11 @@
+Hello flying2hk,
+
+Hi, I have not fixed Question 4.1.4-2 "Please use "Combined Fragment Alt" or "Combined Fragment Opt" to represent
+if-else/if block."
+
+I dont think this is a TC baselined rule as still most designs use colored rectangles instead of Combined Fragment for showing if-else blocks.
+Hope you are ok with this.
+
+Thanks nad Regards.
+
+

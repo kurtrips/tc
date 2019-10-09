@@ -1,0 +1,9 @@
+ <ConfigManager>
+  <namespace name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider">
+
+    <property name="connectionName">
+      <value>stress</value>
+    </property>
+
+  </namespace>
+</ConfigManager>

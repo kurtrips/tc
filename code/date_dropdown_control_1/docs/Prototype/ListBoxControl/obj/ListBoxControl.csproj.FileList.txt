@@ -1,0 +1,5 @@
+bin\Debug\ListBoxControl.dll
+bin\Debug\ListBoxControl.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ListBoxControl.dll
+obj\Debug\ListBoxControl.pdb

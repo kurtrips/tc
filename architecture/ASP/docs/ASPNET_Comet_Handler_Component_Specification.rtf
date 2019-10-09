@@ -1,0 +1,142 @@
+{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset0 Times New Roman;}{\f2\fnil\fcharset0 Tahoma;}{\f3\fnil\fcharset0 Symbol;}{\f4\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue255;\red163\green21\blue21;\red255\green0\blue0;\red43\green145\blue175;\red0\green0\blue0;\red0\green128\blue0;\red255\green255\blue255;\red255\green204\blue153;}
+{\*\generator Msftedit 5.41.21.2508;}\viewkind4\uc1\pard\keepn\nowidctlpar\sb240\sl240\slmult0\qc\tx720\lang1033\kerning28\ul\b\fs32 ASP.NET Comet Handler 1.0 Component Specification\fs28\par
+\pard\nowidctlpar\li720\sa240\ulnone\b0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\b 1.\tab\fs24 Design\par
+\pard\nowidctlpar\li710\fs20\tab\b0 Comet technology enables server to push events/messages to clients under a synchronous request/ response protocol, such as HTTP. When a request is made to the server, the request is held until new events/messages are available, or a timeout occurs. Response will be sent to the client. The client will continue to make another Comet request to the server. This is to make sure that a connection is always available for the server to push events/messages to clients asynchronously. This process is known as long-polling, and continues on and on. This component provides the Comet Handler to be used in the ASP.NET framework. The Comet Client will send requests to the Comet Handler. The Comet Handler will retrieve the new events/messages for the client from the Comet Processor. The Comet Processor is pluggable.\b\fs24\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\fs20 1.1\tab Design Patterns \par
+\pard\keepn\nowidctlpar\li710\sb240\sl240\slmult0\b0\tab\b Strategy Pattern:\b0  applies to the pluggability of the IThreadAssignmentAlgorithm and ICometProcessor interfaces\b\par
+\pard\nowidctlpar\li710\lang16393\b0\tab\b Asynchronous Design Pattern\lang1033 :\b0  Although not a standard design pattern, this component is loosely based on the above mentioned pattern described by Microsoft. Please see \cf1\ul <\cf0\ulnone http://msdn.microsoft.com/en-us/library/aa719595(VS.71).aspx \cf1\ul >\cf0\ulnone  for more details\cf1\i\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\cf0\b\i0 1.2\tab Industry Standards \par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\b0 ASP.NET 2.0\par
+HTTP 1.1\cf1\i\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\cf0\b\i0 1.3\tab Required Algorithms\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\b0 There are no complex algorithms in this component. The only algorithm which is slightly complicated is that of the CometThreadPool.ProcessThreadRequests which is well explained in the uml documentation.\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\b 1.4\tab Component Class Overview\par
+\pard\nowidctlpar\b0\fs24\tab\b\fs22 CometHttpHandler\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This class represents a custom http handler which is responsible for handling comet requests over the http protocol. It derives from IHttpAsynchandler and provides method to begin and end the request processing. Application will not need to call these methods. they will be called by the ASP.NET framework as long as the server resource being requested is mapped properly to the CometHttpHandler in the web.config file.\par
+\par
+\pard\nowidctlpar\b\fs22\tab AsyncResult\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This class derives from IAsyncResult and acts as communicating between the start and end of the asynchronous http request. The CometHttpHadnler uses this class to queue requests to the CometThreadPool and this class retrieves the comet response from the  CometThreadPool and sends it back to the CometHttpHandler as part of its own state. All these interactions happen asynchronously.\par
+\par
+\pard\nowidctlpar\b\fs22\tab CometThreadPool\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This class represents the thread pool used for processing comet requests. It is created by the CometHttphandler class. It exposes method  for allocating a request to one of the threads of the thread pool using a configurable thread assignment algorithm. After a request is allocated to a thread, it processes the request and sends back the CometResponse to the calling in an asynchronous fashion. The processor which actually return the response for a request is also configurable.\par
+\par
+\pard\nowidctlpar\b\fs22\tab PendingRequest\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This class acts as a simple wrapper of a CometRequest and the callback method to invoke when the response is received for a request.\par
+\par
+\pard\nowidctlpar\b\fs22\tab CometCallBack\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This delegate represents the address of any method which takes in a CometResponse parameter and returns void. It is used to perform a callback when the processor responds or times out for a comet request.\par
+\par
+\pard\nowidctlpar\b\fs22\tab CometResponse\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 Represents a Comet Request. It encapsulates the HttpContext of the http request, last activated and responded time for the request.\par
+\par
+\pard\nowidctlpar\b\fs22\tab CometRequest\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 Represents a Comet Response. It encapsulates response message, whether it has pending message, last activation time and context type of the comet response.\par
+\par
+\pard\nowidctlpar\b\fs22\tab ICometProcessor\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This interface lays the contract for classes that provide the functionality of servicing CometRequests and returning a CometResponse. In addition, it also exposes a method for killing the client for a idle Comet Request. Implementing classes must have a default constructor.\par
+\par
+\pard\nowidctlpar\b\fs22\tab IThreadAssignmentAlgorithm\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This interface lays the contract for defining an algorithm for assigning a CometRequest to a thread in a thread pool. It contains a sole method for the above mentioned functionality. It takes in a dictionary which maps threads to already assigned pending requests and a new pending request which needs to be assigned to some thread. The implementing classes must contain a default constructor. Currently this component has 2 implementations of this interface. One assigns requests to threads in a round robin manner and the other does it in a load-balancing manner (thread with fewest already assigned requests will be assigned to).\par
+\par
+\pard\nowidctlpar\b\fs22\tab RoundRobinAssignmentAlgorithm\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This class implements the IThreadAssignmentAlgorithm interface and provides an algorithm which simple keeps track of the index of the last thread that was assigned and then simply assigns to the next thread available.\par
+\par
+\pard\nowidctlpar\b\fs22\tab LoadBalancingAssignmentAlgorithm\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi720\li720 This class implements the IThreadAssignmentAlgorithm interface and provides an algorithm which finds the thread with the minimum number of requests assigned and assigns the new request to that thread.\par
+\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\b 1.5\tab Component Exception Definitions\par
+\pard\nowidctlpar\fs22\tab CometHttpHandlerException\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi710\li710\sa240 This exception is used as the base exception of all exceptions defined in this component. Ideally this exception should not be thrown as is and the deriving exceptions catering to the more specific scenarios must be used. However in cases where which exception needs to be thrown in unclear, there this exception maybe used.\par
+\pard\nowidctlpar\tab\b\fs22 CometHttpHandlerInitializationException\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi710\li710\sa240 This exception is used to indicate any configuration related exceptions thrown when initializing the CometHttpHandler or the CometThreadPool. It derives from CometHttpHandlerException which is the base exception for this component.\fs24\par
+\pard\nowidctlpar\fs20\tab\b\fs22 CometProcessorException\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi710\li710\sa240 This exception will be used by implementing classes of the ICometProcessor interface to denote exceptions in the Process and KillIdleClient methods of the class. It derives from CometHttpHandlerException which is the base exception for this component.\par
+\pard\nowidctlpar\b\fs22\tab ThreadAssignmentAlgorithmException\b0\fs24 :\fs20\par
+\pard\nowidctlpar\fi710\li710\sa240 This exception will be used by implementing classes of the IThreadAssignmentAlgorithm interface to denote exceptions occurring when trying to assign a pending request to a thread. It derives from CometHttpHandlerException which is the base exception for this component.\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 1.6\tab Thread Safety\par
+\pard\keepn\nowidctlpar\li710\sb240\sl240\slmult0\b0\tab This component is thread safe. All classes which have mutable state take care of thread safety with the help of synchronization using the lock statement. These classes include AsyncResult, CometThreadPool, CometResponse and CometRequest. Note also that the component does not force the implementations of the ICometProcessor and IThreadAssignmentAlgorithm to be thread safe although the default implementations provided are thread safe. Access to variables of these interfaces is also synchronized in the CometThreadPool class\cf1\i\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\cf0\b\i0 2.\tab\fs24 Environment Requirements\tab\tab\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\fs20 2.1\tab Environment\par
+\pard\nowidctlpar\b0\f1\fs18\tab\f0\fs20  Development language: C#\par
+\pard\nowidctlpar\li720  Compile target: .NET 2.0\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\b 2.2\tab TopCoder Software Components\par
+\pard\nowidctlpar\fi-360\li1080\sa240\tx1080\b0\'b7\tab\b Configuration API 1.0\b0 : It is used for providing the IConfiguration interface which acts as the configuration for this component.\par
+\'b7\tab\b Configuration Persistence Manager 1.0\b0 : It is used by the CometHttpHandler class for loading the IConfiguration instance from a file based persistence.\par
+\'b7\tab\b Configuration Persistence Manager 2.0\b0 : It is used by the Configuration Persistence Manager component and provides the concrete implementation of IModifiableConfigurationPersistenceProvider called FileModifiableConfigurationPersistenceProvider which loads the configuration for this component from xml file based format.\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\b 2.3\tab Third Party Components\par
+\pard\nowidctlpar\fi-360\li1080\sa240\tx1080\b0 None\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\i\par
+\b\i0 3.\tab\fs24 Installation and Configuration\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\fs20 3.1\tab Package Name\par
+\b0\tab TopCoder.Web.Comet.Handler\par
+\tab TopCoder.Web.Comet.Handler.AssignmentAlgorithms\b\par
+3.2\tab Configuration Parameters\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\b0 The following configuration attributes must be present in the IConfiguration instance which acts as the configuration for this component. Note that all these will just be simple attributes.\cf1\i\par
+\pard\nowidctlpar\sa240\cf0\i0\par
+\trowd\trgaph180\trleft-180\trrh385\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2820\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx5820\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8820\pard\intbl\nowidctlpar\sa240\b\fs24 Parameter\b0\fs1589\cell\b\fs24 Description\b0\fs1589\cell\b\fs24 Values\b0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh684\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx5820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8820\pard\intbl\nowidctlpar\sa240\f2\fs16 numThreads\f0\fs1589\cell\f2\fs16 Represents the number of worker threads that will be present in the thread pool for processing requests.\f0\fs1589\cell\f2\fs16 Any positive integer. (Required)\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh684\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx5820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8820\pard\intbl\nowidctlpar\sa240\f2\fs16 cometProcessor\f0\fs1589\cell\f2\fs16 It should be the fully qualified name of a class that implements  ICometProcessor\f0\fs1589\cell\f2\fs16 A valid fully qualified type name. (Required)\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh700\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx5820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8820\pard\intbl\nowidctlpar\sa240\f2\fs16 theradAssignmentAlgorithm\f0\fs1589\cell\f2\fs16 It should be the fully qualified name of a class that implements  IThreadAssignementAlgorithm\f0\fs1589\cell\f2\fs16 A valid fully qualified type name. (Required)\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh1266\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx5820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8820\pard\intbl\nowidctlpar\sa240\f2\fs16 timeoutPeriod\f0\fs1589\cell\f2\fs16 The time out period in seconds after which if the processor has not responded, then a timeout message (set by ICometProcessor) will be sent to be written to the Http Response.\f0\fs1589\cell\f2\fs16 Any positive integer. (Required)\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh1460\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx5820\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8820\pard\intbl\nowidctlpar\sa240\f2\fs16 idlePeriod\f0\fs1589\cell\f2\fs16 Represents the idle period in seconds. Idle period is defined as that time span in which a Comet Request (which had earlier been responded to) has not received another Comet request from the same client\f0\fs1589\cell\f2\fs16 Any positive integer. (Required)\f0\fs1589\cell\row\pard\fs20\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\sa240\line\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\b 3.3\tab Dependencies Configuration\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\b0 None \cf1\i\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\cf0\b\i0 4.\tab\fs24 Usage Notes\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\fs20 4.1\tab Required steps to test the component\par
+\pard\nowidctlpar\fi-360\li1080\tx1080\b0\f3\'b7     \f0 Extract the component distribution.\par
+\pard\nowidctlpar\f3\tab\'b7     \f0 Follow \cf1\ul{\field{\*\fldinst{HYPERLINK "C:\\\\filez\\\\work\\\\tc\\\\tcs_corp\\\\templates\\\\component\\\\ \\\\l _Dependencies_Configuration"}}{\fldrslt{Dependencies Configuration}}}\cf0\ulnone\f0\fs20 .\par
+\f3\tab\'b7     \f0 Execute \lang16393\lquote n\lang1033 ant test\lang16393\rquote\lang1033  within the directory that the distribution was extracted to.\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 4.2\tab Required steps to use the component\par
+\pard\keepn\nowidctlpar\li710\sb240\sl240\slmult0\tab\b0 For the CometHttpHandler to be able to intercept a http request to a resource, it must be mapped to that resource type in the web.config file. The following configuration snippet should be added under the system.web section in the web.config file.\par
+\b\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\cf1\kerning0\b0\f4\fs18     <\cf2 httpHandlers\cf1 >\par
+      <\cf2 add\cf1  \cf3 verb\cf1 =\cf0 "\cf1 *\cf0 "\cf1  \cf3 path\cf1 =\cf0 "\cf1 *.aspx\cf0 "\cf1  \cf3 type\cf1 =\cf0 "\cf1 TopCoder.Web.Comet.Handler.CometHttpHandler\cf0 "\cf1 />\par
+    </\cf2 httpHandlers\cf1 >\kerning28\i\f0\fs20\par
+\cf0\i0 The above configuration instructs ASP.NET to use the CometHttpHandler for any http request made to an .aspx file on the server.\cf1\i\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\cf0\b\i0 4.3\tab Demo\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\b0 Writing a demo for this component is a little tough because this component is not used in the conventional manner of an end user using the component API. In this component the API will be invoked by ASP.NET. However we'll try to make a decent attempt at a demo.\par
+Suppose the Message:object property of the CometResponse is actually a class called CometResponseMessage which also has a property called Greetings:string. We also assume that the implementation of ICometProcessor sets this Greetings property using the following string: \par
+\cf2\kerning0\f4\fs18 "Greeting from the thread with id = "\cf0  + \cf4 Thread\cf0 .CurrentThread.ManagedThreadId;\par
+\pard\nowidctlpar\li720\sl240\slmult0\cf5\b\f0\fs20 From our comet client we make multiple asynchronous requests to the same page\cf0\b0\f4\fs18\par
+\cf1 for\cf0  (\cf1 int\cf0  i = 0; i < 10; i++)\par
+\{\par
+    \cf4 WebRequest\cf0  wr = \cf4 WebRequest\cf0 .Create(\cf2 "http://localhost:51574/SomeWbesite/Default.aspx"\cf0 );\par
+    \cf4 IAsyncResult\cf0  res = wr.BeginGetResponse(\cf1 new\cf0  \cf4 AsyncCallback\cf0 (DemoCallBackMethod), wr);\par
+\}\par
+\par
+\kerning28\b\f0\fs20 The callback method used by the client is as follows:\kerning0\b0\f4\fs18\par
+\cf1 public\cf0  \cf1 static\cf0  \cf1 void\cf0  DemoCallBackMethod(\cf4 IAsyncResult\cf0  res)\par
+\{\par
+    \cf6 // grab the request\par
+\cf0     \cf4 WebRequest\cf0  request = (\cf4 WebRequest\cf0 )res.AsyncState;\par
+\par
+    \cf6 //stop getting the response\par
+\cf0     \cf4 HttpWebResponse\cf0  response = (\cf4 HttpWebResponse\cf0 )request.EndGetResponse(res);\par
+\par
+    \cf6 //Read the response\par
+\cf0     \cf4 StreamReader\cf0  sr = \cf1 new\cf0  \cf4 StreamReader\cf0 (response.GetResponseStream());\par
+    \cf1 string\cf0  s = sr.ReadToEnd();\par
+\par
+    \cf6 //Write response to console. Among other things the following line must be printed\par
+\cf0     \cf6 //"Greeting from the thread with id = 1"\par
+\cf0     \cf6 //"Greeting from the thread with id = 2"\par
+\cf0     \cf6 //"Greeting from the thread with id = 3"\par
+\cf0     \cf6 //"Greeting from the thread with id = 4"\par
+\cf0     \cf6 //.....and so on\par
+\cf0     \cf6 //This proves that multiple threads are catering to the requests.\par
+\par
+\cf0     \cf6 //typically the comet client will reissue the request which is described in RS as long polling.\par
+\cf0     \cf6 //Poll asynchronously again\par
+\cf0     wr.BeginGetResponse(\cf1 new\cf0  \cf4 AsyncCallback\cf0 (DemoCallBackMethod), wr);\par
+\}\cf1\kerning28\i\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\cf0\b\i0 5.\tab\fs24 Future Enhancements\par
+\fs20\tab\kerning0\b0 Support more transport protocols, e.g. Bidirectional-streams Over Synchronous HTTP (BOSH)\kerning28\b\fs24\par
+\pard\nowidctlpar\sa240\b0\fs20\par
+\pard\nowidctlpar\fs24\par
+}
+ 

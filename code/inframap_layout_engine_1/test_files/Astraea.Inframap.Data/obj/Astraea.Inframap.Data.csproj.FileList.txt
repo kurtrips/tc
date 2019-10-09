@@ -1,0 +1,11 @@
+bin\Debug\Astraea.Inframap.Data.dll
+bin\Debug\Astraea.Inframap.Data.pdb
+bin\Debug\TopCoder.Graph.Layout.dll
+bin\Debug\TopCoder.Util.ExceptionManager.SDE.dll
+bin\Debug\TopCoder.LoggingWrapper.dll
+bin\Debug\TopCoder.Util.ExceptionManager.dll
+bin\Debug\TopCoder.Graph.Layout.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Astraea.Inframap.Data.dll
+obj\Debug\Astraea.Inframap.Data.pdb
+bin\Debug\TopCoder.Util.ConfigurationManager.dll

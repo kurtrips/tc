@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\FAM\Development\InfraMapLayoutEngine\build\classes\Astraea.Inframap.Layout.Test.dll" total="97" failures="0" not-run="0" date="2007-11-08" time="07:39:00">
+  <environment nunit-version="2.2.9.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="C:\FAM\Development\InfraMapLayoutEngine" machine-name="HP50041703150" user="Administrator" user-domain="HP50041703150" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="C:\FAM\Development\InfraMapLayoutEngine\build\classes\Astraea.Inframap.Layout.Test.dll" success="True" time="1.078" asserts="0">
+    <results>
+      <test-suite name="C:\FAM\Development\InfraMapLayoutEngine\build\classes\Astraea.Inframap.Layout.Test.dll" success="True" time="1.031" asserts="0">
+        <results>
+          <test-suite name="Astraea" success="True" time="1.016" asserts="0">
+            <results>
+              <test-suite name="Inframap" success="True" time="1.016" asserts="0">
+                <results>
+                  <test-suite name="Layout" success="True" time="1.016" asserts="0">
+                    <results>
+                      <test-suite name="BaseLayoutEngineTests" success="True" time="0.813" asserts="0">
+                        <results>
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestCharacterUnits" executed="True" success="True" time="0.406" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestCharacterUnitsFail1" executed="True" success="True" time="0.031" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestCharacterUnitsFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConfig" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructorFail1" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructorFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructorFail3" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructorFail4" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestConstructorFail5" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestDefaultFontSize" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestDefaultFontSizeFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestDefaultFontSizeFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestFontUnits" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestFontUnitsFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestFontUnitsFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestGenerateUniqueId" executed="True" success="True" time="0.047" asserts="6" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestGenerateUniqueIdFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestGenerateUniqueIdFail2" executed="True" success="True" time="0.031" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestGenerateUniqueIdFail3" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestGraphLayouter" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestLayout" executed="True" success="True" time="0.047" asserts="3" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestLayoutFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestLogger" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumLinkSpace" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumLinkSpaceFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumLinkSpaceFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumNodeHeight" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumNodeHeightFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumNodeHeightFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumNodeWidth" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumNodeWidthFail1" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumNodeWidthFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumPortHeight" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumPortHeightFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumPortHeightFail2" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumPortWidth" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumPortWidthFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumPortWidthFail2" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumSyntheticNodeHeight" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumSyntheticNodeHeightFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumSyntheticNodeHeightFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumSyntheticNodeWidth" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumSyntheticNodeWidthFail1" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumSyntheticNodeWidthFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumUnlinkedPortSpace" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumUnlinkedPortSpaceFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestMinimumUnlinkedPortSpaceFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestPerformLayout" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestPerformLayoutFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestPerformLayoutFail2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.BaseLayoutEngineTests.TestType" executed="True" success="True" time="0.016" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Demo" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="Astraea.Inframap.Layout.Demo.DemoTest" executed="True" success="True" time="0.016" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="HelperTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestGetSelfDocumentingException" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfig" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigDouble" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigDoubleFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigDoubleFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigFail2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigInt" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigIntFail1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestReadConfigIntFail2" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotNull1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotNull2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotNullNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotNullNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.HelperTests.TestValidateNotNullNotEmpty3" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Impl" success="True" time="0.094" asserts="0">
+                        <results>
+                          <test-suite name="LayoutEngineTests" success="True" time="0.094" asserts="0">
+                            <results>
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestConstructor" executed="True" success="True" time="0.000" asserts="6" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPostProcess" executed="True" success="True" time="0.016" asserts="8" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPostProcessFail1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPreProcessFail1" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPreProcessNewLinks" executed="True" success="True" time="0.016" asserts="18" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPreProcessNewSyntheticNodes" executed="True" success="True" time="0.000" asserts="15" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPreProcessNodeSizes" executed="True" success="True" time="0.016" asserts="16" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPreProcessNonPortSizes" executed="True" success="True" time="0.016" asserts="6" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestPreProcessNonSyntheticNodesLabels" executed="True" success="True" time="0.000" asserts="20" />
+                              <test-case name="Astraea.Inframap.Layout.Impl.LayoutEngineTests.TestType" executed="True" success="True" time="0.016" asserts="1" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="LayoutPostProcessingExceptionTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.016" asserts="3" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPostProcessingExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="LayoutPreProcessingExceptionTests" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Astraea.Inframap.Layout.LayoutPreProcessingExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.016" asserts="2" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

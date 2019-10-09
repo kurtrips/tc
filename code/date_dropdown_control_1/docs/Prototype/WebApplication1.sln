@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{73049229-8137-4EBD-9CE8-9F3701A7A253}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownControl", "DropDownControl\DropDownControl.csproj", "{646F3C0C-43FE-4CC3-A425-F664B4CEE061}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBoxControl", "ListBoxControl\ListBoxControl.csproj", "{092CF11D-8749-4167-8517-9B24D4095C70}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73049229-8137-4EBD-9CE8-9F3701A7A253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73049229-8137-4EBD-9CE8-9F3701A7A253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73049229-8137-4EBD-9CE8-9F3701A7A253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73049229-8137-4EBD-9CE8-9F3701A7A253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646F3C0C-43FE-4CC3-A425-F664B4CEE061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646F3C0C-43FE-4CC3-A425-F664B4CEE061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646F3C0C-43FE-4CC3-A425-F664B4CEE061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646F3C0C-43FE-4CC3-A425-F664B4CEE061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{092CF11D-8749-4167-8517-9B24D4095C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092CF11D-8749-4167-8517-9B24D4095C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092CF11D-8749-4167-8517-9B24D4095C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092CF11D-8749-4167-8517-9B24D4095C70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

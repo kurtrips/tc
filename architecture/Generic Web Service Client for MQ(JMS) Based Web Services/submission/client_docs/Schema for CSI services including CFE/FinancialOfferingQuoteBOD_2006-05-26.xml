@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /cvsroot/ims/ims/gen/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26/pbi/FinancialOfferingQuoteBOD_2006-05-26.xml,v 1.13 2012/02/09 18:38:23 ltian Exp $ -->
+<!-- From sx/sx.xml -->
+<ims:FinancialOfferingQuoteBOD xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ims="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:oa="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26 FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd"
+    revision="1.3.0">
+  <ims:ApplicationArea>
+    <oa:Sender>
+      <oa:LogicalId>XXXXXXXXXX</oa:LogicalId>
+      <oa:Component>XXXXXXXXXX</oa:Component>
+      <oa:ReferenceId>XXXXXXXXXX</oa:ReferenceId>
+    </oa:Sender>
+    <oa:CreationDateTime>2002-07-01T05:10:10-05:00</oa:CreationDateTime>
+    <oa:BODId>XXXXXXXXXX</oa:BODId>
+    <ims:Application>
+      <ims:InteractingApplication>
+        <ims:ApplicationLogicalId>XXXXXXXXXX</ims:ApplicationLogicalId>
+        <ims:UserId>XXXXXXXXXX</ims:UserId>
+        <ims:ServiceOperation>XXXXXXXXXX</ims:ServiceOperation>
+      </ims:InteractingApplication>
+      <ims:ApplicationStatus>
+        <ims:LineNumber>XXXXXXXXXX</ims:LineNumber>
+        <ims:Severity>
+          <ims:Notice>true</ims:Notice>
+        </ims:Severity>
+        <ims:ErrorCode lineNumber="XXXXXXXXXX">XXXXXXXXXX</ims:ErrorCode>
+        <ims:ErrorDescription>XXXXXXXXXX</ims:ErrorDescription>
+      </ims:ApplicationStatus>
+    </ims:Application>
+  </ims:ApplicationArea>
+  <ims:DataArea>
+    <ims:Operation>
+      <ims:Type>Acknowledge</ims:Type>
+    </ims:Operation>
+    <ims:FinancialOfferingQuote>
+      <ims:Header>
+        <ims:Note author="XXXXXXXXXX" id="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</ims:Note>
+        <oa:DocumentReferences>
+          <oa:InvoiceDocumentReference>
+            <oa:DocumentIds>
+              <oa:SupplierDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:SupplierDocumentId>
+            </oa:DocumentIds>
+            <oa:DocumentDate>2002-07-01T05:10:10-05:00</oa:DocumentDate>
+            <oa:Note author="XXXXXXXXXX" id="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Note>
+          </oa:InvoiceDocumentReference>
+          <oa:OpportunityDocumentReference>
+            <oa:DocumentIds>
+              <oa:SupplierDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:SupplierDocumentId>
+            </oa:DocumentIds>
+          </oa:OpportunityDocumentReference>
+          <oa:PurchaseOrderDocumentReference>
+            <oa:DocumentIds>
+              <oa:CustomerDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:CustomerDocumentId>
+            </oa:DocumentIds>
+          </oa:PurchaseOrderDocumentReference>
+          <oa:QuoteDocumentReference>
+            <oa:DocumentIds>
+              <oa:SupplierDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+                <oa:Revision>XXXXXXXXXX</oa:Revision>
+              </oa:SupplierDocumentId>
+            </oa:DocumentIds>
+            <oa:Status>
+              <oa:Code>XXXXXXXXXX</oa:Code>
+            </oa:Status>
+          </oa:QuoteDocumentReference>
+        </oa:DocumentReferences>
+        <oa:Attachments>
+          <oa:Attachment>
+            <oa:EmbeddedData encoding="base64">
+              <oa:Data/>
+            </oa:EmbeddedData>
+            <oa:Description>XXXXXXXXXX</oa:Description>
+          </oa:Attachment>
+        </oa:Attachments>
+        <ims:ReasonCode>XXXXXXXXXX</ims:ReasonCode>
+        <ims:BillingDetails>XXXXXXXXXX</ims:BillingDetails>
+        <oa:Parties>
+          <oa:CustomerParty>
+            <oa:PartyId>
+              <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:PartyId>
+            <oa:Name>XXXXXXXXXX</oa:Name>
+            <oa:Business>
+              <oa:Id>XXXXXXXXXX</oa:Id>
+            </oa:Business>
+            <oa:TaxExemptInd>true</oa:TaxExemptInd>
+            <oa:Addresses>
+              <oa:PrimaryAddress>
+                <oa:AddressLine>
+                  <oa:StreetName>XXXXXXXXXX</oa:StreetName>
+                </oa:AddressLine>
+                <oa:City>XXXXXXXXXX</oa:City>
+                <oa:StateOrProvince>XXXXXXXXXX</oa:StateOrProvince>
+                <oa:PostalCode>XXXXXXXXXX</oa:PostalCode>
+              </oa:PrimaryAddress>
+            </oa:Addresses>
+            <oa:Qualification>
+              <oa:NameValue name="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:NameValue>
+            </oa:Qualification>
+          </oa:CustomerParty>
+          <oa:InstalledAtParty>
+            <oa:PartyId>
+              <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:PartyId>
+            <oa:Business>
+              <oa:Id>XXXXXXXXXX</oa:Id>
+            </oa:Business>
+            <oa:Addresses>
+              <oa:PrimaryAddress>
+                <oa:Country IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Country>
+              </oa:PrimaryAddress>
+            </oa:Addresses>
+            <oa:Qualification>
+              <oa:NameValue name="XXXXXXXXXX">XXXXXXXXXX</oa:NameValue>
+            </oa:Qualification>
+          </oa:InstalledAtParty>
+          <oa:SupplierParty>
+            <oa:PartyId>
+              <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:PartyId>
+            <oa:Name lang="en">XXXXXXXXXX</oa:Name>
+            <oa:Addresses>
+              <oa:PrimaryAddress>
+                <oa:AddressLine>
+                  <oa:Line sequence="23">XXXXXXXXXX</oa:Line>
+                </oa:AddressLine>
+                <oa:City>XXXXXXXXXX</oa:City>
+                <oa:StateOrProvince>XXXXXXXXXX</oa:StateOrProvince>
+                <oa:Country>XXXXXXXXXX</oa:Country>
+                <oa:PostalCode>XXXXXXXXXX</oa:PostalCode>
+              </oa:PrimaryAddress>
+            </oa:Addresses>
+            <oa:Contacts>
+              <oa:ContactAbs>
+                <oa:Person>
+                  <oa:PersonName>
+                    <oa:FormattedName>XXXXXXXXXX</oa:FormattedName>
+                  </oa:PersonName>
+                </oa:Person>
+                <oa:Telephone sequence="23">XXXXXXXXXX</oa:Telephone>
+                <oa:EMailAddress sequence="23">XXXXXXXXXX</oa:EMailAddress>
+                <oa:Fax sequence="23">XXXXXXXXXX</oa:Fax>
+              </oa:ContactAbs>
+            </oa:Contacts>
+            <oa:CorrespondenceLanguage>en</oa:CorrespondenceLanguage>
+          </oa:SupplierParty>
+        </oa:Parties>
+        <ims:LeaseCredit>
+          <ims:CreditApprovalNumber>XXXXXXXXXX</ims:CreditApprovalNumber>
+          <ims:CreditExpiryDate>2002-07-01T05:10:10-05:00</ims:CreditExpiryDate>
+          <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+          <ims:CreditRate>XXXXXXXXXX</ims:CreditRate>
+          <ims:CreditApprovalCode>XXXXXXXXXX</ims:CreditApprovalCode>
+          <ims:CreditConditionCode>XXXXXXXXXX</ims:CreditConditionCode>
+          <ims:CreditRequiredDate>2002-07-01T05:10:10-05:00</ims:CreditRequiredDate>
+        </ims:LeaseCredit>
+        <ims:Local>
+          <ims:NameValue name="XXXXXXXXXX">XXXXXXXXXX</ims:NameValue>
+          <ims:LocalAmount>
+            <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+            <ims:Precision>23</ims:Precision>
+          </ims:LocalAmount>
+          <ims:LocalDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:LocalDate>
+          <ims:LocalRate type="XXXXXXXXXX">23</ims:LocalRate>
+        </ims:Local>
+        <ims:QuoteDates type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:QuoteDates>
+        <ims:QuoteStatus>
+          <oa:StatusValue>
+            <oa:NameValue name="XXXXXXXXXX">XXXXXXXXXX</oa:NameValue>
+          </oa:StatusValue>
+        </ims:QuoteStatus>
+        <ims:QuotedDeal>
+          <ims:DealType>XXXXXXXXXX</ims:DealType>
+          <ims:AgreementType>XXXXXXXXXX</ims:AgreementType>
+          <ims:DealAmounts currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:DealAmounts>
+          <ims:DealGuarantee>XXXXXXXXXX</ims:DealGuarantee>
+        </ims:QuotedDeal>
+        <ims:LeaseCompetitor>
+          <ims:CompetitorInd>XXXXXXXXXX</ims:CompetitorInd>
+          <ims:CompetitorVendorname>XXXXXXXXXX</ims:CompetitorVendorname>
+          <ims:CompetitorVendorPrice>XXXXXXXXXX</ims:CompetitorVendorPrice>
+          <ims:CompetitorVendorEquipment>XXXXXXXXXX</ims:CompetitorVendorEquipment>
+          <ims:VendorRentInd>XXXXXXXXXX</ims:VendorRentInd>
+          <ims:VendorAdvanceArrearInd>XXXXXXXXXX</ims:VendorAdvanceArrearInd>
+        </ims:LeaseCompetitor>
+        <ims:SalesInformation>
+          <ims:SalesOrganization type="XXXXXXXXXX">XXXXXXXXXX</ims:SalesOrganization>
+          <ims:GlobalOrganization type="XXXXXXXXXX">XXXXXXXXXX</ims:GlobalOrganization>
+        </ims:SalesInformation>
+        <ims:ExemptionCode type="XXXXXXXXXX">XXXXXXXXXX</ims:ExemptionCode>
+        <ims:CustomerCurrency>XXXXXXXXXX</ims:CustomerCurrency>
+        <ims:ObjectId>XXXXXXXXXX</ims:ObjectId>
+        <ims:SelectAgreementAccountCode>XXXXXXXXXX</ims:SelectAgreementAccountCode>
+        <ims:Mode>XXXXXXXXXX</ims:Mode>
+        <ims:EndOfLeaseStartDate>2002-07-01T05:10:10-05:00</ims:EndOfLeaseStartDate>
+        <ims:EndOfLeaseEndDate>2002-07-01T05:10:10-05:00</ims:EndOfLeaseEndDate>
+        <ims:AssetCost currency="XXXXXXXXXX">23</ims:AssetCost>
+        <ims:ToleranceIRR>23</ims:ToleranceIRR>
+        <ims:ToleranceRate>23</ims:ToleranceRate>
+        <ims:ToleranceROE>23</ims:ToleranceROE>
+        <ims:DaysInMonth>23</ims:DaysInMonth>
+        <ims:Fasb7dThreshold>XXXXXXXXXX</ims:Fasb7dThreshold>
+        <ims:ValidPeriod>XXXXXXXXXX</ims:ValidPeriod>
+        <ims:RetroValidPeriod>XXXXXXXXXX</ims:RetroValidPeriod>
+        <ims:ContactDetails>
+          <oa:Person>
+            <oa:PersonCode>XXXXXXXXXX</oa:PersonCode>
+            <oa:PersonName>
+              <oa:GivenName lang="en">XXXXXXXXXX</oa:GivenName>
+            </oa:PersonName>
+          </oa:Person>
+          <oa:JobTitle>XXXXXXXXXX</oa:JobTitle>
+          <oa:Telephone sequence="23">XXXXXXXXXX</oa:Telephone>
+          <ims:ContactNode>XXXXXXXXXX</ims:ContactNode>
+          <ims:PROFSId>XXXXXXXXXX</ims:PROFSId>
+          <ims:ReceiveCopyInd>XXXXXXXXXX</ims:ReceiveCopyInd>
+          <ims:QuotePrintFormat>XXXXXXXXXX</ims:QuotePrintFormat>
+        </ims:ContactDetails>
+        <ims:CustomerAgreementInd>XXXXXXXXXX</ims:CustomerAgreementInd>
+        <ims:LineOfFinancingExpirationDate>2002-07-01T05:10:10-05:00</ims:LineOfFinancingExpirationDate>
+        <ims:LineOfFinanceTerm>XXXXXXXXXX</ims:LineOfFinanceTerm>
+        <ims:RequestUserId>XXXXXXXXXX</ims:RequestUserId>
+        <ims:ROEUserGroup>XXXXXXXXXX</ims:ROEUserGroup>
+        <ims:SpecialAssistanceRequiredInd>XXXXXXXXXX</ims:SpecialAssistanceRequiredInd>
+        <ims:LeaseInd type="XXXXXXXXXX">XXXXXXXXXX</ims:LeaseInd>
+      </ims:Header>
+      <ims:Line>
+        <ims:LineNumber>XXXXXXXXXX</ims:LineNumber>
+        <ims:Action>Add</ims:Action>
+        <ims:OrderItem>
+          <oa:ItemIds>
+            <oa:SupplierItemId>
+              <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:SupplierItemId>
+          </oa:ItemIds>
+          <ims:ItemCategoryId type="XXXXXXXXXX">XXXXXXXXXX</ims:ItemCategoryId>
+          <ims:ItemType>XXXXXXXXXX</ims:ItemType>
+          <ims:Description owner="XXXXXXXXXX">XXXXXXXXXX</ims:Description>
+          <ims:SerialNumber>XXXXXXXXXX</ims:SerialNumber>
+          <oa:FeatureValue>
+            <oa:NameValue name="XXXXXXXXXX">XXXXXXXXXX</oa:NameValue>
+          </oa:FeatureValue>
+          <ims:RelatedItem relationshipType="XXXXXXXXXX">
+            <oa:ItemIds>
+              <oa:SupplierItemId>
+                <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:SupplierItemId>
+            </oa:ItemIds>
+            <ims:SerialNumber>XXXXXXXXXX</ims:SerialNumber>
+          </ims:RelatedItem>
+        </ims:OrderItem>
+        <ims:OrderQuantity uom="XXXXXXXXXX">23</ims:OrderQuantity>
+        <ims:UnitPrice>
+          <oa:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX" basis="XXXXXXXXXX" discount="23">23</oa:Amount>
+          <oa:PerQuantity uom="XXXXXXXXXX">23</oa:PerQuantity>
+        </ims:UnitPrice>
+        <ims:TotalAmount currency="XXXXXXXXXX" type="XXXXXXXXXX" basis="XXXXXXXXXX" discount="23">23</ims:TotalAmount>
+        <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX" basis="XXXXXXXXXX" discount="23">23</ims:Amount>
+        <ims:PlannedInstallationDate>2002-07-01T05:10:10-05:00</ims:PlannedInstallationDate>
+        <ims:PromisedShipDate>2002-07-01T05:10:10-05:00</ims:PromisedShipDate>
+        <ims:TaxStatus>
+          <ims:ItemTaxCode>XXXXXXXXXX</ims:ItemTaxCode>
+        </ims:TaxStatus>
+        <oa:Note author="XXXXXXXXXX" id="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Note>
+        <ims:LeaseExtension>
+          <ims:LeaseEndDate>2002-07-01T05:10:10-05:00</ims:LeaseEndDate>
+          <ims:UpgradeAction>XXXXXXXXXX</ims:UpgradeAction>
+          <ims:ExtensionTime extendedLease="XXXXXXXXXX">P1Y2M3DT10H30M</ims:ExtensionTime>
+          <ims:TypeOfFinance type="XXXXXXXXXX">XXXXXXXXXX</ims:TypeOfFinance>
+        </ims:LeaseExtension>
+        <ims:LeaseOfferPackage>
+          <ims:OfferId>XXXXXXXXXX</ims:OfferId>
+          <ims:LeaseOfferId>XXXXXXXXXX</ims:LeaseOfferId>
+          <ims:OfferValidity>
+            <oa:To>2002-07-01T05:10:10-05:00</oa:To>
+          </ims:OfferValidity>
+          <ims:LeaseOption>XXXXXXXXXX</ims:LeaseOption>
+          <ims:LeasingFinancialAttributes>
+            <ims:FinancePreferences>
+              <ims:PaymentStyle>
+                <ims:Arrears>true</ims:Arrears>
+              </ims:PaymentStyle>
+            </ims:FinancePreferences>
+          </ims:LeasingFinancialAttributes>
+          <ims:LeasingPaymentOptions>
+            <ims:LeaseOption>XXXXXXXXXX</ims:LeaseOption>
+            <ims:LeaseTerms>
+              <ims:PeriodTerms>
+                <oa:Actual currency="XXXXXXXXXX" basis="XXXXXXXXXX" discount="23">23</oa:Actual>
+              </ims:PeriodTerms>
+              <ims:PeriodTime>
+                <ims:Duration>XXXXXXXXXX</ims:Duration>
+              </ims:PeriodTime>
+            </ims:LeaseTerms>
+            <ims:UnitLeaseTerms>
+              <ims:PeriodTime>
+                <ims:Duration>XXXXXXXXXX</ims:Duration>
+                <ims:CalendarInterval>XXXXXXXXXX</ims:CalendarInterval>
+              </ims:PeriodTime>
+            </ims:UnitLeaseTerms>
+            <ims:PaymentTerms>
+              <ims:PeriodTime>
+                <ims:CalendarInterval>XXXXXXXXXX</ims:CalendarInterval>
+              </ims:PeriodTime>
+            </ims:PaymentTerms>
+            <ims:RatePerAmount>
+              <ims:Rate>23</ims:Rate>
+            </ims:RatePerAmount>
+          </ims:LeasingPaymentOptions>
+          <ims:Local>
+            <ims:NameValue name="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</ims:NameValue>
+            <ims:LocalAmount>
+              <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+              <ims:Precision>23</ims:Precision>
+            </ims:LocalAmount>
+            <ims:LocalDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:LocalDate>
+          </ims:Local>
+          <ims:LeaseInd type="XXXXXXXXXX">XXXXXXXXXX</ims:LeaseInd>
+          <ims:PrestateBaseField>XXXXXXXXXX</ims:PrestateBaseField>
+        </ims:LeaseOfferPackage>
+        <ims:LeaseOverrides>
+          <ims:Local>
+            <ims:NameValue name="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</ims:NameValue>
+            <ims:LocalAmount>
+              <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+              <ims:Precision>23</ims:Precision>
+            </ims:LocalAmount>
+            <ims:LocalDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:LocalDate>
+          </ims:Local>
+        </ims:LeaseOverrides>
+        <ims:ImpliedInterestRate type="XXXXXXXXXX">23</ims:ImpliedInterestRate>
+        <ims:ImpliedInterestRateCode type="XXXXXXXXXX">XXXXXXXXXX</ims:ImpliedInterestRateCode>
+        <ims:Rate type="XXXXXXXXXX">23</ims:Rate>
+        <ims:LeasingPaymentOptions>
+          <ims:LeaseOption>XXXXXXXXXX</ims:LeaseOption>
+          <ims:UnitLeaseTerms>
+            <ims:PeriodTime>
+              <ims:Duration>XXXXXXXXXX</ims:Duration>
+              <ims:CalendarInterval>XXXXXXXXXX</ims:CalendarInterval>
+            </ims:PeriodTime>
+          </ims:UnitLeaseTerms>
+          <ims:RatePerAmount>
+            <ims:Rate type="XXXXXXXXXX">23</ims:Rate>
+          </ims:RatePerAmount>
+        </ims:LeasingPaymentOptions>
+        <ims:Payments>
+          <ims:PaymentPreferences>
+            <ims:FinanceTax FinanceTax="true">
+              <oa:Tax>
+                <oa:PercentQuantity uom="XXXXXXXXXX">23</oa:PercentQuantity>
+              </oa:Tax>
+            </ims:FinanceTax>
+            <ims:PaymentStyle>
+              <ims:Advanced>true</ims:Advanced>
+            </ims:PaymentStyle>
+            <ims:PaymentMethod>XXXXXXXXXX</ims:PaymentMethod>
+            <ims:TradeInPreference>XXXXXXXXXX</ims:TradeInPreference>
+            <ims:TradeInDate>2002-07-01T05:10:10-05:00</ims:TradeInDate>
+            <ims:FiscalStartDay>XXXXXXXXXX</ims:FiscalStartDay>
+            <ims:FiscalStartMonth>XXXXXXXXXX</ims:FiscalStartMonth>
+            <ims:PrepaymentApproved>true</ims:PrepaymentApproved>
+            <ims:PartialPaymentApproved>true</ims:PartialPaymentApproved>
+            <ims:StartDate>2002-07-01T05:10:10-05:00</ims:StartDate>
+            <ims:DownPaymentInd>XXXXXXXXXX</ims:DownPaymentInd>
+            <ims:DownPayment currency="XXXXXXXXXX">23</ims:DownPayment>
+            <ims:DownPaymentPercentInd>23</ims:DownPaymentPercentInd>
+            <ims:DownPaymentPercent>23</ims:DownPaymentPercent>
+            <ims:DeferralPeriod deferraltype="XXXXXXXXXX">
+              <oa:Duration>P1Y2M3DT10H30M</oa:Duration>
+            </ims:DeferralPeriod>
+            <ims:PaymentTerms>
+              <ims:PaymentTermsStatus>
+                <ims:TotalInstallments>XXXXXXXXXX</ims:TotalInstallments>
+              </ims:PaymentTermsStatus>
+            </ims:PaymentTerms>
+            <ims:PaymentStep>
+              <ims:StepProfileLine IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:StepProfileLine>
+              <ims:StepTerm>
+                <ims:Duration>XXXXXXXXXX</ims:Duration>
+              </ims:StepTerm>
+              <ims:StepPayment currency="XXXXXXXXXX">23</ims:StepPayment>
+              <ims:StepRate>23</ims:StepRate>
+              <ims:StepRateAddFactor>23</ims:StepRateAddFactor>
+              <ims:StepFactor>XXXXXXXXXX</ims:StepFactor>
+              <ims:StepPayAddFactor currency="XXXXXXXXXX">23</ims:StepPayAddFactor>
+            </ims:PaymentStep>
+          </ims:PaymentPreferences>
+          <ims:PaymentTotal>
+            <oa:Actual currency="XXXXXXXXXX" type="XXXXXXXXXX">23</oa:Actual>
+          </ims:PaymentTotal>
+        </ims:Payments>
+        <ims:TransactionType>XXXXXXXXXX</ims:TransactionType>
+        <oa:Parties>
+          <oa:InstalledAtParty>
+            <oa:Addresses>
+              <oa:PrimaryAddress>
+                <oa:StateOrProvince>XXXXXXXXXX</oa:StateOrProvince>
+              </oa:PrimaryAddress>
+            </oa:Addresses>
+          </oa:InstalledAtParty>
+          <oa:ManufacturerParty>
+            <oa:PartyId>
+              <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:PartyId>
+          </oa:ManufacturerParty>
+          <oa:SoldToParty>
+            <oa:PartyId>
+              <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:PartyId>
+          </oa:SoldToParty>
+          <oa:SupplierParty>
+            <oa:PartyId>
+              <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:PartyId>
+          </oa:SupplierParty>
+        </oa:Parties>
+        <oa:DocumentReferences>
+          <oa:ContractDocumentReference>
+            <oa:DocumentIds>
+              <oa:SupplierDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:SupplierDocumentId>
+            </oa:DocumentIds>
+          </oa:ContractDocumentReference>
+          <oa:PurchaseOrderDocumentReference>
+            <oa:DocumentIds>
+              <oa:CustomerDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:CustomerDocumentId>
+            </oa:DocumentIds>
+          </oa:PurchaseOrderDocumentReference>
+          <oa:QuoteDocumentReference>
+            <oa:DocumentIds>
+              <oa:SupplierDocumentId>
+                <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:SupplierDocumentId>
+            </oa:DocumentIds>
+          </oa:QuoteDocumentReference>
+        </oa:DocumentReferences>
+        <ims:SalesInformation>
+          <ims:SalesOrganization type="XXXXXXXXXX">XXXXXXXXXX</ims:SalesOrganization>
+          <ims:GlobalOrganization type="XXXXXXXXXX">XXXXXXXXXX</ims:GlobalOrganization>
+        </ims:SalesInformation>
+        <ims:FinancialTermsandConditions>
+          <ims:TCName type="XXXXXXXXXX" version="XXXXXXXXXX">XXXXXXXXXX</ims:TCName>
+          <ims:TCOfferingId>XXXXXXXXXX</ims:TCOfferingId>
+          <ims:TCNewIndicator>true</ims:TCNewIndicator>
+        </ims:FinancialTermsandConditions>
+        <ims:Local>
+          <ims:NameValue name="XXXXXXXXXX">XXXXXXXXXX</ims:NameValue>
+          <ims:LocalAmount>
+            <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+            <ims:Precision>23</ims:Precision>
+          </ims:LocalAmount>
+          <ims:LocalDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:LocalDate>
+          <ims:LocalRate type="XXXXXXXXXX">23</ims:LocalRate>
+        </ims:Local>
+        <ims:CashFlow>
+          <ims:TCNewInd>true</ims:TCNewInd>
+          <ims:Year>XXXXXXXXXX</ims:Year>
+          <ims:Month>XXXXXXXXXX</ims:Month>
+          <ims:WeightedAverageCostOfCapital>XXXXXXXXXX</ims:WeightedAverageCostOfCapital>
+          <ims:FlowEarn>XXXXXXXXXX</ims:FlowEarn>
+          <ims:PresentValueFactor type="XXXXXXXXXX">XXXXXXXXXX</ims:PresentValueFactor>
+          <ims:PresentValueFactorWACC currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:PresentValueFactorWACC>
+          <ims:InternalPresentValueFactor type="XXXXXXXXXX">XXXXXXXXXX</ims:InternalPresentValueFactor>
+          <ims:PresentValueOfNetCashFlow currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:PresentValueOfNetCashFlow>
+          <ims:KnownPayment currency="XXXXXXXXXX">23</ims:KnownPayment>
+          <ims:UnknownPayment currency="XXXXXXXXXX">23</ims:UnknownPayment>
+          <ims:KnowPaymentNormalized currency="XXXXXXXXXX">23</ims:KnowPaymentNormalized>
+          <ims:UnknownPaymentNormalized currency="XXXXXXXXXX">23</ims:UnknownPaymentNormalized>
+          <ims:InterestIncome currency="XXXXXXXXXX">23</ims:InterestIncome>
+          <ims:Expense currency="XXXXXXXXXX">23</ims:Expense>
+          <ims:AssetCost currency="XXXXXXXXXX">23</ims:AssetCost>
+          <ims:ResidualValueHedge currency="XXXXXXXXXX">23</ims:ResidualValueHedge>
+          <ims:ResidualValue currency="XXXXXXXXXX">23</ims:ResidualValue>
+          <ims:InternalTransferPayment currency="XXXXXXXXXX">23</ims:InternalTransferPayment>
+          <ims:TaxKnownPayment currency="XXXXXXXXXX">23</ims:TaxKnownPayment>
+          <ims:TaxUnknownPayment currency="XXXXXXXXXX">23</ims:TaxUnknownPayment>
+          <ims:TaxExpense currency="XXXXXXXXXX">23</ims:TaxExpense>
+          <ims:TaxResidualValue currency="XXXXXXXXXX">23</ims:TaxResidualValue>
+          <ims:TaxInternalTransferPayment currency="XXXXXXXXXX">23</ims:TaxInternalTransferPayment>
+          <ims:TaxLumpsum currency="XXXXXXXXXX">23</ims:TaxLumpsum>
+          <ims:Depreciation currency="XXXXXXXXXX">23</ims:Depreciation>
+          <ims:InvestmentTaxCredit currency="XXXXXXXXXX">23</ims:InvestmentTaxCredit>
+          <ims:SinkFundAdjustment currency="XXXXXXXXXX">23</ims:SinkFundAdjustment>
+          <ims:SinkFund>
+            <ims:UseOfInFlow currency="XXXXXXXXXX">23</ims:UseOfInFlow>
+            <ims:NeedToSave currency="XXXXXXXXXX">23</ims:NeedToSave>
+            <ims:SinKFundNetCashFlow>
+              <ims:PresentValueSinkFundRate currency="XXXXXXXXXX">23</ims:PresentValueSinkFundRate>
+              <ims:PresentValueWacc currency="XXXXXXXXXX">23</ims:PresentValueWacc>
+              <ims:WACCNetCashFlow currency="XXXXXXXXXX">23</ims:WACCNetCashFlow>
+              <ims:SinkFundCashFlow currency="XXXXXXXXXX">23</ims:SinkFundCashFlow>
+            </ims:SinKFundNetCashFlow>
+          </ims:SinkFund>
+        </ims:CashFlow>
+        <ims:ComplexDetails>
+          <ims:ComplexNumber type="XXXXXXXXXX">XXXXXXXXXX</ims:ComplexNumber>
+          <ims:ComplexVersion type="23">XXXXXXXXXX</ims:ComplexVersion>
+        </ims:ComplexDetails>
+        <ims:ResidualValue>
+          <ims:RVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:RVAmount>
+          <ims:BaseRVPercent>23</ims:BaseRVPercent>
+          <ims:RVMethodPercent>23</ims:RVMethodPercent>
+          <ims:MaximumRVPercent>23</ims:MaximumRVPercent>
+          <ims:RVPercent>23</ims:RVPercent>
+          <ims:RVOperator>XXXXXXXXXX</ims:RVOperator>
+          <ims:RVHedge>XXXXXXXXXX</ims:RVHedge>
+          <ims:RVInterpretation>XXXXXXXXXX</ims:RVInterpretation>
+          <ims:RVOffset>XXXXXXXXXX</ims:RVOffset>
+          <ims:RVProductCategory>XXXXXXXXXX</ims:RVProductCategory>
+          <ims:RVRecognitionShift>XXXXXXXXXX</ims:RVRecognitionShift>
+          <ims:RVSelectionMethod>XXXXXXXXXX</ims:RVSelectionMethod>
+          <ims:RVTaxLiability currency="XXXXXXXXXX">23</ims:RVTaxLiability>
+          <ims:MinimumRVTerm>23</ims:MinimumRVTerm>
+          <ims:RVDate>2002-07-01T05:10:10-05:00</ims:RVDate>
+          <ims:TotalRV currency="XXXXXXXXXX">23</ims:TotalRV>
+          <ims:RVDuration>XXXXXXXXXX</ims:RVDuration>
+          <ims:RVAdjustment currency="XXXXXXXXXX">23</ims:RVAdjustment>
+          <ims:RVOption>XXXXXXXXXX</ims:RVOption>
+          <ims:PresentValueRV currency="XXXXXXXXXX">23</ims:PresentValueRV>
+        </ims:ResidualValue>
+        <ims:SplitCapital>
+          <ims:StepProfileLine IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:StepProfileLine>
+          <ims:StepTerm>
+            <ims:Duration>XXXXXXXXXX</ims:Duration>
+          </ims:StepTerm>
+          <ims:StepRate>23</ims:StepRate>
+        </ims:SplitCapital>
+        <ims:BlendedGroupNumber>XXXXXXXXXX</ims:BlendedGroupNumber>
+        <ims:MaintenanceAdder>XXXXXXXXXX</ims:MaintenanceAdder>
+        <ims:MaintenanceInterestRate>23</ims:MaintenanceInterestRate>
+        <ims:ItemPriceDate>2002-07-01T05:10:10-05:00</ims:ItemPriceDate>
+        <ims:FunctionRequestCode>XXXXXXXXXX</ims:FunctionRequestCode>
+        <ims:DebtCostUpLift type="XXXXXXXXXX">XXXXXXXXXX</ims:DebtCostUpLift>
+        <ims:DepreciationDetails>
+          <ims:TotalDepreciation currency="XXXXXXXXXX">23</ims:TotalDepreciation>
+          <ims:PvDepreciation currency="XXXXXXXXXX">23</ims:PvDepreciation>
+          <ims:DurationDepreciation>23</ims:DurationDepreciation>
+          <ims:FirstYearRule>XXXXXXXXXX</ims:FirstYearRule>
+          <ims:NetBookValueWriteOff currency="XXXXXXXXXX">23</ims:NetBookValueWriteOff>
+          <ims:NetBalanceValueWriteOff currency="XXXXXXXXXX">23</ims:NetBalanceValueWriteOff>
+          <ims:LookupYear>2006</ims:LookupYear>
+          <ims:DepreciationMethod>XXXXXXXXXX</ims:DepreciationMethod>
+          <ims:RemainingValue currency="XXXXXXXXXX">23</ims:RemainingValue>
+          <ims:SalvageValueUplift currency="XXXXXXXXXX">23</ims:SalvageValueUplift>
+          <ims:StartDates>2002-07-01T05:10:10-05:00</ims:StartDates>
+        </ims:DepreciationDetails>
+        <ims:AssetOwner type="XXXXXXXXXX">XXXXXXXXXX</ims:AssetOwner>
+        <ims:OwnerStatus>XXXXXXXXXX</ims:OwnerStatus>
+        <ims:BaseEndExpenseOffset>XXXXXXXXXX</ims:BaseEndExpenseOffset>
+        <ims:EndDate>XXXXXXXXXX</ims:EndDate>
+        <ims:EffectiveDate>2002-07-01T05:10:10-05:00</ims:EffectiveDate>
+        <ims:EquipmentAvailableDate>2002-07-01T05:10:10-05:00</ims:EquipmentAvailableDate>
+        <ims:LeaseExpenses currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:LeaseExpenses>
+        <ims:TaxCredit>
+          <ims:Duration>XXXXXXXXXX</ims:Duration>
+          <ims:TaxCreditPercent>23</ims:TaxCreditPercent>
+          <ims:TaxCreditPercentBase>23</ims:TaxCreditPercentBase>
+          <ims:RecaptureInd>XXXXXXXXXX</ims:RecaptureInd>
+          <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+        </ims:TaxCredit>
+        <ims:TaxTreatmentIncome>XXXXXXXXXX</ims:TaxTreatmentIncome>
+        <ims:NormalizedTaxPay>XXXXXXXXXX</ims:NormalizedTaxPay>
+        <ims:FirstYearTaxRule>XXXXXXXXXX</ims:FirstYearTaxRule>
+        <ims:EfficiencyPercent>23</ims:EfficiencyPercent>
+        <ims:BlendedRateContribution>23</ims:BlendedRateContribution>
+        <ims:FMVDetails>
+          <ims:FMVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:FMVAmount>
+          <ims:FMVPercent type="XXXXXXXXXX">XXXXXXXXXX</ims:FMVPercent>
+          <ims:FMVUplift type="XXXXXXXXXX">XXXXXXXXXX</ims:FMVUplift>
+          <ims:Version>XXXXXXXXXX</ims:Version>
+          <ims:Date>2002-07-01T05:10:10-05:00</ims:Date>
+          <ims:FMVSelectionMethod>XXXXXXXXXX</ims:FMVSelectionMethod>
+        </ims:FMVDetails>
+        <ims:LeaseCredit>
+          <ims:CreditApprovalNumber>XXXXXXXXXX</ims:CreditApprovalNumber>
+          <ims:CreditExpiryDate>2002-07-01T05:10:10-05:00</ims:CreditExpiryDate>
+          <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+          <ims:CreditRate>XXXXXXXXXX</ims:CreditRate>
+          <ims:CreditApprovalCode>XXXXXXXXXX</ims:CreditApprovalCode>
+          <ims:CreditConditionCode>XXXXXXXXXX</ims:CreditConditionCode>
+          <ims:CreditRequiredDate>2002-07-01T05:10:10-05:00</ims:CreditRequiredDate>
+        </ims:LeaseCredit>
+        <ims:LeaseInd type="XXXXXXXXXX">XXXXXXXXXX</ims:LeaseInd>
+        <ims:InitialStartDate>2002-07-01T05:10:10-05:00</ims:InitialStartDate>
+        <ims:ExternalRateName>XXXXXXXXXX</ims:ExternalRateName>
+        <ims:ItemLagDays>XXXXXXXXXX</ims:ItemLagDays>
+        <ims:FloatingRateDetails>
+          <ims:RemainingPrincipal currency="XXXXXXXXXX">23</ims:RemainingPrincipal>
+          <ims:RemainingTerm>XXXXXXXXXX</ims:RemainingTerm>
+          <ims:StartDateBase>XXXXXXXXXX</ims:StartDateBase>
+          <ims:InvoiceLineIndicator>XXXXXXXXXX</ims:InvoiceLineIndicator>
+          <ims:StartDisplacement>23</ims:StartDisplacement>
+          <ims:RatesFixedDayOfTheMonth>XXXXXXXXXX</ims:RatesFixedDayOfTheMonth>
+          <ims:ReferenceDisplacement>XXXXXXXXXX</ims:ReferenceDisplacement>
+          <ims:ReferenceFixedDayOfTheMonth>XXXXXXXXXX</ims:ReferenceFixedDayOfTheMonth>
+          <ims:StartDate>2002-07-01T05:10:10-05:00</ims:StartDate>
+          <ims:RateType>true</ims:RateType>
+          <ims:ReferenceFrequency>XXXXXXXXXX</ims:ReferenceFrequency>
+          <ims:InvoiceAdjustmentFrequency>XXXXXXXXXX</ims:InvoiceAdjustmentFrequency>
+          <ims:Spread>23</ims:Spread>
+        </ims:FloatingRateDetails>
+        <ims:IndexDetails>
+          <ims:Name>true</ims:Name>
+          <ims:InvoiceLineIndicator>XXXXXXXXXX</ims:InvoiceLineIndicator>
+          <ims:StartDisplacement>23</ims:StartDisplacement>
+          <ims:StartDayFixedDate>23</ims:StartDayFixedDate>
+          <ims:ReferenceDatabase>XXXXXXXXXX</ims:ReferenceDatabase>
+          <ims:ReferenceDayFixDate>23</ims:ReferenceDayFixDate>
+          <ims:BillingUnits>true</ims:BillingUnits>
+          <ims:ComplementaryBillingType>true</ims:ComplementaryBillingType>
+          <ims:BuySellName>true</ims:BuySellName>
+          <ims:StartDate>2002-07-01T05:10:10-05:00</ims:StartDate>
+          <ims:RelativeIndexationFactor>23</ims:RelativeIndexationFactor>
+          <ims:FutureIndex>23</ims:FutureIndex>
+        </ims:IndexDetails>
+        <ims:GracePeriod>XXXXXXXXXX</ims:GracePeriod>
+        <ims:UpfrontExpensePassPercent>23</ims:UpfrontExpensePassPercent>
+        <ims:Fasb7DRule>XXXXXXXXXX</ims:Fasb7DRule>
+        <ims:ROEDetails>
+          <ims:ROE currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:ROE>
+          <ims:ItemCategoryId>XXXXXXXXXX</ims:ItemCategoryId>
+          <ims:ROEAdjustmentPercent type="XXXXXXXXXX">XXXXXXXXXX</ims:ROEAdjustmentPercent>
+          <ims:EarningLessUplift currency="XXXXXXXXXX">23</ims:EarningLessUplift>
+          <ims:UserId>XXXXXXXXXX</ims:UserId>
+          <ims:UserGroup>XXXXXXXXXX</ims:UserGroup>
+        </ims:ROEDetails>
+        <ims:PaymentAdjustDays>XXXXXXXXXX</ims:PaymentAdjustDays>
+        <ims:TimingReference>
+          <ims:ROE currency="XXXXXXXXXX">23</ims:ROE>
+          <ims:ParameterMonthNumber>23</ims:ParameterMonthNumber>
+          <ims:LeverageFactor>23</ims:LeverageFactor>
+          <ims:WeightedAverageCostOfCapital currency="XXXXXXXXXX">23</ims:WeightedAverageCostOfCapital>
+          <ims:DebtCost>23</ims:DebtCost>
+          <ims:ROEAdjustmentPercent type="XXXXXXXXXX">XXXXXXXXXX</ims:ROEAdjustmentPercent>
+        </ims:TimingReference>
+        <ims:WholesaleRetailUplift currency="XXXXXXXXXX">23</ims:WholesaleRetailUplift>
+        <ims:NominalStartDay type="XXXXXXXXXX">XXXXXXXXXX</ims:NominalStartDay>
+        <ims:Base>
+          <ims:Term>XXXXXXXXXX</ims:Term>
+          <ims:PayStartDate>2002-07-01T05:10:10-05:00</ims:PayStartDate>
+          <ims:BaseEnhancement currency="XXXXXXXXXX">23</ims:BaseEnhancement>
+          <ims:BaseEnhancementPassPercent>23</ims:BaseEnhancementPassPercent>
+        </ims:Base>
+        <ims:InstallDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:InstallDate>
+        <ims:InitialTerm>XXXXXXXXXX</ims:InitialTerm>
+        <ims:FloatReferenceFrequency>XXXXXXXXXX</ims:FloatReferenceFrequency>
+        <ims:RateProtectionTerm>XXXXXXXXXX</ims:RateProtectionTerm>
+        <ims:FloatNotifyDays>XXXXXXXXXX</ims:FloatNotifyDays>
+        <ims:PriceType>XXXXXXXXXX</ims:PriceType>
+        <ims:PricingOperation>XXXXXXXXXX</ims:PricingOperation>
+        <ims:BackSolveIndicator>XXXXXXXXXX</ims:BackSolveIndicator>
+        <ims:PaymentStartDateMethod>XXXXXXXXXX</ims:PaymentStartDateMethod>
+        <ims:StartDateBase>XXXXXXXXXX</ims:StartDateBase>
+        <ims:MethodPercentBased>XXXXXXXXXX</ims:MethodPercentBased>
+        <ims:MinimumAmortizationGrid>XXXXXXXXXX</ims:MinimumAmortizationGrid>
+        <ims:NominalStartMonth>XXXXXXXXXX</ims:NominalStartMonth>
+        <ims:RecapturePercent type="XXXXXXXXXX">23</ims:RecapturePercent>
+        <ims:ExpenseRule type="XXXXXXXXXX">XXXXXXXXXX</ims:ExpenseRule>
+        <ims:PartialPaymentRule>XXXXXXXXXX</ims:PartialPaymentRule>
+        <ims:RateAdjustment>
+          <ims:ChangePoints>23</ims:ChangePoints>
+          <ims:Date>2002-07-01T05:10:10-05:00</ims:Date>
+          <ims:Factor>XXXXXXXXXX</ims:Factor>
+          <ims:InterestPercent>23</ims:InterestPercent>
+          <ims:Period>XXXXXXXXXX</ims:Period>
+        </ims:RateAdjustment>
+        <ims:RateProtection>XXXXXXXXXX</ims:RateProtection>
+        <ims:RateUplift>XXXXXXXXXX</ims:RateUplift>
+        <ims:ResaleDate>2002-07-01T05:10:10-05:00</ims:ResaleDate>
+        <ims:TransactionSortOrder>XXXXXXXXXX</ims:TransactionSortOrder>
+        <ims:ProcessMethod>XXXXXXXXXX</ims:ProcessMethod>
+        <ims:TaxPayMethodFlag>XXXXXXXXXX</ims:TaxPayMethodFlag>
+        <ims:DealAmounts currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:DealAmounts>
+        <ims:FloatStartDate>2002-07-01T05:10:10-05:00</ims:FloatStartDate>
+        <ims:TypeModelCount>23</ims:TypeModelCount>
+        <ims:Amortization>
+          <ims:PaymentNumber>XXXXXXXXXX</ims:PaymentNumber>
+          <ims:BillingFromDate>2002-07-01T05:10:10-05:00</ims:BillingFromDate>
+          <ims:BillingToDate>2002-07-01T05:10:10-05:00</ims:BillingToDate>
+          <ims:PayDueDate>2002-07-01T05:10:10-05:00</ims:PayDueDate>
+          <ims:PaymentAmount currency="XXXXXXXXXX">23</ims:PaymentAmount>
+          <ims:PaymentAmountRegular currency="XXXXXXXXXX">23</ims:PaymentAmountRegular>
+          <ims:FinanceCharge currency="XXXXXXXXXX">23</ims:FinanceCharge>
+          <ims:Principal currency="XXXXXXXXXX">23</ims:Principal>
+          <ims:RemainingBalance currency="XXXXXXXXXX">23</ims:RemainingBalance>
+        </ims:Amortization>
+        <ims:Settlement>
+          <ims:LeaseInd type="XXXXXXXXXX">XXXXXXXXXX</ims:LeaseInd>
+          <ims:SettlementType>XXXXXXXXXX</ims:SettlementType>
+          <ims:SettlementDay>XXXXXXXXXX</ims:SettlementDay>
+          <ims:MonthAdder>23</ims:MonthAdder>
+          <ims:PayMethod>XXXXXXXXXX</ims:PayMethod>
+          <ims:SupplierType>XXXXXXXXXX</ims:SupplierType>
+          <ims:SupplierNumber>XXXXXXXXXX</ims:SupplierNumber>
+          <ims:SettlementDataBase>XXXXXXXXXX</ims:SettlementDataBase>
+          <ims:SettlementPercentBase>XXXXXXXXXX</ims:SettlementPercentBase>
+          <ims:SettlementPercent>23</ims:SettlementPercent>
+          <ims:SettlementAmount currency="XXXXXXXXXX">23</ims:SettlementAmount>
+          <ims:InternalTransferPaymentEffect>XXXXXXXXXX</ims:InternalTransferPaymentEffect>
+          <ims:InternalTransferPaymentEffectBase>XXXXXXXXXX</ims:InternalTransferPaymentEffectBase>
+        </ims:Settlement>
+        <ims:LessorEarnings currency="XXXXXXXXXX">23</ims:LessorEarnings>
+        <ims:Fasb7DPercent>23</ims:Fasb7DPercent>
+        <ims:Ssap21Percent>23</ims:Ssap21Percent>
+        <ims:UnevenRentTest>XXXXXXXXXX</ims:UnevenRentTest>
+        <ims:StepLevelPaymentPercent>23</ims:StepLevelPaymentPercent>
+        <ims:BillingDate>XXXXXXXXXX</ims:BillingDate>
+        <ims:CloseDate>XXXXXXXXXX</ims:CloseDate>
+        <ims:ExpectedProfit currency="XXXXXXXXXX">23</ims:ExpectedProfit>
+        <ims:UpfrontExpenseOffset currency="XXXXXXXXXX">23</ims:UpfrontExpenseOffset>
+        <ims:PaymentStream>
+          <ims:StepProfileLine IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:StepProfileLine>
+          <ims:StepPayment currency="XXXXXXXXXX">23</ims:StepPayment>
+          <ims:DaySource>XXXXXXXXXX</ims:DaySource>
+          <ims:EndDate>XXXXXXXXXX</ims:EndDate>
+          <ims:RepetitionCount>23</ims:RepetitionCount>
+        </ims:PaymentStream>
+        <ims:Term type="XXXXXXXXXX">XXXXXXXXXX</ims:Term>
+        <ims:PriceRemainingNetInvestmentBalance currency="XXXXXXXXXX">23</ims:PriceRemainingNetInvestmentBalance>
+        <ims:MESDetails>
+          <ims:OrderItem>
+            <oa:ItemIds>
+              <oa:SupplierItemId>
+                <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:SupplierItemId>
+            </oa:ItemIds>
+          </ims:OrderItem>
+          <ims:InitialInstallDate>2002-07-01T05:10:10-05:00</ims:InitialInstallDate>
+          <ims:OriginalInstallDate>2002-07-01T05:10:10-05:00</ims:OriginalInstallDate>
+          <ims:OriginalEndDate>2002-07-01T05:10:10-05:00</ims:OriginalEndDate>
+        </ims:MESDetails>
+        <ims:RateByDuration>
+          <ims:RateType>XXXXXXXXXX</ims:RateType>
+          <ims:Rate duration="XXXXXXXXXX">23</ims:Rate>
+        </ims:RateByDuration>
+        <ims:LastCashFlow>XXXXXXXXXX</ims:LastCashFlow>
+        <ims:EarningLessUplift currency="XXXXXXXXXX">23</ims:EarningLessUplift>
+        <ims:ComboCode>XXXXXXXXXX</ims:ComboCode>
+        <ims:RateCardUniqueId>XXXXXXXXXX</ims:RateCardUniqueId>
+        <ims:Feature>
+          <ims:OrderItem>
+            <oa:ItemIds>
+              <oa:ItemId>
+                <oa:Id IdOrigin="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+              </oa:ItemId>
+            </oa:ItemIds>
+            <ims:Description owner="XXXXXXXXXX">XXXXXXXXXX</ims:Description>
+          </ims:OrderItem>
+          <ims:OrderQuantity uom="XXXXXXXXXX">23</ims:OrderQuantity>
+          <ims:UnitPrice>
+            <oa:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</oa:Amount>
+            <oa:PerQuantity uom="XXXXXXXXXX">23</oa:PerQuantity>
+          </ims:UnitPrice>
+          <ims:TotalAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:TotalAmount>
+          <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+          <ims:Payments>
+            <ims:PaymentPreferences>
+              <ims:PaymentStep>
+                <ims:StepProfileLine IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:StepProfileLine>
+                <ims:StepPayment currency="XXXXXXXXXX">23</ims:StepPayment>
+                <ims:StepRate>23</ims:StepRate>
+              </ims:PaymentStep>
+            </ims:PaymentPreferences>
+          </ims:Payments>
+          <ims:ResidualValue>
+            <ims:RVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:RVAmount>
+            <ims:RVPercent>23</ims:RVPercent>
+            <ims:MinimumRVTerm>23</ims:MinimumRVTerm>
+            <ims:RVDate>2002-07-01T05:10:10-05:00</ims:RVDate>
+            <ims:RVOption>XXXXXXXXXX</ims:RVOption>
+          </ims:ResidualValue>
+          <ims:OwnerStatus>XXXXXXXXXX</ims:OwnerStatus>
+          <ims:FMVDetails>
+            <ims:FMVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:FMVAmount>
+            <ims:FMVPercent type="XXXXXXXXXX">XXXXXXXXXX</ims:FMVPercent>
+            <ims:FMVUplift type="XXXXXXXXXX">XXXXXXXXXX</ims:FMVUplift>
+            <ims:Version>XXXXXXXXXX</ims:Version>
+          </ims:FMVDetails>
+          <ims:LeaseInd type="XXXXXXXXXX">XXXXXXXXXX</ims:LeaseInd>
+          <ims:ItemLagDays>XXXXXXXXXX</ims:ItemLagDays>
+          <ims:PriceType>XXXXXXXXXX</ims:PriceType>
+          <ims:RecapturePercent type="XXXXXXXXXX">23</ims:RecapturePercent>
+        </ims:Feature>
+        <ims:OriginalLease>
+          <ims:OrderItem>
+            <ims:ItemType>XXXXXXXXXX</ims:ItemType>
+            <ims:Description>XXXXXXXXXX</ims:Description>
+          </ims:OrderItem>
+          <ims:UnitPrice>
+            <oa:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX" discount="23">23</oa:Amount>
+            <oa:PerQuantity uom="XXXXXXXXXX">23</oa:PerQuantity>
+          </ims:UnitPrice>
+          <ims:TotalAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:TotalAmount>
+          <ims:PlannedInstallationDate>2002-07-01T05:10:10-05:00</ims:PlannedInstallationDate>
+          <ims:ImpliedInterestRate type="XXXXXXXXXX">23</ims:ImpliedInterestRate>
+          <ims:Rate type="XXXXXXXXXX">23</ims:Rate>
+          <ims:LeasingPaymentOptions>
+            <ims:UnitLeaseTerms>
+              <ims:PeriodTime>
+                <ims:Duration>XXXXXXXXXX</ims:Duration>
+                <ims:CalendarInterval>XXXXXXXXXX</ims:CalendarInterval>
+              </ims:PeriodTime>
+            </ims:UnitLeaseTerms>
+            <ims:RatePerAmount>
+              <ims:Rate type="XXXXXXXXXX">23</ims:Rate>
+            </ims:RatePerAmount>
+          </ims:LeasingPaymentOptions>
+          <ims:Payments>
+            <ims:PaymentPreferences>
+              <ims:FinanceTax FinanceTax="true">
+                <oa:Tax>
+                  <oa:PercentQuantity uom="XXXXXXXXXX">23</oa:PercentQuantity>
+                </oa:Tax>
+              </ims:FinanceTax>
+              <ims:PaymentMethod>XXXXXXXXXX</ims:PaymentMethod>
+              <ims:FiscalStartDay>XXXXXXXXXX</ims:FiscalStartDay>
+              <ims:FiscalStartMonth>XXXXXXXXXX</ims:FiscalStartMonth>
+              <ims:PrepaymentApproved>true</ims:PrepaymentApproved>
+              <ims:StartDate>2002-07-01T05:10:10-05:00</ims:StartDate>
+              <ims:DownPaymentInd>XXXXXXXXXX</ims:DownPaymentInd>
+              <ims:DownPayment currency="XXXXXXXXXX">23</ims:DownPayment>
+              <ims:DeferralPeriod deferraltype="XXXXXXXXXX">
+                <oa:Duration>P1Y2M3DT10H30M</oa:Duration>
+              </ims:DeferralPeriod>
+              <ims:PaymentStep>
+                <ims:StepProfileLine IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:StepProfileLine>
+                <ims:StepTerm>
+                  <ims:Duration>XXXXXXXXXX</ims:Duration>
+                </ims:StepTerm>
+                <ims:StepPayment currency="XXXXXXXXXX">23</ims:StepPayment>
+                <ims:StepRate>23</ims:StepRate>
+                <ims:StepRateAddFactor>23</ims:StepRateAddFactor>
+                <ims:StepFactor>XXXXXXXXXX</ims:StepFactor>
+                <ims:StepPayAddFactor currency="XXXXXXXXXX">23</ims:StepPayAddFactor>
+              </ims:PaymentStep>
+            </ims:PaymentPreferences>
+          </ims:Payments>
+          <ims:TransactionType>XXXXXXXXXX</ims:TransactionType>
+          <ims:FinancialTermsandConditions>
+            <ims:TCOfferingId>XXXXXXXXXX</ims:TCOfferingId>
+          </ims:FinancialTermsandConditions>
+          <ims:Local>
+            <ims:NameValue name="XXXXXXXXXX">XXXXXXXXXX</ims:NameValue>
+            <ims:LocalAmount>
+              <ims:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:Amount>
+              <ims:Precision>23</ims:Precision>
+            </ims:LocalAmount>
+            <ims:LocalDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:LocalDate>
+            <ims:LocalRate type="XXXXXXXXXX">23</ims:LocalRate>
+          </ims:Local>
+          <ims:ResidualValue>
+            <ims:RVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:RVAmount>
+            <ims:PriceRVAmountAdjusted currency="XXXXXXXXXX">23</ims:PriceRVAmountAdjusted>
+            <ims:PriceRVPercent>23</ims:PriceRVPercent>
+            <ims:PercentAdjusted>23</ims:PercentAdjusted>
+            <ims:RVPercent>23</ims:RVPercent>
+            <ims:AccountRVPercent>23</ims:AccountRVPercent>
+            <ims:RVOperator>XXXXXXXXXX</ims:RVOperator>
+            <ims:RVInterpretation>XXXXXXXXXX</ims:RVInterpretation>
+            <ims:RVOffset>XXXXXXXXXX</ims:RVOffset>
+            <ims:RVTaxLiability currency="XXXXXXXXXX">23</ims:RVTaxLiability>
+            <ims:AccountRVBase currency="XXXXXXXXXX">23</ims:AccountRVBase>
+            <ims:PricingRVBase>
+              <oa:Amount currency="XXXXXXXXXX">23</oa:Amount>
+              <oa:PerQuantity uom="XXXXXXXXXX">23</oa:PerQuantity>
+            </ims:PricingRVBase>
+            <ims:EndOfLeaseRVPercent>23</ims:EndOfLeaseRVPercent>
+          </ims:ResidualValue>
+          <ims:SplitCapital>
+            <ims:StepProfileLine IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:StepProfileLine>
+            <ims:StepTerm>
+              <ims:Duration>XXXXXXXXXX</ims:Duration>
+            </ims:StepTerm>
+            <ims:StepRate>23</ims:StepRate>
+          </ims:SplitCapital>
+          <ims:BlendedGroupNumber>XXXXXXXXXX</ims:BlendedGroupNumber>
+          <ims:DepreciationDetails>
+            <ims:TotalDepreciation currency="XXXXXXXXXX">23</ims:TotalDepreciation>
+            <ims:PvDepreciation currency="XXXXXXXXXX">23</ims:PvDepreciation>
+            <ims:DurationDepreciation>23</ims:DurationDepreciation>
+            <ims:FirstYearRule>XXXXXXXXXX</ims:FirstYearRule>
+            <ims:NetBookValueWriteOff currency="XXXXXXXXXX">23</ims:NetBookValueWriteOff>
+            <ims:NetBalanceValueWriteOff currency="XXXXXXXXXX">23</ims:NetBalanceValueWriteOff>
+            <ims:DepreciationMethod>XXXXXXXXXX</ims:DepreciationMethod>
+            <ims:RemainingValue currency="XXXXXXXXXX">23</ims:RemainingValue>
+            <ims:SalvageValueUplift currency="XXXXXXXXXX">23</ims:SalvageValueUplift>
+            <ims:StartDates>2002-07-01T05:10:10-05:00</ims:StartDates>
+          </ims:DepreciationDetails>
+          <ims:AssetOwner type="XXXXXXXXXX">XXXXXXXXXX</ims:AssetOwner>
+          <ims:OwnerStatus>XXXXXXXXXX</ims:OwnerStatus>
+          <ims:BaseEndExpenseOffset>XXXXXXXXXX</ims:BaseEndExpenseOffset>
+          <ims:EndDate>XXXXXXXXXX</ims:EndDate>
+          <ims:PayFrequency>XXXXXXXXXX</ims:PayFrequency>
+          <ims:LeaseExpenses currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:LeaseExpenses>
+          <ims:TaxCredit>
+            <ims:TaxCreditPercent>23</ims:TaxCreditPercent>
+            <ims:TaxCreditPercentBase>23</ims:TaxCreditPercentBase>
+          </ims:TaxCredit>
+          <ims:TaxTreatmentIncome>XXXXXXXXXX</ims:TaxTreatmentIncome>
+          <ims:NormalizedTaxPay>XXXXXXXXXX</ims:NormalizedTaxPay>
+          <ims:FirstYearTaxRule>XXXXXXXXXX</ims:FirstYearTaxRule>
+          <ims:BlendedRateContribution>23</ims:BlendedRateContribution>
+          <ims:LeaseCredit>
+            <ims:CreditRate>XXXXXXXXXX</ims:CreditRate>
+          </ims:LeaseCredit>
+          <ims:LeaseInd type="XXXXXXXXXX">XXXXXXXXXX</ims:LeaseInd>
+          <ims:ExternalRateName>XXXXXXXXXX</ims:ExternalRateName>
+          <ims:FloatingRateDetails>
+            <ims:Spread>23</ims:Spread>
+          </ims:FloatingRateDetails>
+          <ims:IndexDetails>
+            <ims:Name>true</ims:Name>
+            <ims:StartDisplacement>23</ims:StartDisplacement>
+            <ims:BuySellName>true</ims:BuySellName>
+            <ims:StartDate>2002-07-01T05:10:10-05:00</ims:StartDate>
+          </ims:IndexDetails>
+          <ims:ROEDetails>
+            <ims:ROE currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:ROE>
+          </ims:ROEDetails>
+          <ims:TimingReference>
+            <ims:ROE currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:ROE>
+            <ims:ParameterMonthNumber>23</ims:ParameterMonthNumber>
+            <ims:LeverageFactor>23</ims:LeverageFactor>
+            <ims:WeightedAverageCostOfCapital currency="XXXXXXXXXX">23</ims:WeightedAverageCostOfCapital>
+            <ims:DebtCost>23</ims:DebtCost>
+          </ims:TimingReference>
+          <ims:Base>
+            <ims:BaseEnhancement currency="XXXXXXXXXX">23</ims:BaseEnhancement>
+            <ims:BaseEnhancementPassThruPercent>23</ims:BaseEnhancementPassThruPercent>
+          </ims:Base>
+          <ims:InstallDate type="XXXXXXXXXX">2002-07-01T05:10:10-05:00</ims:InstallDate>
+          <ims:RecapturePercent type="XXXXXXXXXX">23</ims:RecapturePercent>
+          <ims:ExpenseRule type="XXXXXXXXXX">XXXXXXXXXX</ims:ExpenseRule>
+          <ims:RateByDuration>
+            <ims:RateType>XXXXXXXXXX</ims:RateType>
+            <ims:Rate duration="XXXXXXXXXX">23</ims:Rate>
+          </ims:RateByDuration>
+          <ims:ComboCode>XXXXXXXXXX</ims:ComboCode>
+        </ims:OriginalLease>
+        <ims:LeaseSubLine>
+          <ims:LineNumber>XXXXXXXXXX</ims:LineNumber>
+          <ims:TransactionType IdOrigin="XXXXXXXXXX">XXXXXXXXXX</ims:TransactionType>
+        </ims:LeaseSubLine>
+      </ims:Line>
+      <ims:AggrLine>
+        <ims:LineNumber>XXXXXXXXXX</ims:LineNumber>
+        <ims:OrderItem>
+          <oa:ItemIds>
+            <oa:SupplierItemId>
+              <oa:Id IdOrigin="XXXXXXXXXX" type="XXXXXXXXXX">XXXXXXXXXX</oa:Id>
+            </oa:SupplierItemId>
+          </oa:ItemIds>
+          <ims:SerialNumber>XXXXXXXXXX</ims:SerialNumber>
+        </ims:OrderItem>
+        <ims:UnitPrice>
+          <oa:Amount currency="XXXXXXXXXX" type="XXXXXXXXXX" discount="23">23</oa:Amount>
+          <oa:PerQuantity uom="XXXXXXXXXX">23</oa:PerQuantity>
+        </ims:UnitPrice>
+        <ims:TotalAmount currency="XXXXXXXXXX" type="XXXXXXXXXX" basis="XXXXXXXXXX" discount="23">23</ims:TotalAmount>
+        <ims:PlannedInstallationDate>2002-07-01T05:10:10-05:00</ims:PlannedInstallationDate>
+        <ims:LeaseOfferPackage>
+          <ims:LeasingPaymentOptions>
+            <ims:LeaseOption>XXXXXXXXXX</ims:LeaseOption>
+          </ims:LeasingPaymentOptions>
+        </ims:LeaseOfferPackage>
+        <ims:ImpliedInterestRate type="XXXXXXXXXX">23</ims:ImpliedInterestRate>
+        <ims:LeasingPaymentOptions>
+          <ims:UnitLeaseTerms>
+            <ims:PeriodTime>
+              <ims:CalendarInterval>XXXXXXXXXX</ims:CalendarInterval>
+            </ims:PeriodTime>
+          </ims:UnitLeaseTerms>
+        </ims:LeasingPaymentOptions>
+        <ims:Payments>
+          <ims:PaymentPreferences>
+            <ims:StartDate>2002-07-01T05:10:10-05:00</ims:StartDate>
+            <ims:DownPayment currency="XXXXXXXXXX">23</ims:DownPayment>
+            <ims:PaymentStep>
+              <ims:StepPayment currency="XXXXXXXXXX">23</ims:StepPayment>
+              <ims:StepRate>23</ims:StepRate>
+            </ims:PaymentStep>
+          </ims:PaymentPreferences>
+        </ims:Payments>
+        <ims:TransactionType>XXXXXXXXXX</ims:TransactionType>
+        <ims:ResidualValue>
+          <ims:RVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:RVAmount>
+        </ims:ResidualValue>
+        <ims:BlendedGroupNumber>XXXXXXXXXX</ims:BlendedGroupNumber>
+        <ims:FMVDetails>
+          <ims:FMVAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:FMVAmount>
+        </ims:FMVDetails>
+        <ims:FloatingRateDetails>
+          <ims:Spread>23</ims:Spread>
+        </ims:FloatingRateDetails>
+        <ims:ROEDetails>
+          <ims:ROE currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:ROE>
+        </ims:ROEDetails>
+        <ims:PriceType>XXXXXXXXXX</ims:PriceType>
+        <ims:Amortization>
+          <ims:PaymentNumber>XXXXXXXXXX</ims:PaymentNumber>
+          <ims:BillingFromDate>2002-07-01T05:10:10-05:00</ims:BillingFromDate>
+          <ims:BillingToDate>2002-07-01T05:10:10-05:00</ims:BillingToDate>
+          <ims:PaymentAmount currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:PaymentAmount>
+        </ims:Amortization>
+        <ims:LessorEarnings currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:LessorEarnings>
+        <ims:PaymentStream>
+          <ims:StepPayment currency="XXXXXXXXXX">23</ims:StepPayment>
+          <ims:Month>XXXXXXXXXX</ims:Month>
+          <ims:Year>XXXXXXXXXX</ims:Year>
+        </ims:PaymentStream>
+        <ims:Term type="XXXXXXXXXX">XXXXXXXXXX</ims:Term>
+        <ims:LineCount>23</ims:LineCount>
+        <ims:AggregationMethod>XXXXXXXXXX</ims:AggregationMethod>
+        <ims:QuotedDeal>
+          <ims:DealAmounts currency="XXXXXXXXXX" type="XXXXXXXXXX">23</ims:DealAmounts>
+        </ims:QuotedDeal>
+      </ims:AggrLine>
+    </ims:FinancialOfferingQuote>
+  </ims:DataArea>
+</ims:FinancialOfferingQuoteBOD>

@@ -1,0 +1,23 @@
+vangavroche 1.1.1.1 - Fixed in ADS 1.4.2.5
+vangavroche 1.1.1.2 - Fixed in ADS 1.1.2
+
+nikolay83 1.1.4 - successfully appealed
+
+Question 2.1.4 - Fixed
+
+nikolay83 2.8.1 - Added an integration assembly
+
+vangavroche 3.1.1.1 - Fixed in ADS 1.1.1
+vangavroche 3.1.1.2 - Fixed
+
+DanLazar 3.1.1 - Fixed
+
+nikolay83 3.1.2 - Cannot find that misspelling
+
+nikolay83 3.2.1 - Fixed
+
+
+
+
+
+

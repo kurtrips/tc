@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MessageConfig>
+  <MessageType XPath="/ServiceRequest/@Type"/>
+  <AttributeSet XPath="" InnerCount="1">
+    <Attribute Name="ID"
+      XPath="/ServiceRequest/@RequestID"
+      Type="System.Int32" />
+  </AttributeSet>
+  <!--Invalid inner count value-->
+  <AttributeSet XPath="" InnerCount="Only * and 1 are allowed here">
+    <Attribute Name="EquipID" 
+      XPath="/ServiceRequest/Equipment/@ID" 
+      Mandatory="yes" 
+      Type="System.Int32" />
+  </AttributeSet>
+  <SourceMessageQueue XPath="ServiceRequest/SourceMessageQueue/@Name"/>
+  <DestinationMessageQueue XPath="ServiceRequest/DestinationMessageQueue/@Name"/>
+</MessageConfig>

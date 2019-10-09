@@ -1,0 +1,6 @@
+1.1.1.1: Sorry for that. Have fixed it. Now search on the basis of enum name.
+1.1.2.2: This had already been fixed. Added another example, please see in output xml, the BigAndNestedArrayReturningFunction function in ClassB
+1.1.2.3: Good popint. Fixed. Have had to write an awful lot of code for this :) Phew
+5.1.5.1: Since assembly is always compiled with resource the OutOFrangeException should never happen. But have added the check anyway, Moved this to Helper too.
+
+Hope this is the end of this :)

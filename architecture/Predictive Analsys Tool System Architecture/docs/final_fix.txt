@@ -1,0 +1,127 @@
+>>Please address the last client forum confirmations.
+
+Done. Only memcached and Spring approval is still left
+
+
+>>The user interface definition, the frontend module scope, is incomplete in my opinion........The gap is too large.
+
+Added. See Front-End spec section 2.1
+Also see the various back-end methods added in the backend spec.
+Also, see example.doc for an example of teh usage.
+
+>>Please look at "4.4.25 Read geographical contract data" it's marked as not needed for now.
+>>But I think you need take that into account and made appropriate changes in API and data model during this contest because it causes huge changes in the future.
+
+This can be easily modeled by adding a parameter called userGeocode to the parameterTypes:List<UserInputValueType> of the defineQuery method. The geocode can then be passed in the queryParameters parameters of the  DataAccess.getDataForAlgorithm method.
+
+
+>>The homepage requirement should include viewing algorithm updates, testing what if scenario and the managing configured algorithm.
+
+The homepage shows latest prediction results amd the list of algorithms. Both of these are now covered in section 5.2 of SDS
+
+
+>>It is not clear how what if scenarios are represented in the frontend.
+
+The input for an algorithm is an instance of the AlgorithmInput class. 
+It consists of the initial setting values, the estimation values and the fact data. 
+It is used to denote both an original input and a what-if case. 
+In the what-if case, the AlgorithmInput.isWhatIfCase = true and AlgorithmInput.parentId is equal to the original algorithmInput.id. 
+
+This is added to SDS section 4 and example.doc
+
+
+>> Please explain the concept of rolling up country data to continent level.
+>>The explanation provided by the client and me would suffice, but please add it to avoid later confusion.
+
+Have added this to SDS glossary section.
+
+
+>> It's not clear for me overall workflow with Expressions and JEXL.......
+
+See updated section 2.7 in backend spec.
+
+
+>> The admin algorithm configuration seems not trivial and I believe should have a module
+
+No separate module, but this is now part of the front-end module. The added service methods are part of back-end module.
+
+
+>>ReportExporter and PredictionAlgorithm do not belong to the frontend module. ..........
+
+Fixed. Now in back-end
+
+
+>>I think you need to provide some guide how to implement new algorithm and how to integrate it with the system....
+
+See example.doc
+
+
+>> Please define how different instances of algorithms, in particular what if cases, are connected.
+
+Have added algorithmInputId:long to AlgorithmOutput. This connects the AlgorithmOutput to the AlgorithmInput
+Have added parentId:long to AlgorithmInput. This connects a what-if case to its original algorithmInput
+
+
+>>Shouldn't what if scenarios have an entity?
+
+Still using AlgorithmInput. In the what-if case, the AlgorithmInput.isWhatIfCase = true and AlgorithmInput.parentId is equal to the original algorithmInput.id. 
+
+
+>>You missed the Bluepages security integration.
+>>Please add a note on it in the frontend module specification.
+
+Added.
+
+
+>>Some chosen technologies (Spring, memcached, json-simple, iText) have not been approved in this thread
+
+Spring, memcached are still open. json-simple is allowed. iText is replaced by PDFBox
+
+
+>>You need to explain why do you need JEXP in SDS for client.
+>>Please add your arguments regarding Spring usage in SDS as well. (it was required in the forum)
+
+Added in SDS 7.2.6
+
+
+>>As Algo could work on multi mb data sets, it'll several seconds or maybe even minutes to finish it work.
+>>I think user shouldn't be blocked during this time.
+>>It will be cool to add ProcessStatus service and appropriate Progress bar in frontend.
+
+Added and explained in 2.8 PredictionAlgorithm of back-end arch.
+
+
+>> Should service put predictive algo output to cache as well?
+>>For example if user will send same algo input several times. I think such requests should be processed by algo only once and then be retrieved from cache. 
+
+Have added this requirement in 2.5 AlgorithmOutputService of back-end arch.
+
+
+>>Section 2 from ADS suggests that there will be 3 modules which is not accurate
+
+Corrected
+
+
+>>SDS section 5.19 and 6.3 - I believe that you should confirm if audit is needed or not.
+
+Confirmed. It is not required
+
+
+>>As I stated above, please change API to meet requirement 4.4.25.
+
+As stated above, this is simple to change later on. And its is not in scope now.
+
+
+>> I strongly suggest to add progress bar functionality.
+
+Have added the aync algorithm running capability. Have added thsi requiremnt in front-end arch.
+
+
+>>Please include a sequence diagram for the management of what if screnarios.
+
+what if screnarios is simply an algorithm input. Hence it is covered by the existing SD
+
+
+>>Please include a sequence diagram for the configuration of an algorithm.
+
+Please see example.doc. I think it is explained well enough here to not duplicate it with an SD.

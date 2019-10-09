@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigManager>
+	<namespace name="Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient">
+		<!-- The namespace used to initialize the object factory (optional) -->
+		<property name="ObjectFactoryNamespace">
+			<value>TopCoder.Util.ObjectFactory</value>
+		</property>
+		
+		<!-- The namespace used to initialize the exception manager.(optional) -->
+		<property name="Binding">
+			<value>Binding</value>
+		</property>
+		
+		<property name="EndpointAddress">
+			<value>EndpointAddress</value>
+		</property>
+		
+	</namespace>
+</ConfigManager>

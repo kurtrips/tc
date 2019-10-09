@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\FAM\Development\FinancialSecurityLookup\build\classes\TopCoder.FinancialService.Utility.Test.dll" total="386" failures="0" not-run="0" date="2007-09-29" time="06:17:50">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="C:\FAM\Development\FinancialSecurityLookup" machine-name="HP50041703150" user="Administrator" user-domain="HP50041703150" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="C:\FAM\Development\FinancialSecurityLookup\build\classes\TopCoder.FinancialService.Utility.Test.dll" success="True" time="27.375" asserts="0">
+    <results>
+      <test-suite name="TopCoder" success="True" time="27.250" asserts="0">
+        <results>
+          <test-suite name="TopCoder.FinancialService" success="True" time="27.250" asserts="0">
+            <results>
+              <test-suite name="TopCoder.FinancialService.Utility" success="True" time="27.250" asserts="0">
+                <results>
+                  <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests" success="True" time="0.563" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityDataCombinerAccuracyTests" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityDataCombinerAccuracyTests.DefaultSecurityDataCombiner_Ctor" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityDataCombinerAccuracyTests.DefaultSecurityDataCombiner_Combine_Overlap1" executed="True" success="True" time="0.016" asserts="7" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityDataCombinerAccuracyTests.DefaultSecurityDataCombiner_Combine_Overlap2" executed="True" success="True" time="0.000" asserts="8" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityDataCombinerAccuracyTests.DefaultSecurityDataCombiner_Combine" executed="True" success="True" time="0.000" asserts="8" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests" success="True" time="0.172" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_Ctor" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_CUSIP_Letters1" executed="True" success="True" time="0.078" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_CUSIP_Letters1_LowerCase" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_CUSIP_Letters2" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_CUSIP_Letters2_LowerCase" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_CUSIP_Number1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_CUSIP_Number2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_ISIN_Number" executed="True" success="True" time="0.063" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SEDOL_Number" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SymbolTicker_NYSE1" executed="True" success="True" time="0.016" asserts="6" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SymbolTicker_NYSE2" executed="True" success="True" time="0.000" asserts="5" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SymbolTicker_AMEX1" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SymbolTicker_AMEX2" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SymbolTicker_NASDAQ1" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.DefaultSecurityIdParserAccuracyTests.DefaultSecurityIdParser_SymbolTicker_NASDAQ2" executed="True" success="True" time="0.000" asserts="6" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialMarketAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialMarketAccuracyTests.FinancialMarket_NYSE" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialMarketAccuracyTests.FinancialMarket_NASDAQ" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialMarketAccuracyTests.FinancialMarket_AMEX" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityExceptionAccuracyTests" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.031" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests" success="True" time="0.109" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.FinancialSecurityManager_Ctor1" executed="True" success="True" time="0.016" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.FinancialSecurityManager_Ctor2" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.ConvertFromCUSIPToISIN" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.ConvertFromISINToCUSIP" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker1_LookA" executed="True" success="True" time="0.016" asserts="28" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker1_LookAAndB" executed="True" success="True" time="0.016" asserts="40" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker1_IdDetails" executed="True" success="True" time="0.000" asserts="7" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker2_LookA_True" executed="True" success="True" time="0.016" asserts="40" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker2_IdDetails_True" executed="True" success="True" time="0.000" asserts="7" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker2_LookA_False" executed="True" success="True" time="0.016" asserts="40" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker2_IdDetails_False" executed="True" success="True" time="0.016" asserts="7" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker3_LookA" executed="True" success="True" time="0.000" asserts="28" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerAccuracyTests.Lookup_SymbolTicker3_LookAAndB" executed="True" success="True" time="0.000" asserts="6" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerBuilderAccuracyTests" success="True" time="0.078" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerBuilderAccuracyTests.BuildFinancialSecurityManager_FullConfig" executed="True" success="True" time="0.078" asserts="10" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.FinancialSecurityManagerBuilderAccuracyTests.BuildFinancialSecurityManager_OptionConfig" executed="True" success="True" time="0.000" asserts="9" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdFormatExceptionAccuracyTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdFormatExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdFormatExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdFormatExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdFormatExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.016" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdTypeExceptionAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdTypeExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdTypeExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdTypeExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.InvalidSecurityIdTypeExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.NoSuchSecurityLookupServiceExceptionAccuracyTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.NoSuchSecurityLookupServiceExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.NoSuchSecurityLookupServiceExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.NoSuchSecurityLookupServiceExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.NoSuchSecurityLookupServiceExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.016" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests.SecurityData_Property_Id" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests.SecurityData_Property_CompanyName" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests.SecurityData_Property_ReferenceIds" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests.SecurityData_Property_ReferenceIds_Cloned" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests.SecurityData_Ctor1" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataAccuracyTests.SecurityData_Ctor2" executed="True" success="True" time="0.000" asserts="7" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataCombiningExceptionAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataCombiningExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataCombiningExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataCombiningExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityDataCombiningExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdDetailsAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdDetailsAccuracyTests.SecurityIdDetails_Property_Id" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdDetailsAccuracyTests.SecurityIdDetails_Property_Type" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdDetailsAccuracyTests.SecurityIdDetails_Ctor" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdParsingExceptionAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdParsingExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdParsingExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdParsingExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdParsingExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdTypeAccuracyTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdTypeAccuracyTests.SecurityIdType_CUSIP" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdTypeAccuracyTests.SecurityIdType_ISIN" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdTypeAccuracyTests.SecurityIdType_SymbolTicker" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityIdTypeAccuracyTests.SecurityIdType_SEDOL" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityLookupExceptionAccuracyTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityLookupExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityLookupExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityLookupExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SecurityLookupExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests.SymbolTickerSecurityIdDetails_Property_SpecialCode" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests.SymbolTickerSecurityIdDetails_Property_FinancialMarkets" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests.SymbolTickerSecurityIdDetails_Property_FinancialMarkets_Cloned" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests.SymbolTickerSecurityIdDetails_Ctor1" executed="True" success="True" time="0.000" asserts="8" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.SymbolTickerSecurityIdDetailsAccuracyTests.SymbolTickerSecurityIdDetails_Ctor2" executed="True" success="True" time="0.000" asserts="8" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.AccuracyTests.UnknownSecurityIdTypeExceptionAccuracyTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.UnknownSecurityIdTypeExceptionAccuracyTests.InheritanceTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.UnknownSecurityIdTypeExceptionAccuracyTests.Constructor_Default_Test" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.UnknownSecurityIdTypeExceptionAccuracyTests.Constructor_String_Test" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.AccuracyTests.UnknownSecurityIdTypeExceptionAccuracyTests.Constructor_StringAndException_Test" executed="True" success="True" time="0.016" asserts="3" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.FailureTests" success="True" time="0.234" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.DefaultSecurityDataCombinerFailureTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.DefaultSecurityDataCombinerFailureTests.TestCombine_Null_firstSecurityData" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.DefaultSecurityDataCombinerFailureTests.TestCombine_Null_secondSecurityData" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.DefaultSecurityIdParserFailureTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.DefaultSecurityIdParserFailureTests.TestParse_Null_securityId" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.DefaultSecurityIdParserFailureTests.TestParse_empty_securityId" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests" success="True" time="0.078" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_Null_configuration" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_Null_objectfactory_key" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_empty_objectfactory_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_invalid_objectfactory_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_empty_security_id_parser_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_invalid_security_id_parser_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_null_security_id_types" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_null_security_lookup_service_keys" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_zero_security_lookup_service_keys" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_invalid_recursive_lookup" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_invalid_reference_lookup" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_Null_security_data_cache_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_empty_security_data_cache_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_invalid_security_data_cache_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_Null_security_data_combiner_key" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_empty_security_data_combiner_key" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerBuilderFailureTests.TestBuildFinancialSecurityManager_invalid_security_data_combiner_key" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests" success="True" time="0.078" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_1_Null_securityLookupServices" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_1_empty_securityLookupServices" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_1_empty_key_securityLookupServices" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_1_null_value_securityLookupServices" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_1_Null_securityDataCombiner" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_1_Null_securityDataCache" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_Null_ssecurityIdParser" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_empty_securityLookupServices" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_Null_securityLookupServices" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_empty_key_securityLookupServices" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_null_value_securityLookupServices" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_Null_securityDataCombiner" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TesFinancialSecurityManager_2_Null_securityDataCache" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestParse_Null_securityId" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestParse_empty_securityId" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestLookup_Null_securityId" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestLookup_empty_securityId" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestLookup_Null_securityIdDetails" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestLookup_invalid_securityIdDetails" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestConvertFromCUSIPToISIN_Null_securityId" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestConvertFromCUSIPToISIN_empty_securityId" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestConvertFromISINToCUSIP_Null_isinSecurityId" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.FinancialSecurityManagerFailureTests.TestConvertFromISINToCUSIP_empty_isinSecurityId" executed="True" success="True" time="0.016" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_1_Null_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_1_empty_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_1_Null_companyName" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_1_empty_companyName" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_Null_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_empty_id" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_Null_companyName" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_empty_companyName" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_Null_referenceIds" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_empty_item_referenceIds" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityDataFailureTests.TestSecurityData_2_null_item_referenceIds" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.SecurityIdDetailsFailureTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityIdDetailsFailureTests.TestSecurityIdDetails_Null_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityIdDetailsFailureTests.TestSecurityIdDetails_empty_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityIdDetailsFailureTests.TestSecurityIdDetails_Null_type" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SecurityIdDetailsFailureTests.TestSecurityIdDetails_empty_type" executed="True" success="True" time="0.016" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_Null_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_empty_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_Null_type" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_empty_type" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_Null_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_empty_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_empty_item_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_1_null_item_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_Null_id" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_empty_id" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_Null_type" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_empty_type" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_Null_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_empty_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_empty_item_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.FailureTests.SymbolTickerSecurityIdDetailsFailureTests.TestSymbolTickerSecurityIdDetails_2_null_item_financialMarkets" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.StressTests" success="True" time="25.766" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.FinancialService.Utility.StressTests.DefaultSecurityDataCombinerStressTests" success="True" time="0.063" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.StressTests.DefaultSecurityDataCombinerStressTests.BenchmarkCombinePerformance" executed="True" success="True" time="0.063" asserts="20000" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.StressTests.DefaultSecurityIdParserStressTests" success="True" time="0.063" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.StressTests.DefaultSecurityIdParserStressTests.BenchmarkParsePerformance" executed="True" success="True" time="0.063" asserts="100" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.StressTests.FinancialSecurityManagerBuilderStressTests" success="True" time="4.266" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.StressTests.FinancialSecurityManagerBuilderStressTests.BenchmarkBuildFinancialSecurityManager" executed="True" success="True" time="4.266" asserts="5000" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.FinancialService.Utility.StressTests.FinancialSecurityManagerStressTests" success="True" time="21.344" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.StressTests.FinancialSecurityManagerStressTests.BenchmarkConvertFromCUSIPToISIN" executed="True" success="True" time="5.297" asserts="5000" />
+                          <test-case name="TopCoder.FinancialService.Utility.StressTests.FinancialSecurityManagerStressTests.BenchmarkConvertFromISINToCUSIP" executed="True" success="True" time="10.813" asserts="5000" />
+                          <test-case name="TopCoder.FinancialService.Utility.StressTests.FinancialSecurityManagerStressTests.BenchmarkLookup" executed="True" success="True" time="5.234" asserts="15000" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityDataCombiners" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestCombineAccuracy1" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestCombineAccuracy2" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestCombineAccuracy3" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestCombineAccuracy4" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestCombineFailure1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiners.DefaultSecurityDataCombinerTests.TestCombineFailure2" executed="True" success="True" time="0.016" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityIdParsers" success="True" time="0.156" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests" success="True" time="0.156" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinAccuracy1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinAccuracy2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinAccuracy3" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolAccuracy1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolAccuracy2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolAccuracy3" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipAccuracy1" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipAccuracy2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipAccuracy3" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseTickerAccuracy1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseTickerAccuracy2" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseTickerAccuracy3" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseTickerAccuracy4" executed="True" success="True" time="0.000" asserts="4" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinFail1" executed="True" success="True" time="0.047" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinFail3" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseIsinFail4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolFail3" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolFail4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseSedolFail5" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipFail3" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseCusipFail4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFail2" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFail3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFail4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFail5" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFailANE" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsers.DefaultSecurityIdParserTests.TestParseFailAE" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.DemoTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.DemoTests.DemoLookup" executed="True" success="True" time="0.016" asserts="6" />
+                      <test-case name="TopCoder.FinancialService.Utility.DemoTests.DemoConvertIds" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.DemoTests.DemoFinancialSecurityManagerBuilder" executed="True" success="True" time="0.000" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.FinancialMarketsTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialMarketsTests.Test1" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.016" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManager" executed="True" success="True" time="0.000" asserts="6" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManagerFail1" executed="True" success="True" time="0.016" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManagerFail2" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManagerFail3" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManagerFail4" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManagerFail5" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerBuilderTests.TestBuildFinancialSecurityManagerFail6" executed="True" success="True" time="0.016" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests" success="True" time="0.156" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="6" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="6" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail2" executed="True" success="True" time="0.016" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail3" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail4" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail5" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail6" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConstructorFail7" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupReference1" executed="True" success="True" time="0.016" asserts="10" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupReference2" executed="True" success="True" time="0.000" asserts="23" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupReference3" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupReference4" executed="True" success="True" time="0.000" asserts="10" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupReference5" executed="True" success="True" time="0.000" asserts="11" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupRecursive1" executed="True" success="True" time="0.016" asserts="13" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupRecursive2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupRecursive3" executed="True" success="True" time="0.016" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupSimple1" executed="True" success="True" time="0.000" asserts="10" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail1" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail2" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail3" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail4" executed="True" success="True" time="0.016" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail5" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail6" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail7" executed="True" success="True" time="0.016" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail8" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestLookupFail9" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestParse" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINAccuracy1" executed="True" success="True" time="0.016" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINAccuracy2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINFail1" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINFail2" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINFail3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINFail4" executed="True" success="True" time="0.016" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromCUSIPToISINFail5" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPAccuracy1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPFail1" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPFail2" executed="True" success="True" time="0.016" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPFail3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPFail4" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPFail5" executed="True" success="True" time="0.016" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.FinancialSecurityManagerTests.TestConvertFromISINToCUSIPFail6" executed="True" success="True" time="0.000" asserts="0" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.HelperTests" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotNull1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotNull2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotNullNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotNullNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateNotNullNotEmpty3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateDictionary1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateDictionary2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateDictionary3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateDictionary4" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateArray1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateArray2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateArray3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateArray4" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateArray5" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestValidateArray6" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestGetSelfDocumentingException" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.HelperTests.TestGetCheckDigitForIsin" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="3" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.016" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdFormatExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.016" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.InvalidSecurityIdTypeExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtor" executed="True" success="True" time="0.016" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.NoSuchSecurityLookupServiceExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataCombiningExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.016" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityDataRecordTests" success="True" time="0.000" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataRecordTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataRecordTests.TestConstructorFail11" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataRecordTests.TestSecurityData" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataRecordTests.TestIsLookedUp" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityDataTests" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="3" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="4" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail11" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail12" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail13" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail14" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail5" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail6" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestConstructorFail7" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestId" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestCompanyName" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityDataTests.TestReferenceIds" executed="True" success="True" time="0.000" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests" success="True" time="0.000" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestConstructorFail2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestConstructorFail3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestConstructorFail4" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestId" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdDetailsTests.TestType" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdParsingExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.016" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityIdTypeTests" success="True" time="0.000" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityIdTypeTests.Test1" executed="True" success="True" time="0.000" asserts="4" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.016" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SecurityLookupExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests" success="True" time="0.031" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="3" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.ServiceNotAvaliableExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.016" asserts="3" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests" success="True" time="0.000" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="5" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="6" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructorFail2" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructorFail3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructorFail4" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestConstructorFail5" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestFinancialMarkets" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.SymbolTickerSecurityIdDetailsTests.TestSpecialCode" executed="True" success="True" time="0.000" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests" success="True" time="0.016" asserts="0">
+                    <results>
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="3" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.016" asserts="1" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                      <test-case name="TopCoder.FinancialService.Utility.UnknownSecurityIdTypeExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

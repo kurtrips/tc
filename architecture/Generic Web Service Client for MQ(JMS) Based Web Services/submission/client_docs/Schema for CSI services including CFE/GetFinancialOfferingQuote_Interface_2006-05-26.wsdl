@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /cvsroot/ims/ims/gen/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26/pbi/GetFinancialOfferingQuote_Interface_2006-05-26.wsdl,v 1.8 2007/07/25 16:16:17 sinhap Exp $ -->
+<wsdl:definitions name="GetFinancialOfferingQuote_Interface_2006-05-26"
+    targetNamespace="http://www.ibm.com/xmlns/ims/1.3/GetFinancialOfferingQuote_Interface_2006-05-26"
+    xmlns:tns="http://www.ibm.com/xmlns/ims/1.3/GetFinancialOfferingQuote_Interface_2006-05-26"
+    xmlns:bod="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+   <wsdl:documentation><![CDATA[
+       Title - GetFinancialOfferingQuote_Interface_2006-05-26.wsdl
+       Publisher - IBM Enterprise Integration Messaging Specification (EIMS)
+       Creator - EIMS Team http://w3.ibm.com/transform/cio.nsf/main/ws_eims
+       Date.Created - 2006-05-26
+       Format - text/xml
+       Language - en-US
+       Identifier - http://w3.ibm.com/standards/xml/ibmww/ims/1.3/PBI/FinancialOfferingQuote/GetFinancialOfferingQuote_Interface_2006-05-26.wsdl
+       Keywords - EIMS, Enterprise Integration Messaging Specification, FinancialOfferingQuote, FinancialOfferingQuoteBOD, GetFinancialOfferingQuote, ShowFinancialOfferingQuote
+       Description -
+	      A service implements the FinancialOfferingQuoteBOD.
+       ]]>
+   </wsdl:documentation>
+
+   <wsdl:types>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+         <xsd:import namespace="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26"
+              schemaLocation="FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd"/>
+      </xsd:schema>
+   </wsdl:types>
+
+   <wsdl:message name="GetFinancialOfferingQuote">
+      <wsdl:part name="GetFinancialOfferingQuote" element="bod:FinancialOfferingQuoteBOD"/>
+   </wsdl:message>
+
+   <wsdl:message name="ShowFinancialOfferingQuote">
+      <wsdl:part name="ShowFinancialOfferingQuote" element="bod:FinancialOfferingQuoteBOD"/>
+   </wsdl:message>
+
+   <wsdl:portType name="GetFinancialOfferingQuote_PortType">
+      <wsdl:documentation>
+	      Port type definition of the FinancialOfferingQuoteBOD for
+	      requester to retrieve FinancialOfferingQuote information.
+      </wsdl:documentation>
+      <wsdl:operation name="GetFinancialOfferingQuote_op">
+         <wsdl:input message="tns:GetFinancialOfferingQuote" name="GetFinancialOfferingQuote"/>
+         <wsdl:output message="tns:ShowFinancialOfferingQuote" name="ShowFinancialOfferingQuote"/>
+      </wsdl:operation>
+   </wsdl:portType>
+</wsdl:definitions>
+

@@ -1,0 +1,64 @@
+>>the submission type to image type mapping is incorrect.
+fixed
+
+>> please take a look at com.topcoder.web.studio.util.Util#createSubmissionPath,....
+fixed
+
+>>you use mark_for_purchase to check whether client has permission to view it......
+have asked in forum. got no reply so far.
+anyway this recommended, so fix is not required. moreover I am somewhat sure that the logic is correct
+
+>>has_access_to_project_as_directproject_member is incorrect, you've checked the billing project of contest against associated_direct_projects, it's incorrect.
+fixed
+
+>>The API path should be like /:apiVersion/download/design/:sid
+haved asked in forum. no reply yet. i am very sure the path I am using is fine
+
+>>For the requirement
+>>"the root directory for all submission files should be configurable as environment variables."
+fixed
+
+>>As commented by copilot in this thread:http://apps.topcoder.com/forums/?module=Thread&threadID=812677&start=0
+>>"for copilot and topcoder managers, they could download the submissions at any time."
+fixed
+
+>>As commented by copilot in this thread:http://apps.topcoder.com/forums/?module=Thread&threadID=812677&start=0
+>>"screeners could only download the submissions after screening phase started"
+fixed
+
+>> please give the detail svn number your submission based on. 
+added in DG
+
+>>why cacheEnabled is false, i think the response can be cached for this download api.
+fixed
+
+>> in ./tc-api/test/test.desDownloadSubmission.js
+>>... ...but user is member if tc direct projects group ... ...
+fixed
+
+>> check following https://coder.topcoder.com/internal/web_module/trunk/src/main/com/topcoder/web/studio/controller/request/DownloadSubmission.java 
+>>       //resetting the cache-control header to empty.  IE freaks out and doesn't save when the
+>>        //cache-control header is set the way we do for an uncached response.
+>>        response.setHeader("Cache-Control", "");.....
+fixed
+
+>>mine_types and file_types are constants, so you don't need to read it in every request, we can hard code them in js just like image type ids.
+Not fixing this. I missed this in appeals phase.
+There are 31 mime types and 45 file types. It is too much to hard-code all of these in code. 
+A better solution would be to add caching to these lookup entities in code, but I digress. Anyway this should be recommended.
+
+>>you've use magic number is lots of places, it make very hard to understand and maintain code, like.....
+fixed
+
+>>you've check everyone permission at last, you should move it before cockpit permissions checking, then we can improve the performance as we don't need to run query to check cockpit permission if user already meet everyone permission.
+fixed
+
+>>you can add a method for below code to avoid code redundancy.
+again. this should be recommended.
+I actually tried this but it made the code look more confusing at the expense of some lines of code.
+So i reverted back to the original state
+
+>>check 175336_attachments/page2.png, please fix it.
+fixed
+
+recommended items are not fixed

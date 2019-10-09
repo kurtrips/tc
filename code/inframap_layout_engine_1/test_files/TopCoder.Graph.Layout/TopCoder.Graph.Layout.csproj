@@ -1,0 +1,89 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9CAA089-9B5D-4CFB-98A1-366E851E5622}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TopCoder.Graph.Layout</RootNamespace>
+    <AssemblyName>TopCoder.Graph.Layout</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopCoder.Util.ExceptionManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Util.ExceptionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ExceptionManager.SDE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Util.ExceptionManager.SDE.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TopCoder\Graph\Layout\Dimension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\IAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\IGraph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\IGraphLayouter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\ILabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\ILink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\INode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\IPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\Layouter\MockLayouter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\LayoutException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TopCoder\Graph\Layout\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

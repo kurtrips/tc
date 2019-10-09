@@ -1,0 +1,144 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{117C3269-5EDD-424E-BA03-F66A505D63A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>Hermes Authentication Service</AssemblyName>
+    <RootNamespace>Hermes_Authentication_Service</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Hermes Authentication Service.XML</DocumentationFile>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hermes.Entity.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bdbb3667a266745c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\Hermes.Entity.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Hermes.Entity.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bdbb3667a266745c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\Hermes.Entity.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopCoder.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.LoggingWrapper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.LoggingWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Services.WCF, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Services.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.Collection.Set, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Util.Collection.Set.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ConfigurationManager, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Util.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ExceptionManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Util.ExceptionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ExceptionManager.SDE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Util.ExceptionManager.SDE.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ObjectFactory, Version=1.2.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Util.ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ObjectFactory.Configuration, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\tcs\p\TopCoder.Util.ObjectFactory.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="conf\preload.xml" />
+    <Content Include="docs\ClientConfig.xml" />
+    <Content Include="docs\Hermes_Authentication_Service_Class_Diagram_Client.gif" />
+    <Content Include="docs\Hermes_Authentication_Service_Class_Diagram_Main.gif" />
+    <Content Include="docs\Hermes_Authentication_Service_Sequence_Diagram_Check_Entity.gif" />
+    <Content Include="docs\Hermes_Authentication_Service_Sequence_Diagram_HermesAuthorizationService.gif" />
+    <Content Include="docs\ServiceConfig.xml" />
+    <Content Include="test_files\TopCoderAuthConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="conf\cm.dtd" />
+    <None Include="docs\CSharpCodingStandards.doc" />
+    <None Include="docs\Hermes Authentication Service 1.0 Requirements Specification.doc" />
+    <None Include="docs\Hermes Authentication Service 1.0 Requirements Specification.pdf" />
+    <None Include="docs\Hermes Authentication Service 1.0 Requirements Specification.rtf" />
+    <None Include="docs\Hermes_Authentication_Service.zuml" />
+    <None Include="docs\Hermes_Authentication_Service_Component_Specification.pdf" />
+    <None Include="docs\Hermes_Authentication_Service_Component_Specification.rtf" />
+    <None Include="docs\Hermes_Authentication_Service_Requirements_Specification.pdf" />
+    <None Include="docs\Hermes_Authentication_Service_Requirements_Specification.rtf" />
+    <None Include="docs\Keystone .NET Developers Setup Guide.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\AssemblyInfo.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\AuthorizationServiceException.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Client\Common\FunctionalAbilitiesAttribute.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Client\Common\HermesAuthorizationMediator.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Client\Common\IAuthorizationMappingProvider.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Client\Common\NoFunctionalAttributeException.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Client\Common\WcfHelper.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Client\HermesAuthorizationServiceClient.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Helper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\IAuthorization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\InvalidSessionException.cs" />
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\Rights.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\csharp\main\Hermes\Services\Security\Authorization\TopCoder\HermesAuthorizationService.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\AuthorizationServiceExceptionTest.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\Client\HermesAuthorizationServiceClientImpl2Test.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\Client\HermesAuthorizationServiceClientImplTest.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\Client\HermesAuthorizationServiceClientTest.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\Client\HermesAuthorizationServiceProxy.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\CoverageExcludeAttribute.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\Demo.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\Demo2.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\InvalidSessionExceptionTest.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\MyTest.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\RightsTest.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\TestHelper.cs" />
+    <Compile Include="src\csharp\tests\Hermes\Services\Security\Authorization\TopCoder\HermesAuthorizationServiceTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

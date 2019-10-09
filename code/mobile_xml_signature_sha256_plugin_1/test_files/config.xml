@@ -1,0 +1,115 @@
+<Config>
+  <Namespace name="TopCoder.Security.Cryptography.Mobile">
+    <Property name="canonicalizers">
+      <Value>http://www.w3.org/TR/2001/REC-xml-c14n-20010315,TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizer</Value>
+	  <Value>http://www.w3.org/2001/10/xml-exc-c14n#,TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizer</Value>
+    </Property>
+    <Property name="signers">
+		<Value>http://www.w3.org/2000/09/xmldsig#rsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.RSASigner</Value>
+		<Value>http://www.w3.org/2000/09/xmldsig#dsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.DSASigner</Value>
+    </Property>
+    <Property name="digesters">
+      <Value>http://www.w3.org/2000/09/xmldsig#sha1,TopCoder.Security.Cryptography.Mobile.Digesters.SHA1Digester</Value>
+    </Property>
+    <Property name="reference_loaders">
+      <Value>http,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoader</Value>
+      <Value>soap,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoader</Value>
+    </Property>
+    <Property name="key_info_providers">
+      <Value>testKeyInfoProvider,TopCoder.Security.Cryptography.Mobile.DummyKeyInfoProvider</Value>
+    </Property>
+    <Property name="transformers">
+      <Value>testTransformer,TopCoder.Security.Cryptography.Mobile.DummyTransformer</Value>
+    </Property>    
+  </Namespace>
+  
+  <Namespace name="TopCoder.Security.Cryptography.Mobile.SHA256Test">
+    <Property name="canonicalizers">
+      <Value>http://www.w3.org/TR/2001/REC-xml-c14n-20010315,TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizer</Value>
+	  <Value>http://www.w3.org/2001/10/xml-exc-c14n#,TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizer</Value>
+    </Property>
+    <Property name="signers">
+		<Value>http://www.w3.org/2000/09/xmldsig#rsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.RSASigner</Value>
+		<Value>http://www.w3.org/2000/09/xmldsig#dsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.DSASigner</Value>
+    </Property>
+    <Property name="digesters">
+      <Value>http://www.w3.org/2000/09/xmldsig#sha256,TopCoder.Security.Cryptography.Mobile.Digesters.SHA256Digester</Value>
+    </Property>
+    <Property name="reference_loaders">
+      <Value>http,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoader</Value>
+      <Value>soap,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoader</Value>
+    </Property>
+    <Property name="key_info_providers">
+      <Value>testKeyInfoProvider,TopCoder.Security.Cryptography.Mobile.DummyKeyInfoProvider</Value>
+    </Property>
+    <Property name="transformers">
+      <Value>testTransformer,TopCoder.Security.Cryptography.Mobile.DummyTransformer</Value>
+    </Property>    
+  </Namespace>
+  
+
+  <Namespace name="TopCoder.Security.Cryptography.Mobile.Stress">
+    <Property name="canonicalizers">
+      <Value>http://www.w3.org/TR/2001/REC-xml-c14n-20010315,TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizer</Value>
+	  <Value>http://www.w3.org/2001/10/xml-exc-c14n#,TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizer</Value>
+    </Property>
+    <Property name="signers">
+		<Value>http://www.w3.org/2000/09/xmldsig#rsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.RSASigner</Value>
+		<Value>http://www.w3.org/2000/09/xmldsig#dsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.DSASigner</Value>
+    </Property>
+    <Property name="digesters">
+      <Value>http://www.w3.org/2000/09/xmldsig#sha1,TopCoder.Security.Cryptography.Mobile.Digesters.SHA1Digester</Value>
+    </Property>
+    <Property name="reference_loaders">
+      <Value>http,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoader</Value>
+      <Value>soap,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoader</Value>
+    </Property>
+    <Property name="key_info_providers">
+      <Value>testKeyInfoProvider,TopCoder.Security.Cryptography.Mobile.DummyKeyInfoProvider</Value>
+    </Property>
+    <Property name="transformers">
+      <Value>testTransformer,TopCoder.Security.Cryptography.Mobile.DummyTransformer</Value>
+    </Property>    
+  </Namespace>
+  <Namespace name="Failure.Topcoder">
+    <Property name="canonicalizers">
+      <Value>http://www.w3.org/TR/2001/REC-xml-c14n-20010315,TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizer</Value>
+	  <Value>http://www.w3.org/2001/10/xml-exc-c14n#,TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizer</Value>
+    </Property>
+    <Property name="signers">
+		<Value>http://www.w3.org/2000/09/xmldsig#rsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.RSASigner</Value>
+		<Value>http://www.w3.org/2000/09/xmldsig#dsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.DSASigner</Value>
+    </Property>
+    <Property name="digesters">
+      <Value>http://www.w3.org/2000/09/xmldsig#sha1,TopCoder.Security.Cryptography.Mobile.Digesters.SHA1Digester</Value>
+    </Property>
+    <Property name="reference_loaders">
+      <Value>http,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoader</Value>
+      <Value>soap,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoader</Value>
+    </Property>
+    <Property name="key_info_providers">
+      <Value>testKeyInfoProvider,TopCoder.Security.Cryptography.Mobile.DummyKeyInfoProvider</Value>
+    </Property>
+    <Property name="transformers">
+      <Value>testTransformer,TopCoder.Security.Cryptography.Mobile.DummyTransformer</Value>
+    </Property>    
+  </Namespace>
+  <Namespace name="AccuracyTests">
+    <Property name="digesters">
+      <Value>http://www.w3.org/2000/09/xmldsig#sha1,TopCoder.Security.Cryptography.Mobile.Digesters.SHA1Digester</Value>
+    </Property>
+    <Property name="signers">
+		<Value>http://www.w3.org/2000/09/xmldsig#rsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.RSASigner</Value>
+		<Value>http://www.w3.org/2000/09/xmldsig#dsa-sha1,TopCoder.Security.Cryptography.Mobile.Signers.DSASigner</Value>
+    </Property>
+    <Property name="canonicalizers">
+      <Value>http://www.w3.org/TR/2001/REC-xml-c14n-20010315,TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizer</Value>
+    </Property>
+    <Property name="reference_loaders">
+      <Value>http,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoader</Value>
+    </Property>
+    <Property name="key_info_providers">
+      <Value>MockKeyInfoProvider,TopCoder.Security.Cryptography.Mobile.MockKeyInfoProvider</Value>
+    </Property>
+  </Namespace>
+</Config>

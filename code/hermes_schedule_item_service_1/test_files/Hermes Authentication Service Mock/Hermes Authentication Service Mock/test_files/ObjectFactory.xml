@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigManager>
+    <namespace name="TopCoder.Util.ObjectFactory.default">
+        <property name="type_name">
+            <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+        </property>
+    </namespace>
+    <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+        <property name="p1:string">
+            <value>HermesAuthentiationService</value>
+        </property>
+    </namespace>
+
+    <namespace name="HermesAuthentiationService.exceptionManager">
+        <property name="type_name">
+            <value>TopCoder.Util.ExceptionManager.ExceptionPublishManager</value>
+        </property>
+        <property name="assembly">
+            <value>TopCoder.Util.ExceptionManager.dll</value>
+        </property>
+    </namespace>
+    
+    <namespace name="HermesAuthentiationService.logger">
+        <property name="type_name">
+            <value>TopCoder.Services.WCF.Loggers.DefaultTCWcfLogger</value>
+        </property>
+        <property name="assembly">
+            <value>TopCoder.Services.WCF.dll</value>
+        </property>
+    </namespace>
+    
+    <namespace name="HermesAuthentiationService.Binding">
+        <property name="type_name">
+            <value>System.ServiceModel.BasicHttpBinding</value>
+        </property>
+        <property name="assembly">
+            <value>System.ServiceModel.dll</value>
+        </property>
+    </namespace>
+
+    <namespace name="HermesAuthentiationService.EndpointAddress">
+        <property name="type_name">
+            <value>System.ServiceModel.EndpointAddress</value>
+        </property>
+        <property name="assembly">
+            <value>System.ServiceModel.dll</value>
+        </property>
+    </namespace>
+    <namespace name="HermesAuthentiationService.EndpointAddress.parameters">
+        <property name="p1:string">
+            <value>http://localhost:11111/demo</value>
+        </property>
+    </namespace>
+</ConfigManager>

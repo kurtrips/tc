@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+
+<xsd:schema
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2003/XMLSchema-instance">
+
+<xsd:complexType name="Doc">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         Contains actual API documentation, including tags/markup.
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:complexContent mixed="true">
+      <xsd:restriction base="xsd:anyType">
+         <xsd:sequence>
+            <xsd:any
+               minOccurs="0"
+               maxOccurs="unbounded"
+               processContents="skip"/>
+         </xsd:sequence>
+      </xsd:restriction>
+   </xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Package">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This could represent a C++/C# namespace or a Java package.  Note that
+         in this model packages cannot contain packages.  Instead, if a package
+         "a.b" (or "::a::b") contains a subpackage "c", the API analyzer should
+         generate the two packages "a.b" and "a.b.c" (or "::a::b" and
+         "::a::b::c").
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc" minOccurs="0"/>
+      <xsd:group ref="generalContent" minOccurs="0" maxOccurs="unbounded"/>
+   </xsd:sequence>
+   <xsd:attribute name="name" type="xsd:NMTOKEN"/>
+</xsd:complexType>
+
+<xsd:complexType name="ConstructedType">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This could represent a class, interface, struct, etc.
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc"
+                   minOccurs="0"/>
+      <xsd:element name="annotation" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="genericParam" type="ParamDecl"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="parent" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:sequence>
+         <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:group ref="generalContent"/>
+            <xsd:element name="constructor" type="Method"/>
+            <xsd:element name="destructor" type="Method"/>
+
+            <xsd:element name="property" type="Field"/>
+            <xsd:element name="event" type="Field"/>
+            <xsd:element name="indexer" type="Method"/>
+         </xsd:choice>
+      </xsd:sequence>
+   </xsd:sequence>
+   <xsd:attribute name="name" type="xsd:NMTOKEN"/>
+   <xsd:attribute name="visibility" type="Visibility"/>
+   <xsd:attribute name="modifiers" type="Modifiers" use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="Field">
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc"
+                   minOccurs="0"/>
+      <xsd:element name="annotation" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="type" type="TypeValueDesc"
+                   minOccurs="0"/>
+   </xsd:sequence>
+   <xsd:attribute name="name" type="xsd:NMTOKEN"/>
+   <xsd:attribute name="visibility" type="Visibility"/>
+   <xsd:attribute name="modifiers" type="Modifiers" use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="Method">
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc"
+                   minOccurs="0"/>
+      <xsd:element name="annotation" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="genericParam" type="ParamDecl"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="return" type="TypeValueDesc"
+                   minOccurs="0"/>
+      <xsd:element name="param" type="ParamDecl"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="exception" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+   </xsd:sequence>
+   <xsd:attribute name="name" type="xsd:NMTOKEN"/>
+   <xsd:attribute name="visibility" type="Visibility"/>
+   <xsd:attribute name="modifiers" type="Modifiers" use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="Enum">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This represents a simple enum (e.g. in C++ or C#).
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc"
+                   minOccurs="0"/>
+      <xsd:element name="annotation" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="type" minOccurs="0" type="xsd:string">
+         <xsd:annotation>
+            <xsd:documentation xml:lang="en">
+               C# allows an enum to have a specific elementary type.
+            </xsd:documentation>
+         </xsd:annotation>
+      </xsd:element>
+      <xsd:sequence>
+         <xsd:element name="value" type="EnumValue"
+                      minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:sequence>
+   <xsd:attribute name="visibility" type="Visibility"/>
+   <xsd:attribute name="modifiers" type="Modifiers" use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="ComplexEnum">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This represents a complex enum type that acts as a full (non-generic)
+         class, but can have enum values with an implied type (e.g. Java 5
+         enums).
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc"
+                   minOccurs="0"/>
+      <xsd:element name="annotation" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="parent" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:sequence>
+         <xsd:element name="value" type="EnumValue"
+                      minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:choice minOccurs="0" maxOccurs="unbounded">
+            <xsd:group ref="generalContent"/>
+            <xsd:element name="constructor" type="Method"/>
+            <xsd:element name="destructor" type="Method"/>
+         </xsd:choice>
+      </xsd:sequence>
+   </xsd:sequence>
+   <xsd:attribute name="visibility" type="Visibility"/>
+   <xsd:attribute name="modifiers" type="Modifiers" use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="EnumValue">
+   <xsd:sequence>
+      <xsd:element name="doc" type="Doc"
+                   minOccurs="0"/>
+      <xsd:element name="annotation" type="TypeValueDesc"
+                   minOccurs="0" maxOccurs="unbounded"/>
+   </xsd:sequence>
+   <xsd:attribute name="name" type="xsd:NMTOKEN"/>
+</xsd:complexType>
+
+<xsd:simpleType name="Visibility">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         May be any value, processors may use this for grouping and possibly
+         user-specified filtering documented (e.g. only docuement "public",
+         "protected", and "package protected" elements).
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Modifiers">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         For (language-specific) modifiers like static, abstract, final,
+         virtual, etc.  This does not have to come directly from the
+         code/language; it may also include human readble descriptors as
+         suitable, such as perhaps "inner" for certain nested types (Java inner
+         classes have an implicit reference to a parent object), and
+         "read-only", "write-only", or "read-write" for properties (these are
+         examples only).
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:restriction base="xsd:NMTOKENS"/>
+</xsd:simpleType>
+
+<xsd:complexType name="ParamDecl">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This represents the name and type of a method or generic parameter.
+         It contains content that can be analyzed by the application (@name,
+         @typevaluespec, and the @xpath attributes of typeref children),
+         and content that is meant to be human readable (all text element
+         content).
+
+         The @typevaluespec attribute may be used in languages where methods
+         or generics can be overloaded by the number and type of parameters
+         (see the definition of the ElementRef type).
+
+         Note that in some languages (C++), this may not simply be a typename;
+         it may be a specific type, a parameter similar to a function parameter
+         (e.g. "int" or "MyType*"), or even a fixed value ("273").  Hence the
+         name of the @typevaluespec attribute.
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:complexContent>
+      <xsd:extension base="TypeValueDesc">
+         <xsd:attribute name="name" use="required" type="xsd:NMTOKEN"/>
+         <xsd:attribute name="typevaluespec" use="optional" type="xsd:string"/>
+      </xsd:extension>
+   </xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Typedef">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This represents a named alias to a type (i.e. a typedef in C++).  It
+         simply has a name and a type (similar to a ParamDecl, but with no
+         @typevaluespec).
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:complexContent>
+      <xsd:extension base="TypeValueDesc">
+         <xsd:attribute name="name" use="required" type="xsd:NMTOKEN"/>
+      </xsd:extension>
+   </xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="TypeValueDesc">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This represents a readable form of the declared type of a typedef,
+         exception, attribute, property, parameter, generic parameter, etc., or
+         even a value (which may include one or more typenames) such as a
+         specific generic parameter value for an overloaded template or an
+         annotation description.  It is plaintext except that portions may be
+         specified as linking to types (class, interface, enum, etc.).
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:complexContent mixed="true">
+      <xsd:restriction base="xsd:anyType">
+         <xsd:sequence>
+            <xsd:element name="typeref" type="NamedTypeRef"
+                         minOccurs="0" maxOccurs="unbounded"/>
+         </xsd:sequence>
+      </xsd:restriction>
+   </xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="NamedTypeRef">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This effectively allows hyper-linking between code elements.  The body
+         is plaintext, and the parameter identifies a target code element via
+         an attribute in the form of an XPath expression.
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+         <xsd:attribute name="xpath" type="ElementRef"/>
+      </xsd:extension>
+   </xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:simpleType name="ElementRef">
+   <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+         This type is for references to other API elements (types, attributes,
+         functions/methods, etc.).  It represents a very limited form of XPath
+         expression.  The limits on this expression are too complex to
+         represent in the schema, so it is up to the application to enforce or
+         comply to these limitations, as documented here.  These restrictions
+         may be relaxed in future versions.
+
+         The initial context node used to evaluate the XPath is the first
+         API element that is an ancestor of the attribute or node with this
+         type (exception: all such expressions inside a DocType element
+         are evaluated relative to the first API element that is an ancestor of
+         the DocType element, not the element in which it actually resides).
+
+            Example #1: If the path is somewhere in the hierarchy under the
+            document element of a method of a class, the path is evaluated with
+            the method element as the initial context node.
+
+            Example #2: If the path is somewhere in the generic arguments of a
+            generic class type, the path is evaluated with the class element as
+            the initial context node.
+
+            Example #3: If the path is in the parameter types of a method
+            signature, the path is evaluated with the method element as the
+            initial context node.
+
+         The syntax used for the path is very restricted so that: 1.) document
+         generators aren't required to include a full XPath implementation, and
+         2.) document generators MAY form a link to elements that are not
+         currently being documented (have already been, or will be,
+         documented); so the target node may not actually be present in the
+         current XML.  The restrictions are:
+
+            1.) The start of each path must:
+                   A.) Be absolute.  For example:
+                          / package[@name='some.name.space']
+                          / class[@name='MyClass']
+                          / method[@name='myMethod' and
+                                   @typevaluespec='whatever']
+                   B.) Start with a child element name.  For example:
+                          class[@name='MyClass']
+                          / method[@name='myMethod' and
+                                   @typevaluespec='whatever']
+                   C.) Or start with one or more parent steps.  For example:
+                          ../../class[@name='MyClass']
+                Note that ONLY the abbreviated syntax shown may be used.  No
+                axis may be specified.
+
+            2.) After the leading "/" of an absolute path, or the first
+                optional parent steps ("..") of a relative path, ONLY child
+                element names are allowed (there may not be another parent
+                step, or a descendant abbreviation like "//").  This makes
+                the path a simple traversal up to a broader scope and then
+                down to a named and well-defined descendant; no ups and downs,
+                and no dependence on declaration order.
+
+            3.) The child element names may only be valid API element node
+                types as they are defined in this schema (e.g. "namespace",
+                "class", "method", "property", but NOT "doc" or "param").
+
+            4.) Each step may have only ONE predicate, and that predicate must
+                take the form of a set of anded expressions.  Each of these
+                expressions may only be of one of the following forms:
+
+                    @name='...'
+                    genericParam[###]/@typevaluespec='...'
+                    param[###]/@typevaluespec='...'
+                    not(param[###])
+
+         This must present enough, and only enough, information to fully
+         specify which API element is being referenced in the source language
+         (note that functions/methods may be overloaded in many languages, and
+         class/function/method template definitions may be overloaded in C++).
+
+         In terms of overloading this may be considered best-effort; especially
+         in the case of user-entered names there may not be enough information
+         to fully identify a specific function or type, in which case the
+         @typevaluespec values may be left out and document generators should
+         be ready to provide a default location or disambiguation mechanism.
+      </xsd:documentation>
+   </xsd:annotation>
+   <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<xsd:element name="package" type="Package"/>
+
+<xsd:element name="complexEnum" type="ComplexEnum"/>
+<xsd:element name="class" type="ConstructedType"/>
+<xsd:element name="interface" type="ConstructedType"/>
+<xsd:element name="struct" type="ConstructedType"/>
+
+<xsd:element name="enum" type="Enum"/>
+<xsd:element name="typedef" type="Typedef"/>
+
+<xsd:element name="field" type="Field"/>
+<xsd:element name="method" type="Method"/>
+<xsd:element name="delegate" type="Method"/>
+<xsd:group name="generalContent">
+   <xsd:choice>
+      <xsd:element ref="complexEnum"/>
+      <xsd:element ref="class"/>
+      <xsd:element ref="interface"/>
+      <xsd:element ref="struct"/>
+
+      <xsd:element ref="enum"/>
+      <xsd:element ref="typedef"/>
+
+      <xsd:element ref="field"/>
+      <xsd:element ref="method"/>
+      <xsd:element ref="delegate"/>
+   </xsd:choice>
+</xsd:group>
+   <xsd:element name="apispec">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="package" minOccurs="0" maxOccurs="unbounded"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

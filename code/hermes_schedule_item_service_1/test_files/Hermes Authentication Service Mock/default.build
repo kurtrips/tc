@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<project name="Hermes Authentication Service" default="compile" basedir=".">
+       
+    <tstamp property="build.date" pattern="dd-MM-yyyy" verbose="true"/>
+    <sysinfo verbose="true"/>
+
+    <property name="component" value="Hermes_Authentication_Service" />
+    <property name="distfilename" value="hermes_authentication_service" />
+    <property name="namespace" value="Hermes\Services\Security\Authorization" />
+    <property name="namespace_file" value="Hermes.Services.Security.Authorization" />
+
+    <property name="component_version" value="1.0" />
+    
+    <property name="copyright" value="Copyright (c) 2007, TopCoder, Inc. All rights reserved." />
+    
+    <!-- NUnit reference. -->
+    <property name="Nunit" value="D:\Program Files\NUnit-Net-2.0 2.2.9\bin\nunit.framework.dll"/>
+    <property name="NunitConsole" value="D:\Program Files\NUnit-Net-2.0 2.2.9\bin\nunit-console.exe"/>
+    <property name="NDoc" value="D:\Program Files\NDoc2-Alpha3u\NDocConsole.exe"/>
+    
+    <property name="NCoverHome" value="${environment::get-variable('NCover_Home')}"/>
+    <property name="NCoverConsole" value="${NCoverHome}\NCover.Console.exe"/>
+    <property name="NCoverStyle" value="${NCoverHome}\Coverage.xsl"/>
+	
+    <property name="debug" value="true"/>
+    <property name="verbose" value="true" />
+    <property name="component_path" value="${distfilename}\${component_version}" />    
+
+    <!-- directories -->
+    <property name="builddir" value="build" />
+    <property name="configdir" value="conf" />
+    <property name="testlogdir" value="log" />
+    <property name="testfiles" value="test_files" />
+    <property name="tcs" value="..\tcs"/>
+    
+    <!-- Base directory for all third party components. -->
+    <property name="ext_bin" value="${tcs}\bin"/>
+    
+    <!-- Base directory for all TCS components. -->
+    <property name="tcs_bin" value="${ext_bin}\tcs"/>
+    
+
+    <!-- NUNIT's output needs to go back to the root these next two properties should correspond -->
+    <property name="build_classdir" value="${builddir}\classes" />
+    <property name="root_from_build_classdir" value="..\.." />
+    <property name="TestOutputXml" value="${testlogdir}\${namespace_file}.Test.dll-results.xml"/>
+    <property name="TestOutputText" value="${testlogdir}\${namespace_file}.Test.dll-results.txt"/>
+
+    <property name="CoverageOutputXml" value="${testlogdir}\${namespace_file}.Test.dll-coverage.xml"/>
+    <property name="CoverageOutputStyleSheet" value="${testlogdir}\coverage.xsl"/>
+    <property name="CoverageNunitXml" value="${testlogdir}\${namespace_file}.Test.dll-coverage-unit.xml"/>
+    <property name="CoverageLogFile" value="${testlogdir}\NCover.log.txt"/>
+    <!-- Include the global system settings.  The settings in this file will override any settings for the same properties
+         included above this line, so if the global file is correct there is no need to edit this file. -->
+    <include buildfile="../topcoder_global.build" failonerror="false" />
+
+  <!-- 3rd party -->
+  <property name="log4net" value="D:\workingCSharp\tcs\p\log4net.dll" />
+  <property name="WCF_BASE" value="C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0"/>
+  <property name="ServiceModel.dll" value="${WCF_BASE}\System.ServiceModel.dll"/>
+  <property name="Serialization.dll" value="${WCF_BASE}\System.Runtime.Serialization.dll"/>
+
+  <!--   ****************************************************  -->
+  <property name="configuration_manager.dll" value="D:\workingCSharp\tcs\p\TopCoder.Util.ConfigurationManager.dll"/>
+  <property name="object_factory.dll" value="D:\workingCSharp\tcs\p\TopCoder.Util.ObjectFactory.dll"/>
+  <property name="wcf_base.dll" value="D:\workingCSharp\tcs\p\TopCoder.Services.WCF.dll"/>
+  <property name="exception_manager.dll" value="D:\workingCSharp\tcs\p\TopCoder.Util.ExceptionManager.dll"/>
+  <property name="self-document_exception.dll" value="D:\workingCSharp\tcs\p\TopCoder.Util.ExceptionManager.SDE.dll"/>
+  <property name="logging_wrapper.dll" value="D:\workingCSharp\tcs\p\TopCoder.LoggingWrapper.dll"/>
+  <property name="configuration_api.dll" value="D:\workingCSharp\tcs\p\TopCoder.Configuration.dll"/>
+  <property name="set_utility.dll" value="D:\workingCSharp\tcs\p\TopCoder.Util.Collection.Set.dll"/>
+  <property name="object_factory_configuration_api_plugin.dll" value="D:\workingCSharp\tcs\p\TopCoder.Util.ObjectFactory.Configuration.dll"/>
+  <property name="entity.dll" value="D:\workingCSharp\tcs\p\Hermes.Entity.Common.dll"/>
+  <property name="base.dll" value="D:\workingCSharp\tcs\p\Hermes.Entity.Base.dll"/>
+    
+    
+    <property name="build_testclassdir" value="${builddir}\testClasses\" />
+    <property name="build_distdir" value="${builddir}\dist" />
+    <property name="build_tcsdistdir" value="${build_distdir}\${distfilename}-${component_version}" />
+    <property name="build_docsdir" value="${builddir}\docs" />
+    <property name="build_docpackage" value="${builddir}\doc_package" />
+    <property name="testdocsresult_dir" value="${build_docsdir}\testResults" />
+    
+    <property name="build_xmldocsdir" value="${build_docsdir}\xmldoc\" />
+    <property name="build_msdndir" value="${build_docsdir}\msdn" />
+    
+    <property name="msdnfile" value="msdndocs.zip" />
+    <property name="docpackagefile" value="${distfilename}_docs.zip" />
+
+    <property name="srcdir" value="src" />
+    <property name="dotnetsrc" value="${srcdir}\csharp" />
+    <property name="dotnetmain" value="${dotnetsrc}\main\${namespace}" />
+    <property name="dotnettests" value="${dotnetsrc}\tests\${namespace}" />
+    <property name="docsdir" value="docs" />
+    
+    <property name="dist_docs" value="${build_tcsdistdir}\docs" />
+    <property name="docs_coverage" value="${docsdir}\coverage" />
+    
+
+    <!-- Component distribution structure -->
+    <property name="dist_conf" value="${build_tcsdistdir}\conf" />
+    <property name="dist_test_files" value="${build_tcsdistdir}\test_files" />
+    <property name="dist_bin" value="${build_distdir}\bin" />
+    <property name="dist_examples" value="${build_tcsdistdir}\examples" />
+    <property name="dist_src" value="${build_tcsdistdir}\src" />
+    <property name="dist_coverage" value="${build_tcsdistdir}\docs\coverage" />
+    <property name="test_results" value="${dist_docs}\test_results" />
+    <property name="msdn_docs" value="${dist_docs}\msdn_docs" />
+    <property name="xml_docs" value="${dist_docs}\xml" />
+    <property name="source_xml_docs" value="${xml_docs}\source" />
+    <property name="test_xml_docs" value="${xml_docs}\tests" />
+    <property name="component.zip" value="${dist_bin}\${component_path}\${distfilename}.zip"/>
+    <property name="component_version_name.zip" value="${distfilename}-${component_version}.zip"/>
+    <property name="component.dist.zip" value="${build_distdir}\${component_version_name.zip}"/>
+
+
+    <property name="design_dist.zip" value="${distfilename}_${component_version}_design_dist.zip"/>
+    <property name="dev_dist.zip" value="${distfilename}_${component_version}_dev_dist.zip"/>
+    
+    <!-- builds -->
+    <property name="design_submission.zip" value="${distfilename}_${component_version}_design_submission.zip"/>
+    <property name="dev_submission.zip" value="${distfilename}_${component_version}_dev_submission.zip"/>
+
+
+    <target name="dist_docs">
+        <mkdir dir="${source_xml_docs}"/>
+        <mkdir dir="${test_xml_docs}"/>
+        <mkdir dir="${test_results}"/>
+        <mkdir dir="${msdn_docs}"/>
+        <mkdir dir="${build_msdndir}"/>
+        
+        <copy file="${build_docsdir}\${namespace_file}.xml" todir="${source_xml_docs}"/>
+        <copy file="${build_docsdir}\${namespace_file}.Test.xml" todir="${test_xml_docs}"/>
+        
+        <copy todir="${test_results}">
+            <fileset basedir="${testdocsresult_dir}" defaultexcludes="true">
+                <includes name="**/*"/>
+                <excludes name="**/*.xml"/>
+            </fileset>
+        </copy>
+        <copy todir="${msdn_docs}">
+            <fileset basedir="${build_msdndir}" defaultexcludes="true">
+                <includes name="**/*"/>
+                <excludes name="**/*.chm"/>
+            </fileset>
+        </copy>
+
+        <copy file="${build_msdndir}\${distfilename}.chm" todir="${dist_docs}"/>
+    </target>
+
+	<target name="compile" >
+	    <mkdir dir="${build_classdir}"/>
+	    <mkdir dir="${build_docsdir}"/>
+		<csc target="library" output="${build_classdir}\${namespace_file}.dll" doc="${build_classdir}\${namespace_file}.xml" >
+			<sources>
+				<includes name="${dotnetmain}\**.cs"/>
+			</sources>
+			<references>
+			    <includes name="${configuration_manager.dll}"/>
+			    <includes name="${configuration_api.dll}"/>
+			    <includes name="${set_utility.dll}"/>
+			    <includes name="${object_factory.dll}"/>
+			    <includes name="${ServiceModel.dll}"/>
+			    <includes name="${Serialization.dll}"/>
+			    <includes name="${wcf_base.dll}"/>
+			    <includes name="${exception_manager.dll}"/>
+			    <includes name="${self-document_exception.dll}"/>
+			    <includes name="${logging_wrapper.dll}"/>
+			    <includes name="${object_factory_configuration_api_plugin.dll}"/>
+			    <includes name="${entity.dll}"/>
+          <includes name="${base.dll}"/>
+			</references>
+		</csc>
+		<copy file="${build_classdir}\${namespace_file}.xml" todir="${build_docsdir}" />
+	</target>
+	
+    <target name="clean">
+        <mkdir dir="${builddir}"/>
+        <mkdir dir="${dist_docs}"/>
+		<delete verbose="${verbose}"> 
+	        <fileset defaultexcludes="false" >
+	            <includes name="${builddir}/**/**"/>
+	            <includes name="*.zip"/>
+	            <includes name="${dist_docs}/**.zip"/>
+	        </fileset>
+		</delete>
+    </target>
+
+    <target name="compile_tests" depends="compile">
+        <mkdir dir="${build_testclassdir}"/> 
+
+        <echo message="Please make sure that Nunit 2.1 is installed."/>
+        <echo message="The NUnit property is currently pointing to: ${Nunit}."/>
+        <echo message="If this is incorrect please adjust the Nunit property to point to the correct location."/>
+        
+        <csc target="library" doc="${build_classdir}\${namespace_file}.Test.xml"
+                              output="${build_classdir}\${namespace_file}.Test.dll"
+                              failonerror="true"
+                              debug="true">
+            <sources>
+            	<includes name="${dotnetmain}\**.cs" />
+                <includes name="${dotnettests}\**.cs" />
+            </sources>
+            <references>
+			    <includes name="${Nunit}"/>
+			    <includes name="${configuration_manager.dll}"/>
+			    <includes name="${configuration_api.dll}"/>
+			    <includes name="${set_utility.dll}"/>
+			    <includes name="${object_factory.dll}"/>
+			    <includes name="${ServiceModel.dll}"/>
+			    <includes name="${Serialization.dll}"/>
+			    <includes name="${wcf_base.dll}"/>
+			    <includes name="${exception_manager.dll}"/>
+			    <includes name="${self-document_exception.dll}"/>
+			    <includes name="${logging_wrapper.dll}"/>
+			    <includes name="${object_factory_configuration_api_plugin.dll}"/>
+			    <includes name="${entity.dll}"/>
+          <includes name="${base.dll}"/>
+	    	</references>
+        </csc>
+        <copy file="${build_classdir}\${namespace_file}.Test.xml" todir="${build_docsdir}" />
+    </target>
+    
+    <target name="copy_dependencies">
+        <mkdir dir="${build_classdir}" />
+        
+        <copy file="${configuration_manager.dll}" todir="${build_classdir}" />  
+        <copy file="${object_factory.dll}" todir="${build_classdir}" />  
+        <copy file="${ServiceModel.dll}" todir="${build_classdir}" />
+        <copy file="${Serialization.dll}" todir="${build_classdir}" />
+        <copy file="${wcf_base.dll}" todir="${build_classdir}" />  
+        <copy file="${exception_manager.dll}" todir="${build_classdir}" />  
+        <copy file="${self-document_exception.dll}" todir="${build_classdir}" />  
+        <copy file="${logging_wrapper.dll}" todir="${build_classdir}" />  
+      	<copy file="${log4net}" todir="${build_classdir}" />
+      	<copy file="${object_factory_configuration_api_plugin.dll}" todir="${build_classdir}" />
+      	<copy file="${configuration_api.dll}" todir="${build_classdir}" />
+      	<copy file="${set_utility.dll}" todir="${build_classdir}" />
+      	<copy file="${entity.dll}" todir="${build_classdir}" />
+        <copy file="${base.dll}" todir="${build_classdir}" />
+        <copy file="${testfiles}\Hermes.Services.Security.Authorization.Test.dll.config" todir="${build_classdir}"/>
+    </target>
+    
+    <target name="test" depends="compile_tests,copy_dependencies">
+        <mkdir dir="${testlogdir}"/>
+        
+        <echo message="Please make sure that nunit-console is in your path."/>
+        <echo message="This file can be found in the NUnit bin directory."/>
+
+        <nunit2 verbose="true"> 
+            <formatter type="Xml" usefile="true" outputdir="${testlogdir}" extension=".xml"/> 
+            <formatter type="Plain" usefile="true" outputdir="${testlogdir}" extension=".txt"/> 
+            <test assemblyname="${build_classdir}\${namespace_file}.Test.dll"/> 
+        </nunit2>
+    </target>
+
+
+    <target name="dist" depends="compile_tests">
+        <mkdir dir="${dist_bin}/${component_path}"/>
+
+        <zip zipfile="${component.zip}">
+            <fileset basedir="${build_classdir}" defaultexcludes="true">
+                <includes name="**/*.dll"/>
+                <excludes name="**/*Test.dll"/>
+            </fileset>
+        </zip>
+    </target>
+   
+    
+    <target name="generate_docs" depends="msdn" /> 
+  
+
+    <target name="deploy" depends="dist">
+    </target>
+
+    <target name="main" depends="deploy,test">
+    </target>
+
+
+	<target name="nunitreport" depends="test">
+		<!-- By default the report is in english, format is noframes by default -->
+		<mkdir dir="${testdocsresult_dir}"/>
+		<nunit2report format="frames" opendesc="yes"  todir="${testdocsresult_dir}"  >
+			<fileset>
+				<includes name="${TestOutputXml}" />
+			</fileset>
+			<summaries>
+				<includes name="${build_docsdir}\${namespace_file}.Test.xml" />
+			</summaries> 
+		</nunit2report>
+
+		<echo message="NUnit frame report generated."/>
+	</target>
+<target name="ncoverreport" description="Code coverage test run." depends="compile_tests">
+
+		<echo message="Starting NUnit code coverage run..."/>
+
+		<exec program="${NCoverConsole}"
+			commandline="&quot;${NunitConsole}&quot; ${build_classdir}\${namespace_file}.Test.dll /xml=${CoverageNunitXml} //l ${CoverageLogFile} //x ${CoverageOutputXml} //ea Hermes.Services.Security.Authorization.CoverageExcludeAttribute"
+			workingdir="." failonerror="true" verbose="true">
+		</exec>
+
+		<!-- copy stylesheet -->
+		<copy file="${NCoverStyle}" tofile="${CoverageOutputStyleSheet}" />
+
+		<echo message="NCover report generated."/>
+	</target>
+    <target name="msdn" depends="compile_tests,copy_dependencies">
+        <mkdir dir="${build_msdndir}"/>
+        <echo message="Requires Microsoft's HTML Help Compiler (hhc.exe) is in your path."/>
+        <ndoc>
+            <assemblies>
+                <includes name="${build_classdir}\${namespace_file}.Test.dll"/>
+            </assemblies>
+            <summaries >
+                <includes name="${build_classdir}\${namespace_file}.Test.xml"/>
+            </summaries>
+            <documenters>
+                <documenter name="MSDN">
+                    <property name="OutputDirectory" value="${build_msdndir}" />
+                    <property name="HtmlHelpName" value="${distfilename}" />
+                    <property name="HtmlHelpCompilerFilename" value="hhc.exe" />
+                    <property name="IncludeFavorites" value="False" />
+                    <property name="Title" value="${component}" />
+                    <property name="SplitTOCs" value="False" />
+                    <property name="DefaulTOC" value="" />
+                    <property name="ShowVisualBasic" value="False" />
+                    <property name="ShowMissingSummaries" value="False" />
+                    <property name="ShowMissingRemarks" value="False" />
+                    <property name="ShowMissingParams" value="False" />
+                    <property name="ShowMissingReturns" value="False" />
+                    <property name="ShowMissingValues" value="False" />
+                    <property name="DocumentInternals" value="False" />
+                    <property name="DocumentProtected" value="False" />
+                    <property name="DocumentPrivates" value="False" />
+                    <property name="DocumentEmptyNamespaces" value="False" />
+                    <property name="IncludeAssemblyVersion" value="True" />
+                    <property name="CopyrightText" value="${copyright}" />
+                    <property name="CopyrightHref" value="" />
+                    <property name="AutoDocumentConstructors" value="True" />
+                 </documenter>
+            </documenters> 
+        </ndoc>
+    </target>
+    
+</project>

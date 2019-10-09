@@ -1,0 +1,4 @@
+All issues in 2.2.1 are fixed.
+Issue in 4.4.1 is not fixed. It was sucessfully appealed IMO.
+
+Thanks!

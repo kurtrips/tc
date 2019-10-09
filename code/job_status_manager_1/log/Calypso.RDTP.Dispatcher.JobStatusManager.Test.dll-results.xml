@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\LEARN\tc\conponent\dev\net\review\job_status_manager\submission-44755-job_status_manager_1.0_dev_submission\build\classes\Calypso.RDTP.Dispatcher.JobStatusManager.Test.dll" total="107" failures="0" not-run="0" date="2007-10-24" time="11:41:17">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.312" os-version="Microsoft Windows NT 6.0.6000.0" platform="Win32NT" cwd="D:\LEARN\tc\conponent\dev\net\review\job_status_manager\submission-44755-job_status_manager_1.0_dev_submission" machine-name="PAUL-PC" user="Paul" user-domain="Paul-PC" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="D:\LEARN\tc\conponent\dev\net\review\job_status_manager\submission-44755-job_status_manager_1.0_dev_submission\build\classes\Calypso.RDTP.Dispatcher.JobStatusManager.Test.dll" success="True" time="0.127" asserts="0">
+    <results>
+      <test-suite name="Calypso" success="True" time="0.104" asserts="0">
+        <results>
+          <test-suite name="Calypso.RDTP" success="True" time="0.104" asserts="0">
+            <results>
+              <test-suite name="Calypso.RDTP.Dispatcher" success="True" time="0.104" asserts="0">
+                <results>
+                  <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager" success="True" time="0.104" asserts="0">
+                    <results>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers" success="True" time="0.019" asserts="0">
+                        <results>
+                          <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests" success="True" time="0.019" asserts="0">
+                            <results>
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestConstructor" executed="True" success="True" time="0.004" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare1" executed="True" success="True" time="0.003" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare3" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare4" executed="True" success="True" time="0.001" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare5" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare6" executed="True" success="True" time="0.001" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare7" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare8" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare9" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare10" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare11" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare12" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare13" executed="True" success="True" time="0.001" asserts="1" />
+                              <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.Prioritizers.DefaultPrioritizerTests.TestCompare14" executed="True" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.DemoTests" success="True" time="0.015" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.DemoTests.TestDemo" executed="True" success="True" time="0.015" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests" success="True" time="0.005" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateNotNull1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateNotNull2" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateJobStatus1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateJobStatus2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateJobCollection1" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateJobCollection2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.HelperTests.TestValidateJobCollection3" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.JobComparerTests" success="True" time="0.005" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobComparerTests.TestConstructor" executed="True" success="True" time="0.001" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobComparerTests.TestConstructorFail1" executed="True" success="True" time="0.001" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobComparerTests.TestCompare1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobComparerTests.TestCompare2" executed="True" success="True" time="0.001" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobComparerTests.TestCompare3" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests" success="True" time="0.009" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestConstructor" executed="True" success="True" time="0.001" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestServiceID" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestStatus" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals1" executed="True" success="True" time="0.001" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals3" executed="True" success="True" time="0.001" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals4" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals5" executed="True" success="True" time="0.001" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals6" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals7" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals8" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestEquals9" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobInfoTests.TestGetHashCode" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests" success="True" time="0.013" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestConstructor" executed="True" success="True" time="0.001" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestCount" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestIsReadOnly" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestAdd" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestAddFail1" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestAddFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestClear" executed="True" success="True" time="0.000" asserts="8" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestContains" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestContainsFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestCopyTo" executed="True" success="True" time="0.001" asserts="6" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestCopyToFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestCopyToFail2" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestCopyToFail3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestCopyToFail4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestRemove" executed="True" success="True" time="0.001" asserts="7" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestRemoveFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestGetEnumerator1" executed="True" success="True" time="0.001" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.TestGetEnumerator2" executed="True" success="True" time="0.001" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.Testop_Implicit" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobSortedCollectionTests.Testop_Implicit2" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests" success="True" time="0.024" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="7" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestSyncRoot" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJob1" executed="True" success="True" time="0.001" asserts="4" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJob2" executed="True" success="True" time="0.000" asserts="8" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJobFail1" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJobFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJobFail3" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJobs" executed="True" success="True" time="0.001" asserts="8" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJobsFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestAddJobsFail2" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobByQueueID1" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobByQueueID2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobCountByStatus1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobCountByStatus2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobCountByStatusFail1" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobCountByStatusServiceID1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobCountByStatusServiceID2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobCountByStatusServiceIDFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByServiceID1" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByServiceID2" executed="True" success="True" time="0.001" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByStatus1" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByStatus2" executed="True" success="True" time="0.001" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByStatusFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByStatusAndServiceID1" executed="True" success="True" time="0.000" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByStatusAndServiceID2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsByStatusAndServiceIDFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsForDispatch1" executed="True" success="True" time="0.001" asserts="3" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestGetJobsForDispatch2" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestRemoveJob" executed="True" success="True" time="0.001" asserts="20" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestRemoveJobs" executed="True" success="True" time="0.001" asserts="13" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestRemoveJobsFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestRemoveJobsFail2" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestHandleStatusChange" executed="True" success="True" time="0.001" asserts="4" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestHandleStatusChangeFail1" executed="True" success="True" time="0.001" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestHandleStatusChangeFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.JobStatusManagerTests.TestHandleStatusChangeFail3" executed="True" success="True" time="0.001" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests" success="True" time="0.009" asserts="0">
+                        <results>
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtor" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorMessage_Null" executed="True" success="True" time="0.002" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="Calypso.RDTP.Dispatcher.JobStatusManager.PrioritizerExceptionTests.TestCtorInfoContext" executed="True" success="True" time="0.001" asserts="3" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

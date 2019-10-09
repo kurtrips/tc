@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ConfigManager SYSTEM "cm.dtd">
+
+<!-- Example configuration file for the component -->
+<ConfigManager>
+  <!-- Example default configuration using DiagnosticImpl -->
+  <namespace name="TopCoder.LoggingWrapper.LogManager">
+
+    <!-- the full classname of the Logger subclass, required -->
+    <property name="logger_class">
+      <Value>TopCoder.LoggingWrapper.DiagnosticImpl</Value>
+    </property>
+
+    <!-- log name of Logger, required -->
+    <property name="logger_name">
+      <Value>logger</Value>
+    </property>
+
+    <!-- default log level, optional -->
+    <property name="default_level">
+      <Value>DEBUG</Value>
+    </property>
+
+    <!-- source for the EventLog, required -->
+    <property name="source">
+      <Value>testsource</Value>
+    </property>
+  </namespace>
+
+</ConfigManager>

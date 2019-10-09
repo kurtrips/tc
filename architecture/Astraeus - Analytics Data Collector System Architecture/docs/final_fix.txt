@@ -1,0 +1,107 @@
+>>According to the scorecard, Logical architecture is more about tiering. 
+
+Added color coding for tiering in diagram
+
+>>Auditing seems not to be covered. In SDS section 5.17 there is this: "The AuditService service will be used to perform >>auditing." but there is no AuditService in the TCUML.
+
+Added
+
+>> "Each Client can have multiple schemas but only one can be active at any moment."
+>>This seems not a valid assumption....
+
+This is fixed. Only one can be the default schema but client can now explicitly send the schema_id in request. Updated logic in real-time server spec 2.1 as well
+
+>>See http://apps.topcoder.com/forums/?module=Thread&threadID=768363&start=0
+>>roles are gain from LDAP,
+>>you should define API to get user details from LDAP,
+>>and use it for authentication/authorization.
+
+Now the AuthService.login method return UserAuth which encapsulates roles. Updated SDS 6.2
+
+>>For conceptualization doc 4.4.12 View Application Settings and 4.4.13 Modify Application Settings,
+>>it is better to suggest some application settings, and provide API for it.
+
+There already is API for cleint, schema, key. Have mentioned this specfically now in Admin Nodule Spec 2.5. I am not sure what other application settings are required.
+
+>>There is no much details for the server module.
+>>These details may better to provided or suggested:
+>>databse details for Cassandra and Hadoop to store track data;
+>>what real time data should be collected to expose to external reporting tool;
+>>what long term data should be collected to expose to external reporting tool.
+>>See http://apps.topcoder.com/forums/?module=Thread&threadID=768318&start=0,
+>>you should provide or suggest details of exposing Analytics Data for external tools.
+
+Database details for Cassandra are already suggested in SDS sec 4
+The real-time data model is already provided in SDS sec 4. 
+The data model used to store the archival data is completely up to the module architect.
+The analytics data is now exposed over HTTP. See section 2.3 in both server modules spec
+
+>>If so why the rememberMe parameter is passed into to the AuthService.login() which does not have any access to the cookie.
+Removed
+
+>>You didn't always check whether the auth session key are valid. Only invalidating session key seems not sufficient for logout.
+I have removed the AuthService.logout. The front-end controller will deal with logout, See updated SDS 5.2
+
+>>As per the BRD 4.4.10, the developer documentation are about how to use the JavaScript library. So I believe the SDS is wrong for this section.
+Added for both Java and JavaScript.
+
+>>It would be better to use 2xx and 5xx since the status codes have different meaning. In addition, 3xx and 4xx are often used as well.
+Was already there. Have added note to point to the defined error conditions.
+
+>>For the AuthService, I don't think the "remember me" can be or should be........
+Duplicate
+
+>> For the Tracking Info Migrator, it is not clear what technology is used for periodic scheduling. CRON, Quartz, or other technology ?
+Fixed. Uses cron.
+
+>> I believe the "Astraeus Analytics Server Module" should be split to at least two module since there are quite ....
+Fixed
+
+>>The client_schema and client_schema_keys should better be merged into a single table (ColumnFamily) since the data are actually always used together and the NoSQL database does not JOIN.  You can even think of using SuperColumn
+
+Not fixing this because it was Rejected :) (by mistake?)
+Anyway I think it will just mean that we will need 2 calls instead of 1 for getting the data. No need for join.
+
+>>In SDS 4, both client_schema table and client_schema_keys table contain key and key_description columns, these are confusing.
+
+Fixed
+
+>> In SDS 5.17: "The AuditService service will be used to perform auditing." but the AuditService is not defined.
+
+Added
+
+>> In SDS 7.6: "See section 5.1.6", there is no section 5.1.6, it should be 5.16.
+
+Fixed
+
+>>You need to provide the Initial Setup Assembly (sometimes for PoC), and final integration assembly.
+
+Provided
+
+>>The Astraeus Analytics Server Module should include functionalities to publish collected analytics data for consumption by external reporting tools.
+>>The Astraeus Analytics - Server Module.rtf doesn't mention such details.
+
+The analytics data is now exposed over HTTP. See section 2.3 in both server modules spec
+
+>>The relationships from Client to Schema, and from Schema to Key, are aggregations, not compositions.
+
+Fixed
+
+>>Auditing seems not to be covered. In SDS section 5.17 there is this: "The AuditService service will be used to perform auditing." but there is no AuditService in the TCUML.
+
+Duplicate
+
+
+SDs
+>>data migration from real time to long term;
+>>admin functionalities;
+>>publish collected analytics data;
+>>Logging diagram should be provided.
+>>Auditing should be addressed as well.
+
+Added
+
+-------------------------------------------FINAL FIX 2-------------------------------------------
+
+1. Added requirement in SDS 5.6 for the JavaScript and API demo
+2. The Access Published Real-time data SD was already there. I have added Access Published Batch data SD. Earlier it was just a comment in the real-time data SD.

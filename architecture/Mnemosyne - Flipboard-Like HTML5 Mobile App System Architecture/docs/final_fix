@@ -1,0 +1,259 @@
+>>I believe how the content shall be displayed and possibly paginated needs further discussions during final fixes http://apps.topcoder.com/forums/?module=Thread&threadID=816845&start=0
+
+Confirmed with PM. This is not requried
+
+>>Explicit requirement for parallelization is not supported: "Map out the REST APIs, provide the contest specs ....
+
+Confirmed with PM. Current state is OK.
+
+>>Local cache is not in scope of this contest, but it should only be accounted it can be done....
+
+Removed
+
+>>Overall, the submission organization lacks the separate points detalization of all key requirements which were .....
+
+Added in ADS section 1
+
+>>Social integration is covered in very shallow manner.
+How the social integration data(tokens, user ids?) is tied to user information is not specified (see left user menu is screens which is opened after opening user profile "Joe Black Lorem Ipsum")
+
+I have added some more detail to answer some of your concerns but more or less the approach is the same.
+
+>>Front-end assembly only provides links (https://developers.facebook.com/docs/facebook-login/login-flow-for-web/ or others)
+I do provide the links because they are exhaustive. In addition to what I have provided for Facebook integration (which is an entire page), I can at best start copy pasting from the links above and writing my own *tutorial*.
+
+>>there are no details on what data should be posted
+There is. It is in tabular format as well.
+
+>>how it is authenticated(e.g., where is login data stored? 
+Login data is stored client side. I have added this.
+
+>>How the user is logged in via social networks?) etc.
+The user does not login via social networks. The user is already logged into Mnemosyne and basically just adds a social login for accessing feeds and for sharing.
+There is no concept of just pure social network login i.e. without any Mnemosyne login. This is in line with FlipBoard.
+
+>>How the social integration data(tokens, user ids?) is tied to user information is not specified
+This is not required (because we do not need pure social network login) All social network login data stays purely client side and is just used to retrieve feeds and for sharing.
+
+>>According to the screens Facebook, Twitter and G+ should be supported, not Facebook, Twitter, LinkedIn (see left menu icons)
+G+ is not required. This is confirmed with PM
+
+>>Sharing of article via email is not covered. (See 06-2_Social Share)
+Added in front-end assembly
+
+>> The provided implementation details are very high - level and missing required details, see 1.1.4 item 1)
+Fixed. Added lots of TCUML documentation
+
+>>When an article contains an video, it may contain the text. Only the "is_video" flag is not sufficient.
+>>However, I don't think IFrame is an acceptable solution. It will looks terrible to use it in a mobile device.
+Yes it does look terrible. I have already raised this issue before submission in forums. I have also confirmed with PM, who thinks this approach is fine
+
+>>How the RelatedArticleServiceImpl is implemented is not clear at all.
+Added
+
+>>The aggregation approach for internal articles prevent the admins from being able to update the content after they published them.
+From PM >> If Internal Pub content is deleted it should no longer be served to the mobile app
+Added to 2.2. Internal Aggregator in assembly spec
+
+>>Social Network SD is too high level not covering of what actual data should be called.
+Not fixed. Since all social networks use OAuth like login and then similar functionality for feeds and posts, this SD is representative of all of them. Such representative SDs are allowed to be a little high level. I don't honestly see the need for having separate detailed SDs which in the end will be very similar anyway.
+
+>>As a direct-to-assembly architecture, implementation instructions need to be provided for each and every function/method.
+Fixed
+
+>>For the REST API, although certain notes are provided at REST API spec, I think they're still not very specific, for instance, how the database connection is obtained? how the database query is done? what database columns to retrieve? etc. 
+Added in REST API spec 2.2. What columns to use is already in the TCUML documentation.
+
+>>The pagination in the implementation does not make much sense, the records are fetched anyway no matter they fall in the return range or not.
+Fixed. Now there are separate paging parameters for the articles and feeds. So now these parameters can be used directly in query.
+
+albertwang 1.1.3 items 3,4,5
+>>I'd say that's a problem then. Although it is probably infeasible at this time to support any video from external RSS feed, in general certain optimisation can still be done to fit the video into mobile device's screen, e.g. simply adjusting the video player widget dimensions.
+Actually parsing an arbitrary article, finding video content (in an arbitrary player) and adjusting its width is not possible at all.
+
+>>It is completely unclear how the video is expected to be stored. There is a link data type in article table, but where video is stored physically is unclear.
+Added in ADS 1.1.3
+
+>> External aggregator implementation: "Through example of reading RSS using SAX is provided at http://www.vogella.com/tutorials/RSSFeed/article.html. (see section 4.1)"
+I have added the pseudo-code in the assembly spec. I suspect however that it is not as useful as the actual code in that article.
+
+>>External aggregator implementation: "3.	For each item:" it is unclear which item, I assume it should be the item in RSS, but it should be then specified which element is considered then.
+Fixed.
+
+>>REST API implementation is actually missing. What is stated in REST API assembly specification.................
+Fixed. See updated TCUML docs
+
+>>http://apps.topcoder.com/forums/?module=Thread&threadID=816608&start=0 " However the CMS systems or the app need to be able to select the appropriate format for the mobile platform." -> where is this covered?
+Added in ADS 1.1.3 that MP4 is the only safe format
+
+>>Instead of using *now*, I think you'd better use the publish datetime of the "latest" article of the feed, which is aggregated this time.
+This is a great point. It has been fixed.
+
+>>Searching involve multiple fields, and the keyword may be checked against a long article.
+Confirmed by PM that searching inside articles is not required. Article title, author, category and feed title are enough.
+
+>> An article may contains multiple image. The provided model does not support this.
+appealed successfully.
+
+>>All the classes/methods/fields completely missing documentation, specifically
+Fixed. Please see updated TCUML docs
+
+>>In the wp_posts table, find all records WHERE post_type = 'attachment' AND post_mime_type = 'video%' -> LIKE 'video%'
+Fixed
+
+>>For internal aggregator category name -> wp_terms table JOIN  wp_term_taxonomy JOIN wp_term_relationships where object_id is the post id. The actual column name to get is missed, only tables required to fetch
+Fixed
+
+>> There is no need to aggregate Jackson JSON ObjectMapper
+Removed
+
+>>I'm not very comfortable with the proposal to use Java for REST API development while the base wordpress CMS is PHP based
+WordPress is approved by client. Also, as I said in appeals, we don't need to do anything in PHP so it does not matter at all in which language WordPress is coded in.
+
+>>All parameters will have the @RequestParam attribute.......
+Fixed
+
+>> REST URLs are not really REST.. They should not contain '_' but be camelCase.
+Actually there is no naming convention for REST. I tried to Google it but I cannot find anything like this.
+
+>>REST API will access the MySQL server using normal PreparedStatement API calls to the database.....
+JdbcTemplate is now used.
+
+>>Thread - safety of models, RelatedArticleServiceImpl is not discussed.
+Fixed
+
+>>Thread safety: Spring MVC controllers are singletons but they will be stateless -> this is not accurate.....
+Fixed
+
+>> Please specify the exact configuration options/parameters in ADS configuration section.
+Fixed. Also added the aggregator configuration.
+
+>>For RelatedArticleServiceImpl fields, as they are configurable there should be setter for them(or other type of injection) and method that verifies configuration, e.g., one approach is to use method marked with @PostConstruct
+Actually if the @Required attribute is used, the @PostConstruct is not required.
+
+>>It is completely unclear how the RSS feeds are configured and set 
+Added in ADS 1.2.1
+
+>>I believe the session ID needs to be sent over to REST API for subsequent calls after user login (via header or parameter). Please document this in REST API doc.
+Added in REST_API.doc 3.1
+
+>>No persistence discussion at all. I assume it is JDBC, but it is stated "normal PreparedStatement"
+See ADS section on persistence and the REST API assembly spec
+
+>>Logging is missing concrete details on what data under which level should be logged (only general info is mentioned). At least exceptions should be logged
+Fixed
+
+>>Logging should not log any user data, like user session ids.
+Fixed
+
+>> Logging "On the device, logging must not be performed as space is limited." ..............
+>>Only the device, logging activity had better still be added..............
+Added. See ADS section on logging
+
+>> Please elaborate a little bit for error scenarios of cron jobs, does failure from one feed stop the whole job? if a ...........
+Added. See ADS section on exception handling
+
+>>No custom exceptions were defined completely........
+Added. See TCUML
+No custom exceptions in Aggregators (cron job cannot consume exceptions) and also for front-end (it will work with HTTP error codes)
+
+>>For REST API there is no error message or any additional.............
+Added. See ADS section on exception handling
+
+>>If saving/reading to/from cache call fails at any time ....
+caching is removed
+
+>>Error handling at the aggregator side is not discussed. It is quite important.
+duplicate
+
+>>Spring declarative approach for transactions can only work in a managed container.
+>>If the feed aggregators are run from command line utility, it won't be triggered.
+>>It is suggested to follow manual transaction approach then.
+No transactions in aggregators. See ADS section on transactions for the rationale
+
+>>Which Spring Declarative Transactions  should be used is not specified.
+Added. See ADS section on transactions
+
+>>Spring Declarative Transactions should be used by the REST Controllers for calls where more than 1 DB table is mutated
+reworded
+
+>>It is unclear which assembly implements models.
+>> It is not mentioned RelatedArticleService is in scope of REST API assembly.
+REST API.  It states "All interfaces and classes in REST API Class Diagram are in scope."
+
+>>Deployment of client app is not specified.
+Added
+
+>>What using both Apache HTTP server and Nginx?
+>>If you chose Nginx, you can use it for Wordpress.
+Fixed
+
+>>The solution is mixing tiering and putting everything into the scope of MnemosyneRestApiController which is basically responsible for everything
+Fixed with 2 tier system
+
+>>Data model is completely not defined.
+It is now. I have not documented these classes in TCUML given that equivalent documentation is in the REST_API.doc
+
+>>Client side data model is not defined
+Client will just consume the JSON reponse it retrieves. There is no point in defining the data model.
+
+>>A custom wrapper will have to be likely written over the customer's current login process to return these fields"
+>>You should specify DTO object containing the result of the data.
+Added. See TCUML entities namespace.
+
+>>Seems also to me the controller contains management of various functionalities not tied completely to each other, like managing of articles and articles........
+Not fixing this. I cannot see how we will benefit from this. There are not too many functions anyway.
+
+>>Jackson JSON version is not specified
+We use the version bundled with the Spring Framework (for which the version is provided)
+
+>>REST API:
+>>2.2	ArticleHeader.....
+Fixed
+
+>>Please extract the "Implementation Details" from the REST API and put them to TCUML.....
+Fixed
+
+>>ADS missing introduction on what this specific module does, only ....
+Fixed
+
+>> I see no point of discussion for CSV upload -> "CSV imports can also be done using the CSV importer plugin". There is a no requirement for CSV upload so this is not required.
+It is required. Because our CMS should have *upload functionality* (not just for media but also for client's existing articles)
+
+>>ADS 3.1 missing ERD, Senormal PreparedStatement quence Diagrams (minor)
+Added
+
+>>Front-End Spec 2.4.7.	Search page
+>>"There is no search page in the storyboards. " -> this is not accurate, search is present on top of the screen.
+What I mean is that there is no page which shows the results of search. So I have to make assumptions on how it will look like. I go for something similar to Flipboard.
+
+>>Submission contains no requirements for support up to 3000 concurrent connections. There is also no justification that this can implemented
+Added in Key Rquirements section in ADS section 1
+
+>>There should be a "Technical Overview" in ADS listing the technologies involved. 
+I saw the ADS template on TopCoder site and there is no such section. Anyway the technolgies are listed in the ADS in a separate section.
+
+>>Please use the ADS template for writing ADS. For instance, the TopCoder Logo and copyright information are not available in the submitted ADS.
+I have. It looks like because I am using Libre Office on Xubuntu, people viewing on Windows machines are having problems. 
+I have  also included PDF version of all documents just so you can see there are no issues on my end.
+
+>>Also the fonts are not used consistently in ADS, e.g. section 1 uses Arial, while most other sections use Times New Roman.
+I am using Arial throughout
+
+>>There are numerous formatting problems in all documents except REST API Specification which makes submission look unprofessional and hard to read.
+See above.
+
+Spelling error section.
+All fixed
+
+>>Aggregator implementations aggregate logger, relationship is wrong.
+>> Aggregator implementations, RelatedArticleServiceImpl missing constructors.
+Both fixed
+
+>>Dependency diagrams should be named "Assembly Diagram"
+>>Missing some relationships(to/from aggregators assembly) between assemblies.......
+All fixed.
+Not showing versions in Assebly Diagram though as this information already exists in ADS.
+
+
+

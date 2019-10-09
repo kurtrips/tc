@@ -1,0 +1,70 @@
+﻿<apispec>
+   <package name="ns1">
+      <doc>The developer probably wrote this description outside of the source
+      files.</doc>
+
+      <class name="A" visibility="public" modifiers="private">
+         <doc>
+            <summary>Some class</summary>
+            <remarks>Documentation for class A.</remarks>
+         </doc>
+
+         <constructor name="A" visibility="public" modifiers="none">
+            <doc>
+               <summary>This is a constructor</summary>
+            </doc>
+         </constructor>
+
+         <method name="Method1" visibility="public" modifiers="public">
+            <doc>
+               <summary>This is a method.</summary>
+               <remarks>Please see <see cref="ns2.B.Method" xpath="/package[@name='ns2']/class[@name='B']/method[@name='Method' and not(param[1])]"/> and <see cref="ns2.B.Prop" xpath="/package[@name='ns2']/class[@name='B']/property[@name='Prop']"/>.</remarks>
+               <param name="arg">A wowie argument</param>
+            </doc>
+            <return>void</return>
+            <param name="arg" typevaluespec="int">int arg</param>
+         </method>
+
+         <method name="Method2" visibility="public" modifiers="static">
+            <doc>
+               <summary>This is static method.</summary>
+               <remarks>Please see <see cref="A.Method1" xpath="../method[@name='Method1' and param[1]/@typevaluespec='int' and not(param[2])]"/>.</remarks>
+               <returns>Must return SOMETHING, I guess</returns>
+            </doc>
+            <return>int</return>
+         </method>
+      </class>
+   </package>
+
+   <package name="ns1">
+      <doc>This is another namespace description.</doc>
+
+      <class name="B" visibility="public" modifiers="static">
+         <doc>
+            <summary>Another class</summary>
+            <remarks>How many classes do we NEED here?</remarks>
+         </doc>
+
+         <parent>
+            <typeref xpath="/package[@name='ns1']/class[@name='A']">A</typeref>
+         </parent>
+
+         <field name="field" visibility="private" modifiers="static">
+            <doc>
+               <summary>A private field</summary>
+               <remarks>Accessed by propery <see cref="Prop" xpath="../property[@name='Prop']"/>.</remarks>
+            </doc>
+         </field>
+
+         <property name="Prop" visibility="public" modifiers="read-write">
+            <doc>
+               This is a property.  Yeah!
+            </doc>
+            <type>ns1.<typeref xpath="/package[@name='ns1']/class[@name='A']">A</typeref>[]</type>
+         </property>
+
+         <method name="MyMethod" visibility="public" modifiers="static">
+         </method>
+      </class>
+   </package>
+</apispec>

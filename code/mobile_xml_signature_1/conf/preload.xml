@@ -1,0 +1,35 @@
+<Config>
+  <Namespace name="TopCoder.Util.CompactConfigurationManager.ConfigMgr">
+    <!-- default namespace, required. non-empty string. -->
+    <Property name="default_namespace">
+      <Value>test1.example1</Value>
+    </Property>
+    <!-- configuration loaders, required, must contain at least 1 value. 
+         Each value must have a corresponding property. 
+         Each value should be non-empty string. -->
+    <Property name="configuration_loaders">
+      <Value>xml_loader1</Value>
+    </Property>
+
+    <!-- this property name is one of configuration_loaders property values. 
+         It contains a required 'property' sub-property and an optional 'loader_type' sub-property. -->
+    <Property name="xml_loader1">
+      <!-- the loader type, its value should like: [assembly-name,type-name], 
+           optinal, default to XmlConfigurationLoader is missing.  -->
+      <Property name="loader_type">
+        <Value>TopCoder.Util.CompactConfigurationManager.Loaders.XmlConfigurationLoader,TopCoder.Util.CompactConfigurationManager</Value>
+      </Property>
+      <!-- the property to instantiate IConfigurationLoader object, 
+           for XmlConfigurationLoader, it must contain at least 1 value. 
+           Each value points a xml configuration file name relative to this assembly file. 
+
+           for the other loader types, it could contain 1 value, multiple values, or nested properties.
+           In one word, it should correspond to a valid Property object. 
+      -->
+      <Property name="property">
+        <Value>../../test_files/config.xml</Value>
+      </Property>
+    </Property>
+
+  </Namespace>
+</Config>

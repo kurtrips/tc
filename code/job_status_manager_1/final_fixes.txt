@@ -1,0 +1,74 @@
+final fixes:
+
+<1.1.1>
+1. JobStatusManager# suscribe/unscribe event ,using job.StatusChanged +=/-= new EventHandler<StatusEventArgs>(HandleStatusChange);
+
+2. JobStatusManager#AddJobs: remove jobs that have been added if exception occurs.
+
+3. JobStatusManager#HandleStatusChange: use AddTradeActivityItemToIndex<int>(jobsByStatus, (int)e.NewStatus, job); to update the 'jobsByStatus'
+
+<2.1.2>
+1. DefaultPrioritizer# MTM, ACC -> private
+
+3. Helper# all methods -> internal
+
+<3.1.2>
+1.JobSortedCollection(IPrioritizer prioritizer):
+  remove argument checking
+
+<3.1.3>
+1. use GetJobsByStatus.Count and GetJobsByStatusAndServiceID.Count in JobStatusManager#GetJobCountByStatus and GetJobCountByStatusServiceID.
+
+<3.1.4>
+1. DefaultPrioritizer# EQUAL ,GREATER and LESS are added.
+
+2. JobSortedCollection#Contains: use return items.BinarySearch(item, comparer) >= 0
+
+3. JobStatusManager#GetJobsByServiceID change to:
+//Create a new JobSortedCollection if none was found
+if (!jobsByServiceId.TryGetValue(serviceID, out jobs))
+
+<3.1.6>
+1. copyright line changed to:
+/*
+ * Copyright (C) 2007 TopCoder Inc., All Rights Reserved.
+ */
+
+2. remove trailing spaces:
+DefaultPrioritizer line 12 and 16.
+
+3. DefaultPrioritizer#Compare():
+job == null && otherJob == null -> (job == null) && (otherJob == null).
+job != null && otherJob == null -> (job != null) && (otherJob == null)
+job == null && otherJob != null -> (job == null) && (otherJob != null)
+
+JobInfo#Equals:
+this.serviceID == other.serviceID) && (this.status == other.Status -> (this.serviceID == other.serviceID) && (this.status == other.Status)
+
+job.AccountingTreatment != MTM: use Equals to compare
+the same to accountingTreatment1 != accountingTreatment2
+
+4. DefaultPrioritizer#Compare: corrct non-chars of the doc.
+
+<4.1.1>
+1.JobStatusManager: added a code example
+
+<4.1.2>
+1. Helper#ValidateJobCollection: change the doc to "The collection must be not null..."
+
+2. JobSortedCollection#CopyTo: added exception tags
+
+<4.1.6>
+1. JobStatusManager#jobPrioritizer line 67 "This variable is set be constructor" -> "This variable is set in constructor"
+
+2. JobInfo#Equals:
+"Two non-null instances are equal if their serviceIDs are equals and their statuses are equal."
+-> "Two non-null instances are equal if both their serviceIDs and their statuses are equal."
+
+3. JobStatusManager#GetJobsByStatus(JobStatus status):
+"if manager doesn't contain job with givenstatus" -> "if manager doesn't contain job with given status"
+
+<5.1.3>
+1. correct about using Assert.AreEqual in tests.
+
+2. Added some failure test cases to test JobSortedCollection#CopyTo.

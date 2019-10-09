@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConfigManager>
+
+ <namespace name="TopCoder.LoggingWrapper">
+
+    <property name="logger_class">
+      <value>TopCoder.LoggingWrapper.Log4NETImpl</value>
+    </property>
+    <property name="logger_name">
+      <value>logger</value>
+    </property>
+    <property name="default_level">
+      <value>DEBUG</value>
+    </property>
+    <property name="config_file">
+      <value>../../test_files/accuracy/log4net.config</value>
+    </property>
+
+ </namespace>
+
+</ConfigManager>

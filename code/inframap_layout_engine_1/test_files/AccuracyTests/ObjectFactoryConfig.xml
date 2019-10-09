@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+
+  <!--Object Factory's own definition-->
+  <namespace name="TestOFNamespace.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TestOFNamespace.default.parameters">
+    <property name="p1:string">
+      <value>Astraea.Inframap.Layout.Test</value>
+    </property>
+  </namespace>
+
+  <!--Object Factory's own definition-->
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>Astraea.Inframap.Layout.Test</value>
+    </property>
+  </namespace>
+
+
+  <!--MockLayouter Definition-->
+  <namespace name="Astraea.Inframap.Layout.Test.TestGraphLayouterToken">
+    <property name="type_name">
+      <value>TopCoder.Graph.Layout.Layouter.MockLayouter</value>
+    </property>
+    <property name="assembly">
+      <value>TopCoder.Graph.Layout.dll</value>
+    </property>
+  </namespace>
+  
+</ConfigManager>

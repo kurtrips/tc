@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigManager>
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>ObjectDefinition</value>
+    </property>
+  </namespace>
+
+  <namespace name="ObjectDefinition.exceptionManager">
+    <property name="type_name">
+      <value>TopCoder.Util.ExceptionManager.ExceptionPublishManager</value>
+    </property>
+    <property name="assembly">
+      <value>TopCoder.Util.ExceptionManager.dll</value>
+    </property>
+  </namespace>
+
+  <namespace name="ObjectDefinition.logger">
+    <property name="type_name">
+      <value>TopCoder.Services.WCF.Loggers.DefaultTCWcfLogger</value>
+    </property>
+    <property name="assembly">
+      <value>TopCoder.Services.WCF.dll</value>
+    </property>
+  </namespace>
+
+  <namespace name="ObjectDefinition.AuditClient">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Clients.AuditServiceClient</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.AuditClient.parameters">
+    <property name="p1:object">
+      <value>AuditBindingKey</value>
+    </property>
+    <property name="p2:object">
+      <value>AuditEndPointAddress</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.AuditBindingKey">
+    <property name="type_name">
+      <value>System.ServiceModel.BasicHttpBinding, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.AuditEndPointAddress">
+    <property name="type_name">
+      <value>System.ServiceModel.EndpointAddress, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.AuditEndPointAddress.parameters">
+    <property name="p1:string">
+      <value>http://localhost:10101/HermesAuditTrailSaveService</value>
+    </property>
+  </namespace>
+
+  <namespace name="ObjectDefinition.GenericClient">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Clients.GenericNotesServiceClient</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.GenericClient.parameters">
+    <property name="p1:object">
+      <value>NoteBindingKey</value>
+    </property>
+    <property name="p2:object">
+      <value>NoteEndPointAddress</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.NoteBindingKey">
+    <property name="type_name">
+      <value>System.ServiceModel.BasicHttpBinding, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.NoteEndPointAddress">
+    <property name="type_name">
+      <value>System.ServiceModel.EndpointAddress, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="ObjectDefinition.NoteEndPointAddress.parameters">
+    <property name="p1:string">
+      <value>http://localhost:20202/HermesGenericNoteService</value>
+    </property>
+  </namespace>  
+
+  <namespace name="ObjectDefinition.MockPersistence">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.MockHermesScheduleItemPersistenceProvider</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+</ConfigManager>

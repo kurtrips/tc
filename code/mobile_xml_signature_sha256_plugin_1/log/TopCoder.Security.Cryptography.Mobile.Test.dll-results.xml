@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\FifthArcticMonkey\Development\MXE_SHA256\build\classes\TopCoder.Security.Cryptography.Mobile.Test.dll" total="135" failures="0" not-run="0" date="2007-04-30" time="05:44:23">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.42" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="D:\FifthArcticMonkey\Development\MXE_SHA256" machine-name="ASEEM" user="Administrator" user-domain="ASEEM" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="D:\FifthArcticMonkey\Development\MXE_SHA256\build\classes\TopCoder.Security.Cryptography.Mobile.Test.dll" success="True" time="131.047" asserts="0">
+    <results>
+      <test-suite name="TopCoder" success="True" time="131.031" asserts="0">
+        <results>
+          <test-suite name="TopCoder.Security" success="True" time="131.031" asserts="0">
+            <results>
+              <test-suite name="TopCoder.Security.Cryptography" success="True" time="131.031" asserts="0">
+                <results>
+                  <test-suite name="TopCoder.Security.Cryptography.Mobile" success="True" time="131.031" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.CanonicalizationExceptionTests" success="True" time="0.109" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.CanonicalizationExceptionTests.DefinitionTest" executed="True" success="True" time="0.047" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.CanonicalizationExceptionTests.TestAccuracyCanonicalizationExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.CanonicalizationExceptionTests.TestAccuracyCanonicalizationExceptionConstructor2" executed="True" success="True" time="0.031" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.CanonicalizationExceptionTests.TestAccuracyCanonicalizationExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.DigesterExceptionTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DigesterExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DigesterExceptionTests.TestAccuracyDigesterExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DigesterExceptionTests.TestAccuracyDigesterExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DigesterExceptionTests.TestAccuracyDigesterExceptionConstructor3" executed="True" success="True" time="0.016" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.DefaultEnumTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultEnumTests.KeyValueTypeTest" executed="True" success="True" time="0.000" asserts="6" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultEnumTests.KeyInfoProviderTypeTest" executed="True" success="True" time="0.000" asserts="16" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests" success="True" time="0.109" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.ConstructorTest" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.ConstructorTestFail1" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.ConstructorTestFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.ConstructorTestFail3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.ConstructorTestFail4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.ConstructorTestFail5" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.KeyPropertyTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.DefaultInstantiationVOTests.PramsPropertyTest" executed="True" success="True" time="0.016" asserts="2" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.KeyInfoExceptionTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.KeyInfoExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.KeyInfoExceptionTests.TestAccuracyKeyInfoExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.KeyInfoExceptionTests.TestAccuracyKeyInfoExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.KeyInfoExceptionTests.TestAccuracyKeyInfoExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryExceptionTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryExceptionTests.TestAccuracyProcessRegistryExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryExceptionTests.TestAccuracyProcessRegistryExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryExceptionTests.TestAccuracyProcessRegistryExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests" success="True" time="0.984" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestConstructor1" executed="True" success="True" time="0.734" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestConstructorAcc" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestConstructorFail1" executed="True" success="True" time="0.031" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestConstructorFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.Testget_RegisteredDefinitionsMap" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetDigesterInstance" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetSignerInstance" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetCanonicalizerInstance" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetReferenceLoaderInstance" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetKeyInfoProviderInstance" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetTransformerInstance" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetTransformerInstanceError" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetKeyInfoProviderInstanceError" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetReferenceLoaderInstanceError" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetSignerInstanceError" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetCanonicalizerInstanceError" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ProcessRegistryTests.TestGetDigesterInstanceError" executed="True" success="True" time="0.000" asserts="1" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.ReferenceLoadingExceptionTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoadingExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoadingExceptionTests.TestAccuracyReferenceLoadingExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoadingExceptionTests.TestAccuracyReferenceLoadingExceptionConstructor2" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoadingExceptionTests.TestAccuracyReferenceLoadingExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.ReferenceTests" success="True" time="0.094" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.Test_Protocol" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestReferenceURI" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestTransformerInstanceDefinitions" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestDigesterInstanceDefinition" executed="True" success="True" time="0.000" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestRefernceFailure" executed="True" success="True" time="0.047" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestRefernceFailure1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestRefernceFailure2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestRefernceFailure3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceTests.TestRefernceFailure4" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.Signers" success="True" time="17.375" asserts="0">
+                        <results>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.Signers.DSASignerTests" success="True" time="14.922" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.DSASignerTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.DSASignerTests.Test_DSAKeyInfo" executed="True" success="True" time="4.078" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.DSASignerTests.TestSignAccuracy" executed="True" success="True" time="4.594" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.DSASignerTests.TestSignFail1" executed="True" success="True" time="1.172" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.DSASignerTests.TestSignFail2" executed="True" success="True" time="5.078" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.Signers.RSASignerTests" success="True" time="2.453" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.RSASignerTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.RSASignerTests.Test_RSAKeyInfo" executed="True" success="True" time="0.328" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.RSASignerTests.TestSignAccuracy" executed="True" success="True" time="0.469" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.RSASignerTests.TestSignFail1" executed="True" success="True" time="0.828" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Signers.RSASignerTests.TestSignFail2" executed="True" success="True" time="0.672" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.Digesters" success="True" time="0.500" asserts="0">
+                        <results>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA1DigesterTests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA1DigesterTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA1DigesterTests.TestDigest" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA1DigesterTests.TestDigestFail1" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests" success="True" time="0.500" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestDigest" executed="True" success="True" time="0.063" asserts="3" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestDigestEmptyString" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestDigestQuickBrownFox" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestDigestNISTVectorShortMessage" executed="True" success="True" time="0.063" asserts="65" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestDigestNISTVectorLongMessage" executed="True" success="True" time="0.375" asserts="64" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Digesters.SHA256DigesterTests.TestDigestFail1" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.SignatureManagerExceptionTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerExceptionTests.TestAccuracySignatureManagerExceptionConstructor1" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerExceptionTests.TestAccuracySignatureManagerExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerExceptionTests.TestAccuracySignatureManagerExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.Canonicalizers" success="True" time="1.109" asserts="0">
+                        <results>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizerTests" success="True" time="0.297" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizerTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizerTests.Testget_Encoding" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizerTests.TestBringToCanonicalFormFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizerTests.TestBringToCanonicalFormFail1" executed="True" success="True" time="0.109" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizerTests.TestBringToCanonicalFormFailAccuracy" executed="True" success="True" time="0.188" asserts="4" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests" success="True" time="0.797" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests.Testget_Encoding" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests.TestBringToCanonicalFormFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests.TestBringToCanonicalFormFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests.TestBringToCanonicalFormFailAccuracy" executed="True" success="True" time="0.078" asserts="4" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.Canonicalizers.XmlDsigExcCanonicalizerTests.TestTransformAccuracy" executed="True" success="True" time="0.703" asserts="11" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.TransformerExceptionTests" success="True" time="0.016" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.TransformerExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.TransformerExceptionTests.TestAccuracyTransformerExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.TransformerExceptionTests.TestAccuracyTransformerExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.TransformerExceptionTests.TestAccuracyTransformerExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.VerificationExceptionTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationExceptionTests.TestAccuracyVerificationExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationExceptionTests.TestAccuracyVerificationExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationExceptionTests.TestAccuracyVerificationExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders" success="True" time="18.875" asserts="0">
+                        <results>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoaderTests" success="True" time="18.609" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoaderTests.TestConstructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoaderTests.TestLoadReferenceDataGoogle" executed="True" success="True" time="3.547" asserts="7" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoaderTests.TestLoadReferenceDataFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoaderTests.TestLoadReferenceDataFail1" executed="True" success="True" time="15.063" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoaderTests" success="True" time="0.266" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoaderTests.Test" executed="True" success="True" time="0.266" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.VerificationFailedExceptionTests" success="True" time="0.094" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationFailedExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationFailedExceptionTests.TestAccuracyVerificationFailedExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationFailedExceptionTests.TestAccuracyVerificationFailedExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.VerificationFailedExceptionTests.TestAccuracyVerificationFailedExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests" success="True" time="57.719" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor1" executed="True" success="True" time="5.953" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor2" executed="True" success="True" time="2.156" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor3" executed="True" success="True" time="2.219" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor4" executed="True" success="True" time="0.703" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor5" executed="True" success="True" time="2.938" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor6" executed="True" success="True" time="1.250" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor7" executed="True" success="True" time="0.594" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestConstructor8" executed="True" success="True" time="2.219" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestSign" executed="True" success="True" time="3.859" asserts="3" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestSignFail1" executed="True" success="True" time="0.594" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestSignFail2" executed="True" success="True" time="2.813" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestSignFail3" executed="True" success="True" time="7.875" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestVerifySignature" executed="True" success="True" time="8.031" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestVerifySignatureFailure1" executed="True" success="True" time="4.250" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestVerifySignatureFailure2" executed="True" success="True" time="4.828" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerTests.TestVerifySignatureFailure3" executed="True" success="True" time="7.328" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.SigningExceptionTests" success="True" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SigningExceptionTests.DefinitionTest" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SigningExceptionTests.TestAccuracySigningExceptionConstructor1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SigningExceptionTests.TestAccuracySigningExceptionConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SigningExceptionTests.TestAccuracySigningExceptionConstructor3" executed="True" success="True" time="0.000" asserts="3" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.Demo" success="True" time="6.813" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.Demo.TheDemo" executed="True" success="True" time="6.594" asserts="0" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.Demo.SoapDemo" executed="True" success="True" time="0.219" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="TopCoder.Security.Cryptography.Mobile.SignatureManagerUsingSHA256Tests" success="True" time="27.000" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerUsingSHA256Tests.TestConstructor1" executed="True" success="True" time="10.391" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerUsingSHA256Tests.TestConstructor2" executed="True" success="True" time="6.750" asserts="2" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerUsingSHA256Tests.TestSignAccuracy" executed="True" success="True" time="1.734" asserts="3" />
+                          <test-case name="TopCoder.Security.Cryptography.Mobile.SignatureManagerUsingSHA256Tests.TestVerifySignature" executed="True" success="True" time="8.125" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.MessageParserManager">
+    <property name="MessageParsers">
+      <value>XmlMessageParser</value>
+      <value>CsvMessageParser</value>
+    </property>
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector</value>
+      <value>CsvMessageTypeDetector</value>
+    </property>    
+  </namespace>
+
+  
+  <!--Tests config for XmlMessageParser-->
+  <namespace name="message.parser.XmlMessageParser">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector">
+    <!--Note 1: The message_type_ postfix can contain any value (SRequest) but must be same as the xpath_value for sake of consistency.-->
+    <!--Note 2: The values may be specified in any order.-->
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+  
+  <!--Vaid Tests config for XmlMessageParser-->
+    <namespace name="message.parser.XmlMessageParserValid2">
+      <property name="MessageTypeDetectors">
+        <value>XmlMessageTypeDetectorValid2</value>
+      </property>
+    </namespace>
+    <namespace name="type.detector.XmlMessageTypeDetectorValid2">
+      <property name="message_type_SRequest">
+        <value>type_recipe_file=../../test_files/testRecipe2.xml</value>
+        <value>xpath=/ServiceRequest/@Type</value>
+        <value>xpath_value=SRequest</value>
+      </property>
+  </namespace>
+  
+  <namespace name="message.parser.XmlMessageParser.BadDetector">
+    <property name="MessageTypeDetectors">
+      <value>NoSuchDetector</value>
+    </property>
+  </namespace>
+
+  <namespace name="message.parser.XmlMessageParser.Invalid1">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector1</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector1">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid1.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+
+  <namespace name="message.parser.XmlMessageParser.Invalid2">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector2</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector2">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid2.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+
+  <namespace name="message.parser.XmlMessageParser.Invalid3">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector3</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector3">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid3.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+  
+    <namespace name="message.parser.XmlMessageParser.Invalid4">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector4</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector4">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid4.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+
+  <namespace name="message.parser.XmlMessageParser.Invalid5">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector5</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector5">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid5.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+
+  <namespace name="message.parser.XmlMessageParser.Invalid6">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector6</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector6">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid6.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+  
+  <namespace name="message.parser.XmlMessageParser.Invalid7">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector7</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector7">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipeInvalid7.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>  
+
+  
+  <!--Tests config for XmlMessageTypeDetector-->
+  <namespace name="type.detector.XmlMessageTypeDetector.DuplicateTypes">
+    <!--Note 1: The message_type_ postfix can contain any value (SRequest) but must be same as the xpath_value for sake of consistency. For example see below.-->
+    <property name="message_type_ThisValueIsNotUsedAnyWhere">
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+    <property name="message_type_CouldBeAnything">
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector.NoSuchRecipeFile">
+    <property name="message_type_ThisValueIsNotUsedAnywhere">
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+      <value>type_recipe_file=../../test_files/noSuchFile.xml</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector.MissingXPath">
+    <property name="message_type_SRequest">
+      <value>xpath_value=SRequest</value>
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector.MissingXPathValue">
+    <property name="message_type_SRequest">
+      <value>xpath=/ServiceRequest/@Type</value>      
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector.MissingTypeRecipeFile">
+    <property name="message_type_SRequest">
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector.MissingEqualSign">
+    <property name="message_type_SRequest">
+      <value>xpath/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetectorWrongMessageType">
+    <property name="message_type_MyMessageType">
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=MyMessageType</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetectorWithValidator">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+      <value>validator=MockValidator</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetectorNoSuchValidator">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+      <value>validator=NoSuchValidator</value>
+    </property>
+  </namespace>  
+  <!--END - Tests config for XmlMessageTypeDetector-->
+
+  
+  <namespace name="message.parser.CsvMessageParser">
+    <property name="MessageTypeDetectors">
+      <value>CsvMessageTypeDetector</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.CsvMessageTypeDetector">
+    <property name="message_type_SomeValue">
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SomeValue</value>
+      <value>type_recipe_file=../../test_files/testCsvRecipe.xml</value>
+    </property>
+  </namespace>
+  
+  
+  <namespace name="message.parser.XmlMessageParser.Unidentified">
+      <property name="MessageTypeDetectors">
+        <value>XmlMessageTypeDetectorUnidentified</value>
+      </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetectorUnidentified">
+      <property name="message_type_ThisIsNotTheMessageType">
+        <value>xpath=/ServiceRequest/@Type</value>
+        <value>xpath_value=TestFailMessageType</value>
+        <value>type_recipe_file=../../test_files/testRecipe.xml</value>
+      </property>
+  </namespace>
+  
+</ConfigManager>

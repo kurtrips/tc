@@ -1,0 +1,9 @@
+1. In thread http://forums.topcoder.com/?module=Thread&threadID=575422&start=0&mc=3,
+designer has given free hand to move code from CreateChildControls to Constructor and vice-versa.
+Due to the issues i have mentioned in the thread, all code was moved from CreateChildControls to constructor. As a result CreateChildControls was left empty. So i have removed it as an empty function was not serving any function.
+Kindly do not mark me down for this.
+
+2. Similar case is for Page_Load. Though this function is still present but the implementation is different from what designer suggested as it was not possible to implement it that way.
+Kindly do not mark me down for this also.
+
+Thanks

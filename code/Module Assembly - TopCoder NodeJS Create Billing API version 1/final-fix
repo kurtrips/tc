@@ -1,0 +1,49 @@
+>>For the new added function initializers/idGenerator.js:getNextIdTimeOltp
+>>It's not correct....
+
+Fixed. Added getNextIDFromDb method which takes DB name as parameter. Updated code to use this method.
+
+>>In ./tc-api/actions/customers.js
+>>..why did you use db common_oltp?
+Fixed
+
+>> please add option "cacheEnabled : false" to createCustomer action, there is no need to cache the response.
+added
+
+>>in ./tc-api/actions/customers.js
+>>durationInYears: 3,...
+fixed
+
+>>BadRequestError in customer.js is useless.
+removed
+
+>>In DG, 7. Insert the one-time setup data using the time_oltp_data_setup.sql script ......
+
+Fixed. using dbaccess time_oltp time_oltp_data_setup.sql
+
+>>In DG, 8. Insert test data into DB using 'create_customer.insert' script. Use the following command:.......
+
+Fixed. using dbaccess create_customer.insert (no dash)
+
+>>node_modules/.bin/mocha test/test.createCustomer.js........
+
+fixed typo
+
+>> verification step: Create Customer - Not admin
+>>you should give steps of creating authorization header that belonging to non admin user
+
+Added
+
+>> In DG, the "dbaccess - time_oltp_data_setup.sql" should be dbaccess time_oltp time_oltp_data_setup.sql
+duplicate of above
+
+>>git clone git@github.com:cloudspokes/tc-api.git
+>>->
+>>git clone https://github.com/cloudspokes/tc-api
+Fixed
+
+>>there is no page header and footer in DG.
+>>check 174707_attachments/picOverride.png, the picture covers the documents, i have to do some adjustment to see the document.
+
+Cannot reproduce both. It looks like some issue with mine and the reviewer's Office installation.
+I have included a generated PDF in the doc folder to prove this. You can see the header/footer exist and the mocha screenshot is in the right place. 

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://operasolutions.com/sip/tactical"
+    xmlns="http://operasolutions.com/sip/tactical"
+    xmlns:sip="http://operasolutions.com/sip/tactical" elementFormDefault="qualified">
+
+<xs:element name="VendorUpload">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="AgencyName" type="xs:string" />
+            <xs:element name="CampaignInvoice" type="campaignInvoice" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>    
+    
+    
+<xs:complexType name="campaignInvoice">
+    <xs:sequence>
+        <xs:element name="Channel" >
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="channel" type="campaignChannel"/>
+                    <xs:element name="detail" type="xs:string" minOccurs="0"/>                    
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>        
+        <xs:element name="InvoiceInfo" type="invoice"/>
+        <xs:element name="Assets">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="Asset" type="asset" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+    <xs:attribute name="CampaignID" type="xs:string"/>
+    <xs:attribute name="CampaignName" type="xs:string"/>
+    <xs:attribute name="BUName" type="xs:string"/>
+
+</xs:complexType>   
+
+
+
+<xs:complexType name="invoice">
+    <xs:attribute name="InvoiceNumber" type="xs:long"/>
+    <xs:attribute name="InvoiceDate" type="xs:date"/>
+    <xs:attribute name="InvoiceAmount" type="xs:float"/>
+</xs:complexType>   
+    
+<xs:element name="Asset" type="asset"/>
+
+<xs:complexType name="asset">
+    <xs:all>
+        <xs:element name="AssetType" >
+            <xs:complexType>
+                <xs:choice>                    
+                    <xs:element name="TraditionalType" type="tradionalAssetType"/>
+                    <xs:element name="DigitalAssetType" type="digitalAssetType"/>
+                    <xs:element name="AssetType" type="allAssetTypes"/>                    
+                </xs:choice>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="PricingType" >
+                <xs:complexType>
+                    <xs:choice>
+                        <xs:element name="type" type="pricingType"/>
+                        <xs:element name="detail" type="xs:string"/>
+                    </xs:choice>
+                </xs:complexType>
+        </xs:element>        
+        <xs:element name="AssetItemOutputs">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="HourlyCostAssetItemOutput" type="hourlyCostAssetItemOutput" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="PassthroughCostAssetItemOutput" type="passthroughCostAssetItemOutput" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="AdditionalServicesCostAssetItemOutput" type="additionalServicesCostAssetItemOutput" minOccurs="0" maxOccurs="unbounded"/>                    
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:all>
+    <xs:attribute name="AssetID" type="xs:long"/>
+    <xs:attribute name="IsComplex" type="xs:boolean"/>
+    <xs:attribute name="IsPartOfCampaign" type="xs:boolean"/>
+    <xs:attribute name="IsMultiChannel" type="xs:boolean"/>
+    <xs:attribute name="ComplexityLevel" type="complexityLevel"/>            
+    <xs:attribute name="ModificationQuantity" type="xs:int"/>
+    <xs:attribute name="VariationQuantity" type="xs:int"/>
+    <xs:attribute name="PricePerUnit" type="xs:float"/>
+    <xs:attribute name="Quantity" type="xs:int"/>
+    <xs:attribute name="AdjuestedQuantity" type="xs:int"/>
+    
+</xs:complexType>   
+    
+   
+    <xs:element name="HourlyCostAssetItemOutput" type="hourlyCostAssetItemOutput"/>    
+    <xs:complexType name="hourlyCostAssetItemOutput"> 
+               <xs:sequence>
+                   <xs:element name="FunctionalTitle" >
+                       <xs:complexType>
+                           <xs:sequence>
+                               <xs:element name="title" type="functionalTitle"/>
+                               <xs:element name="detail" type="xs:string" minOccurs="0"/>
+                           </xs:sequence>
+                       </xs:complexType>
+                   </xs:element>                        
+               </xs:sequence>
+              <xs:attribute name="HourleyRate" type="xs:float"/>
+              <xs:attribute name="TotalHoursBilled" type="xs:float"/>
+              <xs:attribute name="PrecentageAllocation" type="xs:float"/>
+              <xs:attribute name="HoursBilled" type="xs:float"/>
+    </xs:complexType>
+
+    <xs:element name="PassthroughCostAssetItemOutput" type="passthroughCostAssetItemOutput"/>
+    <xs:complexType name="passthroughCostAssetItemOutput"> 
+                <xs:sequence>
+                    <xs:element name="Description" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="text" type="passThrough"/>
+                                <xs:element name="detail" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>                      
+                </xs:sequence>
+                <xs:attribute name="ProviderName" type="xs:string"/>
+                <xs:attribute name="Price" type="xs:float"/>
+               <!-- <xs:attribute name="Quantity" type="xs:float"/> amir, conflit with quantity from the basic asset--> 
+    </xs:complexType>    
+    
+    <xs:element name="AdditionalServicesCostAssetItemOutput" type="additionalServicesCostAssetItemOutput"/>
+    <xs:complexType name="additionalServicesCostAssetItemOutput"> 
+                <xs:sequence>
+                    <xs:element name="Description" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="text" type="functionalTitle"/>
+                                <xs:element name="detail" type="xs:string" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>                      
+                </xs:sequence>
+                <xs:attribute name="Price" type="xs:float"/>
+                <!-- <xs:attribute name="Quantity" type="xs:float"/> amir, conflit with quantity from the basic asset--> 
+    </xs:complexType>    
+
+   <!--  Enumerations -->
+    
+    <xs:simpleType name="campaignChannel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Traditional"/>
+            <xs:enumeration value="Digital - Standard"/>
+            <xs:enumeration value="Digital - Hosting"/>
+            <xs:enumeration value="Digital - Mobile Applications"/>
+            <xs:enumeration value="Multiple"/>
+            <xs:enumeration value="Other"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="allAssetTypes">
+        <xs:union memberTypes="tradionalAssetType digitalAssetType"/>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tradionalAssetType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Application"/>
+            <xs:enumeration value="Booklet"/>
+            <xs:enumeration value="Bookmark/Take One"/>
+            <xs:enumeration value="Breaker"/>
+            <xs:enumeration value="Brochure"/>
+            <xs:enumeration value="CD/DVD Packaging"/>
+            <xs:enumeration value="Coupon/Certificate/Buckslip"/>
+            <xs:enumeration value="Covers"/>
+            <xs:enumeration value="Envelope"/>
+            <xs:enumeration value="Flyer"/>
+            <xs:enumeration value="Flyer/Sales Sheet"/>
+            <xs:enumeration value="Folders"/>
+            <xs:enumeration value="Gift Card Design"/>
+            <xs:enumeration value="Insert"/>
+            <xs:enumeration value="Invitation (with envelope)"/>
+            <xs:enumeration value="Job Aid"/>
+            <xs:enumeration value="Letter and Envelope"/>
+            <xs:enumeration value="Logos"/>
+            <xs:enumeration value="Media Packaging"/>
+            <xs:enumeration value="Newsletter"/>
+            <xs:enumeration value="Postcard"/>
+            <xs:enumeration value="Poster"/>
+            <xs:enumeration value="Riser"/>
+            <xs:enumeration value="Sales Sheet"/>
+            <xs:enumeration value="Self-Mailer"/>
+            <xs:enumeration value="Signage/POP"/>
+            <xs:enumeration value="Staffing Plan Only"/>
+            <xs:enumeration value="Static Clings/Register Stickers"/>
+            <xs:enumeration value="Table Tents/Countercards"/>
+            <xs:enumeration value="Tactical Print Ad"/>
+            <xs:enumeration value="Terms And Conditions"/>
+            <xs:enumeration value="Other"/>            
+        </xs:restriction>
+    </xs:simpleType>    
+    
+    <xs:simpleType name="digitalAssetType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="3-5 Page Sitelet w/ HTML Development"/>
+            <xs:enumeration value="Amexweb image assets (headers, card art, charts, etc.)"/>
+            <xs:enumeration value="Animated Homepage Module"/>
+            <xs:enumeration value="Animated Web Banner"/>
+            <xs:enumeration value="Format Presentation"/>
+            <xs:enumeration value="HTML Email"/>
+            <xs:enumeration value="HTML/Text Email"/>
+            <xs:enumeration value="Letter/ Text Email"/>
+            <xs:enumeration value="Logos"/>
+            <xs:enumeration value="Rich-Media Page / Module"/>
+            <xs:enumeration value="Rich-Media Tool / Demo"/>
+            <xs:enumeration value="Single HTML Page w/ HTML Development"/>
+            <xs:enumeration value="Single HTML Page w/ Specification Document"/>
+            <xs:enumeration value="Splashpage"/>
+            <xs:enumeration value="Staffing Plan Only"/>
+            <xs:enumeration value="Static Homepage Module"/>
+            <xs:enumeration value="Static Web Banner"/>
+            <xs:enumeration value="Web Banner Ads/Interstitials (Pop-ups, Pop-unders etc.)"/>
+            <xs:enumeration value="Other"/>            
+        </xs:restriction>
+    </xs:simpleType>    
+    
+    <xs:simpleType name="pricingType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Output based"/>
+            <xs:enumeration value="Labor based"/>
+            <xs:enumeration value="Output + Labor Based"/>
+            <xs:enumeration value="3rd Party Pass-Through"/>
+            <xs:enumeration value="Fixed fee"/>           
+        </xs:restriction>
+    </xs:simpleType>        
+    
+    <xs:simpleType name="complexityLevel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Animated Homepage Module"/>
+        </xs:restriction>
+    </xs:simpleType>    
+
+    <xs:simpleType name="functionalTitle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Account Coordinator"/>
+            <xs:enumeration value="Account Director"/>
+            <xs:enumeration value="Account Executive"/>
+            <xs:enumeration value="Account Manager"/>
+            <xs:enumeration value="Account Supervisor/COO/Sr. Account Exec"/>
+            <xs:enumeration value="Administrative Personnel"/>
+            <xs:enumeration value="Application Developer"/>
+            <xs:enumeration value="Art buyer"/>
+            <xs:enumeration value="Art Director"/>
+            <xs:enumeration value="Assistant Account Executive"/>
+            <xs:enumeration value="Business Analyst"/>
+            <xs:enumeration value="Copywriter"/>
+            <xs:enumeration value="Creative Director"/>
+            <xs:enumeration value="Designer"/>
+            <xs:enumeration value="Director of Account Planning"/>
+            <xs:enumeration value="Director of Technologies"/>
+            <xs:enumeration value="DTP Production Specialist"/>
+            <xs:enumeration value="Editor"/>
+            <xs:enumeration value="Information Architect"/>
+            <xs:enumeration value="Lead Designer"/>
+            <xs:enumeration value="Media - Paid Specialist "/>
+            <xs:enumeration value="Media - SEO"/>
+            <xs:enumeration value="Media buyer"/>
+            <xs:enumeration value="Media Director"/>
+            <xs:enumeration value="Media Planner"/>
+            <xs:enumeration value="Media Supervisor"/>
+            <xs:enumeration value="Production Director"/>
+            <xs:enumeration value="Production Manager"/>
+            <xs:enumeration value="Programmer"/>
+            <xs:enumeration value="Project Manager"/>
+            <xs:enumeration value="Proofreader"/>
+            <xs:enumeration value="QA Specialist"/>
+            <xs:enumeration value="Researcher"/>
+            <xs:enumeration value="Sr. Art Director"/>
+            <xs:enumeration value="Sr. Copywriter"/>
+            <xs:enumeration value="Sr. Producer"/>
+            <xs:enumeration value="Sr. Information Architect"/>
+            <xs:enumeration value="Sr. Planner"/>
+            <xs:enumeration value="Sr. Programmer/Information Architect"/>
+            <xs:enumeration value="Strategic Planner"/>
+            <xs:enumeration value="Technical Director"/>
+            <xs:enumeration value="Technical Project Manager"/>
+            <xs:enumeration value="Traffic Manager"/>
+            <xs:enumeration value="Web Designer"/>
+            <xs:enumeration value="Web Developer"/>
+            <xs:enumeration value="Other"/>
+        </xs:restriction>
+    </xs:simpleType>    
+    
+    
+    <xs:simpleType name="passThrough">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Stock Image"/>
+            <xs:enumeration value="Mailing Shipping"/>
+            <xs:enumeration value="Printing"/>
+            <xs:enumeration value="Promotional Material"/>
+            <xs:enumeration value="Tech Development"/>
+            <xs:enumeration value="Other"/>            
+        </xs:restriction>
+    </xs:simpleType>   
+    
+    <xs:simpleType name="passThroughTraditional">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Application"/>
+            <xs:enumeration value="Booklet"/>
+            <xs:enumeration value="Bookmark/Take One"/>
+            <xs:enumeration value="Breaker"/>
+            <xs:enumeration value="Brochure"/>
+            <xs:enumeration value="CD/DVD Packaging"/>
+            <xs:enumeration value="Coupon/Certificate/Buckslip"/>
+            <xs:enumeration value="Covers"/>
+            <xs:enumeration value="Envelope"/>
+            <xs:enumeration value="Flyer"/>
+            <xs:enumeration value="Flyer/Sales Sheet"/>
+            <xs:enumeration value="Folders"/>
+            <xs:enumeration value="Gift Card Design"/>
+            <xs:enumeration value="Insert"/>
+            <xs:enumeration value="Invitation (with envelope)"/>
+            <xs:enumeration value="Job Aid"/>
+            <xs:enumeration value="Letter and Envelope"/>
+            <xs:enumeration value="Logos"/>
+            <xs:enumeration value="Media Packaging"/>
+            <xs:enumeration value="Newsletter"/>
+            <xs:enumeration value="Postcard"/>
+            <xs:enumeration value="Poster"/>
+            <xs:enumeration value="Riser"/>
+            <xs:enumeration value="Sales Sheet"/>
+            <xs:enumeration value="Self-Mailer"/>
+            <xs:enumeration value="Signage/POP"/>
+            <xs:enumeration value="Staffing Plan Only"/>
+            <xs:enumeration value="Static Clings/Register Stickers"/>
+            <xs:enumeration value="Table Tents/Countercards"/>
+            <xs:enumeration value="Tactical Print Ad"/>
+            <xs:enumeration value="Terms And Conditions"/>
+            <xs:enumeration value="Other"/>            
+        </xs:restriction>
+    </xs:simpleType>    
+    
+</xs:schema>

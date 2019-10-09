@@ -1,0 +1,17 @@
+bin\Debug\Hermes Authentication Service.dll
+bin\Debug\Hermes Authentication Service.pdb
+bin\Debug\Hermes.Entity.Base.dll
+bin\Debug\Hermes.Entity.Common.dll
+bin\Debug\log4net.dll
+bin\Debug\TopCoder.Configuration.dll
+bin\Debug\TopCoder.LoggingWrapper.dll
+bin\Debug\TopCoder.Services.WCF.dll
+bin\Debug\TopCoder.Util.Collection.Set.dll
+bin\Debug\TopCoder.Util.ConfigurationManager.dll
+bin\Debug\TopCoder.Util.ExceptionManager.dll
+bin\Debug\TopCoder.Util.ExceptionManager.SDE.dll
+bin\Debug\TopCoder.Util.ObjectFactory.Configuration.dll
+bin\Debug\TopCoder.Util.ObjectFactory.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Hermes Authentication Service.dll
+obj\Debug\Hermes Authentication Service.pdb

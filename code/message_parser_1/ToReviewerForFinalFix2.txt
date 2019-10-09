@@ -1,0 +1,1 @@
+1. I am not fixing the recommended points as they are mere code refactoring issues and do not affect functionality.

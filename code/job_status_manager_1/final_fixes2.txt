@@ -1,0 +1,17 @@
+final fixes:
+
+<1.1.1>
+1. JobStatusManager#AddJobs: remove jobs that have been added if exception occurs.(sorry, this is commented in ff1).
+
+2. added check "if (jobsByStatus.ContainsKey((int)e.OldStatus))" to handle for jobsByStatus[(int)e.OldStatus].
+
+<3.1.6>
+1. JobSortedCollection#IEnumerator System.Collections.IEnumerable.GetEnumerator()  -> IEnumerator IEnumerable.GetEnumerator().
+
+<4.1.4>
+1. DefaultPrioritizer#Compare line 98 "Compare based on JobPriority": -> "Compare based on AccountingTreatment".
+
+<4.1.6>
+1. JobInfo#Equals: (fix the other one)
+"Two non-null instances are equal if their serviceIDs are equals and their statuses are equal."
+-> "Two non-null instances are equal if both their serviceIDs and their statuses are equal."

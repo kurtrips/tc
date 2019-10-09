@@ -1,0 +1,886 @@
+<apispec>
+  <package name="MockLibrary">
+    <class name="WakeMeUp" visibility="public">
+      <doc>
+        <summary>
+          A class with event.
+          Demonstrates the xpaths formed for event and delegate types.
+        </summary>
+      </doc>
+      <annotation>System.SerializableAttribute</annotation>
+      <constructor name=".ctor" visibility="private">
+        <doc>
+          <summary>
+            Constructor. Registers the <see cref="T:MockLibrary.AlarmEventHandler" /> handler to the
+            <see cref="E:MockLibrary.WakeMeUp.Alarm" /> event
+          </summary>
+        </doc>
+      </constructor>
+      <method name="AlarmRang" visibility="public">
+        <doc>
+          <summary>
+            AlarmRang has the same signature as AlarmEventHandler.
+          </summary>
+          <param name="sender">sender</param>
+          <param name="e">e</param>
+          <returns>a string</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="sender" typevaluespec="System.Object">System.Object</param>
+        <param name="e" typevaluespec="System.EventArgs">System.EventArgs</param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <field name="field2" visibility="public">
+        <doc>
+          <summary>
+            An Obsolete, NonSerialized field
+          </summary>
+        </doc>
+        <annotation>System.NonSerializedAttribute</annotation>
+        <annotation>System.ObsoleteAttribute</annotation>
+        <type>System.Int32[]</type>
+      </field>
+      <field name="Alarm" visibility="private">
+        <type>MockLibrary.AlarmEventHandler</type>
+      </field>
+      <event name="Alarm" visibility="public">
+        <doc>
+          <summary>
+            An event
+          </summary>
+        </doc>
+        <type>MockLibrary.AlarmEventHandler</type>
+      </event>
+    </class>
+    <class name="ClassF" visibility="public">
+      <doc>
+        <summary>
+          A class demonstrating dependent library.
+        </summary>
+      </doc>
+      <parent>BaseLibrary.ClassBaseA</parent>
+      <constructor name=".ctor" visibility="public" />
+      <method name="ADependentFunction" visibility="public">
+        <doc>
+          <summary>
+            Function returning <see cref="T:BaseLibrary.ClassBaseA" /> instance.
+          </summary>
+          <returns>ClassBaseA instance.</returns>
+        </doc>
+        <return>BaseLibrary.ClassBaseA</return>
+      </method>
+      <method name="Doit" visibility="public">
+        <return>System.String</return>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <class name="ClassA" visibility="public">
+      <doc>
+        <summary>
+          Empty class.
+          Use by other classes.
+          Sample xpath is <see cref="T:MockLibrary.ClassA" />
+
+          This is a sample reference to a non-existing class <see cref="T:NoSuchClass" />
+          This is a sample reference to a non-existing namespace <see cref="N:NoSuchNamespace" />
+          This is a sample reference to a non-existing method <see cref="M:MockLibrary.ClassA.NoSuchMethod" />
+          This is a sample reference to a non-existing field <see cref="F:MockLibrary.ClassA.NoSuchField" />
+        </summary>
+      </doc>
+      <parent>MockLibrary.InterfaceA</parent>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetAInstance" visibility="public" modifiers="virtual">
+        <doc>
+          <summary>
+            GetAInstance method
+            Sample xpath is <see cref="M:MockLibrary.ClassA.GetAInstance(MockLibrary.ClassB)" />
+          </summary>
+          <param name="b">ClassB instance</param>
+          <returns>ClassA instance</returns>
+        </doc>
+        <return>MockLibrary.EnumA</return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">MockLibrary.ClassB</param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <class name="ClassB" visibility="public">
+      <doc>
+        <summary>
+          Class B doc.
+          Inherits from ClassA.
+          Demonstrates public field, method, property.
+          Demonstrates a method using instance of <see cref="T:MockLibrary.ClassA" />
+          and returning a <see cref="T:MockLibrary.ClassA" /> array. Demonstrates the xpath formed for a class.
+          Also demonstrates the xpath formed for a field and a method and property.
+        </summary>
+      </doc>
+      <annotation>System.Reflection.DefaultMemberAttribute</annotation>
+      <parent>MockLibrary.InterfaceA</parent>
+      <parent>MockLibrary.ClassA</parent>
+      <constructor name=".ctor" visibility="public" />
+      <method name="TestMethod1" visibility="public">
+        <doc>
+          <summary>
+            TestMethod1 doc.
+          </summary>
+          <param name="objA">ClassA instance</param>
+          <returns>a string</returns>
+        </doc>
+        <return>MockLibrary.ClassA[]</return>
+        <param name="objA" typevaluespec="MockLibrary.ClassA">MockLibrary.ClassA</param>
+      </method>
+      <method name="GetName" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given id.
+            1st overload for this method.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.GetName(System.Int32)" />
+          </summary>
+          <param name="id">The id</param>
+          <returns>The name</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="id" typevaluespec="System.Int32">System.Int32</param>
+      </method>
+      <method name="GetName" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given string id.
+            2nd overload. Same number of parameters but different type of parameter.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.GetName(System.String)" />
+          </summary>
+          <param name="id">The id</param>
+          <returns>The name</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="id" typevaluespec="System.String">System.String</param>
+      </method>
+      <method name="GetName" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given string id.
+            3rd overload. Different number of parameters.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.GetName(System.String,System.Int32)" />
+          </summary>
+          <param name="id">string id</param>
+          <param name="iid">Int id</param>
+          <returns>The name</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="id" typevaluespec="System.String">System.String</param>
+        <param name="iid" typevaluespec="System.Int32">System.Int32</param>
+      </method>
+      <method name="GetNames" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given id.
+            Simply delegates to <see cref="M:MockLibrary.ClassB.GetName(System.Int32)" />
+          </summary>
+          <param name="ids">The id</param>
+          <returns>The names</returns>
+        </doc>
+        <return>System.Collections.IList</return>
+        <param name="ids" typevaluespec="System.Int32[]">System.Int32[]</param>
+      </method>
+      <method name="SetName" visibility="public">
+        <doc>
+          <summary>
+            Adds the id and name to the <see cref="F:MockLibrary.ClassB.namesIds" /> variable.
+          </summary>
+          <param name="id">The id.</param>
+          <param name="name">The name.</param>
+        </doc>
+        <return>System.Void</return>
+        <param name="id" typevaluespec="System.Int32">System.Int32</param>
+        <param name="name" typevaluespec="System.String">System.String</param>
+      </method>
+      <method name="IsPropNull" visibility="public">
+        <doc>
+          <summary>
+            This method demonstartes an xpath to a property.
+            It uses the <see cref="P:MockLibrary.ClassB.TestProperty1" /> property.
+          </summary>
+          <returns></returns>
+        </doc>
+        <return>System.Boolean</return>
+      </method>
+      <indexer name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An example indexer.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.get_Item(System.Int32)" />
+          </summary>
+          <param name="id">An id</param>
+          <returns>A string</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="id" typevaluespec="System.Int32">System.Int32</param>
+      </indexer>
+      <indexer name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An example indexer. 2nd overload with same number of params but different types.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.get_Item(System.String)" />
+          </summary>
+          <param name="id">An id</param>
+          <returns>A string</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="id" typevaluespec="System.String">System.String</param>
+      </indexer>
+      <indexer name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An example indexer. 3nd overload with different number of params.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.get_Item(System.String,System.Int32)" />
+          </summary>
+          <param name="id">An id</param>
+          <param name="iid">int id</param>
+          <returns>A string</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="id" typevaluespec="System.String">System.String</param>
+        <param name="iid" typevaluespec="System.Int32">System.Int32</param>
+      </indexer>
+      <method name="BigAndNestedArrayReturningFunction" visibility="public">
+        <doc>
+          <summary>
+            Some folks dont really like generics. They prefer really big and nested arrays.
+          </summary>
+          <returns>Phew</returns>
+        </doc>
+        <return>MockLibrary.ClassA[][,,][]</return>
+      </method>
+      <method name="GetAInstance" visibility="public" modifiers="virtual">
+        <return>MockLibrary.EnumA</return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">MockLibrary.ClassB</param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <property name="TestProperty1" visibility="public" modifiers="virtual read-write">
+        <doc>
+          <summary>
+            A test property with type <see cref="T:MockLibrary.ClassA" />
+          </summary>
+        </doc>
+        <type>MockLibrary.ClassA</type>
+      </property>
+      <field name="namesIds" visibility="public">
+        <doc>
+          <summary>
+            Contains id to name mappings.
+          </summary>
+        </doc>
+        <type>System.Collections.IDictionary</type>
+      </field>
+    </class>
+    <interface name="InterfaceA" visibility="public">
+      <doc>
+        <summary>
+          InterfaceA
+        </summary>
+      </doc>
+      <method name="GetAInstance" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            GetAInstance method
+          </summary>
+          <param name="b">ClassB instance</param>
+          <returns>ClassA instance</returns>
+        </doc>
+        <return>MockLibrary.EnumA</return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">MockLibrary.ClassB</param>
+      </method>
+    </interface>
+    <interface name="InterfaceB" visibility="public">
+      <doc>
+        <summary>
+          InterfaceB
+        </summary>
+      </doc>
+      <method name="JustDoIt" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            JustDoIt
+          </summary>
+          <param name="listParam">listParam</param>
+          <param name="boolParam">boolParam</param>
+          <param name="arrayParam">arrayParam</param>
+          <returns></returns>
+        </doc>
+        <return>System.String</return>
+        <param name="listParam" typevaluespec="System.Collections.IList">System.Collections.IList</param>
+        <param name="boolParam" typevaluespec="System.Boolean">System.Boolean</param>
+        <param name="arrayParam" typevaluespec="System.String[]">System.String[]</param>
+      </method>
+    </interface>
+    <interface name="InterfaceC" visibility="public">
+      <doc>
+        <summary>
+          InterfaceC
+        </summary>
+      </doc>
+      <parent>MockLibrary.InterfaceB</parent>
+      <parent>MockLibrary.InterfaceA</parent>
+      <method name="SayHelloToTheWorld" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            Say Hello
+          </summary>
+        </doc>
+        <return>System.Void</return>
+      </method>
+    </interface>
+    <interface name="InterfaceX" visibility="public">
+      <doc>
+        <summary>
+          InterfaceX
+          Sample xpath is <see cref="T:MockLibrary.InterfaceX" />
+        </summary>
+      </doc>
+      <parent>MockLibrary.InterfaceB</parent>
+      <parent>MockLibrary.InterfaceA</parent>
+      <parent>MockLibrary.InterfaceC</parent>
+    </interface>
+    <struct name="StructA" visibility="public">
+      <doc>
+        <summary>
+          Structure A
+        </summary>
+      </doc>
+      <annotation>System.SerializableAttribute</annotation>
+      <parent>MockLibrary.InterfaceA</parent>
+      <parent>System.ValueType</parent>
+      <method name="Method1" visibility="public">
+        <doc>
+          <summary>
+            Method1
+          </summary>
+          <param name="doc">XmlDocument</param>
+          <returns>empty string</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="doc" typevaluespec="System.Xml.XmlDocument">System.Xml.XmlDocument</param>
+      </method>
+      <method name="GetAInstance" visibility="public" modifiers="virtual">
+        <doc>
+          <summary>
+            GetInstance method. Returns a <see cref="T:MockLibrary.EnumA" /> instance.
+          </summary>
+          <param name="b">ClassB instance</param>
+          <returns>EnumA instance</returns>
+        </doc>
+        <return>MockLibrary.EnumA</return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">MockLibrary.ClassB</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="override">
+        <return>System.Int32</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="override">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="ToString" visibility="public" modifiers="override">
+        <return>System.String</return>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <field name="array" visibility="public">
+        <doc>
+          <summary>
+            A <see cref="T:MockLibrary.StructA" /> array.
+          </summary>
+        </doc>
+        <type>MockLibrary.StructA[]</type>
+      </field>
+    </struct>
+    <enum name="EnumA" visibility="public">
+      <doc>
+        <summary>
+          Enum A
+        </summary>
+      </doc>
+      <annotation>System.SerializableAttribute</annotation>
+      <type>System.Int32</type>
+      <value name="Value3" />
+      <value name="Value2" />
+      <value name="Value1" />
+    </enum>
+    <delegate name="AlarmEventHandler" visibility="public">
+      <doc>
+        <summary>
+          A delegate class
+        </summary>
+        <param name="sender">sender</param>
+        <param name="e">e</param>
+        <returns>a string</returns>
+      </doc>
+      <annotation>System.SerializableAttribute</annotation>
+      <return>System.String</return>
+      <param name="sender" typevaluespec="System.Object">System.Object</param>
+      <param name="e" typevaluespec="System.EventArgs">System.EventArgs</param>
+    </delegate>
+  </package>
+  <package name="MockLibrary.Nested">
+    <class name="ClassC" visibility="public">
+      <doc>
+        <summary>
+          Class C doc. Contains many different visibilities and modifiers. Also contains nested classes.
+          Also this class is in the <see cref="N:MockLibrary.Nested" /> namespace.
+          So demonstrates the xpath for namespaces also.
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor
+            Sample xpath is <see cref="M:MockLibrary.Nested.ClassC.#ctor" />
+          </summary>
+        </doc>
+      </constructor>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <field name="privateInt" visibility="private">
+        <doc>
+          <summary>
+            A private integer.
+            Sample xpath is <see cref="F:MockLibrary.Nested.ClassC.privateInt" />
+          </summary>
+        </doc>
+        <type>System.Int32</type>
+      </field>
+      <class name="ClassD" visibility="public">
+        <doc>
+          <summary>
+            A nested class of ClassC.
+            A sample xpath is <see cref="T:MockLibrary.Nested.ClassC.ClassD" />
+          </summary>
+        </doc>
+        <constructor name=".ctor" visibility="public">
+          <doc>
+            <summary>
+              A constructor
+            </summary>
+            <param name="x">int param</param>
+          </doc>
+          <param name="x" typevaluespec="System.Int32">System.Int32</param>
+        </constructor>
+        <constructor name=".cctor" visibility="private" modifiers="static" />
+        <method name="MethodC" visibility="protected" modifiers="virtual">
+          <doc>
+            <summary>
+              A method
+            </summary>
+            <param name="x">ClassA param</param>
+            <param name="y">ClassE param</param>
+            <returns>a string array</returns>
+          </doc>
+          <return>System.String[]</return>
+          <param name="x" typevaluespec="MockLibrary.ClassB">MockLibrary.ClassB</param>
+          <param name="y" typevaluespec="MockLibrary.Nested.ClassC+ClassD+ClassE">MockLibrary.Nested.ClassC+ClassD+ClassE</param>
+        </method>
+        <method name="ClassEvent" visibility="public">
+          <doc>
+            <summary>
+              event handler for anEvent
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+            <returns>empty string</returns>
+          </doc>
+          <return>System.String</return>
+          <param name="sender" typevaluespec="System.Object">System.Object</param>
+          <param name="e" typevaluespec="System.EventArgs">System.EventArgs</param>
+        </method>
+        <method name="GetType" visibility="public">
+          <return>System.Type</return>
+        </method>
+        <method name="MemberwiseClone" visibility="protected">
+          <return>System.Object</return>
+        </method>
+        <method name="ToString" visibility="public" modifiers="virtual">
+          <return>System.String</return>
+        </method>
+        <method name="Equals" visibility="public" modifiers="virtual">
+          <return>System.Boolean</return>
+          <param name="obj" typevaluespec="System.Object">System.Object</param>
+        </method>
+        <method name="GetHashCode" visibility="public" modifiers="virtual">
+          <return>System.Int32</return>
+        </method>
+        <method name="Finalize" visibility="protected" modifiers="override">
+          <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+          <return>System.Void</return>
+        </method>
+        <property name="Prop" visibility="protected" modifiers="read-write">
+          <doc>
+            <summary>
+              A protected property of type ClassE.
+            </summary>
+          </doc>
+          <type>MockLibrary.Nested.ClassC+ClassD+ClassE</type>
+        </property>
+        <field name="anEvent" visibility="private">
+          <type>MockLibrary.AlarmEventHandler</type>
+        </field>
+        <field name="count" visibility="public" modifiers="static readonly">
+          <doc>
+            <summary>
+              An int variable with static and readonly.
+              A sample xpath is <see cref="F:MockLibrary.Nested.ClassC.ClassD.count" />
+            </summary>
+          </doc>
+          <type>System.Int32</type>
+        </field>
+        <event name="anEvent" visibility="public">
+          <doc>
+            <summary>
+              An event.
+            </summary>
+          </doc>
+          <type>MockLibrary.AlarmEventHandler</type>
+        </event>
+        <class name="ClassE" visibility="public">
+          <doc>
+            <summary>
+              A nested class of <see cref="T:MockLibrary.Nested.ClassC.ClassD" />
+            </summary>
+          </doc>
+          <constructor name=".ctor" visibility="public" />
+          <method name="GetType" visibility="public">
+            <return>System.Type</return>
+          </method>
+          <method name="MemberwiseClone" visibility="protected">
+            <return>System.Object</return>
+          </method>
+          <method name="ToString" visibility="public" modifiers="virtual">
+            <return>System.String</return>
+          </method>
+          <method name="Equals" visibility="public" modifiers="virtual">
+            <return>System.Boolean</return>
+            <param name="obj" typevaluespec="System.Object">System.Object</param>
+          </method>
+          <method name="GetHashCode" visibility="public" modifiers="virtual">
+            <return>System.Int32</return>
+          </method>
+          <method name="Finalize" visibility="protected" modifiers="override">
+            <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+            <return>System.Void</return>
+          </method>
+        </class>
+      </class>
+      <interface name="InterfaceD" visibility="public">
+        <doc>
+          <summary>
+            A nested interface.
+            Sample xpath is <see cref="T:MockLibrary.Nested.ClassC.InterfaceD" />
+          </summary>
+        </doc>
+        <method name="MakeMyDay" visibility="public" modifiers="abstract">
+          <doc>
+            <summary>
+              Sample xpath is <see cref="M:MockLibrary.Nested.ClassC.InterfaceD.MakeMyDay" />
+            </summary>
+          </doc>
+          <return>System.Void</return>
+        </method>
+      </interface>
+    </class>
+    <class name="ClassD" visibility="public">
+      <doc>
+        <summary>
+          A nested class of ClassC.
+          A sample xpath is <see cref="T:MockLibrary.Nested.ClassC.ClassD" />
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            A constructor
+          </summary>
+          <param name="x">int param</param>
+        </doc>
+        <param name="x" typevaluespec="System.Int32">System.Int32</param>
+      </constructor>
+      <constructor name=".cctor" visibility="private" modifiers="static" />
+      <method name="MethodC" visibility="protected" modifiers="virtual">
+        <doc>
+          <summary>
+            A method
+          </summary>
+          <param name="x">ClassA param</param>
+          <param name="y">ClassE param</param>
+          <returns>a string array</returns>
+        </doc>
+        <return>System.String[]</return>
+        <param name="x" typevaluespec="MockLibrary.ClassB">MockLibrary.ClassB</param>
+        <param name="y" typevaluespec="MockLibrary.Nested.ClassC+ClassD+ClassE">MockLibrary.Nested.ClassC+ClassD+ClassE</param>
+      </method>
+      <method name="ClassEvent" visibility="public">
+        <doc>
+          <summary>
+            event handler for anEvent
+          </summary>
+          <param name="sender">sender</param>
+          <param name="e">e</param>
+          <returns>empty string</returns>
+        </doc>
+        <return>System.String</return>
+        <param name="sender" typevaluespec="System.Object">System.Object</param>
+        <param name="e" typevaluespec="System.EventArgs">System.EventArgs</param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <property name="Prop" visibility="protected" modifiers="read-write">
+        <doc>
+          <summary>
+            A protected property of type ClassE.
+          </summary>
+        </doc>
+        <type>MockLibrary.Nested.ClassC+ClassD+ClassE</type>
+      </property>
+      <field name="anEvent" visibility="private">
+        <type>MockLibrary.AlarmEventHandler</type>
+      </field>
+      <field name="count" visibility="public" modifiers="static readonly">
+        <doc>
+          <summary>
+            An int variable with static and readonly.
+            A sample xpath is <see cref="F:MockLibrary.Nested.ClassC.ClassD.count" />
+          </summary>
+        </doc>
+        <type>System.Int32</type>
+      </field>
+      <event name="anEvent" visibility="public">
+        <doc>
+          <summary>
+            An event.
+          </summary>
+        </doc>
+        <type>MockLibrary.AlarmEventHandler</type>
+      </event>
+      <class name="ClassE" visibility="public">
+        <doc>
+          <summary>
+            A nested class of <see cref="T:MockLibrary.Nested.ClassC.ClassD" />
+          </summary>
+        </doc>
+        <constructor name=".ctor" visibility="public" />
+        <method name="GetType" visibility="public">
+          <return>System.Type</return>
+        </method>
+        <method name="MemberwiseClone" visibility="protected">
+          <return>System.Object</return>
+        </method>
+        <method name="ToString" visibility="public" modifiers="virtual">
+          <return>System.String</return>
+        </method>
+        <method name="Equals" visibility="public" modifiers="virtual">
+          <return>System.Boolean</return>
+          <param name="obj" typevaluespec="System.Object">System.Object</param>
+        </method>
+        <method name="GetHashCode" visibility="public" modifiers="virtual">
+          <return>System.Int32</return>
+        </method>
+        <method name="Finalize" visibility="protected" modifiers="override">
+          <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+          <return>System.Void</return>
+        </method>
+      </class>
+    </class>
+    <class name="ClassE" visibility="public">
+      <doc>
+        <summary>
+          A nested class of <see cref="T:MockLibrary.Nested.ClassC.ClassD" />
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <interface name="InterfaceD" visibility="public">
+      <doc>
+        <summary>
+          A nested interface.
+          Sample xpath is <see cref="T:MockLibrary.Nested.ClassC.InterfaceD" />
+        </summary>
+      </doc>
+      <method name="MakeMyDay" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            Sample xpath is <see cref="M:MockLibrary.Nested.ClassC.InterfaceD.MakeMyDay" />
+          </summary>
+        </doc>
+        <return>System.Void</return>
+      </method>
+    </interface>
+  </package>
+  <package name="__global__">
+    <class name="GlobalClass" visibility="public">
+      <doc>
+        <summary>
+          An empty global class.
+          Sample xpath is <see cref="T:GlobalClass" />
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+  </package>
+</apispec>

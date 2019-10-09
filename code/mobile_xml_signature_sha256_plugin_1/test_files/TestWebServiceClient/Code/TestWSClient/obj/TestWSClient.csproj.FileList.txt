@@ -1,0 +1,7 @@
+bin\Debug\TestWSClient.exe.config
+bin\Debug\TestWSClient.exe
+bin\Debug\TestWSClient.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TestWSClient.exe
+obj\Debug\TestWSClient.pdb
+bin\Debug\TopCoder.Util.CompactConfigurationManager.dll

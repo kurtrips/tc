@@ -1,0 +1,1878 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TopCoder.Util.ConfigurationManager</name>
+    </assembly>
+    <members>
+        <member name="T:TopCoder.Util.ConfigurationManager.ParsingPreference">
+            <summary>
+            ParsingPreference implements the IParsingPreference interface. 
+            It provides some basic rules like judging the string value can be null, 
+            empty string, or the spaces in the value should be trimmed. 
+            Client should provide its own implementation if more preference 
+            rules are required.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.IParsingPreference">
+            <summary>
+            IParsingPreference interface is designed to allow the developer to set 
+            parsing preferences such as if values should be trimmed before processing, 
+            if nul/empty values should be allowed, and if an exception should be thrown 
+            if a property is requested that does not exist and/or is empty, etc. 
+            And different components within the same app should be able to maintain 
+            their own preference.
+            This interface only contains one method to parse the string value according 
+            to user defined rules. The GetValue/GetValues methods of ConfigManager
+            will pass the value retrieved to the Parse method to process the string 
+            first before passing to the client.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IParsingPreference.Parse(System.String)">
+            <summary>
+            Parses the string value according to user defined rules, and returns 
+            the processed string to user.  
+            This method is called by GetValue/GetValues methods of ConfigurationManager
+            with a IParsingPreference argument to parse the string value retrieved.
+            </summary>
+            <param name="val">String to be parsed.</param>
+            <returns>Parsed string.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.ParsingPreferenceException">
+            If the string value violates some rule, for example if the string
+            can not be null and the one passed in is null.
+            </exception>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ParsingPreference.allowNull">
+            <summary>
+            Represents whether a null string value as input is allowed or not.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ParsingPreference.allowEmpty">
+            <summary>
+            Represents whether an empty string value is allowed as an input or not.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ParsingPreference.trimSpace">
+            <summary>
+            Represents the whether spaces in the input string should be trimmed or not.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ParsingPreference.Parse(System.String)">
+            <summary>
+            Parses the string value according to user defined rules, and returns 
+            the processed string to user.  
+            This method is called by GetValue/GetValues methods of ConfigurationManager
+            with a IParsingPreference argument to parse the string value retrieved.
+            </summary>
+            <param name="val">String to be parsed.</param>
+            <returns>Parsed string.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.ParsingPreferenceException">
+            If the string value violates some rule, for example if the string
+            can not be null and the one passed in is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ParsingPreference.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ParsingPreference.AllowNull">
+            <summary>
+            Determines whether a null string input is allowed or not. 
+            Value is true by default. 
+            If AllowNull is false, the string to be parsed should always be non-null.
+            </summary>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ParsingPreference.AllowEmpty">
+            <summary>
+            Determines whether an empty string input is allowed or not. 
+            Value is true by default.
+            If allowEmpty is false, the input string should always be non-empty.
+            </summary>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ParsingPreference.TrimSpace">
+            <summary>
+            Determines if spaces in the input string should be trimmed or not. 
+            Value is false by default. If the trimSpace is true, then white spaces
+            in the input string will be trimmed and returned by the Parse method.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.XmlFileHandler">
+            <summary>
+            A configuration file handler for XML files as they are defined
+            in the component specification.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.FileHandler">
+            <summary>
+            This interface abstract a configuration file handler.
+            A configuration file handler has the task of identifying whether
+            it can process the file, loading namespaces with their properties
+            from a file and saving a set of namespaces to a file.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.FileHandler.Supports(System.String)">
+            <summary>
+            Determines whether the file is supported by the handler,
+            usually by looking at the extension, but more complex 
+            methods can be applied if needed.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <returns>Whether the file is supported or not.</returns>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.FileHandler.LoadFromFile(System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Loads the namespaces and properties from the file into
+            Namespace and Property objects.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="errorCallback">The error callback.</param>
+            <returns>The populated Namespace objects</returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.FileHandler.SaveFile(TopCoder.Util.ConfigurationManager.Namespace[],System.String)">
+            <summary>
+            Saves a set of Namespace objects and their properties to a file.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="namespaces">The set of namespaces.</param>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.XmlFileHandler.#ctor">
+            <summary>
+            Internal constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.XmlFileHandler.Supports(System.String)">
+            <summary>
+            Determines whether the file is supported by the handler,
+            usually by looking at the extension, but more complex 
+            methods can be applied if needed. In this case
+            the extension should be .xml.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <returns>Whether the file is supported or not.</returns>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.XmlFileHandler.LoadFromFile(System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Loads the namespaces and properties from the file into
+            Namespace and Property objects.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="errorCallback">The error callback.</param>
+            <returns>The populated Namespace objects</returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.XmlFileHandler.SaveFile(TopCoder.Util.ConfigurationManager.Namespace[],System.String)">
+            <summary>
+            Saves a set of Namespace objects and their properties to a file.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="namespaces">The set of namespaces.</param>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.InstanceCreationException">
+            <summary>
+            InstanceCreationException is thrown by the CreateInstance methods
+            of ConfigManager if the instances can not be created correctly 
+            by the type name and/or assembly name loaded  from the configuration manager.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.InstanceCreationException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of InstanceCreationException with the error message.
+            </summary>
+            <param name="message">Error message describing the exception.</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.InstanceCreationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of InstanceCreationException with the error message 
+            and inner exception.
+            </summary>
+            <param name="message">Error message describing the exception.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.ErrorAction">
+            <summary>
+            This enumeration provides values through which the user can
+            communicate the desired behavior when a namespace or property
+            collision occurs.
+            
+            Note: collision/clash means having the same name
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ErrorAction.ReplaceOld">
+            <summary>
+            When a namespace/property clash occurs the old namespace/property
+            should be replaced with the new one.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ErrorAction.KeepOld">
+            <summary>
+            When a namespace/property clash occurs the old namespace/property
+            should be kept and the new one discarded.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ErrorAction.Merge">
+            <summary>
+            When a namespace/property clash occurs then the two 
+            namespaces/properties are merged.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ErrorAction.ThrowException">
+            <summary>
+            When a namespace/property clash occurs then an appropriate 
+            exception should be thrown.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            <summary>
+            Exception thrown when an error occurs while loading a configuration
+            file (signaling the file is invalid). If the error is caused by
+            another exception (XML parsing exceptions for example) then the
+            other exception is wrapped as inner exception. I/O exceptions are
+            not included here. They should be propagated.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.InvalidConfigFileException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.InvalidConfigFileException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.InvalidConfigFileException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="info">the serialization info</param>
+            <param name="context">the streaming context</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.InvalidConfigFileException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+            <param name="inner">the inner exception</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            <summary>
+            Exception thrown when a property name conflict occurs
+            (a property is loaded and a property with the same name 
+            already exists in the owner namespace).
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PropertyClashException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PropertyClashException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PropertyClashException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="info">the serialization info</param>
+            <param name="context">the streaming context</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PropertyClashException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+            <param name="inner">the inner exception</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.DefaultErrorCallback">
+            <summary>
+            Default implementation of the ErrorCallback interface that
+            throws exceptions for all errors.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.ErrorCallback">
+            <summary>
+            Instances of implementations of this interface will be passed by the 
+            user to specify custom handling of the errors that can occur while 
+            loading a config file (namespace clash, property clash, critical 
+            errors). When an error occurs the corresponding method in the callback
+            instance is called to get the desired action to be taken from the user.
+            
+            Note: clash means having the same name
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ErrorCallback.NamespaceCollision(TopCoder.Util.ConfigurationManager.Namespace,TopCoder.Util.ConfigurationManager.Namespace)">
+            <summary>
+            Called in case of a namespace collision to give the
+            user a chance to choose the action to be taken.
+            </summary>
+            <param name="oldNamespace">The old namespace</param>
+            <param name="newNamespace">The new namespace</param>
+            <returns>
+            an ErrorAction enumeration value to specify whether
+            the old namespace should be kept, the new namespace should
+            replace the old one, the namespaces should be merged or
+            an exception should be thrown
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ErrorCallback.PropertyCollision(TopCoder.Util.ConfigurationManager.Namespace,TopCoder.Util.ConfigurationManager.Property,TopCoder.Util.ConfigurationManager.Property)">
+            <summary>
+            Called in case of a property collision to give the
+            user a chance to choose the action to be taken.
+            </summary>
+            <param name="namespaceString">The namespace that holds both properties</param>
+            <param name="oldProperty">The old property</param>
+            <param name="newProperty">The new property</param>
+            <returns>
+            an ErrorAction enumeration value to specify whether
+            the old property should be kept, the new property should
+            replace the old one, the properties should be merged or
+            an exception should be thrown
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ErrorCallback.CriticalError(System.Exception)">
+            <summary>
+            Called in case of a critical error to give the
+            user a chance to choose the action to be taken.
+            </summary>
+            <param name="exception">The exception that occured</param>
+            <returns>
+            a boolean value specifying whether the exception should be
+            thrown or not (true - throw, false - ignore)
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DefaultErrorCallback.NamespaceCollision(TopCoder.Util.ConfigurationManager.Namespace,TopCoder.Util.ConfigurationManager.Namespace)">
+            <summary>
+            Called in case of a namespace collision to give the
+            user a chance to choose the action to be taken.
+            Returns always ErrorAction.ThrowException.
+            </summary>
+            <param name="oldNamespace">The old namespace</param>
+            <param name="newNamespace">The new namespace</param>
+            <returns>
+            an ErrorAction enumeration value to specify whether
+            the old namespace should be kept, the new namespace should
+            replace the old one, the namespaces should be merged or
+            an exception should be thrown
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DefaultErrorCallback.PropertyCollision(TopCoder.Util.ConfigurationManager.Namespace,TopCoder.Util.ConfigurationManager.Property,TopCoder.Util.ConfigurationManager.Property)">
+            <summary>
+            Called in case of a property collision to give the
+            user a chance to choose the action to be taken.
+            Returns always ErrorAction.ThrowException.
+            </summary>
+            <param name="namespaceString">The namespace that holds both properties</param>
+            <param name="oldProperty">The old property</param>
+            <param name="newProperty">The new property</param>
+            <returns>
+            an ErrorAction enumeration value to specify whether
+            the old property should be kept, the new property should
+            replace the old one, the properties should be merged or
+            an exception should be thrown
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DefaultErrorCallback.CriticalError(System.Exception)">
+            <summary>
+            Called in case of a critical error to give the
+            user a chance to choose the action to be taken.
+            Returns always true.
+            </summary>
+            <param name="exception">The exception that occured</param>
+            <returns>
+            a boolean value specifying whether the exception should be
+            thrown or not (true - throw, false - ignore)
+            </returns>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.MergeException">
+            <summary>
+            Exception thrown when the configuration file cannot be saved or unloaded because
+            some of its namespaces or properties were merged, so it is unsafe to save or unload it
+            as the saved config file will be mixed with data from other config files or
+            the removal might corrupt other config files loaded in memory.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.MergeException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.MergeException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.MergeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="info">the serialization info</param>
+            <param name="context">the streaming context</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.MergeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+            <param name="inner">the inner exception</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.ConfigFile">
+            <summary>
+            This class represents a configuration file and stores internally
+            all the information needed to write back the configuration file
+            if needed. The file can be written in the same format of the
+            original or in any other supported format.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigFile.fileHandlers">
+            <summary>
+            The currently implemented configuration file handlers are
+            listed here. When an additional handler is implemented it
+            should be added here.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigFile.filename">
+            <summary>
+            The name of the original file.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigFile.fileHandler">
+            <summary>
+            The file handler used to process the original file.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigFile.namespaces">
+            <summary>
+            The contained namespaces.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigFile.newNamespace">
+            <summary>
+            The new namespace (needed for Reload).
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigFile.errorCallback">
+            <summary>
+            The error callback (needed for Reload).
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigFile.#ctor(System.String,System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Internal constructor.
+            It tries to find an appropriate handler for the file by
+            iterating through a list of implemented handlers and then 
+            loads the file using the handler.
+            </summary>
+            
+            <param name="filename">The filename to process.</param>
+            <param name="newNamespace">
+            The new namespace to load the properties in or null in which
+            case it is ignored.
+            This means that all namespaces from the config file will be
+            ignored and all properties will go into the new package.
+            </param>
+            <param name="errorCallback">The error callback.</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigFile.Reload">
+            <summary>
+            Reloads the configuration file.
+            </summary>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be saved because of that.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigFile.Save">
+            <summary>
+            Save the changes back to disk in the same format
+            as the original.
+            </summary>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be saved because of that.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigFile.SaveTo(System.String)">
+            <summary>
+            Save the changes back to disk in a different file from the
+            original (the format may differ as it is selected based
+            on the extension).
+            </summary>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be saved because of that.
+            </exception>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ConfigFile.Namespaces">
+            <summary>
+            The Namespaces value.
+            </summary>
+            <value>
+            The list of Namespace objects in the configuration file.
+            </value>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.Property">
+            <summary>
+            This class corresponds to a property.
+            A property has a name and more string values.
+            The class exposes properties to access the name and the values.
+            Only the values are modifiable.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Property.name">
+            <summary>
+            The name of the property.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Property.values">
+            <summary>
+            The values of the property (only one element for most
+            properties).
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Property.isMerged">
+            <summary>
+            Is this property merged with another because of a name conflict?
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.Property.#ctor(System.String,System.String[])">
+            <summary>
+            Internal constructor. The user doesn't need to create new 
+            instances.
+            </summary>
+            
+            <param name="name">The name of the property</param>
+            <param name="values">The values of the property (one or more)</param>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.Property.Name">
+            <summary>
+            The Name property.
+            </summary>
+            <value>
+            The name of the property.
+            </value>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.Property.Value">
+            <summary>
+            The Value property.
+            The getter will return the first element in the array
+            if there are more or an empty string if there isn't any.
+            The setter will create an array with one element from the given
+            value.
+            </summary>
+            <value>
+            The value of the property.
+            </value>
+            
+            <exception cref="T:System.NullReferenceException">
+            if value is null
+            </exception>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.Property.Values">
+            <summary>
+            The Values property.
+            </summary>
+            <value>
+            The values of the property.
+            </value>
+            
+            <exception cref="T:System.NullReferenceException">
+            if values is null
+            </exception>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.DataHandleException">
+            <summary>
+            DataHandleException will be thrown by IDataHandler and its subclasses 
+            if they fail to load or save the configuration values during  persistence. 
+            It  encapulates different exceptions thrown from the underlying persistence.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DataHandleException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of DataHandleException with an error message.
+            </summary>
+            <param name="message">Error message describing why this exception was thrown.</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DataHandleException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of DataHandleException with an error message 
+            and inner exception.
+            </summary>
+            <param name="message">Error message describing why this exception was thrown.</param>
+            <param name="innerException">The inner exception object.</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.ConfigManager">
+            <summary>
+            This is the main class which provides the interaction with the
+            user (a singleton). The class exposes methods for loading new
+            configuration files and getting information about loaded namespaces,
+            properties and their values.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigManager.preloadFile">
+            <summary>
+            The name of the file with the names of the configuration files to
+            be preloaded.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigManager.instance">
+            <summary>
+            The one instance of the class.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigManager.namespaceLookup">
+            <summary>
+            Maps namespace names to Namespace objects.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.ConfigManager.configFileLookup">
+            <summary>
+            Maps config file names to ConfigFile objects.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.#cctor">
+            <summary>
+            Initializes the preload file location from the application configuration file, using the
+            key "TopCoder.Util.ConfigurationManager.Preload".  If this setting is not found, the default
+            value is "..\..\conf\preload.xml".
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.#ctor">
+            <summary>
+            Private constructor. Prevents instantiation from outside the class.
+            Its task is to load the preloadFile and extract from there all
+            the names of the configuration files that need to be preloaded.
+            Then each file will be loaded.
+            </summary>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetInstance">
+            <summary>
+            Get the instance of the configuration manager
+            (see the spec on remoting).
+            </summary>
+            
+            <returns>The instance</returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.LoadFile(System.String)">
+            <summary>
+            Loads a new configuration file.
+            All exceptions will be thrown.
+            </summary>
+            
+            <param name="filename">The file to load from.</param>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the filename argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.LoadFile(System.String,System.String)">
+            <summary>
+            Loads a new configuration file and forces all properties to
+            be placed in the specified namespace (their namespace will
+            be striped). All exceptions will be thrown.
+            </summary>
+            
+            <param name="filename">The file to load from.</param>
+            <param name="newNamespace">The new namespace.</param>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the filename argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.LoadFile(System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Loads a new configuration file.
+            The exceptions will be thrown according to the callback
+            given by the user.
+            </summary>
+            
+            <param name="filename">The file to load from.</param>
+            <param name="errorCallback">The error callback.</param>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the filename argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.LoadFile(System.String,System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Loads a new configuration file and forces all properties to
+            be placed in the specified namespace (their namespace will
+            be striped). The exceptions will be thrown according to the
+            callback given by the user.
+            </summary>
+            
+            <param name="filename">The file to load from.</param>
+            <param name="newNamespace">The new namespace.</param>
+            <param name="errorCallback">The error callback.</param>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the filename argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.InsertNewNamespaces(TopCoder.Util.ConfigurationManager.Namespace[],TopCoder.Util.ConfigurationManager.ErrorCallback)">
+             <summary>
+             This helper method adds new namespaces to the lookup table and
+             deals with clashes
+             </summary>
+             <param name="namespaces">The new namespaces to be added</param>
+             <param name="errorCallback">The error callback</param>
+             
+             <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+             If a namespace clash occurs.
+             </exception>
+             
+             <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+             If a property clash occurs.
+             </exception>
+            
+             <exception cref="T:System.NullReferenceException">
+             If the argument is null.
+             </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.RemoveFile(System.String)">
+            <summary>
+            Removes the config file and the associated namespaces from the lookup tables.
+            </summary>
+            
+            <param name="filename">The config filename.</param>
+            <returns>
+            true if the config file was found and removed, false otherwise.
+            </returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be removed because of that.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.ReloadFile(System.String)">
+            <summary>
+            Reloads a config file by removing its namespaces and then reloading it using
+            the ConfigFile.Reload method.
+            </summary>
+            
+            <param name="filename">The config filename.</param>
+            <returns>
+            true if the config file was found and reloaded, false otherwise.
+            </returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be unloaded because of that.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.SaveFile(System.String)">
+            <summary>
+            Save a config file back to disk in the same format as the original.
+            </summary>
+            
+            <param name="filename">The config filename.</param>
+            <returns>
+            true if the config file was found and saved, false otherwise.
+            </returns>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be saved because of that.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If the argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.SaveFileTo(System.String,System.String)">
+            <summary>
+            Save a config file back to disk in a different file from the
+            original (the format may differ as it is selected based
+            on the extension).
+            </summary>
+            
+            <param name="filename">The config filename.</param>
+            <param name="newFilename">The filename to save to.</param>
+            <returns>
+            true if the config file was found and saved, false otherwise.
+            </returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.MergeException">
+            If any of the namespaces or properties of the config file are merged
+            and cannot be saved because of that.
+            </exception>
+            
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetConfigFile(System.String)">
+            <summary>
+            Get a config file by its filename.
+            </summary>
+            
+            <param name="filename">The config filename.</param>
+            <returns>
+            The config file or null if not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetNamespace(System.String)">
+            <summary>
+            Get a namespace by its name.
+            </summary>
+            
+            <param name="name">The namespace.</param>
+            <returns>
+            The namespace or null if not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetProperty(System.String,System.String)">
+            <summary>
+            Shortcut for GetNamespace(namespaceString).GetProperty(property).
+            Get a property by name.
+            </summary>
+            
+            <param name="namespaceString">The namespace to look in.</param>
+            <param name="property">The name of the property.</param>
+            <returns>
+            The property or null if not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValue(System.String,System.String)">
+            <summary>
+            Shortcut for GetNamespace(namespaceString).GetProperty(property).Value.
+            Get the value of a property.
+            </summary>
+            
+            <param name="namespaceString">The namespace to look in.</param>
+            <param name="property">The name of the property.</param>
+            <returns>
+            The value of the property (the first value if there are more)
+            or null if not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValues(System.String,System.String)">
+            <summary>
+            Shortcut for GetNamespace(namespaceString).GetProperty(property).Values.
+            Get the values of a property.
+            </summary>
+            
+            <param name="namespaceString">The namespace to look in.</param>
+            <param name="property">The name of the property.</param>
+            <returns>
+            The values of the property or null if not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.SetValue(System.String,System.String,System.String)">
+            <summary>
+            Shortcut for GetNamespace(namespaceString).GetProperty(property).Value.
+            Set the value of a property.
+            </summary>
+            
+            <param name="namespaceString">The namespace to look in.</param>
+            <param name="property">The name of the property.</param>
+            <param name="value">The new value.</param>
+            <returns>
+            true if the property was found and its value was updated,
+            false if the property was not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.SetValues(System.String,System.String,System.String[])">
+            <summary>
+            Shortcut for GetNamespace(namespaceString).GetProperty(property).Values.
+            Set the values of a property.
+            </summary>
+            
+            <param name="namespaceString">The namespace to look in.</param>
+            <param name="property">The name of the property.</param>
+            <param name="values">The new values.</param>
+            <returns>
+            true if the property was found and its values were updated,
+            false if the property was not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null or if the elements of the array are null.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.Refresh">
+            <summary>
+            Refreshes the config manager by reloading each config file.
+            </summary>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.Clear">
+            <summary>
+            Clears the config manager of all files and namespaces
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.Clear(System.Boolean)">
+            <summary>
+            Clear the config manager of all files and namespaces and reloads
+            the preload files if required.
+            </summary>
+            <param name="preload">Reload the preload files?</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.CreateObject(System.String,System.String,System.String,System.Object[],System.Type)">
+            <summary>
+            Private function to create an instance of a type from the given information.
+            </summary>
+            <param name="ns">Namespace where the property and type are located.</param>
+            <param name="typeProperty">Property name that holds the typename.</param>
+            <param name="assemblyProperty">Property to get the assembly from which to create the requested object.</param>
+            <param name="args">Arguments to be passed to the constructor of the object to be created.</param>
+            <param name="baseType">Base typename determines if typeProperty is a valid typename.</param>
+            <returns>The created object or null if unable to create.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InstanceCreationException">
+            If the instance cannot be created or the assembly cannot be loaded.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.CreateInstance(System.String,System.String,System.Type)">
+            <summary>
+            Instantiates an object based on the typename found in the 
+            configuration property of a specific namespace. 
+            </summary>
+            <param name="ns">Namespace where the typename is located.</param>
+            <param name="typeProperty">The property that holds the typename.</param>
+            <param name="baseType">
+            Base typename determines if typeProperty is a valid typename.
+            </param>
+            <returns>The created object or null if unable to create.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InstanceCreationException">
+            If the instance cannot be created or the assembly cannot be loaded.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">When any argument is null.</exception>
+            <exception cref="T:System.ArgumentException">When ns or typeProperty is empty.</exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.CreateInstance(System.String,System.String,System.Object[],System.Type)">
+            <summary>
+            Instantiates an object based on the typename found in the 
+            configuration property of a specific namespace. 
+            </summary>
+            <param name="ns">Namespace where the property and type are located.</param>
+            <param name="typeProperty">Property name that holds the typename.</param>
+            <param name="args">
+            Arguments to be passed to the constructor of the object to be created.
+            </param>
+            <param name="baseType"> 
+            Base typename determines if typeProperty is a valid typename.
+            </param>
+            <returns>The created object or null if unable to create.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InstanceCreationException">
+            If the instance cannot be created or the assembly cannot be loaded.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">When any argument is null.</exception>
+            <exception cref="T:System.ArgumentException">When ns or typeProperty is empty.</exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.CreateInstance(System.String,System.String,System.String,System.Type)">
+            <summary>
+            Instantiates an object based on the typename found in the 
+            configuration property of a specific namespace. 
+            </summary>
+            <param name="ns">Namespace where the property and type are located.</param>
+            <param name="typeProperty">Property name that holds the typename.</param>
+            <param name="assemblyProperty">Property to get the assembly from which to create the requested object.</param>
+            <param name="baseType">Base typename determines if typeProperty is a valid typename.</param>
+            <returns>The created object or null if unable to create.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InstanceCreationException">
+            If the instance cannot be created or the assembly cannot be loaded.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">When any argument is null.</exception>
+            <exception cref="T:System.ArgumentException">When ns or typeProperty or assemblyProperty is empty.</exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.CreateInstance(System.String,System.String,System.String,System.Object[],System.Type)">
+            <summary>
+            This method will create an instance of the requested type with the assembly name, 
+            and with constructor taking arguments. 
+            </summary>
+            <param name="ns">Namespace where the property and type are located.</param>
+            <param name="typeProperty">Property name that holds the typename.</param>
+            <param name="assemblyProperty">Property to get the assembly from which to create the requested object.</param>
+            <param name="args">Arguments to be passed to the constructor of the object to be created.</param>
+            <param name="baseType">Base typename determines if typeProperty is a valid typename.</param>
+            <returns>The created object or null if unable to create.</returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InstanceCreationException">
+            If the instance cannot be created or the assembly cannot be loaded.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">When any argument is null.</exception>
+            <exception cref="T:System.ArgumentException">When ns or typeProperty or assemblyProperty is empty.</exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValue(System.String,System.String,TopCoder.Util.ConfigurationManager.IParsingPreference)">
+            <summary>
+            Gets the value of a property, parsed based on parsing preferences specified.
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">Name of the property</param>
+            <param name="preference">Rules for parsing.</param>
+            <returns>The value of the property or null if not found.</returns>
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.ParsingPreferenceException">
+            If the string value to be parsed doesn't meet the rules set in the parsing preference.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValues(System.String,System.String,TopCoder.Util.ConfigurationManager.IParsingPreference)">
+            <summary>
+            Gets the value of a property, parsed based on parsing preferences specified.
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">Name of the property</param>
+            <param name="preference">Rules for parsing.</param>
+            <returns>The values of the property or null if not found.</returns>
+            <exception cref="T:System.NullReferenceException">
+            If any argument is null.
+            </exception>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.ParsingPreferenceException">
+            If the string value to be parsed doesn't meet the rules set in the parsing preference.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValue(System.String,System.String,System.Type)">
+            <summary>
+            Get the value of a property in a namespace as a specific datatype.
+            </summary>
+            <param name="ns">The namespace to look in.</param>
+            <param name="property">The property name.</param>
+            <param name="type">The specific datatype of the value to be retrieved.</param>
+            <returns>The value or null if not found.</returns>
+            <exception cref="T:System.NotSupportedException">
+            If the retrieved property value cannot be converted into the specified type.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValues(System.String,System.String,System.Type)">
+            <summary>
+            Get a set of values for a property as a specific datatype.
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">The property name in the namespace.</param>
+            <param name="type">The datatype of the values to be retrieved.</param>
+            <returns>
+            An array of values or null if not found.
+            </returns>
+            <exception cref="T:System.NotSupportedException">
+            If the any of retrieved values cannot be converted into the specified type.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValue(System.String,System.String,System.Type,TopCoder.Util.ConfigurationManager.IStringConverter)">
+            <summary>
+            Get the value of a property in a namespace as a specific datatype.
+            </summary>
+            <param name="ns">The namespace to look in.</param>
+            <param name="property">The property name.</param>
+            <param name="type">The specific datatype of the value to be retrieved.</param>
+            <param name="converter">
+            Converter object to convert the retrieved value into the specified datatype.
+            </param>
+            <returns>The value or null if not found.</returns>
+            <exception cref="T:System.FormatException">
+            If the retrieved property value cannot be converted into the specified type.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">If any argument is null.</exception>
+            <exception cref="T:System.ArgumentException">If ns or property is empty.</exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetValues(System.String,System.String,System.Type,TopCoder.Util.ConfigurationManager.IStringConverter)">
+            <summary>
+            Get a set of values for a property as a specific datatype.
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">The property name in the namespace.</param>
+            <param name="type">The datatype of the values to be retrieved.</param>
+            <param name="converter">
+            Converter object to convert the retrieved value into the specified datatype.
+            </param>
+            <returns>
+            An array of values or null if not found.
+            </returns>
+            <exception cref="T:System.FormatException">
+            If the any of retrieved values cannot be converted into the specified type.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetIntValue(System.String,System.String)">
+            <summary>
+            A convenient method to return the property value as an int type. 
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">The property name.</param>
+            <returns>
+            The value as an int or null if not found.
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetDoubleValue(System.String,System.String)">
+            <summary>
+            A convenient method to return the property value as a double.
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">Property name.</param>
+            <returns>
+            The value as a double or null if not found.
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetIntValues(System.String,System.String)">
+            <summary>
+            A convenient method to return the property values as an int[] type. 
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">The property name.</param>
+            <returns>
+            The set of values as an int or null if not found.
+            </returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ConfigManager.GetDoubleValues(System.String,System.String)">
+            <summary>
+            A convenient method to return the property values as double[].
+            </summary>
+            <param name="ns">Namespace to look in.</param>
+            <param name="property">Property name.</param>
+            <returns>
+            The set of values as a double or null if not found.
+            </returns>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ConfigManager.ConfigFiles">
+            <summary>
+            The ConfigFiles property.
+            </summary>
+            <value>
+            The array of config files which are currently loaded.
+            The results are in no particular order.
+            </value>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ConfigManager.Namespaces">
+            <summary>
+            The Namespaces property.
+            </summary>
+            <value>
+            The array of namespaces which are currently loaded.
+            The results are in no particular order.
+            </value>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.ConfigManager.Item(System.String)">
+            <summary>
+            Shortcut for getting a namespace by its name.
+            Same as GetNamespace(string name).
+            </summary>
+            
+            <param name="name">The namespace.</param>
+            <returns>
+            The namespace or null if not found.
+            </returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            If argument is null.
+            </exception>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.IDataHandler">
+            <summary>
+            IDataHandler interface is responsible for loading or saving namespaces 
+            to the corresponding datasource. A new IDataHandler instance will be 
+            created from the configuration values in the mxml file by the PluggableHandler, 
+            and necessary information will also be passed to it during the instantiation, 
+            so that it knows which datasource to connect to. 
+            All implementations of this interface should provide a constructor taking 
+            an IDictionary argument which contains pairs of string type key-value 
+            pair to provide necessary information about the datasource.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IDataHandler.Load(TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Loads a list of Namespace instances from the datasource.
+            This method will be called by the LoadFromFile method of PluggableHandler 
+            class to load the namespaces from a specific datasource.
+            </summary>
+            <param name="errorCallback">
+            The error handler callback if an error occurs during loading.
+            </param>
+            <returns>A list of namespaces read from the datasource.</returns>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IDataHandler.Save(System.Collections.IList)">
+            <summary>
+            Saves a list of namespaces to the datasource. This method is called by the 
+            SaveFile method of PluggableHandler to save the namespace list to the 
+            datasource.
+            </summary>
+            <param name="namespacesList">List of namespaces to be saved.</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.ParsingPreferenceException">
+            <summary>
+            ParsingPreferenceException will be thrown in the 
+            IParsingPreference and its subclasses if the string value 
+            does not follow the user's preference rules.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.ParsingPreferenceException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of ParsingPreferenceException with an error message.
+            </summary>
+            <param name="message">Error message that caused this exception.</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            <summary>
+            Exception thrown when the configuration file format is unknown
+            (no handler supports it).
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.UnknownFormatException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.UnknownFormatException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.UnknownFormatException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="info">the serialization info</param>
+            <param name="context">the streaming context</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.UnknownFormatException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+            <param name="inner">the inner exception</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.PluggableHandler">
+            <summary>
+            PluggableHandler  will be used by ConfigFile to load the config values 
+            from pluggable datasources. It supports a kind of file with 'mxml' file extension 
+            (which is actually in xml format), and will create an IDataHandler instance 
+            dynamically using necessary data defined in the file using reflection. 
+            The created IDataHandler instance is responsible for the loading/saving of 
+            the configuration values.
+            Whenever a client needs to communicate with a different kind of datasource, 
+            it has to provide an implementation of IDataHandler, and create an 
+            mxml file which will be used by the PluggableHandler to instantiate it dynamically.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PluggableHandler.CreateInstanceFromFile(System.String)">
+            <summary>
+            Private method to create an IDataHandler implementation from an mxml file.
+            </summary>
+            <param name="filename">
+            An mxml file that contains the appropriate data for creating an 
+            implementation of IDataHandler.
+            </param>
+            <returns>
+            An IDataHandler object or null if an error occurs.
+            </returns>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If filename is an invalid configuration file.
+            </exception>
+            <exception cref="T:TopCoder.Util.ConfigurationManager.DataHandleException">
+            If the IDataHandler instance cannot be created from the information
+            given in the mxml file.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PluggableHandler.#ctor">
+            <summary>
+            Internal empty constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PluggableHandler.Supports(System.String)">
+            <summary>
+            Determines whether the file is supported by the handler,
+            usually by looking at the extension, but more complex 
+            methods can be applied if needed. In this case
+            the extension should be .mxml.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <returns>Whether the file is supported or not.</returns>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PluggableHandler.LoadFromFile(System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Load the namespaces from the IDataHandler instance created from the necessary 
+            data defined in the mxml file, into Namespace and Property objects.
+            </summary>
+            
+            <param name="filename">The name of the mxml file.</param>
+            <param name="errorCallback">The error callback.</param>
+            <returns>The populated Namespace objects</returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the mxml configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.PluggableHandler.SaveFile(TopCoder.Util.ConfigurationManager.Namespace[],System.String)">
+            <summary>
+            Saves a set of Namespace objects and their properties into 
+            the datasource related to the IDataHandler created with the values 
+            defined in the mxml file.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="namespaces">The set of namespaces.</param>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.IniFileHandler">
+            <summary>
+            A configuration file handler for INI files.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IniFileHandler.#ctor">
+            <summary>
+            Internal constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IniFileHandler.Supports(System.String)">
+            <summary>
+            Determines whether the file is supported by the handler,
+            usually by looking at the extension, but more complex 
+            methods can be applied if needed. In this case
+            the extension should be .ini.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <returns>Whether the file is supported or not.</returns>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IniFileHandler.LoadFromFile(System.String,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Loads the namespaces and properties from the file into
+            Namespace and Property objects.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="errorCallback">The error callback.</param>
+            <returns>The populated Namespace objects</returns>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            If a namespace clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.InvalidConfigFileException">
+            If the configuration file is invalid.
+            </exception>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.UnknownFormatException">
+            If the format of the configuration file is unkown.
+            </exception>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IniFileHandler.SaveFile(TopCoder.Util.ConfigurationManager.Namespace[],System.String)">
+            <summary>
+            Saves a set of Namespace objects and their properties to a file.
+            </summary>
+            
+            <param name="filename">The name of the file.</param>
+            <param name="namespaces">The set of namespaces.</param>
+            
+            <exception cref="T:System.IO.IOException">
+            If an I/O error occurs.
+            </exception>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.NamespaceClashException">
+            <summary>
+            Exception thrown when a namespace name conflict occurs
+            (a namespace is loaded and a namespace with the same name 
+            already exists).
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.NamespaceClashException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.NamespaceClashException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.NamespaceClashException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="info">the serialization info</param>
+            <param name="context">the streaming context</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.NamespaceClashException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            
+            <param name="message">the error message</param>
+            <param name="inner">the inner exception</param>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.DefaultStringConverter">
+            <summary>
+            DefaultStringConverter implements the IStringConverter interface, 
+            and it will be used by the ConfigManager by default if no IStringConverter 
+            argument is specified when calling the GetValue/GetValues methods to get 
+            a value as a specified type. This class is a singleton.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.IStringConverter">
+            <summary>
+            IStringConverter interface aims to convert the string value into a specific type. 
+            This interface will be used by the ConfigManager in GetValue/GetValues methods 
+            to convert string into user specified type. 
+            If not specified, ConfigManager will use the DefaultStringConverter to do 
+            the conversion by default, which is an implementation of this interface.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.IStringConverter.Convert(System.String,System.Type)">
+            <summary>
+            Converts the string to the specified type.
+            </summary>
+            <param name="val">Value to be converted.</param>
+            <param name="type">The type to which val has to be conerted.</param>
+            <returns>
+            The value to be converted into the specified type or its subclass.
+            </returns>
+            <exception cref="T:System.NotSupportedException">
+            If the string value cannot be converted correctly.
+            </exception>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.DefaultStringConverter.instance">
+            <summary>
+            Represents the singleton static instance of the DefaultStringConverter.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DefaultStringConverter.#ctor">
+            <summary>
+            Private constructor. Hidden since this class is a singleton.
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.DefaultStringConverter.Convert(System.String,System.Type)">
+            <summary>
+            Converts an input string to the specified type.
+            </summary>
+            <param name="val">Value to be converted.</param>
+            <param name="type">The type to which val has to be converted.</param>
+            <returns>
+            The value to be converted into the specified type or its subclass.
+            </returns>
+            <exception cref="T:System.NotSupportedException">
+            If the string value cannot be converted correctly.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            If any of the arguments is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            If val is empty.
+            </exception>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.DefaultStringConverter.Instance">
+            <summary>
+            Getter method to return the singleton DefaultStringConverter.
+            </summary>
+        </member>
+        <member name="T:TopCoder.Util.ConfigurationManager.Namespace">
+            <summary>
+            A namespace groups logically a set of properties.
+            As expected, the namespace contains a set of Property objects and
+            properties and methods to access them.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Namespace.name">
+            <summary>
+            The name of the namespace
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Namespace.properties">
+            <summary>
+            The properties contained in the namespace
+            in the order in which they appear in the configuration file.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Namespace.propertiesLookup">
+            <summary>
+            A hash table mapping property names to Property objects
+            to speed up the lookup of properties by name.
+            </summary>
+        </member>
+        <member name="F:TopCoder.Util.ConfigurationManager.Namespace.isMerged">
+            <summary>
+            Is this namespace merged with another because of a name conflict?
+            </summary>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.Namespace.#ctor(System.String)">
+            <summary>
+            Internal constructor.
+            </summary>
+            
+            <param name="name">The name of the namespace</param>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.Namespace.AddProperty(TopCoder.Util.ConfigurationManager.Property,TopCoder.Util.ConfigurationManager.ErrorCallback)">
+            <summary>
+            Add a new property to the namespace.
+            </summary>
+            
+            <param name="errorCallback">The error callback.</param>
+            <param name="property">The property to add</param>
+            
+            <exception cref="T:TopCoder.Util.ConfigurationManager.PropertyClashException">
+            If a property clash occurs.
+            </exception>
+        </member>
+        <member name="M:TopCoder.Util.ConfigurationManager.Namespace.GetProperty(System.String)">
+            <summary>
+            Get the property with the specified name.
+            </summary>
+            
+            <param name="name">The name of the property</param>
+            <returns>The property or null if not found.</returns>
+            
+            <exception cref="T:System.NullReferenceException">
+            if name is null
+            </exception>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.Namespace.Name">
+            <summary>
+            The Name property.
+            </summary>
+            <value>
+            The name of the namespace.
+            </value>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.Namespace.Properties">
+            <summary>
+            The Properties property.
+            </summary>
+            <value>
+            The array of properties owned by the namespace.
+            </value>
+        </member>
+        <member name="P:TopCoder.Util.ConfigurationManager.Namespace.Item(System.String)">
+            <summary>
+            Shortcut for accessing a single value property by its name.
+            Same as GetProperty(string name).Value
+            </summary>
+            
+            <param name="name">The name of the property</param>
+            
+            <exception cref="T:System.NullReferenceException">
+            if name is null
+            </exception>
+        </member>
+    </members>
+</doc>

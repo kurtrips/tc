@@ -1,0 +1,26 @@
+Here is an email exchange with copilot:
+
+kurtrips:
+Please take a look at the responses in nikolay83's review. There are 2 issues:
+1. Blogging support - You have confirmed that the only requirement is that added content should be available as a list on a page. This is already present in Joomla, in fact this is the home page.
+2. Load Balancing Test Scenario - Architecture contests are not responsible for test definition or test strategy.
+
+cyberjag:
+1. Please add a new page for blogs that can support commenting for logged in users. Also if possible tagging should be supported.
+2. Load testing is not required as we are planning to do it as a separate task.
+
+---------------------------------------------------------------------------------------------
+
+nikolay83 1.1.4 - user posts as a list is already available. Comments and Tags are added. See last para of SDS section 5.3
+
+nikolay83 1.1.5.1 - As per http://apps.topcoder.com/forums/?module=Message&messageID=1562880, it seems the only things required are user preferences and user profile page. See updated SDS section 5.5
+
+nikolay83 1.1.5.2 - Not fixing this. Suggested JCron class is an extension and it is not available for Joomla 2.5. See http://extensions.joomla.org/extensions/administration/admin-performance/847 I think a normal cron is enough here as this is just a test leaderboard component.
+
+nikolay83 1.1.5.3 - Fixed in SDS section 7.4
+
+nikolay83 1.1.5.3 - Fixed in SDS section 7.7
+
+nikolay83 2.3.2 - This is not required as per copilot response in email
+
+Other items are duplicates.

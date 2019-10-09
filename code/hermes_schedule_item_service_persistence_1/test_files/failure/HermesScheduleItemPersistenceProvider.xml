@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+    <!-- valid config -->
+	<namespace name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider">
+		<property name="objectFactoryNamespace">
+			<value>FailureTest.ObjectFactory</value>
+		</property>
+		<property name="connectionName">
+			<value>failure</value>
+		</property>
+		<property name="helper">
+			<value>PersistenceHelper</value>
+		</property>
+	</namespace>
+	
+	<namespace name="FailureTest.ObjectFactory.default">
+		<property name="type_name">
+			<value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+		</property>
+	</namespace>
+    <namespace name="FailureTest.ObjectFactory.default.parameters">
+        <property name="p1:string">
+            <value>FailureTest.ObjectFactory.ObjectDefinitions</value>
+        </property>
+    </namespace>
+
+	<namespace name="FailureTest.ObjectFactory.ObjectDefinitions.PersistenceHelper">
+		<property name="type_name">
+			<value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceHelper</value>
+		</property>
+		<property name="assembly">
+      			<value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+		</property>
+	</namespace>
+
+	<namespace name="FailureTest.ObjectFactory.ObjectDefinitions.Invalid">
+		<property name="type_name">
+			<value>System.Object</value>
+		</property>
+	</namespace>
+
+	<!-- Invalid config -->
+	<namespace name="FailureTest.Invalid.EmptyObjectFactoryNamespace">
+		<property name="objectFactoryNamespace">
+			<value>  </value>
+		</property>
+		<property name="connectionName">
+			<value>Data Source=XE;User ID=SYSTEM;Password=oracle10g;</value>
+		</property>
+		<property name="helper">
+			<value>PersistenceHelper</value>
+		</property>
+	</namespace>
+	<namespace name="FailureTest.Invalid.ConnectionNameMissed">
+		<property name="objectFactoryNamespace">
+			<value>FailureTest.ObjectFactory</value>
+		</property>
+		<property name="helper">
+			<value>PersistenceHelper</value>
+		</property>
+	</namespace>
+	<namespace name="FailureTest.Invalid.EmptyConnectionName">
+		<property name="objectFactoryNamespace">
+			<value>FailureTest.ObjectFactory</value>
+		</property>
+		<property name="connectionName">
+			<value> </value>
+		</property>
+		<property name="helper">
+			<value>PersistenceHelper</value>
+		</property>
+	</namespace>
+	<namespace name="FailureTest.Invalid.PersistenceHelperMissed">
+		<property name="objectFactoryNamespace">
+			<value>FailureTest.ObjectFactory</value>
+		</property>
+		<property name="connectionName">
+			<value>Data Source=XE;User ID=SYSTEM;Password=oracle10g;</value>
+		</property>
+	</namespace>
+	<namespace name="FailureTest.Invalid.EmptyPersistenceHelper">
+		<property name="objectFactoryNamespace">
+			<value>FailureTest.ObjectFactory</value>
+		</property>
+		<property name="connectionName">
+			<value>Data Source=XE;User ID=SYSTEM;Password=oracle10g;</value>
+		</property>
+		<property name="helper">
+			<value>  </value>
+		</property>
+	</namespace>
+	<namespace name="FailureTest.Invalid.InvalidPersistenceHelper">
+		<property name="objectFactoryNamespace">
+			<value>FailureTest.ObjectFactory</value>
+		</property>
+		<property name="connectionName">
+			<value>Data Source=XE;User ID=SYSTEM;Password=oracle10g;</value>
+		</property>
+		<property name="helper">
+			<value>Invalid</value>
+		</property>
+	</namespace>
+</ConfigManager>

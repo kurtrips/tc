@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\FAM\Development\CSharpApiProcessor\build\classes\TopCoder.CodeDoc.CSharp.Test.dll" total="260" failures="0" not-run="0" date="2007-11-01" time="16:50:40">
+  <environment nunit-version="2.2.9.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="C:\FAM\Development\CSharpApiProcessor" machine-name="HP50041703150" user="Administrator" user-domain="HP50041703150" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="C:\FAM\Development\CSharpApiProcessor\build\classes\TopCoder.CodeDoc.CSharp.Test.dll" success="True" time="33.016" asserts="0">
+    <results>
+      <test-suite name="C:\FAM\Development\CSharpApiProcessor\build\classes\TopCoder.CodeDoc.CSharp.Test.dll" success="True" time="33.016" asserts="0">
+        <results>
+          <test-suite name="TopCoder" success="True" time="33.016" asserts="0">
+            <results>
+              <test-suite name="CodeDoc" success="True" time="33.016" asserts="0">
+                <results>
+                  <test-suite name="CSharp" success="True" time="33.016" asserts="0">
+                    <results>
+                      <test-suite name="AccuracyTests" success="True" time="2.078" asserts="0">
+                        <results>
+                          <test-suite name="Reflection" success="True" time="2.078" asserts="0">
+                            <results>
+                              <test-suite name="ReflectionEngineAccuracy" success="True" time="2.078" asserts="0">
+                                <results>
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.ADelegate" executed="True" success="True" time="1.531" asserts="2" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.Enum" executed="True" success="True" time="0.047" asserts="3" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.Indexer" executed="True" success="True" time="0.047" asserts="2" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.Indexer2" executed="True" success="True" time="0.047" asserts="0" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.InnerContstructorRef" executed="True" success="True" time="0.047" asserts="2" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.InnerInStruct" executed="True" success="True" time="0.047" asserts="1" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.MockClassPresent" executed="True" success="True" time="0.047" asserts="2" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.PrivateProperty" executed="True" success="True" time="0.031" asserts="3" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.Property" executed="True" success="True" time="0.047" asserts="4" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.PublicField" executed="True" success="True" time="0.031" asserts="3" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.StaticProperty" executed="True" success="True" time="0.047" asserts="2" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.VeryInner" executed="True" success="True" time="0.047" asserts="1" />
+                                  <test-case name="TopCoder.CodeDoc.CSharp.AccuracyTests.Reflection.ReflectionEngineAccuracy.VirtMethod" executed="True" success="True" time="0.047" asserts="1" />
+                                </results>
+                              </test-suite>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="CSharpAPIProcessorFactoryTests" success="True" time="0.141" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestConfigureCommandLineParser" executed="True" success="True" time="0.109" asserts="6" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestConfigureCommandLineParserFail1" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestConfigureCommandLineParserFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestNewXmlProcessor" executed="True" success="True" time="0.016" asserts="2" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestNewXmlProcessorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestNewXmlProcessorFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestNewXmlProcessorFail3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactoryTests.TestNewXmlProcessorFail4" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="CSharpAPIProcessorTests" success="True" time="3.813" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestConstructor" executed="True" success="True" time="0.016" asserts="1" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestProcessDocument" executed="True" success="True" time="2.141" asserts="1" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestProcessDocument1" executed="True" success="True" time="1.656" asserts="1" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestProcessDocumentFail1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestProcessDocumentFail2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.CSharpAPIProcessorTests.TestProcessDocumentFail3" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Demo" success="True" time="2.172" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.CodeDoc.CSharp.Demo.DemoTest_CommandLine" executed="True" success="True" time="1.938" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.Demo.DemoTest_NonCommandLine1" executed="True" success="True" time="0.188" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.Demo.DemoTest_NonCommandLine2" executed="True" success="True" time="0.047" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="FailureTests" success="True" time="0.125" asserts="0">
+                        <results>
+                          <test-suite name="AssemblyLoaderFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestConstructor_EmptyElement1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestConstructor_EmptyElement2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestConstructor_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestConstructor_NullElement1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestConstructor_NullElement2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestLoadAssembly_Empty" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestLoadAssembly_Invalid" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestLoadAssembly_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestResolveAssembly_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.AssemblyLoaderFailureTest.TestResolveAssembly_Null2" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="CSharpAPIProcessorFactoryFailureTest" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFactoryFailureTest.TestConfigureCommandLineParser_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFactoryFailureTest.TestConfigureCommandLineParser_Null2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFactoryFailureTest.TestCtorAccuracy" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFactoryFailureTest.TestNewXmlProcessor_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFactoryFailureTest.TestNewXmlProcessor_Null2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFactoryFailureTest.TestNewXmlProcessor_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="CSharpAPIProcessorFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFailureTest.TestConstructor_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFailureTest.TestProcessDocument_Invalid1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFailureTest.TestProcessDocument_Invalid2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.CSharpAPIProcessorFailureTest.TestProcessDocument_Null" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="MBRLoggerFailureTest" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.MBRLoggerFailureTest.TestConstructor_Null" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="ReflectionEngineFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestConstructor_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_Empty" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_InvalidContent" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_InvalidParam" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_InvalidParam2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_InvalidRoot" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_NotExistAssemblyFile" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineFailureTest.TestWriteAPISpec_Null2" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="ReflectionEngineParametersFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestAssemblyFileNames_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestAssemblyFileNames_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestLoggerNamespace_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestModuleNames_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestModuleNames_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestReferencePaths_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestReferencePaths_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestSlashDocFileNames_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestSlashDocFileNames_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestTypePrefixes_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineParametersFailureTest.TestTypePrefixes_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="ReflectionEngineUtilityFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetFieldModifiers_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetFieldVisibility_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetMethodModifiers_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetMethodVisibility_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetPropertyModifiers_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetPropertyVisibility_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetTypeModifiers_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetTypeVisibility_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetUniqueID_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetUniqueID_Null2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetUniqueID_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetUniqueID_Null4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetUniqueID_Null5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.ReflectionEngineUtilityFailureTest.TestGetUniqueID_Null6" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SlashDocCacheFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestAddSlashDocFile_Empty" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestAddSlashDocFile_Null1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestAddSlashDocFiles_EmptyElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestAddSlashDocFiles_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestAddSlashDocFiles_NullElement" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestConstructor_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestIndexerWithEmptyId1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.SlashDocCacheFailureTest.TestIndexerWithNullId" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="XPathResolverFailureTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.XPathResolverFailureTest.TestAddXPathReferences_Invalid1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.XPathResolverFailureTest.TestAddXPathReferences_Invalid2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.XPathResolverFailureTest.TestAddXPathReferences_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.XPathResolverFailureTest.TestConstructor_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.XPathResolverFailureTest.TestResolveXPath_Empty1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.FailureTests.XPathResolverFailureTest.TestResolveXPath_Null1" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="HelperTests" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestGetXpathAttributePredicate" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestGetXpathPredicate" executed="True" success="True" time="0.000" asserts="1" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray1" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray3" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray4" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray5" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray6" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray7" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateArray8" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotNull1" executed="True" success="True" time="0.016" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotNull2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotNullNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotNullNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                          <test-case name="TopCoder.CodeDoc.CSharp.HelperTests.TestValidateNotNullNotEmpty3" executed="True" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite name="Reflection" success="True" time="2.297" asserts="0">
+                        <results>
+                          <test-suite name="AssemblyLoaderTests" success="True" time="0.063" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructor2" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructor2Fail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructor2Fail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructor2Fail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestConstructorFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestLoadAssembly1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestLoadAssembly2" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestLoadAssemblyFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestLoadAssemblyFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestLoadAssemblyFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestResolveAssembly1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestResolveAssembly2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestResolveAssembly3" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestResolveAssembly4" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestResolveAssemblyFail1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.AssemblyLoaderTests.TestResolveAssemblyFail2" executed="True" success="True" time="0.016" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="MBRLoggerTests" success="True" time="0.078" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.MBRLoggerTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.MBRLoggerTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.MBRLoggerTests.TestLog1" executed="True" success="True" time="0.031" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.MBRLoggerTests.TestLog2" executed="True" success="True" time="0.047" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="ReflectionEngineParametersTests" success="True" time="0.031" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestAssemblyFileNames" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestAssemblyFileNames1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestAssemblyFileNames2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestAssemblyFileNamesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestAssemblyFileNamesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestDocumentPrivates" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestLoggerNamespace" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestLoggerNamespaceFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestModuleNames" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestModuleNames1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestModuleNames2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestModuleNamesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestModuleNamesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestReferencePaths" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestReferencePaths1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestReferencePaths2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestReferencePathsFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestReferencePathsFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestSlashDocFileNames" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestSlashDocFileNames1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestSlashDocFileNames2" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestSlashDocFileNamesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestSlashDocFileNamesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestTypePrefixes" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestTypePrefixes1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestTypePrefixes2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestTypePrefixesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineParametersTests.TestTypePrefixesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="ReflectionEngineTests" success="True" time="1.984" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestConstructor1" executed="True" success="True" time="0.047" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestConstructor2" executed="True" success="True" time="0.047" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestConstructorFail" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_Alarm" executed="True" success="True" time="0.078" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassA" executed="True" success="True" time="0.063" asserts="14" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassB" executed="True" success="True" time="0.063" asserts="55" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassC" executed="True" success="True" time="0.063" asserts="18" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassD" executed="True" success="True" time="0.047" asserts="29" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassE" executed="True" success="True" time="0.063" asserts="14" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassF_1" executed="True" success="True" time="0.063" asserts="21" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_ClassF_2" executed="True" success="True" time="0.094" asserts="21" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_Delegate" executed="True" success="True" time="0.063" asserts="14" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_EnumA" executed="True" success="True" time="0.063" asserts="4" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_InterfaceA" executed="True" success="True" time="0.047" asserts="9" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_InterfaceB" executed="True" success="True" time="0.063" asserts="15" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_InterfaceC" executed="True" success="True" time="0.047" asserts="8" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_NoDocPrivate" executed="True" success="True" time="0.094" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Class1" executed="True" success="True" time="0.047" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Class2" executed="True" success="True" time="0.047" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Delegate" executed="True" success="True" time="0.063" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Enum" executed="True" success="True" time="0.063" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Event" executed="True" success="True" time="0.047" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Field" executed="True" success="True" time="0.063" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Interface" executed="True" success="True" time="0.078" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Method" executed="True" success="True" time="0.063" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Property" executed="True" success="True" time="0.047" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_SeeCref_Struct" executed="True" success="True" time="0.047" asserts="3" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpec_StructA" executed="True" success="True" time="0.063" asserts="25" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail1" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail2" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail3" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail4" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail5" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail6" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineTests.TestWriteAPISpecFail7" executed="True" success="True" time="0.047" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="ReflectionEngineUtilityTests" success="True" time="0.047" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetFieldModifiers" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetFieldModifiersFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetFieldVisibility" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetFieldVisibilityFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetMethodModifiers" executed="True" success="True" time="0.000" asserts="4" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetMethodModifiersFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetMethodVisibility" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetMethodVisibilityFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetPropertyModifiers" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetPropertyModifiersFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetPropertyVisibility" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetPropertyVisibilityFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetTypeModifiers" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetTypeModifiersFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetTypeVisibility" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetTypeVisibilityFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID10" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID11" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID12" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID13" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID14" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID15" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID16" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID17" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID3" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID4" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID5" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID6" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID7" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID8" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueID9" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.ReflectionEngineUtilityTests.TestGetUniqueIDFail1" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SlashDocCacheTests" success="True" time="0.063" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFile" executed="True" success="True" time="0.000" asserts="4" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFile1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFileFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFileFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFiles" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFilesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFilesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestAddSlashDocFilesFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestItem" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestItemFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestItemFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.SlashDocCacheTests.TestUniqueIDs" executed="True" success="True" time="0.000" asserts="5" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="XPathResolverTests" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.XPathResolverTests.TestAddXPathReferencesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.XPathResolverTests.TestAddXPathReferencesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.XPathResolverTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.XPathResolverTests.TestConstructor1" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.Reflection.XPathResolverTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="StressTests" success="True" time="22.344" asserts="0">
+                        <results>
+                          <test-suite name="CSharpAPIProcessorStressTest" success="True" time="22.313" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.CodeDoc.CSharp.StressTests.CSharpAPIProcessorStressTest.TestProcessDocument_NormalAssembly" executed="True" success="True" time="11.594" asserts="0" />
+                              <test-case name="TopCoder.CodeDoc.CSharp.StressTests.CSharpAPIProcessorStressTest.TestProcessDocument_SmallAssembly" executed="True" success="True" time="10.719" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

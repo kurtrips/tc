@@ -1,0 +1,2 @@
+There are many unknowns in the system right now.
+Although a Specification contest can be useful, since it seems client does not want to disclose many details, it is left to client to provide more requirementsin the module architecture phase.

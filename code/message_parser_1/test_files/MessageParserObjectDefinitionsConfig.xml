@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+
+  <!--Object Factory's own definition-->
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow</value>
+    </property>
+  </namespace>
+
+
+  <!--XmlMessageParser Definition-->
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageParser">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Parsers.XmlMessageParser</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageParser.parameters">
+    <property name="p1:string">
+      <value>message.parser.XmlMessageParser</value>
+    </property>
+  </namespace>
+
+
+  <!--XmlMessageDetector Definition-->
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector</value>
+    </property>
+  </namespace>
+  
+  <!--XmlMessageDetector Definition-->
+    <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetectorValid2">
+      <property name="type_name">
+        <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+      </property>
+      <property name="assembly">
+        <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+      </property>
+    </namespace>
+    <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetectorValid2.parameters">
+      <property name="p1:string">
+        <value>type.detector.XmlMessageTypeDetectorValid2</value>
+      </property>
+  </namespace>
+
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector1">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector1.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector1</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector2">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector2.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector2</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector3">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector3.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector3</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector4">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector4.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector4</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector5">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector5.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector5</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector6">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector6.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector6</value>
+    </property>
+  </namespace>
+  
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector7">
+      <property name="type_name">
+        <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+      </property>
+      <property name="assembly">
+        <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+      </property>
+    </namespace>
+    <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetector7.parameters">
+      <property name="p1:string">
+        <value>type.detector.XmlMessageTypeDetector7</value>
+      </property>
+  </namespace>
+
+  <!--Validator Definition-->
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.MockValidator">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.MockValidator</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  
+  <!--No Such Validator Config - has wrong type-->
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.NoSuchValidator">
+    <property name="type_name">
+      <value>System.String</value>
+    </property>
+  </namespace>
+  
+
+  <!--CsvMessageTypeDetector Definition-->
+  <!--This is for testing only. There is no class called CsvMessageParser so it just creates a XmlMessageParser instance.-->
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.CsvMessageParser">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Parsers.XmlMessageParser</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.CsvMessageParser.parameters">
+    <property name="p1:string">
+      <value>message.parser.XmlMessageParser</value>
+    </property>
+  </namespace>
+  <!--CsvMessageTypeDetector Definition-->
+  <!--This is for testing only. There is no class called CsvMessageTypeDetector so it just creates a CsvMessageTypeDetector instance.-->  
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.CsvMessageTypeDetector">
+    <property name="type_name">
+      <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+    </property>
+    <property name="assembly">
+      <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.CsvMessageTypeDetector.parameters">
+    <property name="p1:string">
+      <value>type.detector.XmlMessageTypeDetector</value>
+    </property>
+  </namespace>
+  
+  
+    <!--XmlMessageDetector Definition-->
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetectorUnidentified">
+        <property name="type_name">
+          <value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+        </property>
+        <property name="assembly">
+          <value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+        </property>
+  </namespace>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.XmlMessageTypeDetectorUnidentified.parameters">
+        <property name="p1:string">
+          <value>type.detector.XmlMessageTypeDetectorUnidentified</value>
+        </property>
+  </namespace>
+
+</ConfigManager>

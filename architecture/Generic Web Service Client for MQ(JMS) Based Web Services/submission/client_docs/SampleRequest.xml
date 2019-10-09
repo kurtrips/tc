@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /cvsroot/ims/ims/gen/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26/pbi/FinancialOfferingQuoteBOD_2006-05-26.xml,v 1.11 2010/08/17 14:27:20 ltian Exp $ -->
+<!-- From sx/sx.xml -->
+<ims:FinancialOfferingQuoteBOD xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ims="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:oa="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26 FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd"
+    revision="1.3.0">
+  <ims:ApplicationArea>
+    <oa:Sender>
+      <oa:LogicalId>2011-07-28T10:23:43+00:00</oa:LogicalId>
+      <oa:Component>00315903</oa:Component>
+    </oa:Sender>
+    <oa:CreationDateTime>2011-07-28T10:23:43+00:00</oa:CreationDateTime>
+    <oa:BODId>00315903</oa:BODId>
+    <ims:Application>
+      <ims:InteractingApplication>
+        <ims:ApplicationLogicalId>CFE00000</ims:ApplicationLogicalId>
+        <ims:UserId>HD1</ims:UserId>
+        <ims:ServiceOperation>GET_IGF_DOCUMENT</ims:ServiceOperation>
+      </ims:InteractingApplication>
+   </ims:Application>
+  </ims:ApplicationArea>
+  <ims:DataArea>
+  <ims:FinancialOfferingQuote>
+      <ims:Header>
+      <!-- AddrLine-AddressLine1 to AddrLine-AddressLine11   -->
+        <ims:Note id="Address1" type="Token">IBM Global Financing</ims:Note>
+        <ims:Note id="Addrees2" type="Token">PO Box 99</ims:Note>
+        <ims:Note id="Address3" type="Token">North Harbour ST</ims:Note>
+        <ims:Note id="Address4" type="Token">Portsmouth PO6 0000</ims:Note>
+        <ims:Note id="Address5" type="Token">Fax 023-9256 01181</ims:Note>
+        <ims:Note id="Address6" type="Token"></ims:Note>
+        <ims:Note id="Address7" type="Token">Phone #: 0870 870 87990</ims:Note>
+        <ims:Note id="Address8" type="Token"></ims:Note>
+        <ims:Note id="Address9" type="Token"></ims:Note>
+        <ims:Note id="Address10" type="Token"></ims:Note>
+        <ims:Note id="Address11" type="Token"></ims:Note>
+        <!-- CAL contacts and audit information  -->
+        <!-- LAL-WithdrawnIndicator -->
+        <ims:Note id="WithdrawnIndicator" type="Token">Y</ims:Note>
+        <!-- LAL-IgfContact -->
+        <ims:Note id="IgfContact" type="Token">janaraya@in.ibm.com</ims:Note>
+        <!-- LAL-LALIgfContact -->
+        <ims:Note id="LALIgfContact" type="Token">Test</ims:Note>
+        <!-- LAL-CreateId -->
+        <ims:Note id="CreateId" type="Token">janaraya@in.ibm.com</ims:Note>
+        <!-- LAL-LastUpdateId -->
+        <ims:Note id="LastUpdateId" type="Token">janaraya@in.ibm.com</ims:Note>
+        <!-- LAL-CreateTimestamp -->
+        <ims:Note id="CreateTimestamp" type="Token">2009-06-30</ims:Note>
+        <!-- LAL-LastUpdateTimestamp -->
+        <ims:Note id="LastUpdateTimestamp" type="Token">2009-06-30</ims:Note>
+        <!-- LAL-WithdrawnTimestamp -->
+        <ims:Note id="WithdrawnTimestamp" type="Token">2009-06-30</ims:Note>
+        <!-- Credit Buckets   -->
+        <ims:Note id="IBMHardware" type="Token">10.00</ims:Note>
+        <ims:Note id="IBMSoftware" type="Token">10.00</ims:Note>
+        <ims:Note id="IBMServices" type="Token">10.00</ims:Note>
+        <ims:Note id="NonIBMHardware" type="Token">10.00</ims:Note>
+        <ims:Note id="NonIBMSoftware" type="Token">10.00</ims:Note>
+        <ims:Note id="NonIBMServices" type="Token">10.00</ims:Note>
+        <ims:Note id="NonIT" type="Token">10.00</ims:Note>
+        <!-- Indicators  -->
+        <!-- LAL-WithdrawnIndicator -->
+        <ims:Note id="WithdrawnInd" type="Token">N</ims:Note>
+        <!-- OL-RollupIndicator -->
+        <ims:Note id="RollupInd" type="Token">Y</ims:Note>
+        <oa:DocumentReferences>
+         <oa:OpportunityDocumentReference>
+            <oa:DocumentIds>
+              <oa:SupplierDocumentId>
+              <!-- LAL-LALNumber  -->
+                <oa:Id type="CAL">00315903</oa:Id>
+                <oa:Revision>0</oa:Revision> 
+              </oa:SupplierDocumentId>
+              <oa:SupplierDocumentId>
+              <!-- idOrigin=OL-CreditRequestNumber,LAL-OfferLetterNumber  -->
+                <oa:Id IdOrigin="CR000000422A" type="OfferNum">003159</oa:Id>
+                <oa:Revision>0</oa:Revision> 
+              </oa:SupplierDocumentId>
+              <oa:SupplierDocumentId>
+              <!-- LAL-VendorNumber -->
+                <oa:Id type="VendorNum">1000106527</oa:Id>
+              </oa:SupplierDocumentId>
+             </oa:DocumentIds>
+          </oa:OpportunityDocumentReference>
+        </oa:DocumentReferences>
+        <!-- QUOTE-BillType  -->
+        <ims:BillingDetails>F</ims:BillingDetails>
+        <oa:Parties>
+          <oa:CustomerParty>
+            <oa:PartyId>
+            <!-- OL-CustomerNumber -->
+              <oa:Id IdOrigin="IBM/Legacy">019757</oa:Id>
+            </oa:PartyId>
+            <oa:Business>
+            <!-- OL-LegalEntityNumber -->
+              <oa:Id>ELS000501</oa:Id>
+            </oa:Business>
+            <!-- COA-TaxExemptIndicator-->
+            <oa:TaxExemptInd>true</oa:TaxExemptInd>
+          </oa:CustomerParty>
+          <oa:InstalledAtParty>
+            <oa:Business>
+             <!-- Subsidiary Code-->
+               <oa:Id>00</oa:Id>
+            </oa:Business>
+            <oa:Addresses>
+              <oa:PrimaryAddress>
+              <!-- Country Code LAL-CountryCode-->
+                <oa:Country IdOrigin="GB">866</oa:Country>
+              </oa:PrimaryAddress>
+            </oa:Addresses>
+         </oa:InstalledAtParty>            
+          <oa:SupplierParty>
+          <!-- LAL-Language-->
+            <oa:CorrespondenceLanguage>ENU</oa:CorrespondenceLanguage>
+          </oa:SupplierParty>
+        </oa:Parties>
+        <ims:LeaseCredit>
+        <!-- OL-CreditApprovalNumber -->
+          <ims:CreditApprovalNumber>AN00000040f6</ims:CreditApprovalNumber>
+        <!--OL-CreditStatus  -->
+          <ims:CreditApprovalCode>A</ims:CreditApprovalCode>
+         </ims:LeaseCredit>
+        <ims:Local>
+        <!-- Local indicator 1 -->
+         <ims:NameValue name="LclInd1" /> 
+         <!-- LAL-Amount -->
+          <ims:LocalAmount>
+            <ims:Amount currency="GBP" type="LclAmount1">1000.00</ims:Amount>
+            <ims:Precision>2</ims:Precision>
+          </ims:LocalAmount>
+          </ims:Local>
+        <!-- OL-QuoteValidityEndDate -->
+        <ims:QuoteDates type="ValidDte">2009-06-17</ims:QuoteDates>
+        <!--OL-QuoteValidityStartDate   -->
+        <ims:QuoteDates type="EffDate">2009-05-18T00:00:00-00:00</ims:QuoteDates>
+        <ims:QuotedDeal>
+        <!-- LAL-OLAmountFinanced -->
+          <ims:DealAmounts currency="GBP" type="PriceDealSize">1000.00</ims:DealAmounts>
+          <!-- OL-AmountFinanced -->
+          <ims:DealAmounts currency="GBP" type="AmtFinance">1000.00</ims:DealAmounts>
+        </ims:QuotedDeal>
+        <ims:CustomerCurrency>GBP</ims:CustomerCurrency>
+        <!-- CAL1        -->
+        <ims:ObjectId>CAL1</ims:ObjectId>
+        <ims:ContactDetails>
+           <oa:Person>
+           <oa:PersonCode>1</oa:PersonCode> 
+           <oa:PersonName>
+           <oa:GivenName lang="ENU">Henry Dolata</oa:GivenName> 
+           </oa:PersonName>
+           </oa:Person>
+           <oa:JobTitle>Sales</oa:JobTitle> 
+           <oa:Telephone sequence="1" /> 
+           <ims:ContactNode>IBMUS</ims:ContactNode> 
+           <ims:PROFSId>DOLATA</ims:PROFSId> 
+           <ims:ReceiveCopyInd>Y</ims:ReceiveCopyInd> 
+           <!-- LAL-OutputFormat -->
+           <ims:QuotePrintFormat>005</ims:QuotePrintFormat> 
+        </ims:ContactDetails>
+      <ims:LeaseInd type="RequestQuoteDocInd">Y</ims:LeaseInd> 
+      </ims:Header>
+      <ims:Line>
+        <ims:LineNumber>1</ims:LineNumber>
+        <ims:OrderItem>
+          <oa:ItemIds>
+            <oa:SupplierItemId>
+              <!-- QUOTE-MachineType,QUOTE-MachineModel -->
+              <oa:Id IdOrigin="MTM">9406-810</oa:Id>
+              <!-- Asset-MES Number  -->
+              <oa:Id IdOrigin="MES"></oa:Id>
+            </oa:SupplierItemId>
+          </oa:ItemIds>
+          <!-- QUOTE-Description -->
+          <ims:Description owner="ProductDescription">HW-IBM iSeries Models 800, 810, 825, 870, and 890</ims:Description>
+        </ims:OrderItem>
+        <!-- QUOTE-MachineQuantity -->
+        <ims:OrderQuantity uom="each">1</ims:OrderQuantity>
+        <!-- QUOTE-AmountFinanced --> 
+        <ims:UnitPrice>
+         <oa:Amount currency="GBP" type="FinAmt" basis="ListPrice" discount="0">50000</oa:Amount> 
+         <oa:PerQuantity uom="each">1</oa:PerQuantity> 
+        </ims:UnitPrice>
+        <!-- QUOTE-NetPurchasePrice -->
+        <ims:UnitPrice>
+        <oa:Amount currency="GBP" type="NetPurPrice" basis="ListPrice" discount="0">50000</oa:Amount> 
+        <oa:PerQuantity uom="each">1</oa:PerQuantity> 
+        </ims:UnitPrice>
+        <!-- QUOTE-PlanInstallDate   -->
+        <ims:PlannedInstallationDate>2009-05-27T00:00:00Z</ims:PlannedInstallationDate> 
+        <!-- QUOTE-TransactionType -->
+        <ims:TransactionType>NLSE</ims:TransactionType>
+        <oa:Parties>
+          <oa:SupplierParty>
+            <oa:PartyId>
+             <!-- Supplier-SupplierSeqNumber -->
+              <oa:Id IdOrigin="SeqNum">38</oa:Id>
+              <!-- Supplier-VendorNumber  -->
+              <oa:Id IdOrigin="VendorNum">1000106527</oa:Id>
+              <!-- Supplier-LegalIdNumber  -->
+              <oa:Id IdOrigin="LegalIdNum"></oa:Id>
+              <!-- Supplier-SraNumber -->
+              <oa:Id IdOrigin="SraNum">8765439098</oa:Id>
+              <!-- Supplier-SupplierId -->
+              <oa:Id IdOrigin="SupplierId">1000106527</oa:Id>
+              <!-- Supplier-AccountNumber  -->
+              <oa:Id IdOrigin="AccountNum"></oa:Id>
+            </oa:PartyId>
+            <!-- Supplier-SupplierName -->
+            <oa:Name lang="en">FACORT</oa:Name>
+            <oa:Addresses>
+              <oa:PrimaryAddress>
+                <oa:AddressLine>
+                  <!--  Supplier-StreetAddress1-->
+                  <oa:Line sequence="1">A</oa:Line>
+                  <!--  Supplier-StreetAddress2-->
+                  <oa:Line sequence="2"></oa:Line>
+                  <!--  Supplier-StreetAddress3-->
+                  <oa:Line sequence="3"></oa:Line>
+                  <!--  Supplier-ContactInformation -->
+                  <oa:Line sequence="4"></oa:Line>
+                </oa:AddressLine>
+                <!-- Supplier-StateZipCode  -->
+                <oa:PostalCode></oa:PostalCode>
+              </oa:PrimaryAddress>
+            </oa:Addresses>
+            <oa:Contacts>
+              <oa:ContactAbs>
+                <oa:Person>
+                  <oa:PersonName>
+                  <!-- Supplier-ContactName  -->
+                    <oa:FormattedName></oa:FormattedName>
+                  </oa:PersonName>
+                </oa:Person>
+                <!-- Supplier-Email  -->
+                <oa:EMailAddress sequence="1"></oa:EMailAddress>
+                </oa:ContactAbs>
+            </oa:Contacts>
+            <!-- LAL-Language -->
+            <oa:CorrespondenceLanguage>ENU</oa:CorrespondenceLanguage>
+          </oa:SupplierParty>
+        </oa:Parties>
+       <ims:LeaseSubLine>
+          <ims:LineNumber>0</ims:LineNumber>
+         </ims:LeaseSubLine>
+        <ims:LeaseSubLine>
+          <ims:LineNumber>1</ims:LineNumber>
+          <ims:OrderItem>
+          <oa:ItemIds>
+            <oa:SupplierItemId>
+              <!-- QUOTE-MachineType,QUOTE-MachineModel -->
+              <oa:Id IdOrigin="MTM">9406-810</oa:Id>
+              <!-- Asset-MES Number  -->
+              <oa:Id IdOrigin="MES"></oa:Id>
+            </oa:SupplierItemId>
+          </oa:ItemIds>
+          <!-- QUOTE-Description -->
+          <ims:Description owner="ProductDescription">HW-IBM iSeries Models 800, 810, 825, 870, and 890</ims:Description>
+        </ims:OrderItem>
+        <!-- QUOTE-MachineQuantity -->
+        <ims:OrderQuantity uom="each">1</ims:OrderQuantity>
+        <!-- QUOTE-AmountFinanced --> 
+        <ims:UnitPrice>
+         <oa:Amount currency="GBP" type="FinAmt" basis="ListPrice" discount="0">50000</oa:Amount> 
+         <oa:PerQuantity uom="each">1</oa:PerQuantity> 
+        </ims:UnitPrice>
+        <!-- QUOTE-NetPurchasePrice -->
+        <ims:UnitPrice>
+        <oa:Amount currency="GBP" type="NetPurPrice" basis="ListPrice" discount="0">50000</oa:Amount> 
+        <oa:PerQuantity uom="each">1</oa:PerQuantity> 
+        </ims:UnitPrice>
+        <!-- QUOTE-PlanInstallDate   -->
+        <ims:PlannedInstallationDate>2009-05-27T00:00:00Z</ims:PlannedInstallationDate> 
+        <!-- QUOTE-TransactionType -->
+        <ims:TransactionType>NLSE</ims:TransactionType>
+         </ims:LeaseSubLine> 
+      </ims:Line>
+      </ims:FinancialOfferingQuote>
+  </ims:DataArea>
+</ims:FinancialOfferingQuoteBOD>

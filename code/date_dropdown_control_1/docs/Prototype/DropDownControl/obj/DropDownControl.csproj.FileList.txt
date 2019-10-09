@@ -1,0 +1,5 @@
+bin\Debug\DropDownControl.dll
+bin\Debug\DropDownControl.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DropDownControl.dll
+obj\Debug\DropDownControl.pdb

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigManager>
+	<namespace name="Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient">
+		<property name="Binding">
+			<value>Binding</value>
+		</property>
+		
+		<property name="EndpointAddress">
+			<value>EndpointAddress</value>
+		</property>
+		
+	</namespace>
+</ConfigManager>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Document>
+  <XMLVersion version="1.04"></XMLVersion>
+  <PacketNum>1234806_22443_20090202</PacketNum>
+  <RunDate>20090202</RunDate>
+  <Record>
+    <SeqNumber>1</SeqNumber>
+    <LienRefNum>12727707</LienRefNum>
+    <DFSNumber></DFSNumber>
+    <Ref1>7169</Ref1>
+    <Ref2>16773</Ref2>
+    <Ref3>04/04/2006</Ref3>
+    <Ref4></Ref4>
+    <RecordStatus Status="Completed"></RecordStatus>
+    <FilingType Type="Original"></FilingType>
+    <FileStatus Status="Rejected"></FileStatus>
+    <FileNumber></FileNumber>
+    <OriginalFileNumber></OriginalFileNumber>
+    <FileDate></FileDate>
+    <OriginalFileDate>20090202</OriginalFileDate>
+    <ExpirationDate></ExpirationDate>
+    <FilingState>MI</FilingState>
+    <FilingOffice> Secretary of State</FilingOffice>
+    <FirstDebtorName>
+      <OrganizationName>Ray's Canoeing &amp; The Fly Factory</OrganizationName>	
+    <IndividualName> 
+     <FirstName>James </FirstName> 
+     <MiddleInit>M</MiddleInit> 
+     <LastName>Arellano</LastName> 
+     <Suffix>Jr</Suffix>
+    </IndividualName>
+    </FirstDebtorName>
+    <RejectionReason>
+    <RejectionText>02/02/2009 10:19:53 - Rejected: Reason Codes: Clarify Debtor's Organization Info</RejectionText>
+    </RejectionReason>
+  </Record>
+</Document>

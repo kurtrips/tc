@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+ <head>
+  <title>
+    Web SQL Demonstration Document
+  </title>
+  <script type="text/javascript">
+      //This is simple initialization code
+      var db;
+      function Init() {
+          db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
+          db.transaction(function (tx) {
+              tx.executeSql('CREATE TABLE IF NOT EXISTS my_table (id, text)');
+              tx.executeSql('INSERT INTO my_table (id, text) VALUES (1, "abcd")');
+              tx.executeSql('INSERT INTO my_table (id, text) VALUES (2, "efgh")');
+              tx.executeSql('INSERT INTO my_table (id, text) VALUES (3, "ijkl")');
+          });
+      }
+    
+      //This is the mock for the UI code
+      function Client() {
+          //Define the callback
+          var cb = function (x) { alert(x + ' rows were retrieved'); }
+
+          //Call the service
+          Service(cb);
+      };
+
+      //This is the mock for the service code
+      function Service(cb) {
+          db.transaction(function (tx) {
+              tx.executeSql('SELECT * FROM my_table', [], function (tx, results) {
+                  //Call the client provided callback with some information
+                  cb(results.rows.length);
+              });
+          });
+      };
+
+      //Run the example
+      Init();
+      Client();
+
+  </script>
+ </head>
+ <body>
+  <h1>
+   Hello, Web SQL!
+  </h1>
+ </body>
+</html>

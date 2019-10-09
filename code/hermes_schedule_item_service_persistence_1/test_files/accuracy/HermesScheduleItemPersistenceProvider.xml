@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+  
+  <namespace name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider">
+    <property name="objectFactoryNamespace">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+    <property name="connectionName">
+      <value>accuracy</value>
+    </property>
+    <property name="helper">
+      <value>HermesScheduleItemPersistenceHelper</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.Util.ObjectFactory.HermesScheduleItemPersistenceHelper">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceHelper</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>    
+  </namespace>
+
+</ConfigManager>

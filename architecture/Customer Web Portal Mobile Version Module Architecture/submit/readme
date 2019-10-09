@@ -1,0 +1,16 @@
+Requirement for Change Password, Register and Help are currently left to Final Fix.
+See http://apps.topcoder.com/forums/?module=Thread&threadID=801954&start=0 and http://apps.topcoder.com/forums/?module=Thread&threadID=801924&start=0
+
+
+The Register logic in the code currently is incorrect and must be changed as required. See assembly spec 2.9
+
+
+All changes required to the REST API are marked in GREEN in the WCF RESTful Endpoint.doc
+
+
+I plan to have Login, Register, Forgot Password, Help and the Registration related fix as one assembly and the rest as another assembly.
+However as a majority part of the first assembly is left to FF, I have included only one assembly in my current submission.
+If I win, I will split it into 2 assemblies as described above.
+
+
+A simple POC has been included to demo backbone.

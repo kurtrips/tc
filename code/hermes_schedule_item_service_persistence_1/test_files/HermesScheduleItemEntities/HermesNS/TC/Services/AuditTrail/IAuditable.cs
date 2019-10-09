@@ -1,0 +1,16 @@
+// IAuditable<TParent>.cs
+// Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+using System;
+using System.Collections.Generic;
+
+namespace HermesNS.TC.Services.AuditTrail
+{
+    /// <author>TCSDESIGNER</author>
+    /// <author>TCSDEVELOPER</author>
+    /// <version>1.0</version>
+    /// <copyright>Copyright (c) 2006, TopCoder, Inc. All rights reserved.</copyright>
+    public interface IAuditable<TParent>
+    {
+        IList<HermesAuditRecord> Audit(TParent old);
+    }
+}

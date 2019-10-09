@@ -1,0 +1,8 @@
+bin\Debug\WcfCommonsMock.dll
+bin\Debug\WcfCommonsMock.pdb
+bin\Debug\Hermes.Entity.Base.dll
+bin\Debug\Hermes.Entity.Common.dll
+bin\Debug\TopCoder.Util.ConfigurationManager.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WcfCommonsMock.dll
+obj\Debug\WcfCommonsMock.pdb

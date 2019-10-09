@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ServiceRequest RequestID="5252" Type="SRequest" >
+  <Equipment ID="1251494" Customer="1414" >PC with 80gb</Equipment>
+  <Schedule Date="2007/03/05" Type="FirsTry" />
+  <Bonus>
+    <BonusID due="01/02/2008">123</BonusID>
+    <BonusID due="02/01/2008">456</BonusID>
+  </Bonus>
+  <!--Source Queue name cannot be empty.-->
+  <SourceMessageQueue Name="" 
+                      Path="MyMachine\MyQueue"
+                      Description="Source Queue For Complaints"/>
+  <DestinationMessageQueue Name="" 
+                      Path="OtherMachine\AnotherQueue"
+                      Description="Destination Queue For Complaints"/>
+</ServiceRequest>

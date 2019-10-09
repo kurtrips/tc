@@ -1,0 +1,13 @@
+
+
+
+
+
+
+<doc>Hello, world!<!-- Comment 1 --></doc>
+
+
+
+<!-- Comment 2 -->
+
+<!-- Comment 3 -->

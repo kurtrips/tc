@@ -1,0 +1,14 @@
+bin\Debug\HermesNS.TC.Services.GenericNotes.dll
+bin\Debug\HermesNS.TC.Services.GenericNotes.pdb
+bin\Debug\TopCoder.Services.WCF.GenericNotes.dll
+bin\Debug\TopCoder.Services.WCF.dll
+bin\Debug\log4net.dll
+bin\Debug\TopCoder.Util.ConfigurationManager.dll
+bin\Debug\TopCoder.Util.ExceptionManager.SDE.dll
+bin\Debug\TopCoder.Data.ConnectionFactory.dll
+bin\Debug\TopCoder.Util.IDGenerator.dll
+bin\Debug\TopCoder.Util.ExceptionManager.dll
+bin\Debug\TopCoder.LoggingWrapper.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\HermesNS.TC.Services.GenericNotes.dll
+obj\Debug\HermesNS.TC.Services.GenericNotes.pdb

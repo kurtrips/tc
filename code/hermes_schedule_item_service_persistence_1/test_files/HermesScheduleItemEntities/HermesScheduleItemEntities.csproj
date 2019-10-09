@@ -1,0 +1,100 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21682C34-6784-4A72-B714-6F4597890EFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HermesScheduleItemEntities</RootNamespace>
+    <AssemblyName>HermesScheduleItemEntities</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hermes Entity Validation, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\Hermes Entity Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.9.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\System.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="TopCoder.Services.WCF.GenericNotes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Services.WCF.GenericNotes.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ConfigurationManager, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Util.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ExceptionManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Util.ExceptionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.ExceptionManager.SDE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b7567367622062c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Util.ExceptionManager.SDE.dll</HintPath>
+    </Reference>
+    <Reference Include="TopCoder.Util.Indexing, Version=1.1.1.0, Culture=neutral, PublicKeyToken=b7567367622062c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dlls\TopCoder.Util.Indexing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HermesNS\TC\Services\AuditTrail\HermesAuditRecord.cs" />
+    <Compile Include="HermesNS\TC\Services\AuditTrail\IAuditable.cs" />
+    <Compile Include="HermesNS\TC\Services\GenericNotes\HermesGenericNote.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\Helper.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\HermesActivity.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\HermesActivityGroup.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\HermesActivityType.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\HermesScheduleItem.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\HermesScheduleItemRequestStatus.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\HermesScheduleItemStatus.cs" />
+    <Compile Include="HermesNS\TC\Services\ScheduleItem\Entities\IllegalAuditItemException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WcfBase\WcfBase.csproj">
+      <Project>{BF54CE98-1E9F-4EB0-9001-0D1C8960A736}</Project>
+      <Name>WcfBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfScheduleItem\TopCoder.Services.WCF.Schedule.Item.csproj">
+      <Project>{92F9467C-1729-48CE-8A72-830078631EBC}</Project>
+      <Name>TopCoder.Services.WCF.Schedule.Item</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

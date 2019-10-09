@@ -1,0 +1,29 @@
+----------------------------------APPROVAL-------------------------------------------------
+1. Have removed the WCF service layer altogether. Now there's just the UI layer and the data access layer.
+The data access layer is now compiled into a DLL and referenced directly (via programming call) by the UI layer.
+Have fixed this in all documents.
+
+2. Localization DLL is now again referenced in SDS as well as Specification spec
+
+----------------------------------FINAL FIX 1-------------------------------------------------
+AleaActaEst 1.1.5.1 - Localization is not required as per http://apps.topcoder.com/forums/?module=Thread&threadID=754132
+
+AleaActaEst 1.5.1 - Both issues fixed.
+
+albertwang 2.3.1.1 - Added a specification contest. All open items have also been listed in the specification contest spec. Updated Game plan as well.
+
+albertwang 2.3.1.2 - No RIA Build is planned. It was just a careless mistake in the Game Plan. It is removed
+
+nikolay83 2.3.2.1 - Added security to section 2.5 Other common concerns of each AS. Secuirty is addressed in SDS section 6
+
+nikolay83 2.3.2.2 - Fixed
+
+albertwang 2.3.2.1 - Duplicate
+
+nikolay83 2.4.1.1 - successfuly appealed
+
+nikolay83 2.4.2.1 - Fixed. Now using red (pink)
+
+nikolay83 2.4.2.2, 2.4.2.3 - successfuly appealed
+
+albertwang 2.4.2.1 - successfuly appealed

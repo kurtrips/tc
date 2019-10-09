@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigManager>
+    <namespace name="TopCoder.Util.ObjectFactory.default">
+        <property name="type_name">
+            <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+        </property>
+    </namespace>
+
+    <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+        <property name="p1:string">
+            <value>ObjectDefinitions</value>
+        </property>
+    </namespace>
+
+	<namespace name="ObjectDefinitions.XmlMessageTypeDetector">
+		<property name="assembly">
+			<value>../../build/classes/TopCoder.MSMQ.MessageProcessingWorkflow.Test.dll</value>
+		</property>
+		<property name="type_name">
+			<value>TopCoder.MSMQ.MessageProcessingWorkflow.Detectors.XmlMessageTypeDetector</value>
+		</property>
+	</namespace>
+	<namespace name="ObjectDefinitions.XmlMessageTypeDetector.parameters">
+		<property name="p1:string">
+			<value>type.detector.XmlMessageTypeDetector</value>
+		</property>
+	</namespace>
+	
+	
+		<namespace name="ObjectDefinitions.MyPersistence">
+		<property name="assembly">
+			<value>../../build/classes/TopCoder.MSMQ.ConversationManager.Entities.dll</value>
+		</property>
+		<property name="type_name">
+			<value>TopCoder.MSMQ.ConversationManager.DataAccess.ConversationManagerPersistence</value>
+		</property>
+	</namespace>
+
+
+
+</ConfigManager>

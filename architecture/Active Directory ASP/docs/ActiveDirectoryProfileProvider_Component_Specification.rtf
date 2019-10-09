@@ -1,0 +1,414 @@
+{\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fnil\fcharset0 Times New Roman;}{\f2\fnil\fprq1\fcharset0 Courier New;}{\f3\fnil\fcharset0 Courier New;}{\f4\fswiss\fprq2\fcharset0 Arial;}{\f5\fnil\fcharset0 Tahoma;}{\f6\fnil\fcharset0 Symbol;}{\f7\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red163\green21\blue21;\red255\green0\blue0;\red43\green145\blue175;\red0\green128\blue0;\red255\green255\blue255;\red255\green204\blue153;}
+{\*\generator Msftedit 5.41.21.2508;}\viewkind4\uc1\pard\nowidctlpar\qc\cf1\lang1033\kerning28\ul\b\fs28 Active Directory ASP.NET Profile Provider 1.0\cf0  Component Specification\par
+\pard\nowidctlpar\li720\sa240\ulnone\b0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\b\fs24 1.\tab Design\par
+\pard\nowidctlpar\li710\tab\kerning0\b0\f1 The ASP.NET User Providers make it easy to integrate user profile based logic into any application. Unfortunately, the providers only ship with one implementation of these providers: for SQL Server. The Active Directory ASP.NET User Profile Provider component will provide a Profile Provider that uses .NET's Directory Services library to read and write user profile against Active Directory.\par
+\par
+\b Design Features:\par
+\par
+\ul a) Declarative Configuration of the provider:\ulnone\par
+\b0 The component is configurable in an application configuration file. This has been achieved with the help of classes deriving from ConfigurationSection, ConfigurationElement and ConfigurationElementCollection. \par
+\par
+A sample definition for the properties of the Profile is as follows:\par
+\cf2\f2\fs16 <\cf3 profile\cf2  \cf4 defaultProvider\cf2 =\cf0 "\cf2 ActiveDirectoryProfileProvider\cf0 "\cf2  \cf4 enabled\cf2 =\cf0 "\cf2 true\cf0 "\cf2 >\par
+\tab <\cf3 properties\cf2 >\par
+\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 DisplayName\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 System.String\cf0 "\cf2 />\par
+\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 Department\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 System.String\cf0 "\cf2 />\par
+\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 BadLoginCount\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 System.Int32\cf0 "\cf2 />\par
+\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 FavoriteURLs\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 System.Collections.Specialized.StringCollection\cf0 "\cf2 />\par
+\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 UserContactInfo\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 TestLibrary.UserContactInfo, TestLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\cf0 "\cf2 />\par
+\tab\tab <\cf3 group\cf2  \cf4 name\cf2 =\cf0 "\cf2 Bio\cf0 "\cf2 >\par
+\tab\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 BirthDate\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 DateTime\cf0 "\cf2 />\par
+\tab\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 Location\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 String\cf0 "\cf2 />\par
+\tab\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 ProgrammingLanguageOfChoice\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 TestLibrary.ProgrammingLanguages, TestLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\cf0 "\cf2  \cf4 serializeAs\cf2 =\cf0 "\cf2 Binary\cf0 "\cf2 />\par
+\tab\tab </\cf3 group\cf2 >\par
+\tab </\cf3 properties\cf2 >\par
+\tab <\cf3 providers\cf2 >\par
+\tab\tab <\cf3 add\cf2  \cf4 name\cf2 =\cf0 "\cf2 ActiveDirectoryProfileProvider\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 TopCoder.Web.Profile.Providers.ActiveDirectory.ActiveDirectoryProfileProvider\cf0 "\cf2 />\par
+\tab </\cf3 providers\cf2 >\par
+</\cf3 profile\cf2 >\f3\par
+\par
+\cf0\f1\fs24 The above basically tells ASP.NET that the Profile used by the application will have a DisplayName property of value string, a FavoriteURLs property of type StringCollection , a UserContactInfo property of type UserContactInfo etc.\par
+\par
+The configuration for the activeDirectoryProfileProvider itself is done using its own section as shown below:\par
+\cf2\f2\fs16 <\cf3 activeDirectoryProvider\cf2  \cf4 connectionName\cf2 =\cf0 "\cf2 activeDirectoryConnection\cf0 "\cf2  \cf4 userNameAttribute\cf2 =\cf0 "\cf2 cn\cf0 "\cf2  \cf4 applicationNameAttribute\cf2 =\cf0 "\cf2 division\cf0 "\cf2 >\par
+  <\cf3 attributeMappings\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 DisplayName\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 displayName\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 Department\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 department\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 BadLoginCount\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 badPwdCount\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 FavoriteURLs\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 url\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.EmailId\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 emailId\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.PhoneNumber\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 telephoneNumber\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.AddressInfo.Addresses\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 addresses\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.AddressInfo.OfficeAddress\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 officeAddress\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 Bio.BirthDate\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 birthDate\cf0 "\cf2  \cf4 isGroupedProperty\cf2 =\cf0 "\cf2 True\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 Bio.Location\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 location\cf0 "\cf2  \cf4 isGroupedProperty\cf2 =\cf0 "\cf2 True\cf0 "\cf2 ></\cf3 add\cf2 >\par
+    <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 Bio.ProgrammingLanguageOfChoice\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 prog\cf0 "\cf2  \cf4 isGroupedProperty\cf2 =\cf0 "\cf2 True\cf0 "\cf2 ></\cf3 add\cf2 >\par
+  </\cf3 attributeMappings\cf2 >\par
+</\cf3 activeDirectoryProvider\cf2 >\f3\fs18\par
+\cf0\kerning28\b\f0\fs24\par
+\kerning0\b0\f1 This is self explanatory. The \cf4\f3\fs16 userNameAttribute\cf2 =\cf0 "\cf2 cn\cf0 " \f1\fs24 means that the userName of the profile will be mapped to the 'cn' attribute of a User object in Active Directory.\par
+The \cf3\f3\fs16 attributeMappings \cf0\f1\fs24 container is used add arbitrarily many mappings of the profile properties to their Active Directory Object attributes. For example the \cf2\f3\fs16 BadLoginCount \cf0\f1\fs24  property will be mapped to the  \cf2\f3\fs16 badPwdCount \cf0\f1\fs24 attribute. The \cf4\f3\fs16 isSerialized \cf0\f1\fs24 configuration attribute declares that the profile value should be directly retrieved/set without any type conversion. This is useful in case of storage of complex objects because their serialized values can be saved.\par
+\par
+Finally we need to declare our custom section. This is done as follows:\par
+\cf2\f3\fs18   \fs16 <\cf3 configSections\cf2 >\par
+    <\cf3 section\cf2  \cf4 name\cf2 =\cf0 "\cf2 activeDirectoryProvider\cf0 "\cf2  \cf4 type\cf2 =\cf0 "\cf2 TopCoder.Web.Profile.Providers.ActiveDirectory.Configuration.ActiveDirectoryProfileProviderSection, TestLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\cf0 "\cf2  \cf4 allowDefinition\cf2 =\cf0 "\cf2 Everywhere\cf0 "\cf2 />\par
+  </\cf3 configSections\cf2 >\par
+\par
+\cf0\ul\b\f1\fs24 b) Mappings for complex Profile properties:\par
+\ulnone\b0 This design supports the following types of Profile properties:\par
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent720{\pntxtb\'B7}}\nowidctlpar\fi-720\li1430 Primitives\par
+{\pntext\f7\'B7\tab}String\par
+{\pntext\f7\'B7\tab}Classes deriving from ICollection. The Collection should itself be either non-generic or a generic collection with generic argument of type primitive or string. This includes arrays.\par
+{\pntext\f7\'B7\tab}Complex Classes\kerning28\b\f0\par
+\pard\nowidctlpar\li710\par
+\kerning0\b0\f1 This design can support arbitrarily complex objects as properties of a Profile class. The only requirement is that the class should have a default constructor and a setter/getter for each of its properties.\par
+\par
+An example of properties of complex type can be seen from the section above. Here profile contains a property called UserContactInfo of type UserContactInfo which in turn contains a complex type of name AddressInfo.\par
+\par
+\cf2\f2\fs18 public\cf0  \cf2 class\cf0  \cf5 UserContactInfo\par
+\cf0\{\par
+    \cf2 public\cf0  \cf2 string\cf0  EmailId \{set; get;\}\par
+    \cf2 public\cf0  \cf2 int\cf0  PhoneNumber \{set; get;\}\par
+    \cf2 public\cf0  \cf5 AddressInfo\cf0  AddressInfo \{set; get;\}\par
+\}\par
+\par
+\cf2 public\cf0  \cf2 class\cf0  \cf5 AddressInfo\par
+\cf0\{\par
+    \cf2 public\cf0  \cf2 string\cf0 [] Addresses \{set; get;\}\par
+    \cf2 public\cf0  \cf2 string\cf0  OfficeAddress \{set; get;\}\par
+\}\f3\par
+\par
+\f1\fs24 and mapping for it is of form:\f3\fs18\par
+\cf2\f2\fs16   <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.EmailId\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 emailId\cf0 "\cf2 ></\cf3 add\cf2 >\par
+  <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.PhoneNumber\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 telephoneNumber\cf0 "\cf2 ></\cf3 add\cf2 >\par
+  <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.AddressInfo.Addresses\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 addresses\cf0 "\cf2 ></\cf3 add\cf2 >\par
+  <\cf3 add\cf2  \cf4 profileAttribute\cf2 =\cf0 "\cf2 UserContactInfo.AddressInfo.OfficeAddress\cf0 "\cf2  \cf4 activeDirectoryUserAttribute\cf2 =\cf0 "\cf2 officeAddress\cf0 "\cf2 ></\cf3 add\cf2 >\f3\par
+\par
+\cf0\f1\fs24 Note that the profileAttribute should be of form [Object1Name].[Object2Name].[ObjectNName].[LeafPropertyName]. This is referred to in the design as a \i Qualified Property Name\i0 .\f3\fs16\par
+\par
+\kerning28\b\f0\fs24\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\fs20 1.1\tab Design Patterns \par
+\pard\nowidctlpar\li710\tab\lang16393\kerning0\f1\fs24 ASP.NET 2.0 Provider Model\b0 : This is not a standard design pattern but its a pattern used by .NET  for providing a software module that provides a uniform interface between an ASP.NET service and a data source.\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\lang1033\kerning28\b\f0\fs20 1.2\tab Industry Standards \par
+\b0\f1\fs24\tab LDAP\par
+\tab Active Directory\par
+\tab ASP.NET 2.0\b\f0\fs20\par
+1.3\tab Required Algorithms\par
+\b0\i\tab\ul 1.3.1 Searching for profiles:\par
+\pard\keepn\nowidctlpar\sl240\slmult0\tx0\ulnone\i0\tab The following is the algorithm for the FindInactiveProfilesByUserName method:\par
+\par
+\pard\keepn\nowidctlpar\li710\sl240\slmult0\tab\cf2\kerning0\f3\fs18 if\cf0  (authenticationOption != \cf5 ProfileAuthenticationOption\cf0 .Authenticated || LastActivityDateAttribute == \cf2 null\cf0 )\par
+    \cf2 throw\cf0  \cf2 new\cf0  \cf5 Exception\cf0 ();\par
+\cf5 ProfileInfoCollection\cf0  ret = \cf2 new\cf0  \cf5 ProfileInfoCollection\cf0 ();\par
+\par
+\cf6 //Create the filter using UserName, ApplicationName and LastActivityDate\par
+\cf2 string\cf0  filter = \cf3 "(&("\cf0  + LastUpdateDateAttribute + \cf3 "<=\{0\})("\cf0  + ApplicationNameAttribute + \cf3 "=\{1\})("\cf0  + UserNameAttribute + \cf3 "=\{2\})(objectClass=user)(objectCategory=person))"\cf0 ;\par
+filter = \cf2 string\cf0 .Format(filter, userInactiveSinceDate.ToString(), ApplicationName, usernameToMatch);\par
+\par
+\cf6 //Connect and prepare DirectorySearcher\par
+\cf2 using\cf0  (\cf5 DirectoryEntry\cf0  entry = CreateDirectoryEntry()) \{\par
+    \cf2 using\cf0  (\cf5 DirectorySearcher\cf0  searcher = \cf2 new\cf0  \cf5 DirectorySearcher\cf0 (entry)) \{\par
+        \cf5 SearchScope\cf0  scope = SingleLevelSearch ?\par
+\tab\tab\tab  \cf5 SearchScope\cf0 .OneLevel : \cf5 SearchScope\cf0 .Subtree;\par
+        searcher.SearchScope = scope;\par
+        searcher.Filter = filter;\par
+\par
+        \cf6 //Search\par
+\cf0         \cf2 using\cf0  (\cf5 SearchResultCollection\cf0  results = searcher.FindAll()) \{\par
+            totalRecords = results.Count;\par
+\par
+            \cf6 //Navigate to the result index as per pageIndex and pageSize.\par
+\cf0             \cf2 int\cf0  startIndex = pageSize * (pageIndex - 1);\par
+            \cf2 int\cf0  endIndex = startIndex + pageSize - 1;\par
+\par
+            \cf2 for\cf0  (\cf2 int\cf0  i = startIndex; i < Math.Min(endIndex,totalRecords-\tab\tab\tab 1); i++) \{\par
+                \par
+                \cf6 //Get the properties from the user\par
+\cf0                 \cf2 string\cf0  userName = results[i].GetDirectoryEntry\tab\tab\tab\tab\tab ().Properties[UserNameAttribute][0] \cf2 as\cf0  \cf2 string\cf0 ;\par
+                \cf5 DateTime\cf0  lastActivityDate = \cf5 Convert\cf0 .ToDateTime(results\tab\tab\tab\tab [i].GetDirectoryEntry().Properties\tab\tab\tab\tab\tab\tab [LastActivityDateAttribute][0]);\par
+                \cf5 DateTime\cf0  lastUpdatedDate =\par
+\tab\tab\tab\tab  LastUpdateDateAttribute != \cf2 null\cf0  ?\par
+                    \tab\cf5 Convert\cf0 .ToDateTime(results[i].GetDirectoryEntry\tab\tab\tab\tab\tab ().Properties[LastUpdateDateAttribute][0]) :\par
+                    \cf5 DateTime\cf0 .MinValue;\par
+\par
+                \cf6 //Create new ProfileInfo\par
+\cf0                 \cf5 ProfileInfo\cf0  p = \cf2 new\cf0  \cf5 ProfileInfo\cf0 (userName, \cf2 false\cf0 , \tab\tab\tab\tab\tab lastActivityDate, lastUpdatedDate, 0);\par
+                ret.Add(p);\par
+            \}\par
+        \}\par
+    \}\par
+\}\par
+\par
+\cf2 return\cf0  ret;\par
+\par
+\par
+\kerning28\b\f0\fs20 Note\b0 : In the algorithm above, if pageSize is 0, then simply all results need to be returned.\kerning0\f3\fs18\par
+\par
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent720{\pntxtb\'B7}}\keepn\nowidctlpar\fi-720\li1430\sa240\sl240\slmult0\kerning28\f0\fs20 The algorithm for FindProfilesByUserName is similar just that we do not use the \kerning0\f3\fs18 LastActivityDateAttribute \kerning28\f0\fs20 in the filter.\par
+{\pntext\f7\'B7\tab}The algorithm for GetAllInactiveProfiles is also similar just that we do not use the \kerning0\f3\fs18 UserNameAttribute \kerning28\f0\fs20 in the filter.\par
+{\pntext\f7\'B7\tab}The algorithm for GetAllProfiles is also similar just that we do not use either \kerning0\f3\fs18 LastActivityDateAttribute or \kerning28\f0\fs20  \kerning0\f3\fs18 UserNameAttribute \kerning28\f0\fs20 in the filter.\par
+{\pntext\f7\'B7\tab}The algorithm for GetNumberOfInactiveProfiles is similar to GetAllInactiveProfiles. Here we set the PropertiesToLoad to an empty collection so that the results returned do not use any space. After the results are returned, we just return the number of results.\par
+\pard\keepn\nowidctlpar\li710\sl240\slmult0\par
+\ul\i 1.3.2 \kerning0\i0\f4 GetPropertyRecursively \kerning28\i\f0 algorithm:\par
+\ulnone\i0\f1\fs24 The following is the algorithm for the \kerning0\f2\fs18 GetPropertyRecursively \kerning28\f1\fs24 method. It is commented well enough so it should prove easy to understand:\ul\i\f0\fs20\par
+\ulnone\i0\par
+\pard\keepn\nowidctlpar\li708\sl240\slmult0\cf2\kerning0\f2\fs18 private\cf0  \cf2 object\cf0  GetPropertyRecursively(\cf5 DirectoryEntry\cf0  userEntry, \cf2 string\cf0  propertyToGet, \cf5 Type\cf0  destinationType, \cf5 SettingsSerializeAs\cf0  serializeAs, \cf5 AttributeMappingList\cf0  attributeListForContext)\par
+\{\par
+    \cf6 //Get the Active Directory User attribute mapping\par
+\cf0     \cf5 AttributeMapping\cf0  attrMap = attributeListForContext[propertyToGet];\par
+    \cf6 //if no such key exists i.e. attrMap is null, simply return null;\par
+\par
+\cf0     \cf6 //Primitives, string, simple collections and serialized complex types\par
+\cf0     \cf2 if\cf0  (destinationType.IsPrimitive || destinationType.Equals(\cf2 typeof\cf0 (\cf2 string\cf0 )) || \cf2 typeof\cf0 (\cf5 ICollection\cf0 ).IsAssignableFrom(destinationType) || destinationType.IsArray || destinationType.IsValueType)\par
+    \{\par
+        \cf6 //Get value from Active Directory and convert it into correct \tab\tab type\par
+\cf0         \cf2 object\cf0  convertedObject = GetConvertedAttributeValueForUser\tab\tab\tab\tab (userEntry, attrMap.ActiveDirectoryUserAttribute, \tab\tab\tab\tab destinationType);\par
+\par
+        \cf2 return\cf0  convertedObject;\par
+    \}\par
+    \cf6 //Complex types\par
+\cf0     \cf2 else\par
+\cf0     \{\par
+        \cf2 if\cf0  (serializeAs != \cf5 SettingsSerializeAs\cf0 .ProviderSpecific)\par
+        \{\par
+            \cf2 if\cf0  (serializeAs == \cf5 SettingsSerializeAs\cf0 .String || serializeAs \tab\tab\tab\tab == \cf5 SettingsSerializeAs\cf0 .Xml)\par
+                \cf2 return\cf0  GetConvertedAttributeValueForUser(userEntry, \tab\tab\tab attrMap.ActiveDirectoryUserAttribute, \cf2 typeof\cf0 (\cf2 string\cf0 ));\par
+            \cf2 else\par
+\cf0                 \cf2 return\cf0  GetConvertedAttributeValueForUser(userEntry, \tab\tab\tab attrMap.ActiveDirectoryUserAttribute, \cf2 typeof\cf0 (\cf2 byte\cf0 []));\par
+        \}\par
+        \cf2 else\par
+\cf0         \{\par
+            \cf6 //Get the mappings for the inner properties\par
+\cf0             \cf5 AttributeMappingList\cf0  innerMappings = attributeListForContext\tab\tab\tab [propertyToGet].InnerMappingList;\par
+\par
+            \cf6 //Create a new instance of the complex type using \tab\tab\tab\tab Activator.CreateInstance and default constructor.\par
+\cf0             \cf2 object\cf0  complexObj = \cf5 Activator\cf0 .CreateInstance\tab\tab\tab\tab\tab (destinationType);\par
+\par
+            \cf6 //Call AD to get value for each inner property\par
+\cf0             \cf2 foreach\cf0  (\cf5 AttributeMapping\cf0  innerMapping \cf2 in\cf0  innerMappings)\par
+            \{\par
+                \cf6 //Get the current property\par
+\cf0                 \cf5 PropertyInfo\cf0  propInfo = destinationType.GetProperty\tab\tab\tab (innerMapping.ProfileAttribute);\par
+\par
+                \cf6 //Recursively call BuildComplexObject\par
+\cf0                 \cf2 object\cf0  convertedObject = GetPropertyRecursively\tab\tab\tab\tab (userEntry, innerMapping.ProfileAttribute, \tab\tab\tab\tab\tab propInfo.PropertyType, \tab\tab\tab\tab\tab\tab\tab\tab\cf5 SettingsSerializeAs\cf0 .ProviderSpecific, innerMappings);\par
+\par
+                \cf6 //Set the property of complex type\par
+\cf0                 propInfo.SetValue(complexObj, convertedObject, \cf2 null\cf0 );\par
+            \}\par
+\par
+            \cf2 return\cf0  complexObj;\par
+        \}\par
+    \}\par
+\par
+\}\par
+\par
+\pard\keepn\nowidctlpar\li708\sl240\slmult0\tx0\kerning28\f0\fs20\tab\par
+\pard\keepn\nowidctlpar\li710\sl240\slmult0\ul\i 1.3.3 \kerning0\i0\f4 SetPropertyRecursively \kerning28\i\f0 algorithm:\par
+\pard\keepn\nowidctlpar\li708\sl240\slmult0\tx0\ulnone\i0\f1\fs24 The following is the algorithm for the \kerning0\f2\fs18 SetPropertyRecursively \kerning28\f1\fs24 method. It is commented well enough so it should prove easy to understand:\par
+\par
+\pard\keepn\nowidctlpar\li708\sl240\slmult0\cf2\kerning0\f2\fs18 private\cf0  \cf2 void\cf0  SetPropertyRecursively(\cf5 DirectoryEntry\cf0  userEntry, \cf2 object\cf0  propertyValue, \cf2 bool\cf0  isSerialized, \cf5 AttributeMapping\cf0  am)\par
+\{\par
+    \cf5 Type\cf0  propertyType = propertyValue.GetType();\par
+\par
+    \cf6 //Simple property\par
+\cf0     \cf2 if\cf0  (am.InnerMappingList == \cf2 null\cf0  || am.InnerMappingList.Count == 0)\par
+    \{\par
+        \cf6 //Primitives, strings and serialized objects\par
+\cf0         \cf2 if\cf0  (propertyType.IsPrimitive || propertyType.Equals(\cf2 typeof\tab\tab\tab\tab\cf0 (\cf2 string\cf0 )) || propertyType.IsValueType || isSerialized)\par
+        \{\par
+            \cf6 //Set the value of the attribute. Uncomment this\par
+\cf0             \cf6 userEntry.InvokeSet(am.ActiveDirectoryUserAttribute, \tab\tab\tab\tab propertyValue);\par
+\par
+\cf0             \cf2 return\cf0 ;\par
+        \}\par
+        \cf6 //Collections and arrays\par
+\cf0         \cf2 else\cf0  \cf2 if\cf0  (\cf2 typeof\cf0 (\cf5 ICollection\cf0 ).IsAssignableFrom(propertyType))\par
+        \{\par
+            \cf5 ICollection\cf0  coll = (\cf5 ICollection\cf0 )propertyValue;\par
+            \cf2 object\cf0 [] arr = \cf2 new\cf0  \cf2 object\cf0 [coll.Count];\par
+\par
+            \cf6 //Populate the object array that will be saved.\par
+\cf0             \cf2 int\cf0  i = 0;\par
+            \cf5 IEnumerator\cf0  en = coll.GetEnumerator();\par
+            \cf2 while\cf0  (en.MoveNext())\par
+            \{\par
+                arr[i] = en.Current;\par
+                i++;\par
+            \}\par
+\par
+            \cf6 //Save. Uncomment this\par
+\cf0             \cf6 userEntry.InvokeSet(am.ActiveDirectoryUserAttribute, arr);\par
+\par
+\cf0             \cf2 return\cf0 ;\par
+        \}\par
+\par
+        \cf2 throw\cf0  \cf2 new\cf0  \cf5 Exception\cf0 (\cf3 "Unknown format"\cf0 );\par
+    \}\par
+    \cf6 //Complex property\par
+\cf0     \cf2 else\par
+\cf0     \{\par
+        \cf5 AttributeMappingList\cf0  innerMappingList = am.InnerMappingList;\par
+        \cf2 foreach\cf0  (\cf5 AttributeMapping\cf0  innerAm \cf2 in\cf0  innerMappingList)\par
+        \{\par
+            SetPropertyRecursively(userEntry, propertyType.GetProperty\tab\tab\tab (innerAm.ProfileAttribute).GetValue(propertyValue, \cf2 null\cf0 ), \tab\tab\tab\cf2 false\cf0 , innerAm);\par
+        \}\par
+    \}\par
+\}\par
+\pard\keepn\nowidctlpar\li708\sl240\slmult0\tx0\kerning28\f1\fs24\par
+\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 1.4\tab Component Class Overview\par
+\pard\nowidctlpar\b0\f1\fs24\tab\b ActiveDirectoryProfileProvider\b0 :\f0\fs20\par
+\pard\nowidctlpar\fi10\li1420\f1\fs24 This class provides a Profile Provider that uses .NET's Directory Services library to read and write user profile against Active Directory. The class extends from the System.Web.Profile.ProfileProvider class, and is fully compatible with all ASP.NET profile provider functionalities. The configuration for this class can be done using its custom section in the application config file. The configurable parameters include LDAP Connection String, Property mappings and types, Whether to use a nested search of the user directory etc.\par
+\par
+\pard\nowidctlpar\tab\b AttributeMapping\b0 :\f0\fs20\par
+\pard\nowidctlpar\fi10\li1420\f1\fs24 This class represents a mapping between the name of a property of Profile to the name of attribute in User entry of Active Directory. It also defines a property for holding whether end user wants the property to be saved/retrieved in serialized form.\par
+\par
+\pard\nowidctlpar\tab\b AttributeMappingList\b0 :\f0\fs20\par
+\pard\nowidctlpar\fi10\li1420\f1\fs24 This class is a simple wrapper around a List of AttributeMapping instances. It introduces a new indexer to retrieve the AttributeMapping for a profile property name and a method which finds all AttributeMapping instances which are used for a complex object type.\par
+\par
+\pard\nowidctlpar\b\tab ActiveDirectoryProfileProviderSection\b0 :\f0\fs20\par
+\pard\nowidctlpar\fi10\li1420\f1\fs24 This class represents a custom section in configuration files which is used for declaring the properties of the ActiveDirectoryProfileProvider.\par
+\par
+\pard\nowidctlpar\b\tab AttributeMappingsCollection\b0 :\f0\fs20\par
+\pard\nowidctlpar\fi10\li1420\f1\fs24 This class is a ConfiurationElementCollection. It is a collection of AttributeMappingElements instances which is used to hold the mappings of the Profile property name to the attribute of user object in Active Directory.\par
+\par
+\pard\nowidctlpar\b\tab AttributeMappingElement\b0 :\f0\fs20\par
+\pard\nowidctlpar\fi10\li1420\f1\fs24 This class represents a ConfigurationElement representing a mapping between the name of a property of Profile to the name of attribute in User entry of Active Directory. It also defines a property for holding whether end user wants the property to be saved/retrieved in serialized form.\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 1.5\tab Component Exception Definitions\par
+\pard\nowidctlpar\b0\f1\fs24\tab\b ActiveDirectoryProfileProviderException\b0 :\f0\fs20\par
+\pard\nowidctlpar\li1420\sa240\f1\fs24\tab This exception acts as the base exception for this component. It derives from ProviderException and is used to signal any general purpose exception that may be thrown in this component such as exceptions arising from reading/writing from/to Active Directory, missing lastActivityDateAttribute, incorrect value for authenticationOption parameter etc.\par
+\pard\nowidctlpar\tab\b ActiveDirectoryProfileProviderInitializationException\b0 :\f0\fs20\par
+\pard\nowidctlpar\li1420\sa240\f1\fs24 This exception acts as the exception which is used to signify any errors which may be caused during the initialization of the ActiveDirectoryProfileProvider such as missing properties, empty strings for property values etc.\par
+\pard\nowidctlpar\tab\b ActiveDirectoryProfileProviderUnsupportedOperationException\b0 :\f0\fs20\par
+\pard\nowidctlpar\li1420\sa240\f1\fs24 This exception acts as the exception which is used to signify any errors which may be caused when user tries to use Profile properties which are not of primitive type or string or ICollection or complex objects with inner properties of primitive type or string.\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 1.6\tab Thread Safety\par
+\pard\keepn\nowidctlpar\li710\sb240\sl240\slmult0\b0\f1\fs24\tab As per the Provider guidelines found at http://msdn.microsoft.com/en-us/library/aa479030.aspx: "\i A\lang16393\kerning0 SP.NET 2.0 providers are instanced one time during an application's lifetime and are shared among all requests. Because each request is processed on a different thread drawn from a thread pool that serves ASP.NET, providers can (and probably will be) accessed by two or more threads at the same time. This means providers must be thread-safe." \i0 and \i "The only provider method that doesn't have to be thread-safe is the Initialize method inherited from ProviderBase. ASP.NET ensures that Initialize is never executed on two or more threads concurrently."\i0\par
+\lang1033\kerning28\b\f0\fs20\tab\b0\f1\fs24 Keeping this in mind, this component has been made thread safe. Thread safety is provided using the a dedicated syncRoot variable which is used for locking out complete codes of all public methods. Note that even methods which only retrieve data, are made thread safe so as to avoid conditions where the method reads data in intermittent stage while another method is writing it.\b\f0\fs20\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\cf2\b0\i\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\cf0\b\i0\fs24 2.\tab Environment Requirements\tab\tab\par
+\pard\keepn\nowidctlpar\sb240\sa240\sl240\slmult0\tx0\fs20 2.1\tab Environment\par
+\pard{\pntext\f7\'B7\tab}{\*\pn\pnlvlblt\pnf7\pnindent720{\pntxtb\'B7}}\nowidctlpar\fi-720\li1430\kerning0\b0\f1\fs24\tab Development language: C# 2.0\par
+{\pntext\f7\'B7\tab}\tab Compile target: .NET Framework 2.0\kerning28\f0\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b\fs20 2.2\tab TopCoder Software Components\par
+\tab\b0\f1\fs24 None\b\f0\fs20\par
+2.3\tab Third Party Components\par
+\tab\b0\f1\fs24 None\b\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\fs24 3.\tab Installation and Configuration\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\fs20 3.1\tab Package Name\par
+\b0\f1\fs24\tab TopCoder.Web.Profile.Providers.ActiveDirectory\par
+\tab TopCoder.Web.Profile.Providers.ActiveDirectory.Configuration\b\f0\fs20\par
+3.2\tab Configuration Parameters\par
+\b0\f1\fs24 The following are the configuration attributes that can be used activeDirectoryProvider node:\f0\par
+\pard\nowidctlpar\sa240\fs20\tab\par
+\trowd\trgaph180\trleft-180\trrh382\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\qc\b\fs24 Parameter\b0\fs1589\cell\b\fs24 Description\b0\fs1589\cell\b\fs24 Values\b0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh1180\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 UseSingleLevelSearch\f0\fs1589\cell\f5\fs18 Represents whether the ActiveDirectoryProfileProvider uses a single level search for users or a full sub tree search. It is not mandatory in which case the default value of false will be used.\f0\fs1589\cell\f5\fs18 Any Boolean value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh532\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 ConnectionName\f0\fs1589\cell\f5\fs18 Represents the connection name to use for the ActiveDirectoryProfileProvider. It is mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh748\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 LoginName\f0\fs1589\cell\f5\fs18 Represents the login name to use for connecting to the ActiveDirectoryProfileProvider. It is not mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh748\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 LoginPassword\f0\fs1589\cell\f5\fs18 Represents the login password to use for connecting to the ActiveDirectoryProfileProvider. It is not mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh964\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 AuthenticationType\f0\fs1589\cell\f5\fs18 Represents the authentication type to use for connecting to the ActiveDirectoryProfileProvider. It is not mandatory in which case the default value of None is used.\f0\fs1589\cell\f5\fs18 Any valid AuthenticationTypes value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh748\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 UserNameAttribute\f0\fs1589\cell\f5\fs18 Represents the attribute of a user object in ActiveDirectory, which will be considered as the userName of the User. It is mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh715\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 LastUpdatedDateAttribute\f0\fs1589\cell\f5\fs18 Represents the attribute of a user object in ActiveDirectory, which will be considered as the last updated date of the User. It is not mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh748\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 LastActivityDateAttribute\f0\fs1589\cell\f5\fs18 Represents the attribute of a user object in ActiveDirectory, which will be considered as the last activity date of the User. It is not mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh748\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2280\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6915\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 ApplicationNameAttribute\f0\fs1589\cell\f5\fs18 Represents the attribute of a user object in ActiveDirectory, which will be considered as the application name of the User. It is mandatory.\f0\fs1589\cell\f5\fs18 Any non-null non-empty string value\f0\fs1589\cell\row\pard\fs18\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\sa240\f1\fs24 Inside the activeDirectoryProvider node, we can place an attributeMappings node. The attributeMappings can use the add node for specifying a single profile to attribute mapping. The configuration attributes of these add nodes are:\par
+\f0\fs20\par
+\trowd\trgaph180\trleft-180\trrh382\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2476\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6555\clcfpat8\clcbpat7\clshdng10000\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\qc\b\fs24 Parameter\b0\fs1589\cell\b\fs24 Description\b0\fs1589\cell\b\fs24 Values\b0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh532\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2476\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6555\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 ProfileAttribute\f0\fs1589\cell\f5\fs18 Represents the name of the property of the Profile instance.\f0\fs1589\cell\f5\fs18 Any valid non-null non-empty string\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh532\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2476\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6555\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 ActiveDirectoryUserAttribute\f0\fs1589\cell\f5\fs18 Represents the name of the attribute of the User object of Active Directory.\f0\fs1589\cell\f5\fs18 Any valid non-null non-empty string\f0\fs1589\cell\row\trowd\trgaph180\trleft-180\trrh1396\trpaddl180\trpaddr180\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx2476\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx6555\clbrdrl\brdrw20\brdrs\clbrdrt\brdrw20\brdrs\clbrdrr\brdrw20\brdrs\clbrdrb\brdrw20\brdrs \cellx8821\pard\intbl\nowidctlpar\sa240\f5\fs18 IsSerialized\f0\fs1589\cell\f5\fs18 Represents whether the property should be saved/accessed in serialized form. It is typically useful for properties of complex types where user just wants to serialize the whole complex object and then save it to a single attribute in Active Directory.\f0\fs1589\cell\f5\fs18 Any bool value.\f0\fs1589\cell\row\pard\fs20\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\sa240\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 3.3\tab Dependencies Configuration\par
+\tab\b0\f1\fs24 None\b\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\fs24 4.\tab Usage Notes\par
+\pard\keepn\nowidctlpar\sa240\sl240\slmult0\tx0\fs20 4.1\tab Required steps to test the component\par
+\pard\nowidctlpar\fi-360\li1080\sa240\tx1080\b0\f6\'b7\tab\f0 Extract the component distribution.\par
+\f6\'b7\tab\f0 Follow \cf2\ul{\field{\*\fldinst{HYPERLINK "C:\\\\ilez\\\\ork\\\\c\\\\cs_corp\\\\emplates\\\\omponent\\\\ \\\\ _Dependencies_Configuration"}}{\fldrslt{Dependencies Configuration}}}\cf0\ulnone\f0\fs20 .\par
+\f6\'b7\tab\f0 Execute \lang16393\lquote n\lang1033 ant test\lang16393\rquote\lang1033  within the directory that the distribution was extracted to.\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx0\b 4.2\tab Required steps to use the component\par
+\tab\b0\f1\fs24 None\b\f0\fs20\par
+4.3\tab Demo\par
+\pard\keepn\nowidctlpar\li708\sb240\sl240\slmult0\tx0\tab\b0\f1\fs24 Assuming we provide the configuration as specified in 1.a in web.config. Now the Profile property of the web page will have typed properties introduced into it. Simply setting these properties will call the GetPropertyValues and SetPropertyValues methods.\b\f0\fs20\par
+\pard\keepn\nowidctlpar\li708\sb240\sl240\slmult0\kerning0\b0\f3\fs18         Profile.DisplayName = \cf3 "someDiplayName"\cf0 ;\par
+        Profile.BadLoginCount = 2;\par
+\par
+        \cf5 StringCollection\cf0  cool = \cf2 new\cf0  \cf5 StringCollection\cf0 ();\par
+        cool.Add(\cf3 "www.google.com"\cf0 );\par
+        cool.Add(\cf3 "www.topcoder.com"\cf0 );\par
+        Profile.FavoriteURLs = cool;\par
+\par
+        \cf5 UserContactInfo\cf0  uci = \cf2 new\cf0  \cf5 UserContactInfo\cf0 ();\par
+        uci.Pager = \cf3 "6345234"\cf0 ;\par
+        uci.PhoneNumber = \cf3 "9807667"\cf0 ;\par
+\pard\keepn\nowidctlpar\li708\sb240\sl240\slmult0\tx0         Profile.UserContactInfo = uci;\kerning28\b\f0\fs20\par
+\par
+\tab\b0\f1\fs24 The business methods of the ActiveDirectoryProfileProvider can be invoked as follows:\par
+\pard\keepn\nowidctlpar\li708\sb240\sl240\slmult0\cf6\kerning0\f3\fs18 //Get the ActiveDirectoryProfileProvider\par
+\cf5 ProfileProvider\cf0  adProfileProvider = \cf2 null\cf0 ;\par
+\cf5 IEnumerator\cf0  en = Profile.Providers.GetEnumerator();\par
+\cf2 while\cf0  (en.MoveNext())\par
+    \cf2 if\cf0  (en.Current.GetType() == \cf2 typeof\cf0 (\cf5 ActiveDirectoryProfileProvider\cf0 ))\par
+        adProfileProvider = en.Current \cf2 as\cf0  \cf5 ActiveDirectoryProfileProvider\cf0 ;\par
+\par
+\cf6 //Assuming we have the following data in users:\par
+//User1 : userName = Mark, lastActivityDate = 12/12/2007\par
+//User2 : userName = Marlon, lastActivityDate = 3/3/2008\par
+//User3 : userName = Maverick, lastActivityDate = 6/6/2008\par
+//User4 : userName = Don, lastActivityDate = 5/5/2008\par
+\par
+//FindInactiveProfilesByUserName\par
+\cf2 int\cf0  tr = 0;\par
+\cf5 ProfileInfoCollection\cf0  pic = adProfileProvider.FindInactiveProfilesByUserName(\par
+    \cf5 ProfileAuthenticationOption\cf0 .Authenticated, \cf3 "Ma*"\cf0 , \cf2 new\cf0  \cf5 DateTime\cf0 (2008, 5, 5), 0, 0, \cf2 out\cf0  tr);\par
+\cf6 //Prints 2 because it matches Mark and Marlon but not Maverick\par
+\cf5 Console\cf0 .Out.WriteLine(pic.Count);\par
+\par
+\cf6 //FindProfilesByUserName\par
+\cf0 pic = adProfileProvider.FindProfilesByUserName(\cf5 ProfileAuthenticationOption\cf0 .Authenticated, \cf3 "Ma*"\cf0 , 0, 0, tr);\par
+\cf6 //Prints 3 because it matches Mark and Marlon and Maverick\par
+\cf5 Console\cf0 .Out.WriteLine(pic.Count);\par
+\par
+\cf6 //GetAllInactiveProfiles\par
+\cf0 pic = adProfileProvider.GetAllInactiveProfiles(\cf5 ProfileAuthenticationOption\cf0 .Authenticated, \cf2 new\cf0  \cf5 DateTime\cf0 (2008, 5, 5), 0, 0, tr);\par
+\cf6 //Prints 3 because it matches Mark and Marlon and Don\par
+\cf5 Console\cf0 .Out.WriteLine(pic.Count);\par
+\par
+\cf6 //GetAllInactiveProfiles\par
+\cf0 pic = adProfileProvider.GetAllProfiles(\cf5 ProfileAuthenticationOption\cf0 .Authenticated, 0, 0, tr);\par
+\cf6 //Prints 4 because it matches all users\par
+\cf5 Console\cf0 .Out.WriteLine(pic.Count);\par
+\par
+\cf6 //GetAllInactiveProfiles with paging\par
+\cf0 pic = adProfileProvider.GetAllProfiles(\cf5 ProfileAuthenticationOption\cf0 .Authenticated, 1, 2, tr);\par
+\cf6 //Prints 2 because it gets only 2 records per page\par
+\cf5 Console\cf0 .Out.WriteLine(pic.Count);\par
+\cf6 //Prints 4 because total records are still 4\par
+\cf5 Console\cf0 .Out.WriteLine(tr);\par
+\par
+\cf6 //GetNumberOfInactiveProfiles\par
+\cf2 int\cf0  inAct = adProfileProvider.GetNumberOfInactiveProfiles(\cf5 ProfileAuthenticationOption\cf0 .Authenticated, \cf2 new\cf0  \cf5 DateTime\cf0 (2008, 5, 5));\par
+\cf6 //Prints 3\par
+\cf5 Console\cf0 .Out.WriteLine(inAct);\par
+\par
+\cf2 int\cf0  deleted = adProfileProvider.DeleteProfiles(\cf2 new\cf0  \cf2 string\cf0 [] \{ \cf3 "Mark"\cf0 , \cf3 "Marlon"\cf0  \});\par
+\cf6 //Prints 2. Deletes Mark and Marlon\par
+\cf5 Console\cf0 .Out.WriteLine(deleted);\par
+\par
+\cf2 int\cf0  deleted = adProfileProvider.DeleteInactiveProfiles(\cf5 ProfileAuthenticationOption\cf0 .Authenticated, \cf2 new\cf0  \cf5 DateTime\cf0 (2008, 7, 7));\par
+\cf6 //Prints 2. Deletes Maverick and Don because Mark and Marlon were already deleted.\par
+\cf5 Console\cf0 .Out.WriteLine(deleted);\par
+\pard\keepn\nowidctlpar\li708\sb240\sl240\slmult0\tx0\kerning28\b\f0\fs20\par
+\pard\keepn\nowidctlpar\sb240\sl240\slmult0\tx360\fs24 5.\tab Future Enhancements\par
+\pard\keepn\nowidctlpar\li710\sb240\sl240\slmult0\tx360\b0\f1\tab Ability to handle arbitrarily complex Profile properties.\par
+\tab Ability to handle anonymous users.\b\f0\par
+\pard\nowidctlpar\li720\sa240\sl240\slmult0\cf2\b0\i\fs20\par
+\pard\nowidctlpar\sa240\cf0\i0\par
+\pard\nowidctlpar\f1\fs24\par
+}
+ 

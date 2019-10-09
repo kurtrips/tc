@@ -1,0 +1,17 @@
+<config>
+	<configuration name="processor">
+		<attribute name="processor_factory">
+			<value>TopCoder.CodeDoc.CSharp.CSharpAPIProcessorFactory</value>
+		</attribute>
+		<configuration name="processor_factory_config">
+			<attribute name="reference_paths">
+				<value>c:\reference_path1</value>
+				<value>d:\reference_path2</value>
+				<value>e:\reference_path3</value>
+			</attribute>
+			<attribute name="logger_namespace">
+				<value>TopCoder.LoggingWrapper.DiagnosticImpl</value>
+			</attribute>
+		</configuration>
+	</configuration>
+</config>

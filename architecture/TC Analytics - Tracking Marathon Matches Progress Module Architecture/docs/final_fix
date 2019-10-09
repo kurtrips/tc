@@ -1,0 +1,98 @@
+Final Fix 2:
+
+Red Hat Linux is now added to ADS and specs
+changlog error is fixed.
+
+-------------------------------------------------------------------------------------------------------------------
+
+First of all, I have refactored a the architecture into a front-end and a back-end one, keeping in mind the discussion at http://apps.topcoder.com/forums/?module=Thread&threadID=774387&start=0
+The MarathonMatchInfoService is new. It is solely responsible for the data access.
+The actions are now merged into one assembly.
+
+I have updated the assembly specs, each relevant section in ADS, the dependency diagram, the SDs. 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+>>New URL pattern for tracking Marathon Matches was NOT defined. It should have round ID as a part of URL.
+
+Added to the description of each action
+
+>>API for retrieving data from each chart was not provided.
+
+It is not required. But I have introduced a new data-access layer (see MarathonMatchInfoService) which can be used later for the REST service (as per discussion at http://apps.topcoder.com/forums/?module=Thread&threadID=774387&start=0)
+
+>>The requirement form wiki was: "HighCharts is used for client side chart rendering, your solution should provide APIs to retrieve data from each chart" but I do not see a formalized API being exposed.
+
+Duplicate
+
+>>formatting data and rendering charts SD is absent.
+
+Added. See Prepare JSON and Bind data to charts Sequence Diagram
+
+>> the workflow for formatting data and rendering them on the charts is absent. It was a requirement: http://apps.topcoder.com/forums/?module=Thread&threadID=773490&start=0 ...
+
+appealed.
+
+>>Data entities should be thoroughly explained with code for each field and methods explained for the developers.,.
+
+They are documented now. See TCUML entity, fields documenation.
+The data source is already there in the assemblies.
+
+>> In section "2.3 Threading" we have: "The JBoss Web Server will serve each web request with a separate instance of the Struts action. Therefore it need not be thread-safe" but how does this prevent threading issues with the back-end?
+
+Added more info to ADS 2.3
+
+>>"There are no specific concurrency concerns as data is only being read and not written."
+- what about other processes writing the data? After all the data must be written at some point, how is that prevented form messing up our component?
+
+Added more info to ADS 2.4
+
+>> "If any required configuration parameter is missed, then we will throw new IllegalStateException to denote the error situation." ---> why not have a configuration exception? You can easily do that with Spring.
+
+Recommended item not fixed.
+
+>> "All persistence access will be done using queries."
+- what kind of queries? Be specific.
+
+Fixed in ADS 2.6
+
+>>"If query string parameters are missing or invalid or no entity is found for their given values, then we will throw the IllegalArgumentException."
+- why would you throw IllegalArgumentException if the return number of entities is 0?
+
+Recommended item not fixed.
+
+>>"JSON will be built programatically by the actions. It will be done using the Jackson library. " ---> which version of the library?
+
+1.9.7. Have added this to ADS and specs and dependency diagram.
+
+>>Scalability was not addressed. An entire section is absent in ADS.
+
+Added section to ADS.
+
+>>ADS does not properly define what the scope of the architecture is. It states: "This project goals is to move and integrates the tracking functionality for Marathon Match into this platform." but this does not tell anything about what this will do.
+
+Added a new para to ADS 1.
+
+>>In the ADS the workflow should talk about how the integration will affect the behavior of the cockpit and to give a higher-level overview of what this project will do and how the users will use it.
+
+The higher-level overview is added in ADS 1.
+Not sure what else I can add to the workflow section. It already is quite clear and descriptive.
+
+>>Q3.1.2 spelling errors
+>>Q3.1.3 spelling errors
+
+All fixed. Did not find changlog
+
+>>Q3.2.1 SD issues
+All fixed. One new SD introduced to elaborate on the JSON and data binding part.
+
+>> Descriptions of classes, methods, and fields are needed in TCUML, because this is a direct to assembly contest.
+Not needed as per copilot response at http://apps.topcoder.com/forums/?module=Thread&threadID=774392&start=0
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+There are some other issues but they are duplicates.
+
+
+
+
+

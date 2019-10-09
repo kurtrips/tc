@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ConfigManager>
+  <!-- Example default configuration for Logger using DiagnosticImpl -->
+  <namespace name="TestLoggerNamespace">
+    <!-- the full classname of the Logger subclass, required -->
+    <property name="logger_class">
+      <Value>TopCoder.LoggingWrapper.DiagnosticImpl</Value>
+    </property>
+
+    <!-- log name of Logger, required -->
+    <property name="logger_name">
+      <Value>logger</Value>
+    </property>
+
+    <!-- default log level, optional -->
+    <property name="default_level">
+      <Value>DEBUG</Value>
+    </property>
+
+    <!-- source for the EventLog, required -->
+    <property name="source">
+      <Value>testsource</Value>
+    </property>
+  </namespace>
+
+  <!--Object Factory's own definition-->
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>Astraea</value>
+    </property>
+  </namespace>
+
+
+  <!--MockLayouter Definition-->
+  <namespace name="Astraea.Layouter">
+    <property name="type_name">
+      <value>Astraea.Inframap.Layout.FailureTests.Layouter</value>
+    </property>
+    <property name="assembly">
+      <value>Astraea.Inframap.Layout.Test.dll</value>
+    </property>
+  </namespace>  
+</ConfigManager>

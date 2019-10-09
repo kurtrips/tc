@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\FAM\Development\HermesScheduleItemPersistence\build\classes\HermesNS.TC.Services.ScheduleItem.Test.dll" total="187" failures="0" not-run="0" date="2008-01-03" time="10:00:44">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="C:\FAM\Development\HermesScheduleItemPersistence" machine-name="HP50041703150" user="Administrator" user-domain="HP50041703150" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="C:\FAM\Development\HermesScheduleItemPersistence\build\classes\HermesNS.TC.Services.ScheduleItem.Test.dll" success="True" time="40.422" asserts="0">
+    <results>
+      <test-suite name="HermesNS" success="True" time="40.422" asserts="0">
+        <results>
+          <test-suite name="HermesNS.TC" success="True" time="40.422" asserts="0">
+            <results>
+              <test-suite name="HermesNS.TC.Services" success="True" time="40.422" asserts="0">
+                <results>
+                  <test-suite name="HermesNS.TC.Services.ScheduleItem" success="True" time="40.422" asserts="0">
+                    <results>
+                      <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence" success="True" time="40.422" asserts="0">
+                        <results>
+                          <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests" success="True" time="6.922" asserts="0">
+                            <results>
+                              <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests" success="True" time="6.922" asserts="0">
+                                <results>
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestConstructor_1" executed="True" success="True" time="0.656" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestConstructor_2" executed="True" success="True" time="0.016" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestConstructor_3" executed="True" success="True" time="0.016" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestSaveActivity_Accuracy" executed="True" success="True" time="0.422" asserts="21" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestSaveActivityGroup_Accuracy" executed="True" success="True" time="0.031" asserts="5" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestSaveActivityType_Accuracy" executed="True" success="True" time="0.031" asserts="10" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestSaveScheduleItem_Accuracy" executed="True" success="True" time="0.125" asserts="41" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestSaveScheduleItemStatus_Accuracy" executed="True" success="True" time="0.031" asserts="5" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestSaveScheduleItemRequestStatus_Accuracy" executed="True" success="True" time="0.031" asserts="5" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteActivity_Accuracy" executed="True" success="True" time="0.047" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteActivityGroup_Accuracy" executed="True" success="True" time="0.031" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteActivityType_Accuracy" executed="True" success="True" time="0.188" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteScheduleItem_Accuracy" executed="True" success="True" time="0.266" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteScheduleItemStatus_Accuracy" executed="True" success="True" time="0.031" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteScheduleItemRequestStatus_Accuracy" executed="True" success="True" time="0.031" asserts="2" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetActivity_Accuracy1" executed="True" success="True" time="0.094" asserts="21" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetActivity_Accuracy2" executed="True" success="True" time="0.016" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetActivityGroup_Accuracy1" executed="True" success="True" time="0.047" asserts="5" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetActivityGroup_Accuracy2" executed="True" success="True" time="0.031" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetActivityType_Accuracy1" executed="True" success="True" time="0.156" asserts="10" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetActivityType_Accuracy2" executed="True" success="True" time="0.031" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleItem_Accuracy1" executed="True" success="True" time="0.172" asserts="41" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleItem_Accuracy2" executed="True" success="True" time="0.016" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleItemStatus_Accuracy1" executed="True" success="True" time="0.063" asserts="5" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleItemStatus_Accuracy2" executed="True" success="True" time="0.031" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleRequestStatus_Accuracy1" executed="True" success="True" time="0.078" asserts="5" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleRequestStatus_Accuracy2" executed="True" success="True" time="0.016" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivities_Accuracy1" executed="True" success="True" time="0.469" asserts="22" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivities_Accuracy2" executed="True" success="True" time="1.000" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivities_Accuracy3" executed="True" success="True" time="0.031" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivityGroups_Accuracy1" executed="True" success="True" time="0.047" asserts="6" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivityGroups_Accuracy2" executed="True" success="True" time="0.016" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivityTypes_Accuracy1" executed="True" success="True" time="0.125" asserts="11" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllActivityTypes_Accuracy2" executed="True" success="True" time="0.016" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllScheduleItemStatuses_Accuracy1" executed="True" success="True" time="0.063" asserts="6" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllScheduleItemStatuses_Accuracy2" executed="True" success="True" time="0.031" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllScheduleRequestStatuses_Accuracy1" executed="True" success="True" time="0.047" asserts="6" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetAllScheduleRequestStatuses_Accuracy2" executed="True" success="True" time="0.031" asserts="1" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestCreateScheduleItemPublishEditCopyRelationship_Accuracy" executed="True" success="True" time="0.547" asserts="82" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestDeleteScheduleItemPublishEditCopyRelationship_Accuracy" executed="True" success="True" time="0.766" asserts="84" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleItemEditCopy_Accuracy" executed="True" success="True" time="0.703" asserts="41" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.AccuracyTests.HermesScheduleItemPersistenceProviderAccuracyTests.TestGetScheduleItemParentCopy_Accuracy" executed="True" success="True" time="0.328" asserts="41" />
+                                </results>
+                              </test-suite>
+                            </results>
+                          </test-suite>
+                          <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests" success="True" time="0.516" asserts="0">
+                            <results>
+                              <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest" success="True" time="0.141" asserts="0">
+                                <results>
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildActivities_ReaderIsNull" executed="True" success="True" time="0.031" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildActivities_ReaderIsClosed" executed="True" success="True" time="0.031" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildActivityGroups_ReaderIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildActivityGroups_ReaderIsClosed" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildActivityTypes_ReaderIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildActivityTypes_ReaderIsClosed" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildScheduleItems_ReaderIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildScheduleItems_ReaderIsClosed" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildScheduleItemStatuses_ReaderIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildScheduleItemStatuses_ReaderIsClosed" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildScheduleItemRequestStatuses_ReaderIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceHelperFailureTest.TestBuildScheduleItemRequestStatuses_ReaderIsClosed" executed="True" success="True" time="0.016" asserts="0" />
+                                </results>
+                              </test-suite>
+                              <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest" success="True" time="0.375" asserts="0">
+                                <results>
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor1_DefaultNamespaceUnexisted" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_NamespaceIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_NamespaceIsEmpty" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_NamespaceIsUnexisted" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_ObjectFactoryNamespaceIsEmpty" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_ConnectionNameMissed" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_ConnectionNameIsEmpty" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_PersistenceHelperMissed" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_PersistenceHelperIsEmpty" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor2_PersistenceHelperIsInvalid" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor3_ConnectionNameIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor3_ConnectionNameIsEmpty" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCtor3_HelperIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveActivity_ActivityIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveActivityGroup_ActivityGroupIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveActivityGroup_InvalidConnection" executed="True" success="True" time="0.078" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveActivityType_ActivityTypeIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveActivityType_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveScheduleItem_ScheduleItemIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveScheduleItemStatus_ScheduleItemStatusIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveScheduleItemStatus_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveScheduleItemRequestStatus_ScheduleRequestStatusIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestSaveScheduleItemRequestStatus_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteActivity_IdNotfound" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteActivity_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteActivityGroup_IdNotfound" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteActivityGroup_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteActivityType_IdNotfound" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteActivityType_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItem_IdNotfound" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItem_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItemStatus_IdNotfound" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItemStatus_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItemRequestStatus_IdNotfound" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItemRequestStatus_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetActivity_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetActivityGroup_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetActivityType_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItem_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItemStatus_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItemRequestStatus_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetAllActivities_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetAllActivityGroups_InvalidConnection" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetAllActivityTypes_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetAllScheduleItemStatuses_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetAllScheduleRequestStatuses_InvalidConnection" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCreateScheduleItemPublishEditCopyRelationship_ParentIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCreateScheduleItemPublishEditCopyRelationship_EditCopyIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestCreateScheduleItemPublishEditCopyRelationship_ConnectionNameInvalidl" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItemPublishEditCopyRelationship_EditCopyIsNull" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestDeleteScheduleItemPublishEditCopyRelationship_ConnectionNameInvalidl" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItemEditCopy_EditCopyIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItemEditCopy_ConnectionNameInvalidl" executed="True" success="True" time="0.016" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItemParentCopy_EditCopyIsNull" executed="True" success="True" time="0.000" asserts="0" />
+                                  <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.FailureTests.HermesScheduleItemPersistenceProviderFailureTest.TestGetScheduleItemParentCopy_ConnectionNameInvalidl" executed="True" success="True" time="0.016" asserts="0" />
+                                </results>
+                              </test-suite>
+                            </results>
+                          </test-suite>
+                          <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests" success="True" time="10.219" asserts="0">
+                            <results>
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests.TestActivity" executed="True" success="True" time="1.672" asserts="50" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests.TestActivityGroup" executed="True" success="True" time="1.500" asserts="100" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests.TestActivityType" executed="True" success="True" time="2.203" asserts="100" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests.TestScheduleItem" executed="True" success="True" time="2.141" asserts="100" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests.TestScheduleItemStatus" executed="True" success="True" time="1.063" asserts="100" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderStressTests.TestScheduleItemRequestStatus" executed="True" success="True" time="1.625" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.DemoClass" success="True" time="1.047" asserts="0">
+                            <results>
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.DemoClass.Demo" executed="True" success="True" time="1.047" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests" success="True" time="21.656" asserts="0">
+                            <results>
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor1" executed="True" success="True" time="0.125" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2" executed="True" success="True" time="0.078" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail1" executed="True" success="True" time="0.109" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail2" executed="True" success="True" time="0.141" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail3" executed="True" success="True" time="0.219" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail4" executed="True" success="True" time="0.250" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail5" executed="True" success="True" time="0.141" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail6" executed="True" success="True" time="0.281" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail7" executed="True" success="True" time="0.297" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor2Fail8" executed="True" success="True" time="0.781" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor3" executed="True" success="True" time="0.453" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor3Fail1" executed="True" success="True" time="0.313" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor3Fail2" executed="True" success="True" time="0.094" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestConstructor3Fail3" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivity1" executed="True" success="True" time="0.188" asserts="56" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivity2" executed="True" success="True" time="0.625" asserts="112" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityFail1" executed="True" success="True" time="0.422" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityFail2" executed="True" success="True" time="5.359" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityGroup1" executed="True" success="True" time="0.781" asserts="8" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityGroup2" executed="True" success="True" time="0.234" asserts="16" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityGroupFail1" executed="True" success="True" time="0.078" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityGroupFail2" executed="True" success="True" time="0.391" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityType1" executed="True" success="True" time="1.125" asserts="22" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityType2" executed="True" success="True" time="0.297" asserts="52" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityTypeFail1" executed="True" success="True" time="0.125" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveActivityTypeFail2" executed="True" success="True" time="0.250" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItem1" executed="True" success="True" time="0.281" asserts="149" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItem2" executed="True" success="True" time="0.250" asserts="298" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemFail1" executed="True" success="True" time="0.109" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemFail2" executed="True" success="True" time="0.156" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemStatus1" executed="True" success="True" time="0.125" asserts="8" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemStatus2" executed="True" success="True" time="0.125" asserts="16" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemStatusFail1" executed="True" success="True" time="0.078" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemStatusFail2" executed="True" success="True" time="0.266" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemRequestStatus1" executed="True" success="True" time="0.094" asserts="8" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemRequestStatus2" executed="True" success="True" time="0.250" asserts="16" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemRequestStatusFail1" executed="True" success="True" time="4.469" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestSaveScheduleItemRequestStatusFail2" executed="True" success="True" time="0.109" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteActivity" executed="True" success="True" time="0.063" asserts="58" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteActivityFail1" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteActivityGroup" executed="True" success="True" time="0.063" asserts="10" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteActivityGroupFail1" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteActivityType" executed="True" success="True" time="0.047" asserts="24" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteActivityTypeFail1" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItem" executed="True" success="True" time="0.094" asserts="150" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItemFail1" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItemStatus" executed="True" success="True" time="0.047" asserts="10" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItemStatusFail1" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItemRequestStatus" executed="True" success="True" time="0.063" asserts="10" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItemRequestStatusFail1" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetActivity" executed="True" success="True" time="0.047" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetActivityFail1" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetActivityGroup" executed="True" success="True" time="0.031" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetActivityGroupFail1" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetActivityType" executed="True" success="True" time="0.031" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetActivityTypeFail1" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItem" executed="True" success="True" time="0.047" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemFail1" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemStatus" executed="True" success="True" time="0.047" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemStatusFail1" executed="True" success="True" time="0.250" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemRequestStatus" executed="True" success="True" time="0.172" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemRequestStatusFail1" executed="True" success="True" time="0.094" asserts="0" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetAllActivities" executed="True" success="True" time="0.094" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetAllActivityGroups" executed="True" success="True" time="0.047" asserts="1" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetAllActivityTypes" executed="True" success="True" time="0.047" asserts="1" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetAllScheduleItemStatuses" executed="True" success="True" time="0.078" asserts="1" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetAllScheduleRequestStatuses" executed="True" success="True" time="0.047" asserts="1" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestCreateScheduleItemPublishEditCopyRelationship" executed="True" success="True" time="0.109" asserts="296" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestDeleteScheduleItemPublishEditCopyRelationship" executed="True" success="True" time="0.078" asserts="2" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemEditCopy" executed="True" success="True" time="0.063" asserts="296" />
+                              <test-case name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProviderTests.TestGetScheduleItemParentCopy" executed="True" success="True" time="0.094" asserts="296" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigManager>
+  <!-- //////////////////////////MAIN CONFIGURATION//////////////////////////-->
+  <!--Configuration properties for default namespace-->
+  <namespace name="HermesNS.TC.Services.ScheduleItem.HermesScheduleItemService">
+    <property name="objectFactoryNamespace">
+      <value>TestOFNamespace</value>
+    </property>
+    <property name="auditClientKey">
+      <value>TestAuditClientKey</value>
+    </property>
+    <property name="genericNotesClientKey">
+      <value>TestGenericNotesClientKey</value>
+    </property>
+    <property name="persistence">
+      <value>TestPersistenceKey</value>
+    </property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>    
+  </namespace>
+
+
+  <!--Object Factory's own definition using TestOFNamespace namespace-->
+  <namespace name="TestOFNamespace.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TestOFNamespace.default.parameters">
+    <property name="p1:string">
+      <value>HermesScheduleItemService</value>
+    </property>
+  </namespace>
+
+
+  <!--Object Factory's own definition using default namespace-->
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>HermesScheduleItemService</value>
+    </property>
+  </namespace>
+
+
+  <!--Object definition for the persistence provider-->
+  <namespace name="HermesScheduleItemService.TestPersistenceKey">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+
+  
+  <!--Object definition for the HermesLogger-->
+  <namespace name="HermesScheduleItemService.TestHermesLoggerKey">
+    <property name="type_name">
+      <value>HermesNS.TC.LoggingWrapperPublisher.HermesLogger</value>
+    </property>
+    <property name="assembly">
+      <value>Hermes_Services_for_TopCoder.dll</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.TestHermesLoggerKey.parameters">
+    <property name="p1:string">
+      <value>SomeLogger</value>
+    </property>
+  </namespace>
+  <namespace name="HermesNS.TC.DAAB">
+    <property name="default_profile_key">
+      <value>ProfileKey</value>
+    </property>
+  </namespace>
+  <namespace name="HermesNS.TC.LoggingWrapperPublisher">
+    <property name="object_factory_namespace">
+      <value>TestOFNamespace</value>
+    </property>
+    <property name="generic_exception_manager_key">
+      <value>GenericExceptionManagerKey</value>
+    </property>    
+  </namespace>
+  <namespace name="HermesScheduleItemService.GenericExceptionManagerKey">
+    <property name="type_name">
+      <value>HermesNS.TC.LoggingWrapperPublisher.DefaultGenericExceptionManager</value>
+    </property>
+    <property name="assembly">
+      <value>Hermes_Services_for_TopCoder.dll</value>
+    </property>
+  </namespace>  
+
+
+  <!--Object definition for the audit client-->
+  <namespace name="HermesScheduleItemService.TestAuditClientKey">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Clients.AuditServiceClient</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.TestAuditClientKey.parameters">
+    <property name="p1:object">
+      <value>AuditBindingKey</value>
+    </property>
+    <property name="p2:object">
+      <value>AuditEndPointAddress</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.AuditBindingKey">
+    <property name="type_name">
+      <value>System.ServiceModel.BasicHttpBinding, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.AuditEndPointAddress">
+    <property name="type_name">
+      <value>System.ServiceModel.EndpointAddress, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.AuditEndPointAddress.parameters">
+    <property name="p1:string">
+      <value>http://localhost:22222/HermesAuditTrailSaveService</value>
+    </property>
+  </namespace>
+
+
+  <!--Object definition for the note client-->
+  <namespace name="HermesScheduleItemService.TestGenericNotesClientKey">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Clients.GenericNotesServiceClient</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.TestGenericNotesClientKey.parameters">
+    <property name="p1:object">
+      <value>NoteBindingKey</value>
+    </property>
+    <property name="p2:object">
+      <value>NoteEndPointAddress</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.NoteBindingKey">
+    <property name="type_name">
+      <value>System.ServiceModel.BasicHttpBinding, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.NoteEndPointAddress">
+    <property name="type_name">
+      <value>System.ServiceModel.EndpointAddress, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.NoteEndPointAddress.parameters">
+    <property name="p1:string">
+      <value>http://localhost:44444/HermesGenericNoteService</value>
+    </property>
+  </namespace>
+
+
+  <!--Defintion of the exception manager for service host-->
+  <namespace name="HermesScheduleItemService.exceptionManager">
+    <property name="type_name">
+      <value>TopCoder.Util.ExceptionManager.ExceptionPublishManager</value>
+    </property>
+    <property name="assembly">
+      <value>TopCoder.Util.ExceptionManager.dll</value>
+    </property>
+  </namespace>
+
+
+  <!--Defintion of the logger for service host-->
+  <namespace name="HermesScheduleItemService.logger">
+    <property name="type_name">
+      <value>TopCoder.Services.WCF.Loggers.DefaultTCWcfLogger</value>
+    </property>
+    <property name="assembly">
+      <value>TopCoder.Services.WCF.dll</value>
+    </property>
+  </namespace>
+
+
+  <!--Configuration for HermesAuthorizationServiceClient-->
+  <namespace name="Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient">
+    <property name="ObjectFactoryNamespace">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+    <property name="Binding">
+      <value>MediatorBindingKey</value>
+    </property>
+    <property name="EndpointAddress">
+      <value>MediatorEndpointAddress</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.MediatorBindingKey">
+    <property name="type_name">
+      <value>System.ServiceModel.BasicHttpBinding, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.MediatorEndpointAddress">
+    <property name="type_name">
+      <value>System.ServiceModel.EndpointAddress, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.MediatorEndpointAddress.parameters">
+    <property name="p1:string">
+      <value>http://localhost:55555/HermesAuthorizationService</value>
+    </property>
+  </namespace>
+
+
+  <!--Configuration for HermesAuthorizationService-->
+  <namespace name="Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService">
+    <property name="login_namespace">
+      <value>login_namespace</value>
+    </property>
+    <property name="role_namespace">
+      <value>role_namespace</value>
+    </property>
+    <property name="function_namespace">
+      <value>function_namespace</value>
+    </property>
+    <property name="entity_namespace">
+      <value>function_namespace</value>
+    </property>    
+  </namespace>
+  <namespace name="login_namespace">
+    <property name="sessionIds">
+      <value>session_id_name</value>
+    </property>
+    <property name="session_id_name_allow">
+      <value>session_token_name</value>
+    </property>    
+  </namespace>
+  <namespace name="role_namespace">
+  </namespace>
+  <namespace name="entity_namespace">
+  </namespace>
+  <namespace name="function_namespace">
+    <property name="functionNames">
+      <value>CreateActivity</value>
+      <value>CreateActivityGroup</value>
+      <value>CreateActivityType</value>
+      <value>CreateScheduleItem</value>
+      <value>CreateScheduleItemStatus</value>
+      <value>CreateScheduleItemRequestStatus</value>
+      <value>DeleteActivity</value>
+      <value>DeleteActivityType</value>
+      <value>DeleteScheduleItem</value>
+      <value>DeleteScheduleItemStatus</value>
+      <value>DeleteScheduleItemRequestStatus</value>
+      <value>GetActivity</value>      
+      <value>GetActivityGroup</value>
+      <value>GetActivityType</value>
+      <value>GetScheduleItem</value>
+      <value>GetScheduleItemStatus</value>
+      <value>GetScheduleItemRequestStatus</value>
+      <value>SaveActivity</value>
+      <value>SaveActivityGroup</value>
+      <value>SaveActivityType</value>
+      <value>SaveScheduleItem</value>
+      <value>SaveScheduleItemStatus</value>
+      <value>SaveScheduleItemRequestStatus</value>
+      <value>CreateScheduleItemEditCopy</value>
+      <value>CreateScheduleItemPublishEditCopyRelationship</value>
+      <value>DeleteScheduleItemPublishEditCopyRelationship</value>
+      <value>GetScheduleItemEditCopy</value>
+      <value>GetScheduleItemParentCopy</value>
+      <value>PublishScheduleItem</value>
+    </property>
+    <property name="CreateActivity_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateActivityGroup_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateActivityType_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateScheduleItem_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateScheduleItemRequestStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateScheduleItemStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="DeleteActivity_permission">
+      <value>true</value>
+    </property>
+    <property name="DeleteActivityType_permission">
+      <value>true</value>
+    </property>
+    <property name="DeleteScheduleItem_permission">
+      <value>true</value>
+    </property>
+    <property name="DeleteScheduleItemStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="DeleteScheduleItemRequestStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="GetActivity_permission">
+      <value>true</value>
+    </property>
+    <property name="GetActivityGroup_permission">
+      <value>true</value>
+    </property>
+    <property name="GetActivityType_permission">
+      <value>true</value>
+    </property>
+    <property name="GetScheduleItem_permission">
+      <value>true</value>
+    </property>
+    <property name="GetScheduleItemStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="GetScheduleItemRequestStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="SaveActivity_permission">
+      <value>true</value>
+    </property>
+    <property name="SaveActivityGroup_permission">
+      <value>true</value>
+    </property>
+    <property name="SaveActivityType_permission">
+      <value>true</value>
+    </property>
+    <property name="SaveScheduleItem_permission">
+      <value>true</value>
+    </property>
+    <property name="SaveScheduleItemStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="SaveScheduleItemRequestStatus_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateScheduleItemEditCopy_permission">
+      <value>true</value>
+    </property>
+    <property name="CreateScheduleItemPublishEditCopyRelationship_permission">
+      <value>true</value>
+    </property>
+    <property name="DeleteScheduleItemPublishEditCopyRelationship_permission">
+      <value>true</value>
+    </property>
+    <property name="GetScheduleItemEditCopy_permission">
+      <value>true</value>
+    </property>
+    <property name="GetScheduleItemParentCopy_permission">
+      <value>true</value>
+    </property>
+    <property name="PublishScheduleItem_permission">
+      <value>true</value>
+    </property>    
+  </namespace>  
+  <!-- //////////////////////////END OF MAIN CONFIGURATION//////////////////////////-->
+
+
+
+  <!-- //////////////////////////CONFIGURATION FOR OTHER TESTS//////////////////////////-->
+
+  <!--Configuration properties for MyOtherNamespace namespace-->
+  <namespace name="MyOtherNamespace">
+    <property name="objectFactoryNamespace">
+      <value>TestOFNamespace</value>
+    </property>
+    <property name="auditClientKey">
+      <value>TestAuditClientKey</value>
+    </property>
+    <property name="genericNotesClientKey">
+      <value>TestGenericNotesClientKey</value>
+    </property>
+    <property name="persistence">
+      <value>TestPersistenceKey</value>
+    </property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for MyFailureNamespace1 namespace-->
+  <namespace name="MyFailureNamespace1">
+    <property name="objectFactoryNamespace">
+      <value>TestOFNamespace</value>
+    </property>
+    <property name="auditClientKey">
+      <value>TestAuditClientKey</value>
+    </property>
+    <property name="genericNotesClientKey">
+      <value>TestGenericNotesClientKey</value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for MyFailureNamespace2 namespace-->
+  <namespace name="MyFailureNamespace2">
+    <property name="objectFactoryNamespace">
+      <value>                                            </value>
+    </property>
+    <property name="auditClientKey">
+      <value>TestAuditClientKey</value>
+    </property>
+    <property name="genericNotesClientKey">
+      <value>TestGenericNotesClientKey</value>
+    </property>
+    <property name="persistence">
+      <value>TestPersistenceKey</value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for MyFailureNamespace3 namespace-->
+  <namespace name="MyFailureNamespace3">
+    <property name="objectFactoryNamespace">
+      <value></value>
+    </property>
+    <property name="auditClientKey">
+      <value>TestAuditClientKey</value>
+    </property>
+    <property name="genericNotesClientKey">
+      <value>TestGenericNotesClientKey</value>
+    </property>
+    <property name="persistence">
+      <value>exceptionManager</value>
+    </property>
+  </namespace>
+
+  <!-- //////////////////////////END OF CONFIGURATION FOR OTHER TESTS//////////////////////////-->
+
+</ConfigManager>

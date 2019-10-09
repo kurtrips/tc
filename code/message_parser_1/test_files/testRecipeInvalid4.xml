@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MessageConfig>
+  <MessageType XPath="/ServiceRequest/@Type"/>
+  <AttributeSet XPath="" InnerCount="1">
+    <Attribute Name="ID"
+      XPath="/ServiceRequest/@RequestID"
+      Type="System.DateTime" />
+      <!--Wrong type above. Must throw error.-->    
+  </AttributeSet>
+  <AttributeSet XPath="" InnerCount="1">
+    <Attribute Name="EquipID" 
+      XPath="/ServiceRequest/Equipment/@ID" 
+      Mandatory="yes" 
+      Type="System.Int32" />
+    <Attribute Name="EquipCustomer" 
+      XPath="/ServiceRequest/Equipment/@Customer" 
+      Mandatory="yes" 
+      Type="System.Int32" />
+    <Attribute Name="EquipDescrip" 
+      XPath="/ServiceRequest/Equipment" 
+      Mandatory="no" 
+      Type="System.String" />
+    <Attribute Name="SchedDate" 
+      XPath="/ServiceRequest/Schedule/@Date" 
+      Mandatory="yes" 
+      Type="System.DateTime" />
+    <Attribute Name="SchedType" 
+      XPath="/ServiceRequest/Schedule/@Date" 
+      Mandatory="no" 
+      Type="System.String" />
+  </AttributeSet>
+  <AttributeSet XPath="/ServiceRequest/Bonus" InnerCount="*">
+    <Attribute Name="PromotionID"
+      XPath="/BonusID"
+      Mandatory="yes"
+      Type="System.Int32" />
+    <Attribute Name="DueDate"
+      XPath="/BonusID/@due"
+      Mandatory="yes"
+      Type="System.DateTime" />
+  </AttributeSet>
+  <SourceMessageQueue XPath="ServiceRequest/SourceMessageQueue/@Name"/>
+  <DestinationMessageQueue XPath="ServiceRequest/DestinationMessageQueue/@Name"/>
+</MessageConfig>

@@ -1,0 +1,1268 @@
+<apispec>
+  <package name="MockLibrary">
+    <class name="WakeMeUp" visibility="public">
+      <doc>
+        <summary>
+          A class with event.
+          Demonstrates the xpaths formed for event and delegate types.
+        </summary>
+      </doc>
+      <annotation>
+        System.<typeref xpath="/package[@name='System']/class[@name='SerializableAttribute']">SerializableAttribute</typeref>
+      </annotation>
+      <constructor name=".ctor" visibility="private">
+        <doc>
+          <summary>
+            Constructor. Registers the <see cref="MockLibrary.AlarmEventHandler" xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']" /> handler to the
+            <see cref="MockLibrary.WakeMeUp.Alarm" xpath="/package[@name='MockLibrary']/class[@name='WakeMeUp']/event[@name='Alarm']" /> event
+          </summary>
+        </doc>
+      </constructor>
+      <method name="AlarmRang" visibility="public">
+        <doc>
+          <summary>
+            AlarmRang has the same signature as AlarmEventHandler.
+          </summary>
+          <param name="sender">sender</param>
+          <param name="e">e</param>
+          <returns>a string</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="sender" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+        <param name="e" typevaluespec="System.EventArgs">
+          System.<typeref xpath="/package[@name='System']/class[@name='EventArgs']">EventArgs</typeref>
+        </param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+      <field name="field2" visibility="public">
+        <doc>
+          <summary>
+            An Obsolete, NonSerialized field
+          </summary>
+        </doc>
+        <annotation>
+          System.<typeref xpath="/package[@name='System']/class[@name='NonSerializedAttribute']">NonSerializedAttribute</typeref>
+        </annotation>
+        <annotation>
+          System.<typeref xpath="/package[@name='System']/class[@name='ObsoleteAttribute']">ObsoleteAttribute</typeref>
+        </annotation>
+        <type>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>[]
+        </type>
+      </field>
+      <field name="Alarm" visibility="private">
+        <type>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']">AlarmEventHandler</typeref>
+        </type>
+      </field>
+      <event name="Alarm" visibility="public">
+        <doc>
+          <summary>
+            An event
+          </summary>
+        </doc>
+        <type>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']">AlarmEventHandler</typeref>
+        </type>
+      </event>
+    </class>
+    <class name="ClassF" visibility="public">
+      <doc>
+        <summary>
+          A class demonstrating dependent library.
+        </summary>
+      </doc>
+      <parent>
+        BaseLibrary.<typeref xpath="/package[@name='BaseLibrary']/class[@name='ClassBaseA']">ClassBaseA</typeref>
+      </parent>
+      <constructor name=".ctor" visibility="public" />
+      <method name="ADependentFunction" visibility="public">
+        <doc>
+          <summary>
+            Function returning <see cref="BaseLibrary.ClassBaseA" xpath="/package[@name='BaseLibrary']/class[@name='ClassBaseA']" /> instance.
+          </summary>
+          <returns>ClassBaseA instance.</returns>
+        </doc>
+        <return>
+          BaseLibrary.<typeref xpath="/package[@name='BaseLibrary']/class[@name='ClassBaseA']">ClassBaseA</typeref>
+        </return>
+      </method>
+      <method name="Doit" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+    </class>
+    <class name="ClassA" visibility="public">
+      <doc>
+        <summary>
+          Empty class.
+          Use by other classes.
+          Sample xpath is <see cref="MockLibrary.ClassA" xpath="/package[@name='MockLibrary']/class[@name='ClassA']" />
+
+          This is a sample reference to a non-existing class <see cref="NoSuchClass" xpath="T:NoSuchClass" />
+          This is a sample reference to a non-existing namespace <see cref="NoSuchNamespace" xpath="N:NoSuchNamespace" />
+          This is a sample reference to a non-existing method <see cref="MockLibrary.ClassA.NoSuchMethod" xpath="M:MockLibrary.ClassA.NoSuchMethod" />
+          This is a sample reference to a non-existing field <see cref="MockLibrary.ClassA.NoSuchField" xpath="/package[@name='MockLibrary']/class[@name='ClassA']/field[@name='NoSuchField']" />
+        </summary>
+      </doc>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceA']">InterfaceA</typeref>
+      </parent>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetAInstance" visibility="public" modifiers="virtual">
+        <doc>
+          <summary>
+            GetAInstance method
+            Sample xpath is <see cref="MockLibrary.ClassA.GetAInstance(MockLibrary.ClassB)" xpath="/package[@name='MockLibrary']/class[@name='ClassA']/method[@name='GetAInstance' and param[1]='MockLibrary.ClassB' and not(param[2])]" />
+          </summary>
+          <param name="b">ClassB instance</param>
+          <returns>ClassA instance</returns>
+        </doc>
+        <return>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/enum[type='EnumA']">EnumA</typeref>
+        </return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassB']">ClassB</typeref>
+        </param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+    </class>
+    <class name="ClassB" visibility="public">
+      <doc>
+        <summary>
+          Class B doc.
+          Inherits from ClassA.
+          Demonstrates public field, method, property.
+          Demonstrates a method using instance of <see cref="MockLibrary.ClassA" xpath="/package[@name='MockLibrary']/class[@name='ClassA']" />
+          and returning a <see cref="MockLibrary.ClassA" xpath="/package[@name='MockLibrary']/class[@name='ClassA']" /> array. Demonstrates the xpath formed for a class.
+          Also demonstrates the xpath formed for a field and a method and property.
+        </summary>
+      </doc>
+      <annotation>
+        System.Reflection.<typeref xpath="/package[@name='System.Reflection']/class[@name='DefaultMemberAttribute']">DefaultMemberAttribute</typeref>
+      </annotation>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceA']">InterfaceA</typeref>
+      </parent>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassA']">ClassA</typeref>
+      </parent>
+      <constructor name=".ctor" visibility="public" />
+      <method name="TestMethod1" visibility="public">
+        <doc>
+          <summary>
+            TestMethod1 doc.
+          </summary>
+          <param name="objA">ClassA instance</param>
+          <returns>a string</returns>
+        </doc>
+        <return>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassA']">ClassA</typeref>[]
+        </return>
+        <param name="objA" typevaluespec="MockLibrary.ClassA">
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassA']">ClassA</typeref>
+        </param>
+      </method>
+      <method name="GetName" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given id.
+            1st overload for this method.
+            A sample xpath should be formed <see cref="MockLibrary.ClassB.GetName(System.Int32)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/method[@name='GetName' and param[1]='System.Int32' and not(param[2])]" />
+          </summary>
+          <param name="id">The id</param>
+          <returns>The name</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="id" typevaluespec="System.Int32">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </param>
+      </method>
+      <method name="GetName" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given string id.
+            2nd overload. Same number of parameters but different type of parameter.
+            A sample xpath should be formed <see cref="MockLibrary.ClassB.GetName(System.String)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/method[@name='GetName' and param[1]='System.String' and not(param[2])]" />
+          </summary>
+          <param name="id">The id</param>
+          <returns>The name</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="id" typevaluespec="System.String">
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </param>
+      </method>
+      <method name="GetName" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given string id.
+            3rd overload. Different number of parameters.
+            A sample xpath should be formed <see cref="MockLibrary.ClassB.GetName(System.String,System.Int32)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/method[@name='GetName' and param[1]='System.String' and param[2]='System.Int32' and not(param[3])]" />
+          </summary>
+          <param name="id">string id</param>
+          <param name="iid">Int id</param>
+          <returns>The name</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="id" typevaluespec="System.String">
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </param>
+        <param name="iid" typevaluespec="System.Int32">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </param>
+      </method>
+      <method name="GetNames" visibility="public" modifiers="static">
+        <doc>
+          <summary>
+            Gets the name for a given id.
+            Simply delegates to <see cref="MockLibrary.ClassB.GetName(System.Int32)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/method[@name='GetName' and param[1]='System.Int32' and not(param[2])]" />
+          </summary>
+          <param name="ids">The id</param>
+          <returns>The names</returns>
+        </doc>
+        <return>
+          System.Collections.<typeref xpath="/package[@name='System.Collections']/interface[@name='IList']">IList</typeref>
+        </return>
+        <param name="ids" typevaluespec="System.Int32[]">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>[]
+        </param>
+      </method>
+      <method name="SetName" visibility="public">
+        <doc>
+          <summary>
+            Adds the id and name to the <see cref="MockLibrary.ClassB.namesIds" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/field[@name='namesIds']" /> variable.
+          </summary>
+          <param name="id">The id.</param>
+          <param name="name">The name.</param>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+        <param name="id" typevaluespec="System.Int32">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </param>
+        <param name="name" typevaluespec="System.String">
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </param>
+      </method>
+      <method name="IsPropNull" visibility="public">
+        <doc>
+          <summary>
+            This method demonstartes an xpath to a property.
+            It uses the <see cref="MockLibrary.ClassB.TestProperty1" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/property[@name='TestProperty1']" /> property.
+          </summary>
+          <returns></returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+      </method>
+      <indexer name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An example indexer.
+            A sample xpath should be formed <see cref="MockLibrary.ClassB.get_Item(System.Int32)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/indexer[@name='get_Item' and param[1]='System.Int32' and not(param[2])]" />
+          </summary>
+          <param name="id">An id</param>
+          <returns>A string</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="id" typevaluespec="System.Int32">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </param>
+      </indexer>
+      <indexer name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An example indexer. 2nd overload with same number of params but different types.
+            A sample xpath should be formed <see cref="MockLibrary.ClassB.get_Item(System.String)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/indexer[@name='get_Item' and param[1]='System.String' and not(param[2])]" />
+          </summary>
+          <param name="id">An id</param>
+          <returns>A string</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="id" typevaluespec="System.String">
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </param>
+      </indexer>
+      <indexer name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An example indexer. 3nd overload with different number of params.
+            A sample xpath should be formed <see cref="MockLibrary.ClassB.get_Item(System.String,System.Int32)" xpath="/package[@name='MockLibrary']/class[@name='ClassB']/indexer[@name='get_Item' and param[1]='System.String' and param[2]='System.Int32' and not(param[3])]" />
+          </summary>
+          <param name="id">An id</param>
+          <param name="iid">int id</param>
+          <returns>A string</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="id" typevaluespec="System.String">
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </param>
+        <param name="iid" typevaluespec="System.Int32">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </param>
+      </indexer>
+      <method name="BigAndNestedArrayReturningFunction" visibility="public">
+        <doc>
+          <summary>
+            Some folks dont really like generics. They prefer really big and nested arrays.
+          </summary>
+          <returns>Phew</returns>
+        </doc>
+        <return>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassA']">ClassA</typeref>[][,,][]
+        </return>
+      </method>
+      <method name="GetAInstance" visibility="public" modifiers="virtual">
+        <return>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/enum[type='EnumA']">EnumA</typeref>
+        </return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassB']">ClassB</typeref>
+        </param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+      <property name="TestProperty1" visibility="public" modifiers="virtual read-write">
+        <doc>
+          <summary>
+            A test property with type <see cref="MockLibrary.ClassA" xpath="/package[@name='MockLibrary']/class[@name='ClassA']" />
+          </summary>
+        </doc>
+        <type>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassA']">ClassA</typeref>
+        </type>
+      </property>
+      <field name="namesIds" visibility="public">
+        <doc>
+          <summary>
+            Contains id to name mappings.
+          </summary>
+        </doc>
+        <type>
+          System.Collections.<typeref xpath="/package[@name='System.Collections']/interface[@name='IDictionary']">IDictionary</typeref>
+        </type>
+      </field>
+    </class>
+    <interface name="InterfaceA" visibility="public">
+      <doc>
+        <summary>
+          InterfaceA
+        </summary>
+      </doc>
+      <method name="GetAInstance" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            GetAInstance method
+          </summary>
+          <param name="b">ClassB instance</param>
+          <returns>ClassA instance</returns>
+        </doc>
+        <return>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/enum[type='EnumA']">EnumA</typeref>
+        </return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassB']">ClassB</typeref>
+        </param>
+      </method>
+    </interface>
+    <interface name="InterfaceB" visibility="public">
+      <doc>
+        <summary>
+          InterfaceB
+        </summary>
+      </doc>
+      <method name="JustDoIt" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            JustDoIt
+          </summary>
+          <param name="listParam">listParam</param>
+          <param name="boolParam">boolParam</param>
+          <param name="arrayParam">arrayParam</param>
+          <returns></returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="listParam" typevaluespec="System.Collections.IList">
+          System.Collections.<typeref xpath="/package[@name='System.Collections']/interface[@name='IList']">IList</typeref>
+        </param>
+        <param name="boolParam" typevaluespec="System.Boolean">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </param>
+        <param name="arrayParam" typevaluespec="System.String[]">
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>[]
+        </param>
+      </method>
+    </interface>
+    <interface name="InterfaceC" visibility="public">
+      <doc>
+        <summary>
+          InterfaceC
+        </summary>
+      </doc>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceB']">InterfaceB</typeref>
+      </parent>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceA']">InterfaceA</typeref>
+      </parent>
+      <method name="SayHelloToTheWorld" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            Say Hello
+          </summary>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+    </interface>
+    <interface name="InterfaceX" visibility="public">
+      <doc>
+        <summary>
+          InterfaceX
+          Sample xpath is <see cref="MockLibrary.InterfaceX" xpath="/package[@name='MockLibrary']/interface[@name='InterfaceX']" />
+        </summary>
+      </doc>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceB']">InterfaceB</typeref>
+      </parent>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceA']">InterfaceA</typeref>
+      </parent>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceC']">InterfaceC</typeref>
+      </parent>
+    </interface>
+    <struct name="StructA" visibility="public">
+      <doc>
+        <summary>
+          Structure A
+        </summary>
+      </doc>
+      <annotation>
+        System.<typeref xpath="/package[@name='System']/class[@name='SerializableAttribute']">SerializableAttribute</typeref>
+      </annotation>
+      <parent>
+        MockLibrary.<typeref xpath="/package[@name='MockLibrary']/interface[@name='InterfaceA']">InterfaceA</typeref>
+      </parent>
+      <parent>
+        System.<typeref xpath="/package[@name='System']/class[@name='ValueType']">ValueType</typeref>
+      </parent>
+      <method name="Method1" visibility="public">
+        <doc>
+          <summary>
+            Method1
+          </summary>
+          <param name="doc">XmlDocument</param>
+          <returns>empty string</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="doc" typevaluespec="System.Xml.XmlDocument">
+          System.Xml.<typeref xpath="/package[@name='System.Xml']/class[@name='XmlDocument']">XmlDocument</typeref>
+        </param>
+      </method>
+      <method name="GetAInstance" visibility="public" modifiers="virtual">
+        <doc>
+          <summary>
+            GetInstance method. Returns a <see cref="MockLibrary.EnumA" xpath="/package[@name='MockLibrary']/enum[type='EnumA']" /> instance.
+          </summary>
+          <param name="b">ClassB instance</param>
+          <returns>EnumA instance</returns>
+        </doc>
+        <return>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/enum[type='EnumA']">EnumA</typeref>
+        </return>
+        <param name="b" typevaluespec="MockLibrary.ClassB">
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassB']">ClassB</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="override">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="override">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="ToString" visibility="public" modifiers="override">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+      <field name="array" visibility="public">
+        <doc>
+          <summary>
+            A <see cref="MockLibrary.StructA" xpath="/package[@name='MockLibrary']/struct[@name='StructA']" /> array.
+          </summary>
+        </doc>
+        <type>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/struct[@name='StructA']">StructA</typeref>[]
+        </type>
+      </field>
+    </struct>
+    <enum name="EnumA" visibility="public">
+      <doc>
+        <summary>
+          Enum A
+        </summary>
+      </doc>
+      <annotation>
+        System.<typeref xpath="/package[@name='System']/class[@name='SerializableAttribute']">SerializableAttribute</typeref>
+      </annotation>
+      <type>System.Int32</type>
+      <value name="Value3" />
+      <value name="Value2" />
+      <value name="Value1" />
+    </enum>
+    <delegate name="AlarmEventHandler" visibility="public">
+      <doc>
+        <summary>
+          A delegate class
+        </summary>
+        <param name="sender">sender</param>
+        <param name="e">e</param>
+        <returns>a string</returns>
+      </doc>
+      <annotation>
+        System.<typeref xpath="/package[@name='System']/class[@name='SerializableAttribute']">SerializableAttribute</typeref>
+      </annotation>
+      <return>
+        System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+      </return>
+      <param name="sender" typevaluespec="System.Object">
+        System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+      </param>
+      <param name="e" typevaluespec="System.EventArgs">
+        System.<typeref xpath="/package[@name='System']/class[@name='EventArgs']">EventArgs</typeref>
+      </param>
+    </delegate>
+  </package>
+  <package name="MockLibrary.Nested">
+    <class name="ClassC" visibility="public">
+      <doc>
+        <summary>
+          Class C doc. Contains many different visibilities and modifiers. Also contains nested classes.
+          Also this class is in the <see cref="MockLibrary.Nested" xpath="/package[@name='MockLibrary.Nested']" /> namespace.
+          So demonstrates the xpath for namespaces also.
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor
+            Sample xpath is <see cref="MockLibrary.Nested.ClassC.#ctor" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/constructor[@name='.ctor' and not(param[1])]" />
+          </summary>
+        </doc>
+      </constructor>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+      <field name="privateInt" visibility="private">
+        <doc>
+          <summary>
+            A private integer.
+            Sample xpath is <see cref="MockLibrary.Nested.ClassC.privateInt" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/field[@name='privateInt']" />
+          </summary>
+        </doc>
+        <type>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </type>
+      </field>
+      <class name="ClassD" visibility="public">
+        <doc>
+          <summary>
+            A nested class of ClassC.
+            A sample xpath is <see cref="MockLibrary.Nested.ClassC.ClassD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']" />
+          </summary>
+        </doc>
+        <constructor name=".ctor" visibility="public">
+          <doc>
+            <summary>
+              A constructor
+            </summary>
+            <param name="x">int param</param>
+          </doc>
+          <param name="x" typevaluespec="System.Int32">
+            System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+          </param>
+        </constructor>
+        <constructor name=".cctor" visibility="private" modifiers="static" />
+        <method name="MethodC" visibility="protected" modifiers="virtual">
+          <doc>
+            <summary>
+              A method
+            </summary>
+            <param name="x">ClassA param</param>
+            <param name="y">ClassE param</param>
+            <returns>a string array</returns>
+          </doc>
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>[]
+          </return>
+          <param name="x" typevaluespec="MockLibrary.ClassB">
+            MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassB']">ClassB</typeref>
+          </param>
+          <param name="y" typevaluespec="MockLibrary.Nested.ClassC+ClassD+ClassE">
+            MockLibrary.Nested.<typeref xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']/class[@name='ClassE']">ClassCClassDClassE</typeref>
+          </param>
+        </method>
+        <method name="ClassEvent" visibility="public">
+          <doc>
+            <summary>
+              event handler for anEvent
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+            <returns>empty string</returns>
+          </doc>
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+          </return>
+          <param name="sender" typevaluespec="System.Object">
+            System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+          </param>
+          <param name="e" typevaluespec="System.EventArgs">
+            System.<typeref xpath="/package[@name='System']/class[@name='EventArgs']">EventArgs</typeref>
+          </param>
+        </method>
+        <method name="GetType" visibility="public">
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+          </return>
+        </method>
+        <method name="MemberwiseClone" visibility="protected">
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+          </return>
+        </method>
+        <method name="ToString" visibility="public" modifiers="virtual">
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+          </return>
+        </method>
+        <method name="Equals" visibility="public" modifiers="virtual">
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+          </return>
+          <param name="obj" typevaluespec="System.Object">
+            System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+          </param>
+        </method>
+        <method name="GetHashCode" visibility="public" modifiers="virtual">
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+          </return>
+        </method>
+        <method name="Finalize" visibility="protected" modifiers="override">
+          <annotation>
+            System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+          </annotation>
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+          </return>
+        </method>
+        <property name="Prop" visibility="protected" modifiers="read-write">
+          <doc>
+            <summary>
+              A protected property of type ClassE.
+            </summary>
+          </doc>
+          <type>
+            MockLibrary.Nested.<typeref xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']/class[@name='ClassE']">ClassCClassDClassE</typeref>
+          </type>
+        </property>
+        <field name="anEvent" visibility="private">
+          <type>
+            MockLibrary.<typeref xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']">AlarmEventHandler</typeref>
+          </type>
+        </field>
+        <field name="count" visibility="public" modifiers="static readonly">
+          <doc>
+            <summary>
+              An int variable with static and readonly.
+              A sample xpath is <see cref="MockLibrary.Nested.ClassC.ClassD.count" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']/field[@name='count']" />
+            </summary>
+          </doc>
+          <type>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+          </type>
+        </field>
+        <event name="anEvent" visibility="public">
+          <doc>
+            <summary>
+              An event.
+            </summary>
+          </doc>
+          <type>
+            MockLibrary.<typeref xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']">AlarmEventHandler</typeref>
+          </type>
+        </event>
+        <class name="ClassE" visibility="public">
+          <doc>
+            <summary>
+              A nested class of <see cref="MockLibrary.Nested.ClassC.ClassD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']" />
+            </summary>
+          </doc>
+          <constructor name=".ctor" visibility="public" />
+          <method name="GetType" visibility="public">
+            <return>
+              System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+            </return>
+          </method>
+          <method name="MemberwiseClone" visibility="protected">
+            <return>
+              System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+            </return>
+          </method>
+          <method name="ToString" visibility="public" modifiers="virtual">
+            <return>
+              System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+            </return>
+          </method>
+          <method name="Equals" visibility="public" modifiers="virtual">
+            <return>
+              System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+            </return>
+            <param name="obj" typevaluespec="System.Object">
+              System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+            </param>
+          </method>
+          <method name="GetHashCode" visibility="public" modifiers="virtual">
+            <return>
+              System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+            </return>
+          </method>
+          <method name="Finalize" visibility="protected" modifiers="override">
+            <annotation>
+              System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+            </annotation>
+            <return>
+              System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+            </return>
+          </method>
+        </class>
+      </class>
+      <interface name="InterfaceD" visibility="public">
+        <doc>
+          <summary>
+            A nested interface.
+            Sample xpath is <see cref="MockLibrary.Nested.ClassC.InterfaceD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/interface[@name='InterfaceD']" />
+          </summary>
+        </doc>
+        <method name="MakeMyDay" visibility="public" modifiers="abstract">
+          <doc>
+            <summary>
+              Sample xpath is <see cref="MockLibrary.Nested.ClassC.InterfaceD.MakeMyDay" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/interface[@name='InterfaceD']/method[@name='MakeMyDay' and not(param[1])]" />
+            </summary>
+          </doc>
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+          </return>
+        </method>
+      </interface>
+    </class>
+    <class name="ClassD" visibility="public">
+      <doc>
+        <summary>
+          A nested class of ClassC.
+          A sample xpath is <see cref="MockLibrary.Nested.ClassC.ClassD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']" />
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            A constructor
+          </summary>
+          <param name="x">int param</param>
+        </doc>
+        <param name="x" typevaluespec="System.Int32">
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </param>
+      </constructor>
+      <constructor name=".cctor" visibility="private" modifiers="static" />
+      <method name="MethodC" visibility="protected" modifiers="virtual">
+        <doc>
+          <summary>
+            A method
+          </summary>
+          <param name="x">ClassA param</param>
+          <param name="y">ClassE param</param>
+          <returns>a string array</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>[]
+        </return>
+        <param name="x" typevaluespec="MockLibrary.ClassB">
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/class[@name='ClassB']">ClassB</typeref>
+        </param>
+        <param name="y" typevaluespec="MockLibrary.Nested.ClassC+ClassD+ClassE">
+          MockLibrary.Nested.<typeref xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']/class[@name='ClassE']">ClassCClassDClassE</typeref>
+        </param>
+      </method>
+      <method name="ClassEvent" visibility="public">
+        <doc>
+          <summary>
+            event handler for anEvent
+          </summary>
+          <param name="sender">sender</param>
+          <param name="e">e</param>
+          <returns>empty string</returns>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+        <param name="sender" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+        <param name="e" typevaluespec="System.EventArgs">
+          System.<typeref xpath="/package[@name='System']/class[@name='EventArgs']">EventArgs</typeref>
+        </param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+      <property name="Prop" visibility="protected" modifiers="read-write">
+        <doc>
+          <summary>
+            A protected property of type ClassE.
+          </summary>
+        </doc>
+        <type>
+          MockLibrary.Nested.<typeref xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']/class[@name='ClassE']">ClassCClassDClassE</typeref>
+        </type>
+      </property>
+      <field name="anEvent" visibility="private">
+        <type>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']">AlarmEventHandler</typeref>
+        </type>
+      </field>
+      <field name="count" visibility="public" modifiers="static readonly">
+        <doc>
+          <summary>
+            An int variable with static and readonly.
+            A sample xpath is <see cref="MockLibrary.Nested.ClassC.ClassD.count" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']/field[@name='count']" />
+          </summary>
+        </doc>
+        <type>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </type>
+      </field>
+      <event name="anEvent" visibility="public">
+        <doc>
+          <summary>
+            An event.
+          </summary>
+        </doc>
+        <type>
+          MockLibrary.<typeref xpath="/package[@name='MockLibrary']/delegate[@name='AlarmEventHandler']">AlarmEventHandler</typeref>
+        </type>
+      </event>
+      <class name="ClassE" visibility="public">
+        <doc>
+          <summary>
+            A nested class of <see cref="MockLibrary.Nested.ClassC.ClassD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']" />
+          </summary>
+        </doc>
+        <constructor name=".ctor" visibility="public" />
+        <method name="GetType" visibility="public">
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+          </return>
+        </method>
+        <method name="MemberwiseClone" visibility="protected">
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+          </return>
+        </method>
+        <method name="ToString" visibility="public" modifiers="virtual">
+          <return>
+            System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+          </return>
+        </method>
+        <method name="Equals" visibility="public" modifiers="virtual">
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+          </return>
+          <param name="obj" typevaluespec="System.Object">
+            System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+          </param>
+        </method>
+        <method name="GetHashCode" visibility="public" modifiers="virtual">
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+          </return>
+        </method>
+        <method name="Finalize" visibility="protected" modifiers="override">
+          <annotation>
+            System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+          </annotation>
+          <return>
+            System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+          </return>
+        </method>
+      </class>
+    </class>
+    <class name="ClassE" visibility="public">
+      <doc>
+        <summary>
+          A nested class of <see cref="MockLibrary.Nested.ClassC.ClassD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/class[@name='ClassD']" />
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+    </class>
+    <interface name="InterfaceD" visibility="public">
+      <doc>
+        <summary>
+          A nested interface.
+          Sample xpath is <see cref="MockLibrary.Nested.ClassC.InterfaceD" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/interface[@name='InterfaceD']" />
+        </summary>
+      </doc>
+      <method name="MakeMyDay" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            Sample xpath is <see cref="MockLibrary.Nested.ClassC.InterfaceD.MakeMyDay" xpath="/package[@name='MockLibrary.Nested']/class[@name='ClassC']/interface[@name='InterfaceD']/method[@name='MakeMyDay' and not(param[1])]" />
+          </summary>
+        </doc>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+    </interface>
+  </package>
+  <package name="__global__">
+    <class name="GlobalClass" visibility="public">
+      <doc>
+        <summary>
+          An empty global class.
+          Sample xpath is <see cref="GlobalClass" xpath="/package[@name='']/class[@name='GlobalClass']" />
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Type']">Type</typeref>
+        </return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/class[@name='String']">String</typeref>
+        </return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Boolean']">Boolean</typeref>
+        </return>
+        <param name="obj" typevaluespec="System.Object">
+          System.<typeref xpath="/package[@name='System']/class[@name='Object']">Object</typeref>
+        </param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Int32']">Int32</typeref>
+        </return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>
+          System.Runtime.ConstrainedExecution.<typeref xpath="/package[@name='System.Runtime.ConstrainedExecution']/class[@name='ReliabilityContractAttribute']">ReliabilityContractAttribute</typeref>
+        </annotation>
+        <return>
+          System.<typeref xpath="/package[@name='System']/struct[@name='Void']">Void</typeref>
+        </return>
+      </method>
+    </class>
+  </package>
+</apispec>

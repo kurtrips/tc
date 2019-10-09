@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="compile" name="Proof of Concept Assembly - Sell Data Capture Transformation of XML Schema">
+    <path id="project_classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/xalan.jar"/>
+        <pathelement location="lib/serializer.jar"/>
+        <pathelement location="lib/xercesImpl.jar"/>
+        <pathelement location="lib/xml-apis.jar"/>
+        <pathelement location="lib/xsltc.jar"/>
+        <pathelement location="lib/junit-4.8.1.jar"/>
+    </path>
+    
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    
+    <target depends="init" name="compile">
+        <javac destdir="bin" includeAntRuntime="no">
+            <src path="src"/>
+            <classpath refid="project_classpath"/>
+        </javac>
+    </target>
+    
+    <target depends="compile" name="dist">
+        <jar jarfile="bin/XSLT2HTML.jar" basedir="bin"/>
+    </target>
+    
+    <target depends="compile" name="test">
+        <junit>
+          <classpath refid="project_classpath" />
+          <formatter type="brief" usefile="false" />
+          <test name="com.topcoder.sip.test.XSLT2HTMLTest" />
+        </junit>    
+    </target>    
+</project>

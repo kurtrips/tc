@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConfigManager>
+  <namespace name="TopCoder.Data.ConnectionFactory">
+    <property name="Connection_Types">
+      <value>Oracle</value>
+      <value>failure</value>
+    </property>
+    <property name="Default_Connection_Type">
+      <value>Oracle</value>
+    </property>
+
+    <property name="Oracle_Assembly">
+      <value>Oracle.DataAccess.dll</value>
+    </property>
+    <property name="Oracle_Class">
+      <value>Oracle.DataAccess.Client.OracleConnection</value>
+    </property>
+    <property name="Oracle_Default_String">
+      <value>Data Source=XE;User ID=SYSTEM;Password=oracle10g;</value>
+    </property>
+
+    <property name="Predefined_Connections">
+      <value>search</value>
+    </property>
+    <property name="Default_Predefined_Connection">
+      <value>search</value>
+    </property>
+
+    <property name="search_Type">
+      <value>Oracle</value>
+    </property>
+
+    <property name="failure_Assembly">
+      <value>Oracle.DataAccess.dll</value>
+    </property>
+    <property name="failure_Class">
+      <value>Oracle.DataAccess.Client.OracleConnection</value>
+    </property>
+    <property name="failure_Default_String">
+      <value>Data Source=XE;User ID=SYSTEM;Password=oracle10g;</value>
+    </property>
+  </namespace>
+</ConfigManager>

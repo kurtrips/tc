@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\FAM\Development\DateDropDownControl\build\classes\TopCoder.Web.UI.WebControl.DateDropDown.Test.dll" total="208" failures="0" not-run="0" date="2007-08-18" time="06:42:11">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="C:\FAM\Development\DateDropDownControl" machine-name="HP50041703150" user="Administrator" user-domain="HP50041703150" />
+  <culture-info current-culture="sk-SK" current-uiculture="en-US" />
+  <test-suite name="C:\FAM\Development\DateDropDownControl\build\classes\TopCoder.Web.UI.WebControl.DateDropDown.Test.dll" success="True" time="0.953" asserts="0">
+    <results>
+      <test-suite name="TopCoder" success="True" time="0.922" asserts="0">
+        <results>
+          <test-suite name="TopCoder.Web" success="True" time="0.844" asserts="0">
+            <results>
+              <test-suite name="TopCoder.Web.UI" success="True" time="0.844" asserts="0">
+                <results>
+                  <test-suite name="TopCoder.Web.UI.WebControl" success="True" time="0.844" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown" success="True" time="0.844" asserts="0">
+                        <results>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest" success="True" time="0.047" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorMessage_Valid" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.BindDataInvalidExceptionUnitTest.TestCtorInfoContext" executed="True" success="True" time="0.016" asserts="3" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownExceptionUnitTest.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests" success="True" time="0.047" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestInputDateFormat" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestDisplayDateFormat" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestInitialSelection" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestInitialSelectionTimeStamp" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestInitialSelectionDateFormat" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestDatePattern" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestAddDateItem" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestAddDateItems1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestAddDateItems2" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestRemoveDateItem" executed="True" success="True" time="0.016" asserts="5" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestRemoveDateItems1" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestRemoveDateItems2" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestSelectedDate" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestAddItemFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestAddItemsFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestAddItemsFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestRemoveItemFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestRemoveItemFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateDropDownListTests.TestRemoveItemFail3" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests" success="True" time="0.031" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestInputDateFormat" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestDisplayDateFormat" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestInitialSelection" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestInitialSelectionTimeStamp" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestInitialSelectionDateFormat" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestDatePattern" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestAddDateItem" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestAddDateItems1" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestAddDateItems2" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestRemoveDateItem" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestRemoveDateItems1" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestRemoveDateItems2" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestSelectedDate" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestAddItemFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestAddItemsFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestAddItemsFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestRemoveItemFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestRemoveItemFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DateListBoxTests.TestRemoveItemFail3" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests" success="True" time="0.063" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertFrom1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertFrom2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertFromFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertFromFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertTo1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertTo2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertToFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestCanConvertToFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestConvertFrom" executed="True" success="True" time="0.016" asserts="12" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestConvertFromFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestConvertTo" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternConverterTests.TestConvertToFail1" executed="True" success="True" time="0.016" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternInvalidDataExceptionUnitTest.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests" success="True" time="0.078" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestInputDateFormat" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestInputDateFormatFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestDisplayDateFormat" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestDisplayDateFormatFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestStartDate" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestStartDateFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestStopDate" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestSStopDateFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestRules" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestControlId" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestControlIdFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestControlInstance" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestGenerateDates" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestGenerateDates1" executed="True" success="True" time="0.031" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.DatePatternTests.TestToString" executed="True" success="True" time="0.031" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionInvalidDataExceptionUnitTest.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests" success="True" time="0.391" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructor1" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructor2" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructor3" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructor4" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructorFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructorFail2" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestConstructorFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestDateFormat" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestInitialSelection" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestTimeStamp" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestDateFormatFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestInitialSelectionFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestTimeStampFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems1" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems2" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems3" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems4" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems5" executed="True" success="True" time="0.031" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems6" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems7" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems11" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems8" executed="True" success="True" time="0.031" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems9" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems10" executed="True" success="True" time="0.016" asserts="2926" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItems12" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItemsFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItemsFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItemsFail3" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.InitialSelectionManagerTests.TestSelectItemsFail4" executed="True" success="True" time="0.016" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests" success="True" time="0.031" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestConstructorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestConstructorFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate3" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate4" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate5" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate7" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidate8" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidateFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidateFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidateFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.ItemValidatorTests.TestValidateFail4" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorMessage_Null" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorMessage_Valid" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorMessageInner_Null3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorMessageInner_Null1" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorMessageInner_Null2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorMessageInner_Valid" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleInvalidDataExceptionUnitTest.TestCtorInfoContext" executed="True" success="True" time="0.000" asserts="3" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests" success="True" time="0.063" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestConstructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestDateType" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestDateValue" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestTimeValue" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestYearDivisor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestReverseOrder" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestInterleave" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy1" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy3" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy4" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy5" executed="True" success="True" time="0.000" asserts="44" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy6" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy7" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy8" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy9" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy10" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy11" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy12" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy13" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesAccuracy14" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestDateTypeFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestDateTypeFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestDateValueFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestTimeValueFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestYearDivisorFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestYearDivisorFail2" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestInterleaveFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail6" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail7" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail8" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail9" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail10" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail11" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail12" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail13" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail14" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail15" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.RuleTests.TestGenerateDatesFail16" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.Demo" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.Demo.DateDropDownListDemo" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.Demo.DateListBoxDemo" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.TestValidateNotNull1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.TestValidateNotNull2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.TestValidateNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.TestValidateNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.ValidateNotNullNotEmpty1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.ValidateNotNullNotEmpty2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.ValidateNotNullNotEmpty3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.ValidatePositive1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.ValidatePositive2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.UI.WebControl.DateDropDown.HelperTests.ValidatePositive3" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,62 @@
+>>processFontData method:
+>>in Submit.java, it will collect as many as errors possible, however, you return with the first error
+
+Not fixing this. it is too ugly. Please also see http://apps.topcoder.com/forums/?module=Thread&threadID=813963&start=0&mc=1#1858370
+
+
+>>you didn't check whether sourceFile(connection.params.sourceFile) is type of file before calling 
+
+fixed for all.
+
+
+>>The entry names 'source' and 'submission' should be configurable according to the implementation of Submit.java.
+
+fixed
+
+
+>>The clear db script is not correct, it can not clean all the test data.
+This is fixed.
+Please see http://apps.topcoder.com/forums/?module=Thread&threadID=813963&start=0&mc=1#1858370
+You might want to fix the sequence on your VM.
+
+
+>>'User not a Submitter for the challenge' can not been re-produced fully.
+>>If no data is uploaded by that user, the output json will be:
+>>"error": "Error: submissionFile is a required parameter for this action",
+
+This is something inherent in actionhero. If a required parmeter is missing, it will straight away return and that too (incorrectly) with a 200 response code!!
+This has been discussed in many contests. We cannot fix this unless we change actionhero itself.
+
+
+>>filePath = api.config.designSubmissionsBasePath + challengeId + "/" + userHandle + "_" + userId + "/";
+>>The 'userHandle' should be 'userHandle.toLowerCase()'
+
+Fixed.
+
+
+>>The java code UnifiedSubmissionValidator.validate is NOT implemented in nodejs
+
+Not fixing this. I had already mentioned this in the readme.
+Please see http://apps.topcoder.com/forums/?module=Thread&threadID=813963&start=0&mc=1#1858370
+
+
+>>method generateUnifiedSubmissionFile:
+>>please use async.waterfall to process, otherwise the done callback method may be called more than once
+
+Fixed. Please see the fix. Note that Javascript is single threaded, so there are no thread safety concerns for the doneCalled variable to be changed simultaneously.
+
+
+>>When running the test cases for the first time, one test will fail, here is the log:
+>>1) Submit for design challenge "after all" hook
+Duplicate
+
+
+>>Submit Checkpoint Submission scenario........
+fixed
+
+>>please remove '.~lock.Module Assembly - Topcoder NodeJS Challenge Results.doc#' in submission under docs
+fixed
+
+>>missing topcoder header/footer and page number in each page
+this is most probably because of inconsistent behavior between your and mine Word processors.
+Anyway I am including a PDF, where you can see that the page headers footers and numbers are shown 

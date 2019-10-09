@@ -1,0 +1,23 @@
+BLE 1.1.1.1 - Using Quartz.NET. Added the requirement to Peripheral Services and Reports Module.
+
+BLE 1.1.2 - Confirmed in forum that .NET 4.0 is fine. http://apps.topcoder.com/forums/?module=Thread&threadID=729230&start=0
+
+DanLazar 1.1.3.1 - Added IPermissionService.GetAllPermissionsForUser. It is explained in section 2 of Peripheral and Reports Module. Note that the Permission related objects are renamed also.
+
+BLE 1.1.4.1 - Added line in section 6.4 of SDS
+
+BLE 1.1.4.2 - Added internationalization section in 7.7 of SDS.
+
+DanLazar 1.2.1 - Merged reports and peripheral services into 1 module (as confirmed at http://apps.topcoder.com/forums/?module=Thread&threadID=729200&start=0). Moved Product Version/Instance from Core Entities to Commission Data module as Product Version/Instance are tightly coupled with Commission Data.
+
+BLE 1.3.2.1 - Fixed. Added ProductCatgeory.
+
+BLE 1.3.2.3 - User.contactInfo is already of type ContactInfo.
+
+BLE 1.3.2.4 - Fixed. Added the required fields.
+
+AleaActaEst 2.4.1 - Waived by co-pilot at http://apps.topcoder.com/forums/?module=Thread&threadID=729231&start=0
+
+BLE 2.4.2 - Added all 3 SDs
+
+NOTE - Have removed the database erd I had provided before, because now Porduct Version/Instance are in same module as Commission Data.

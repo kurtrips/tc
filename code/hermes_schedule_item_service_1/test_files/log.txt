@@ -1,0 +1,280 @@
+2007-12-04 03:57:49,125 [2400] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 3:57:49 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 03:57:51,000 [2400] INFO  logger [(null)] <(null)> - New state: Closing
+Timestamp: 12/4/2007 3:57:51 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 04:38:37,906 [2028] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 4:38:37 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 04:40:21,250 [3236] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 4:40:21 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 05:28:56,140 [3428] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 5:28:56 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 05:53:32,968 [660] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 5:53:32 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 05:54:40,359 [3472] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 5:54:40 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 05:55:13,031 [1144] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 5:55:13 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 05:55:30,906 [2324] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 5:55:30 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 05:56:18,312 [3452] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 5:56:18 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:02:00,046 [3396] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:02:00 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:04:48,781 [1316] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:04:48 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:06:19,968 [1956] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:06:19 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:14:20,546 [3608] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:14:20 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:14:21,656 [3608] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 6:14:21 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:14:39,859 [2840] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:14:39 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:14:40,718 [2840] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 6:14:40 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:19:43,968 [3736] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:19:43 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:20:49,093 [2688] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:20:49 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:21:37,015 [2864] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:21:37 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:23:48,187 [3524] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:23:48 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:24:56,218 [3008] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:24:56 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:24:57,250 [3008] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 6:24:57 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:25:51,046 [932] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:25:51 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:25:51,953 [932] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 6:25:51 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 06:26:03,343 [3904] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 6:26:03 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:23:48,625 [1464] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 7:23:48 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:23:54,109 [1464] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 7:23:54 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:24:12,656 [4876] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 7:24:12 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:39:09,937 [5692] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 7:39:09 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:59:20,984 [5716] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 7:59:20 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:59:22,968 [5716] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 7:59:22 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:59:50,281 [5788] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 7:59:50 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 07:59:51,312 [5788] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 7:59:51 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:03:28,093 [1576] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 8:03:28 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:03:30,734 [1576] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 8:03:30 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:03:45,062 [5764] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 8:03:45 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:07:06,171 [2248] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 8:07:06 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:15:40,578 [2648] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 8:15:40 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:40:39,250 [4980] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 8:40:39 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:54:43,328 [5456] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 8:54:43 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 08:54:47,390 [5456] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 8:54:47 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:14:37,812 [3620] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:14:37 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:14:41,515 [3620] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 9:14:41 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:15:58,796 [4844] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:15:58 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:16:00,078 [4844] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 9:16:00 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:17:34,578 [5164] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:17:34 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:17:35,562 [5164] INFO  logger [(null)] <(null)> - New state: Faulted
+Timestamp: 12/4/2007 9:17:35 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:17:53,609 [3860] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:17:53 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:19:20,515 [6000] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:19:20 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:21:05,062 [5300] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:21:05 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:29:24,468 [6024] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:29:24 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:42:00,718 [3280] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:42:00 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:49:11,656 [2152] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:49:11 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:55:45,312 [3452] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:55:45 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+
+2007-12-04 09:57:37,015 [4448] INFO  logger [(null)] <(null)> - New state: Opening
+Timestamp: 12/4/2007 9:57:37 AM
+Local IP Address: 192.168.1.2
+Host name: HP50041703150
+

@@ -1,0 +1,7 @@
+Still using memcached. Spring is removed.
+
+
+>> I see nothing mentioned about "...testing what if scenario..." from homepage.
+
+I think reviewer made mistake here. The homepage does not show what-if scenarios, it shows predictions.
+You can verify this by comparing the shown table to the Predictions page and the What-if Cases page.

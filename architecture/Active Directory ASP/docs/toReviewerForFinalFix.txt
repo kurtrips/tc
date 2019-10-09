@@ -1,0 +1,9 @@
+1. Arbitrarily complex objects are now supported using recursion.
+2. GetUserEntryByUserName searcher by userName for the given application Name, so all methods calling thsi method are taking care of the application name.
+3. AleaActaEst 4.1.7.2: Actually I am using Wordpad which is allowed as per design guidelines. The CS looks ok in Wordpad.
+4. AleaActaEst 4.1.7.3: Actually even RS does not specify version for LDAP and AD, so I'm leavin this out.
+5. I have included a prototype which contains complete recursive code used for the Set/Get propertyValues methods.
+6. Existing SDs have been updated. The new Get/Set PropertyRecursively methods are candidates for SD too, but considering that I have provided an already functional code for these methods, the SDs for these does not seem necessary.
+
+Thanks for your review,
+kurtrips

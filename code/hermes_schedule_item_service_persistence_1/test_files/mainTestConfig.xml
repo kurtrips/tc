@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+  
+  <!--Configuration properties for default namespace-->
+  <namespace name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider">
+    <property name="objectFactoryNamespace">
+      <value>TestOFNamespace</value>
+    </property>
+    <property name="connectionName">
+      <value>myConnectionName</value>
+    </property>
+    <property name="helper">
+      <value>TestHelper</value>
+    </property>
+  </namespace>
+
+  <!--Object Factory's own defintion (using TestOFNamespace)-->
+  <namespace name="TestOFNamespace.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TestOFNamespace.default.parameters">
+    <property name="p1:string">
+      <value>PersistenceTest</value>
+    </property>
+  </namespace>
+
+  <!--Object Definition for helper class-->
+  <namespace name="PersistenceTest.TestHelper">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceHelper</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>    
+  </namespace>
+
+</ConfigManager>

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmallAssembly</name>
+    </assembly>
+    <members>
+        <member name="T:AnotherNamespace.GetValue">
+            <summary>
+            A public delegate
+            </summary>
+            <returns>return value</returns>
+        </member>
+        <member name="T:SmallAssembly.MyClass">
+             <summary>
+             The class used to test.
+             </summary>
+             
+             <author>xxiyy</author>
+             <version>1.0</version>
+            
+             <copyright>
+             Copyright (C) 2007 TopCoder Inc., All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:SmallAssembly.MyClass.name">
+            <summary>
+            Name of the class. It can be get or set by <c>Name</c> field.
+            </summary>
+        </member>
+        <member name="F:SmallAssembly.MyClass.PublicValue">
+            <summary>
+            This is a reference of <see cref="T:SmallAssembly.MockClass"/>
+            </summary>
+        </member>
+        <member name="M:SmallAssembly.MyClass.#ctor(SmallAssembly.MockClass)">
+            <summary>
+            Create a new <see cref="T:SmallAssembly.MyClass"/>.
+            </summary>
+            <param name="mockClass">Instance of <see cref="T:SmallAssembly.MockClass"/></param>
+        </member>
+        <member name="M:SmallAssembly.MyClass.ToString">
+            <summary>
+            Return the class name
+            </summary>
+            <returns>My return</returns>
+        </member>
+        <member name="M:SmallAssembly.MyClass.PrivateMethod">
+            <summary>
+            Private method
+            </summary>
+            <returns>return value</returns>
+        </member>
+        <member name="E:SmallAssembly.MyClass.MyEvent">
+            <summary>
+            public event of MyEvent.
+            </summary>
+        </member>
+        <member name="P:SmallAssembly.MyClass.Name">
+            <summary>
+            Name of the class
+            </summary>
+            <value>Name value</value>
+        </member>
+        <member name="P:SmallAssembly.MyClass.StaticProperty">
+            <summary>
+            Static property.
+            </summary>
+        </member>
+        <member name="T:SmallAssembly.MockClass">
+            <summary>
+            Mock class used to test
+            </summary>
+        </member>
+        <member name="T:SmallAssembly.InternalClass">
+            <summary>
+            Internal class.
+            </summary>
+        </member>
+        <member name="T:SmallAssembly.MyStructor">
+            <summary>
+            MockStructor
+            </summary>
+        </member>
+        <member name="F:SmallAssembly.MyStructor.Name">
+            <summary>
+            Name property
+            </summary>
+            <value>Name value</value>
+        </member>
+        <member name="F:SmallAssembly.MyStructor.Age">
+            <summary>
+            Age property
+            </summary>
+            <value>Age value</value>
+        </member>
+        <member name="T:SmallAssembly.MyEnum">
+            <summary>
+            My Enum.
+            </summary>
+        </member>
+        <member name="F:SmallAssembly.MyEnum.First">
+            <summary>
+            <p>First enum.</p>
+            </summary>
+        </member>
+        <member name="F:SmallAssembly.MyEnum.Second">
+            <summary>
+            Second enum.
+            </summary>
+        </member>
+        <member name="T:SmallAssembly.MyInterface">
+            <summary>
+            Mock interface.
+            </summary>
+        </member>
+        <member name="P:SmallAssembly.MyInterface.GetValue">
+            <summary>
+            Get value
+            </summary>
+            <value>The value</value>
+        </member>
+    </members>
+</doc>

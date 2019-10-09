@@ -1,0 +1,10 @@
+1. This delivery is packaged with the Mobile XML Signature COmponent. Only 3 extra files have been    added to the project. They are
+  (i)   src\csharp\main\TopCoder\Security\Cryptography\Mobile\Digesters\SHA256Digester.cs
+  (ii)  src\csharp\tests\TopCoder\Security\Cryptography\Mobile\DefaultSHA256DigesterTests.cs
+  (iii) src\csharp\tests\TopCoder\Security\Cryptography\Mobile\SignatureManagerUsingSHA256Tests.cs
+
+2. The test case DefaultSHA256DigesterTests runs official NIST SHA byte oriented test cases       available from here http://csrc.nist.gov/cryptval/shs.htm. These are present in test_files folder as SHA256LongMsg.txt and SHA256ShortMsg.txt
+
+3. The nant test takes an awfully long to run. About 120 seconds on my machine. Please be    patient. The tests also need to connect to the web.
+
+Thanks

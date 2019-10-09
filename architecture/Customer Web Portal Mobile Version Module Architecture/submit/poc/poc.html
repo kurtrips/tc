@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Backbone Test</title>
+</head>
+<body>
+	<div id="mainContainer">
+		<ul></ul>
+	</div>
+	
+	
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="underscore-min.js"></script>
+	<script src="backbone-min.js"></script>
+	
+	<script>
+		(function($){
+
+		var City = Backbone.Model.extend({
+			defaults: {
+				id: '',
+				name: 0,
+				lat: 0,
+				lng: 0
+			}
+		});
+		
+		var CityCollection = Backbone.Collection.extend({
+			model: City,
+			url: 'http://localhost:8080/RentPlace/get_cities' //CHANGE THIS TO SOME REST SERVICE RUNNING ON YOUR COMPUTER AND ADJUST THE MODEL ACCORDINGLY
+		});
+		
+		var CityView = Backbone.View.extend({
+			tagName: 'div',
+			initialize: function(){
+				_.bindAll(this, 'render'); // every function that uses 'this' as the current object should be in here
+			},
+			render: function() {
+				$(this.el).html(this.model.get('id')+ ' ' +this.model.get('name') + ' ' + this.model.get('lat') + ' ' + this.model.get('lng')); //CHANGE THIS TO ACCORDING TO YOUR REST SERVICE
+				return this; // for chainable calls, like .render().el
+			}
+		});
+		
+		var CityCollectionView = Backbone.View.extend({
+			el: '#mainContainer',
+			initialize: function(){
+				_.bindAll(this, 'render', 'appendItem'); // every function that uses 'this' as the current object should be in here
+				
+				this.collection = new CityCollection();
+				this.collection.bind('add', this.appendItem); // collection event binder
+				
+				this.counter = 0; // total number of items added thus far
+			    this.render();
+			},
+			render: function(){
+				//Use the code below to hardcode some entities in render
+				/*var c1 = new City({id:1, name:"NY", lat: 12, lng: 13});
+				var c2 = new City({id:2, name:"LA", lat: 13, lng: 14});
+				this.collection.add(c1);
+				this.collection.add(c2);*/
+				
+				//Make GET request to the collection URL
+				this.collection.fetch({ 
+					data: $.param({ term: 'ch'}) 
+				});
+			},
+			appendItem: function(city){
+			  var cityView = new CityView({
+				model: city
+			  });
+			  $(this.el).append(cityView.render().el);
+			}
+		});
+		  
+		  var appView = new CityCollectionView();
+		})(jQuery);
+	</script>
+</body>
+</html>

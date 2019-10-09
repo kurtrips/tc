@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MockLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:MockLibrary.InterfaceX">
+            <summary>
+            InterfaceX
+            Sample xpath is <see cref="T:MockLibrary.InterfaceX"/>
+            </summary>
+        </member>
+        <member name="T:MockLibrary.InterfaceC">
+            <summary>
+            InterfaceC
+            </summary>
+        </member>
+        <member name="T:MockLibrary.InterfaceA">
+            <summary>
+            InterfaceA
+            </summary>
+        </member>
+        <member name="M:MockLibrary.InterfaceA.GetAInstance(MockLibrary.ClassB)">
+            <summary>
+            GetAInstance method
+            </summary>
+            <param name="b">ClassB instance</param>
+            <returns>ClassA instance</returns>
+        </member>
+        <member name="T:MockLibrary.InterfaceB">
+            <summary>
+            InterfaceB
+            </summary>
+        </member>
+        <member name="M:MockLibrary.InterfaceB.JustDoIt(System.Collections.IList,System.Boolean,System.String[])">
+            <summary>
+            JustDoIt
+            </summary>
+            <param name="listParam">listParam</param>
+            <param name="boolParam">boolParam</param>
+            <param name="arrayParam">arrayParam</param>
+            <returns></returns>
+        </member>
+        <member name="M:MockLibrary.InterfaceC.SayHelloToTheWorld">
+            <summary>
+            Say Hello
+            </summary>
+        </member>
+        <member name="T:MockLibrary.EnumA">
+            <summary>
+            Enum A
+            </summary>
+        </member>
+        <member name="F:MockLibrary.EnumA.Value1">
+            <summary>
+            Value1
+            </summary>
+        </member>
+        <member name="F:MockLibrary.EnumA.Value2">
+            <summary>
+            Value2
+            </summary>
+        </member>
+        <member name="F:MockLibrary.EnumA.Value3">
+            <summary>
+            Value3
+            </summary>
+        </member>
+        <member name="T:MockLibrary.AlarmEventHandler">
+            <summary>
+            A delegate class
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+            <returns>a string</returns>
+        </member>
+        <member name="T:MockLibrary.WakeMeUp">
+            <summary>
+            A class with event.
+            Demonstrates the xpaths formed for event and delegate types.
+            </summary>
+        </member>
+        <member name="M:MockLibrary.WakeMeUp.AlarmRang(System.Object,System.EventArgs)">
+            <summary>
+            AlarmRang has the same signature as AlarmEventHandler.
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+            <returns>a string</returns>
+        </member>
+        <member name="F:MockLibrary.WakeMeUp.field2">
+            <summary>
+            An Obsolete, NonSerialized field
+            </summary>
+        </member>
+        <member name="M:MockLibrary.WakeMeUp.#ctor">
+            <summary>
+            Constructor. Registers the <see cref="T:MockLibrary.AlarmEventHandler"/> handler to the
+            <see cref="E:MockLibrary.WakeMeUp.Alarm"/> event
+            </summary>
+        </member>
+        <member name="E:MockLibrary.WakeMeUp.Alarm">
+            <summary>
+            An event
+            </summary>
+        </member>
+        <member name="T:MockLibrary.ClassF">
+            <summary>
+            A class demonstrating dependent library.
+            </summary>
+        </member>
+        <member name="M:MockLibrary.ClassF.ADependentFunction">
+            <summary>
+            Function returning <see cref="T:BaseLibrary.ClassBaseA"/> instance. 
+            </summary>
+            <returns>ClassBaseA instance.</returns>
+        </member>
+        <member name="T:MockLibrary.Nested.ClassC">
+            <summary>
+            Class C doc. Contains many different visibilities and modifiers. Also contains nested classes.
+            Also this class is in the <see cref="N:MockLibrary.Nested"/> namespace.
+            So demonstrates the xpath for namespaces also.
+            </summary>
+        </member>
+        <member name="M:MockLibrary.Nested.ClassC.#ctor">
+            <summary>
+            Constructor
+            Sample xpath is <see cref="M:MockLibrary.Nested.ClassC.#ctor"/>
+            </summary>
+        </member>
+        <member name="F:MockLibrary.Nested.ClassC.privateInt">
+            <summary>
+            A private integer.
+            Sample xpath is <see cref="F:MockLibrary.Nested.ClassC.privateInt"/>
+            </summary>
+        </member>
+        <member name="T:MockLibrary.Nested.ClassC.InterfaceD">
+            <summary>
+            A nested interface.
+            Sample xpath is <see cref="T:MockLibrary.Nested.ClassC.InterfaceD"/>
+            </summary>
+        </member>
+        <member name="M:MockLibrary.Nested.ClassC.InterfaceD.MakeMyDay">
+            <summary>
+            Sample xpath is <see cref="M:MockLibrary.Nested.ClassC.InterfaceD.MakeMyDay"/>
+            </summary>
+        </member>
+        <member name="T:MockLibrary.Nested.ClassC.ClassD">
+            <summary>
+            A nested class of ClassC.
+            A sample xpath is <see cref="T:MockLibrary.Nested.ClassC.ClassD"/>
+            </summary>
+        </member>
+        <member name="F:MockLibrary.Nested.ClassC.ClassD.count">
+            <summary>
+            An int variable with static and readonly.
+            A sample xpath is <see cref="F:MockLibrary.Nested.ClassC.ClassD.count"/>
+            </summary>
+        </member>
+        <member name="M:MockLibrary.Nested.ClassC.ClassD.MethodC(MockLibrary.ClassB,MockLibrary.Nested.ClassC.ClassD.ClassE)">
+            <summary>
+            A method
+            </summary>
+            <param name="x">ClassA param</param>
+            <param name="y">ClassE param</param>
+            <returns>a string array</returns>
+        </member>
+        <member name="M:MockLibrary.Nested.ClassC.ClassD.#ctor(System.Int32)">
+            <summary>
+            A constructor
+            </summary>
+            <param name="x">int param</param>
+        </member>
+        <member name="M:MockLibrary.Nested.ClassC.ClassD.ClassEvent(System.Object,System.EventArgs)">
+            <summary>
+            event handler for anEvent
+            </summary>
+            <param name="sender">sender</param>
+            <param name="e">e</param>
+            <returns>empty string</returns>
+        </member>
+        <member name="E:MockLibrary.Nested.ClassC.ClassD.anEvent">
+            <summary>
+            An event.
+            </summary>
+        </member>
+        <member name="P:MockLibrary.Nested.ClassC.ClassD.Prop">
+            <summary>
+            A protected property of type ClassE.
+            </summary>
+        </member>
+        <member name="T:MockLibrary.Nested.ClassC.ClassD.ClassE">
+            <summary>
+            A nested class of <see cref="T:MockLibrary.Nested.ClassC.ClassD"/> 
+            </summary>
+        </member>
+        <member name="T:MockLibrary.ClassB">
+            <summary>
+            Class B doc.
+            Inherits from ClassA.
+            Demonstrates public field, method, property.
+            Demonstrates a method using instance of <see cref="T:MockLibrary.ClassA"/>
+            and returning a <see cref="T:MockLibrary.ClassA"/> array. Demonstrates the xpath formed for a class.
+            Also demonstrates the xpath formed for a field and a method and property.
+            </summary>
+        </member>
+        <member name="T:MockLibrary.ClassA">
+            <summary>
+            Empty class.
+            Use by other classes.
+            Sample xpath is <see cref="T:MockLibrary.ClassA"/>
+            
+            This is a sample reference to a non-existing class <see cref="T:NoSuchClass"/>
+            This is a sample reference to a non-existing namespace <see cref="N:NoSuchNamespace"/>
+            This is a sample reference to a non-existing method <see cref="M:MockLibrary.ClassA.NoSuchMethod"/>
+            This is a sample reference to a non-existing field <see cref="F:MockLibrary.ClassA.NoSuchField"/>
+            </summary>
+        </member>
+        <member name="M:MockLibrary.ClassA.GetAInstance(MockLibrary.ClassB)">
+            <summary>
+            GetAInstance method
+            Sample xpath is <see cref="M:MockLibrary.ClassA.GetAInstance(MockLibrary.ClassB)"/>
+            </summary>
+            <param name="b">ClassB instance</param>
+            <returns>ClassA instance</returns>
+        </member>
+        <member name="F:MockLibrary.ClassB.namesIds">
+            <summary>
+            Contains id to name mappings.
+            </summary>
+        </member>
+        <member name="M:MockLibrary.ClassB.TestMethod1(MockLibrary.ClassA)">
+            <summary>
+            TestMethod1 doc.
+            </summary>
+            <param name="objA">ClassA instance</param>
+            <returns>a string</returns>
+        </member>
+        <member name="M:MockLibrary.ClassB.GetName(System.Int32)">
+            <summary>
+            Gets the name for a given id.
+            1st overload for this method.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.GetName(System.Int32)"/>
+            </summary>
+            <param name="id">The id</param>
+            <returns>The name</returns>
+        </member>
+        <member name="M:MockLibrary.ClassB.GetName(System.String)">
+            <summary>
+            Gets the name for a given string id.
+            2nd overload. Same number of parameters but different type of parameter.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.GetName(System.String)"/>
+            </summary>
+            <param name="id">The id</param>
+            <returns>The name</returns>
+        </member>
+        <member name="M:MockLibrary.ClassB.GetName(System.String,System.Int32)">
+            <summary>
+            Gets the name for a given string id.
+            3rd overload. Different number of parameters.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.GetName(System.String,System.Int32)"/>
+            </summary>
+            <param name="id">string id</param>
+            <param name="iid">Int id</param>
+            <returns>The name</returns>
+        </member>
+        <member name="M:MockLibrary.ClassB.GetNames(System.Int32[])">
+            <summary>
+            Gets the name for a given id.
+            Simply delegates to <see cref="M:MockLibrary.ClassB.GetName(System.Int32)"/>
+            </summary>
+            <param name="ids">The id</param>
+            <returns>The names</returns>
+        </member>
+        <member name="M:MockLibrary.ClassB.SetName(System.Int32,System.String)">
+            <summary>
+            Adds the id and name to the <see cref="F:MockLibrary.ClassB.namesIds"/> variable.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:MockLibrary.ClassB.IsPropNull">
+            <summary>
+            This method demonstartes an xpath to a property.
+            It uses the <see cref="P:MockLibrary.ClassB.TestProperty1"/> property.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MockLibrary.ClassB.BigAndNestedArrayReturningFunction">
+            <summary>
+            Some folks dont really like generics. They prefer really big and nested arrays.
+            </summary>
+            <returns>Phew</returns>
+        </member>
+        <member name="P:MockLibrary.ClassB.TestProperty1">
+            <summary>
+            A test property with type <see cref="T:MockLibrary.ClassA"/>
+            </summary>
+        </member>
+        <member name="P:MockLibrary.ClassB.Item(System.Int32)">
+            <summary>
+            An example indexer.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.get_Item(System.Int32)"/>
+            </summary>
+            <param name="id">An id</param>
+            <returns>A string</returns>
+        </member>
+        <member name="P:MockLibrary.ClassB.Item(System.String)">
+            <summary>
+            An example indexer. 2nd overload with same number of params but different types.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.get_Item(System.String)"/>
+            </summary>
+            <param name="id">An id</param>
+            <returns>A string</returns>
+        </member>
+        <member name="P:MockLibrary.ClassB.Item(System.String,System.Int32)">
+            <summary>
+            An example indexer. 3nd overload with different number of params.
+            A sample xpath should be formed <see cref="M:MockLibrary.ClassB.get_Item(System.String,System.Int32)"/>
+            </summary>
+            <param name="id">An id</param>
+            <param name="iid">int id</param>
+            <returns>A string</returns>
+        </member>
+        <member name="T:GlobalClass">
+            <summary>
+            An empty global class.
+            Sample xpath is <see cref="T:GlobalClass"/>
+            </summary>
+        </member>
+        <member name="T:MockLibrary.StructA">
+            <summary>
+            Structure A
+            </summary>
+        </member>
+        <member name="M:MockLibrary.StructA.Method1(System.Xml.XmlDocument)">
+            <summary>
+            Method1
+            </summary>
+            <param name="doc">XmlDocument</param>
+            <returns>empty string</returns>
+        </member>
+        <member name="F:MockLibrary.StructA.array">
+            <summary>
+            A <see cref="T:MockLibrary.StructA"/> array.
+            </summary>
+        </member>
+        <member name="M:MockLibrary.StructA.GetAInstance(MockLibrary.ClassB)">
+            <summary>
+            GetInstance method. Returns a <see cref="T:MockLibrary.EnumA"/> instance.
+            </summary>
+            <param name="b">ClassB instance</param>
+            <returns>EnumA instance</returns>
+        </member>
+    </members>
+</doc>

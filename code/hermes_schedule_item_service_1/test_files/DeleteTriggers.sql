@@ -1,0 +1,22 @@
+DROP TRIGGER DBT#_DELETE_CTVTY;
+DROP TRIGGER DBT#_DELETE_CTVTY_GRP;
+DROP TRIGGER DBT#_DELETE_CTVTY_TYP;
+DROP TRIGGER dbt#_delete_schd_req_stts;
+DROP TRIGGER dbt#_delete_schd_itm_pub_xrf;
+DROP TRIGGER dbt#_delete_schd_stts;
+DROP TRIGGER dbt#_delete_schd_tm;
+DROP TRIGGER dbt#_insert_ctvty;
+DROP TRIGGER dbt#_insert_ctvty_typ;
+DROP TRIGGER dbt#_insert_ctvty_grp;
+DROP TRIGGER dbt#_insert_schd_itm_pub_xrf;
+DROP TRIGGER dbt#_insert_schd_req_stts;
+DROP TRIGGER dbt#_insert_schd_stts;
+DROP TRIGGER dbt#_insert_schd_tm;
+DROP TRIGGER dbt#_update_ctvty;
+DROP TRIGGER dbt#_update_ctvty_grp;
+DROP TRIGGER dbt#_update_ctvty_typ;
+DROP TRIGGER dbt#_update_schd_req_stts;
+DROP TRIGGER dbt#_update_schd_stts;
+DROP TRIGGER dbt#_update_schd_tm;
+
+commit;

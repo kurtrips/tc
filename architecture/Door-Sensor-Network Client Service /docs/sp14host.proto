@@ -1,0 +1,1432 @@
+package sp14host;
+/*!
+ ********************************************************************
+ * \brief Enumeration for returns from the database functions.
+ ********************************************************************
+ */
+enum tagDatabaseReturnStatus
+    {
+        /// \brief The operation completed successfully.
+        STATUS_OK = 0;
+        /// \brief To indicate that the interface is not implemented yet.
+        STATUS_NOT_IMPLEMENTED = 1;
+        /// \brief The error could be any number of things.
+        STATUS_UNKNOWN_ERROR = 2;
+        /// \brief Updating or deleting object that does not exist.
+        STATUS_OBJECT_DOES_NOT_EXIST = 3;
+    }
+import "sp14basetypes.proto";
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tSystem database operations
+ ******************************************************************** 
+ */
+message tSystemArgument
+{
+    required uint32 numberOfReturns = 1;
+    optional tSystem data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tSystem database operations
+ ******************************************************************** 
+ */
+message tSystemReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    optional tSystem data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tSIDCommon database operations
+ ******************************************************************** 
+ */
+message tSIDCommonArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tSIDCommon data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tSIDCommon database operations
+ ******************************************************************** 
+ */
+message tSIDCommonReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tSIDCommon data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tAreaWithName database operations
+ ******************************************************************** 
+ */
+message tAreaWithNameArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tAreaWithName data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tAreaWithName database operations
+ ******************************************************************** 
+ */
+message tAreaWithNameReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tAreaWithName data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tPod database operations
+ ******************************************************************** 
+ */
+message tPodArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tPod data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tPod database operations
+ ******************************************************************** 
+ */
+message tPodReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tPod data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tPointWithName database operations
+ ******************************************************************** 
+ */
+message tPointWithNameArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tPointWithName data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tPointWithName database operations
+ ******************************************************************** 
+ */
+message tPointWithNameReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tPointWithName data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tPointType database operations
+ ******************************************************************** 
+ */
+message tPointTypeArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tPointType data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tPointType database operations
+ ******************************************************************** 
+ */
+message tPointTypeReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tPointType data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tOutputDefault database operations
+ ******************************************************************** 
+ */
+message tOutputDefaultArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tOutputDefault data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tOutputDefault database operations
+ ******************************************************************** 
+ */
+message tOutputDefaultReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tOutputDefault data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tAuthority database operations
+ ******************************************************************** 
+ */
+message tAuthorityArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tAuthority data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tAuthority database operations
+ ******************************************************************** 
+ */
+message tAuthorityReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tAuthority data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tUser database operations
+ ******************************************************************** 
+ */
+message tUserArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tUser data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tUser database operations
+ ******************************************************************** 
+ */
+message tUserReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tUser data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tPointTypeCustom database operations
+ ******************************************************************** 
+ */
+message tPointTypeCustomArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tPointTypeCustom data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tPointTypeCustom database operations
+ ******************************************************************** 
+ */
+message tPointTypeCustomReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tPointTypeCustom data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tHoliday database operations
+ ******************************************************************** 
+ */
+message tHolidayArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tHoliday data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tHoliday database operations
+ ******************************************************************** 
+ */
+message tHolidayReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tHoliday data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tSchedule database operations
+ ******************************************************************** 
+ */
+message tScheduleArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tSchedule data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tSchedule database operations
+ ******************************************************************** 
+ */
+message tScheduleReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tSchedule data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tDoorWithName database operations
+ ******************************************************************** 
+ */
+message tDoorWithNameArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tDoorWithName data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tDoorWithName database operations
+ ******************************************************************** 
+ */
+message tDoorWithNameReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tDoorWithName data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tCondo database operations
+ ******************************************************************** 
+ */
+message tCondoArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tCondo data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tCondo database operations
+ ******************************************************************** 
+ */
+message tCondoReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tCondo data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tLog database operations
+ ******************************************************************** 
+ */
+message tLogArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tLog data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tLog database operations
+ ******************************************************************** 
+ */
+message tLogReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tLog data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tFloor database operations
+ ******************************************************************** 
+ */
+message tFloorArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tFloor data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tFloor database operations
+ ******************************************************************** 
+ */
+message tFloorReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tFloor data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tSharedData database operations
+ ******************************************************************** 
+ */
+message tSharedDataArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tSharedData data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tSharedData database operations
+ ******************************************************************** 
+ */
+message tSharedDataReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tSharedData data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tProfile database operations
+ ******************************************************************** 
+ */
+message tProfileArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tProfile data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tProfile database operations
+ ******************************************************************** 
+ */
+message tProfileReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tProfile data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tUserEdit database operations
+ ******************************************************************** 
+ */
+message tUserEditArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tUserEdit data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tUserEdit database operations
+ ******************************************************************** 
+ */
+message tUserEditReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tUserEdit data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tAuthFloorMap database operations
+ ******************************************************************** 
+ */
+message tAuthFloorMapArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tAuthFloorMap data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tAuthFloorMap database operations
+ ******************************************************************** 
+ */
+message tAuthFloorMapReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tAuthFloorMap data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tCommunications database operations
+ ******************************************************************** 
+ */
+message tCommunicationsArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tCommunications data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tCommunications database operations
+ ******************************************************************** 
+ */
+message tCommunicationsReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tCommunications data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tAreaGroups database operations
+ ******************************************************************** 
+ */
+message tAreaGroupsArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tAreaGroups data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tAreaGroups database operations
+ ******************************************************************** 
+ */
+message tAreaGroupsReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tAreaGroups data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tBand_FallBack database operations
+ ******************************************************************** 
+ */
+message tBand_FallBackArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tBand_FallBack data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tBand_FallBack database operations
+ ******************************************************************** 
+ */
+message tBand_FallBackReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tBand_FallBack data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tCustomTelco database operations
+ ******************************************************************** 
+ */
+message tCustomTelcoArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tCustomTelco data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tCustomTelco database operations
+ ******************************************************************** 
+ */
+message tCustomTelcoReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tCustomTelco data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Argument type for the tPanelConfig database operations
+ ******************************************************************** 
+ */
+message tPanelConfigArgument
+{
+    required uint32 numberOfReturns = 1;
+    repeated tPanelConfig data = 2;
+}
+/*! 
+ ******************************************************************** 
+ * \brief Return type for the tCustomTelco database operations
+ ******************************************************************** 
+ */
+message tPanelConfigReturn
+{
+    required tagDatabaseReturnStatus status = 1 [default = STATUS_NOT_IMPLEMENTED];
+    repeated tPanelConfig data = 2;
+}
+service Host_Application_Service
+{
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tSystem in the database 
+     * \param tSystemArgument [in] The tSystem of the database to Create. 
+     * \return tSystemReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtSystem( tSystemArgument ) returns (tSystemReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tSystem in the database 
+     * \param tSystemArgument [in] The tSystem of the database to Read. 
+     * \return tSystemReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtSystem( tSystemArgument ) returns (tSystemReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tSystem in the database 
+     * \param tSystemArgument [in] The tSystem of the database to Update. 
+     * \return tSystemReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetSystem( tSystemArgument ) returns (tSystemReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tSystem in the database 
+     * \param tSystemArgument [in] The tSystem of the database to Delete. 
+     * \return tSystemReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetSystem( tSystemArgument ) returns (tSystemReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tSIDCommon in the database 
+     * \param tSIDCommonArgument [in] The tSIDCommon of the database to Create. 
+     * \return tSIDCommonReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtSIDCommon( tSIDCommonArgument ) returns (tSIDCommonReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tSIDCommon in the database 
+     * \param tSIDCommonArgument [in] The tSIDCommon of the database to Read. 
+     * \return tSIDCommonReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtSIDCommon( tSIDCommonArgument ) returns (tSIDCommonReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tSIDCommon in the database 
+     * \param tSIDCommonArgument [in] The tSIDCommon of the database to Update. 
+     * \return tSIDCommonReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetSIDCommon( tSIDCommonArgument ) returns (tSIDCommonReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tSIDCommon in the database 
+     * \param tSIDCommonArgument [in] The tSIDCommon of the database to Delete. 
+     * \return tSIDCommonReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetSIDCommon( tSIDCommonArgument ) returns (tSIDCommonReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tAreaWithName in the database 
+     * \param tAreaWithNameArgument [in] The tAreaWithName of the database to Create. 
+     * \return tAreaWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtAreaWithName( tAreaWithNameArgument ) returns (tAreaWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tAreaWithName in the database 
+     * \param tAreaWithNameArgument [in] The tAreaWithName of the database to Read. 
+     * \return tAreaWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtAreaWithName( tAreaWithNameArgument ) returns (tAreaWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tAreaWithName in the database 
+     * \param tAreaWithNameArgument [in] The tAreaWithName of the database to Update. 
+     * \return tAreaWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetAreaWithName( tAreaWithNameArgument ) returns (tAreaWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tAreaWithName in the database 
+     * \param tAreaWithNameArgument [in] The tAreaWithName of the database to Delete. 
+     * \return tAreaWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetAreaWithName( tAreaWithNameArgument ) returns (tAreaWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tPod in the database 
+     * \param tPodArgument [in] The tPod of the database to Create. 
+     * \return tPodReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtPod( tPodArgument ) returns (tPodReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tPod in the database 
+     * \param tPodArgument [in] The tPod of the database to Read. 
+     * \return tPodReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtPod( tPodArgument ) returns (tPodReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tPod in the database 
+     * \param tPodArgument [in] The tPod of the database to Update. 
+     * \return tPodReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetPod( tPodArgument ) returns (tPodReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tPod in the database 
+     * \param tPodArgument [in] The tPod of the database to Delete. 
+     * \return tPodReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetPod( tPodArgument ) returns (tPodReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tPointWithName in the database 
+     * \param tPointWithNameArgument [in] The tPointWithName of the database to Create. 
+     * \return tPointWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtPointWithName( tPointWithNameArgument ) returns (tPointWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tPointWithName in the database 
+     * \param tPointWithNameArgument [in] The tPointWithName of the database to Read. 
+     * \return tPointWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtPointWithName( tPointWithNameArgument ) returns (tPointWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tPointWithName in the database 
+     * \param tPointWithNameArgument [in] The tPointWithName of the database to Update. 
+     * \return tPointWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetPointWithName( tPointWithNameArgument ) returns (tPointWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tPointWithName in the database 
+     * \param tPointWithNameArgument [in] The tPointWithName of the database to Delete. 
+     * \return tPointWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetPointWithName( tPointWithNameArgument ) returns (tPointWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tPointType in the database 
+     * \param tPointTypeArgument [in] The tPointType of the database to Create. 
+     * \return tPointTypeReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtPointType( tPointTypeArgument ) returns (tPointTypeReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tPointType in the database 
+     * \param tPointTypeArgument [in] The tPointType of the database to Read. 
+     * \return tPointTypeReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtPointType( tPointTypeArgument ) returns (tPointTypeReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tPointType in the database 
+     * \param tPointTypeArgument [in] The tPointType of the database to Update. 
+     * \return tPointTypeReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetPointType( tPointTypeArgument ) returns (tPointTypeReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tPointType in the database 
+     * \param tPointTypeArgument [in] The tPointType of the database to Delete. 
+     * \return tPointTypeReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetPointType( tPointTypeArgument ) returns (tPointTypeReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tOutputDefault in the database 
+     * \param tOutputDefaultArgument [in] The tOutputDefault of the database to Create. 
+     * \return tOutputDefaultReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtOutputDefault( tOutputDefaultArgument ) returns (tOutputDefaultReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tOutputDefault in the database 
+     * \param tOutputDefaultArgument [in] The tOutputDefault of the database to Read. 
+     * \return tOutputDefaultReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtOutputDefault( tOutputDefaultArgument ) returns (tOutputDefaultReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tOutputDefault in the database 
+     * \param tOutputDefaultArgument [in] The tOutputDefault of the database to Update. 
+     * \return tOutputDefaultReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetOutputDefault( tOutputDefaultArgument ) returns (tOutputDefaultReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tOutputDefault in the database 
+     * \param tOutputDefaultArgument [in] The tOutputDefault of the database to Delete. 
+     * \return tOutputDefaultReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetOutputDefault( tOutputDefaultArgument ) returns (tOutputDefaultReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tAuthority in the database 
+     * \param tAuthorityArgument [in] The tAuthority of the database to Create. 
+     * \return tAuthorityReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtAuthority( tAuthorityArgument ) returns (tAuthorityReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tAuthority in the database 
+     * \param tAuthorityArgument [in] The tAuthority of the database to Read. 
+     * \return tAuthorityReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtAuthority( tAuthorityArgument ) returns (tAuthorityReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tAuthority in the database 
+     * \param tAuthorityArgument [in] The tAuthority of the database to Update. 
+     * \return tAuthorityReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetAuthority( tAuthorityArgument ) returns (tAuthorityReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tAuthority in the database 
+     * \param tAuthorityArgument [in] The tAuthority of the database to Delete. 
+     * \return tAuthorityReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetAuthority( tAuthorityArgument ) returns (tAuthorityReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tUser in the database 
+     * \param tUserArgument [in] The tUser of the database to Create. 
+     * \return tUserReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtUser( tUserArgument ) returns (tUserReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tUser in the database 
+     * \param tUserArgument [in] The tUser of the database to Read. 
+     * \return tUserReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtUser( tUserArgument ) returns (tUserReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tUser in the database 
+     * \param tUserArgument [in] The tUser of the database to Update. 
+     * \return tUserReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetUser( tUserArgument ) returns (tUserReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tUser in the database 
+     * \param tUserArgument [in] The tUser of the database to Delete. 
+     * \return tUserReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetUser( tUserArgument ) returns (tUserReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tPointTypeCustom in the database 
+     * \param tPointTypeCustomArgument [in] The tPointTypeCustom of the database to Create. 
+     * \return tPointTypeCustomReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtPointTypeCustom( tPointTypeCustomArgument ) returns (tPointTypeCustomReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tPointTypeCustom in the database 
+     * \param tPointTypeCustomArgument [in] The tPointTypeCustom of the database to Read. 
+     * \return tPointTypeCustomReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtPointTypeCustom( tPointTypeCustomArgument ) returns (tPointTypeCustomReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tPointTypeCustom in the database 
+     * \param tPointTypeCustomArgument [in] The tPointTypeCustom of the database to Update. 
+     * \return tPointTypeCustomReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetPointTypeCustom( tPointTypeCustomArgument ) returns (tPointTypeCustomReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tPointTypeCustom in the database 
+     * \param tPointTypeCustomArgument [in] The tPointTypeCustom of the database to Delete. 
+     * \return tPointTypeCustomReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetPointTypeCustom( tPointTypeCustomArgument ) returns (tPointTypeCustomReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tHoliday in the database 
+     * \param tHolidayArgument [in] The tHoliday of the database to Create. 
+     * \return tHolidayReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtHoliday( tHolidayArgument ) returns (tHolidayReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tHoliday in the database 
+     * \param tHolidayArgument [in] The tHoliday of the database to Read. 
+     * \return tHolidayReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtHoliday( tHolidayArgument ) returns (tHolidayReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tHoliday in the database 
+     * \param tHolidayArgument [in] The tHoliday of the database to Update. 
+     * \return tHolidayReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetHoliday( tHolidayArgument ) returns (tHolidayReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tHoliday in the database 
+     * \param tHolidayArgument [in] The tHoliday of the database to Delete. 
+     * \return tHolidayReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetHoliday( tHolidayArgument ) returns (tHolidayReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tSchedule in the database 
+     * \param tScheduleArgument [in] The tSchedule of the database to Create. 
+     * \return tScheduleReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtSchedule( tScheduleArgument ) returns (tScheduleReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tSchedule in the database 
+     * \param tScheduleArgument [in] The tSchedule of the database to Read. 
+     * \return tScheduleReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtSchedule( tScheduleArgument ) returns (tScheduleReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tSchedule in the database 
+     * \param tScheduleArgument [in] The tSchedule of the database to Update. 
+     * \return tScheduleReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetSchedule( tScheduleArgument ) returns (tScheduleReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tSchedule in the database 
+     * \param tScheduleArgument [in] The tSchedule of the database to Delete. 
+     * \return tScheduleReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetSchedule( tScheduleArgument ) returns (tScheduleReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tDoorWithName in the database 
+     * \param tDoorWithNameArgument [in] The tDoorWithName of the database to Create. 
+     * \return tDoorWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtDoorWithName( tDoorWithNameArgument ) returns (tDoorWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tDoorWithName in the database 
+     * \param tDoorWithNameArgument [in] The tDoorWithName of the database to Read. 
+     * \return tDoorWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtDoorWithName( tDoorWithNameArgument ) returns (tDoorWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tDoorWithName in the database 
+     * \param tDoorWithNameArgument [in] The tDoorWithName of the database to Update. 
+     * \return tDoorWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetDoorWithName( tDoorWithNameArgument ) returns (tDoorWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tDoorWithName in the database 
+     * \param tDoorWithNameArgument [in] The tDoorWithName of the database to Delete. 
+     * \return tDoorWithNameReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetDoorWithName( tDoorWithNameArgument ) returns (tDoorWithNameReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tCondo in the database 
+     * \param tCondoArgument [in] The tCondo of the database to Create. 
+     * \return tCondoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtCondo( tCondoArgument ) returns (tCondoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tCondo in the database 
+     * \param tCondoArgument [in] The tCondo of the database to Read. 
+     * \return tCondoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtCondo( tCondoArgument ) returns (tCondoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tCondo in the database 
+     * \param tCondoArgument [in] The tCondo of the database to Update. 
+     * \return tCondoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetCondo( tCondoArgument ) returns (tCondoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tCondo in the database 
+     * \param tCondoArgument [in] The tCondo of the database to Delete. 
+     * \return tCondoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetCondo( tCondoArgument ) returns (tCondoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tLog in the database 
+     * \param tLogArgument [in] The tLog of the database to Create. 
+     * \return tLogReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtLog( tLogArgument ) returns (tLogReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tLog in the database 
+     * \param tLogArgument [in] The tLog of the database to Read. 
+     * \return tLogReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtLog( tLogArgument ) returns (tLogReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tLog in the database 
+     * \param tLogArgument [in] The tLog of the database to Update. 
+     * \return tLogReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetLog( tLogArgument ) returns (tLogReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tLog in the database 
+     * \param tLogArgument [in] The tLog of the database to Delete. 
+     * \return tLogReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetLog( tLogArgument ) returns (tLogReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tFloor in the database 
+     * \param tFloorArgument [in] The tFloor of the database to Create. 
+     * \return tFloorReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtFloor( tFloorArgument ) returns (tFloorReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tFloor in the database 
+     * \param tFloorArgument [in] The tFloor of the database to Read. 
+     * \return tFloorReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtFloor( tFloorArgument ) returns (tFloorReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tFloor in the database 
+     * \param tFloorArgument [in] The tFloor of the database to Update. 
+     * \return tFloorReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetFloor( tFloorArgument ) returns (tFloorReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tFloor in the database 
+     * \param tFloorArgument [in] The tFloor of the database to Delete. 
+     * \return tFloorReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetFloor( tFloorArgument ) returns (tFloorReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tSharedData in the database 
+     * \param tSharedDataArgument [in] The tSharedData of the database to Create. 
+     * \return tSharedDataReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtSharedData( tSharedDataArgument ) returns (tSharedDataReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tSharedData in the database 
+     * \param tSharedDataArgument [in] The tSharedData of the database to Read. 
+     * \return tSharedDataReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtSharedData( tSharedDataArgument ) returns (tSharedDataReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tSharedData in the database 
+     * \param tSharedDataArgument [in] The tSharedData of the database to Update. 
+     * \return tSharedDataReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetSharedData( tSharedDataArgument ) returns (tSharedDataReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tSharedData in the database 
+     * \param tSharedDataArgument [in] The tSharedData of the database to Delete. 
+     * \return tSharedDataReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetSharedData( tSharedDataArgument ) returns (tSharedDataReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tProfile in the database 
+     * \param tProfileArgument [in] The tProfile of the database to Create. 
+     * \return tProfileReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtProfile( tProfileArgument ) returns (tProfileReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tProfile in the database 
+     * \param tProfileArgument [in] The tProfile of the database to Read. 
+     * \return tProfileReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtProfile( tProfileArgument ) returns (tProfileReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tProfile in the database 
+     * \param tProfileArgument [in] The tProfile of the database to Update. 
+     * \return tProfileReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetProfile( tProfileArgument ) returns (tProfileReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tProfile in the database 
+     * \param tProfileArgument [in] The tProfile of the database to Delete. 
+     * \return tProfileReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetProfile( tProfileArgument ) returns (tProfileReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tUserEdit in the database 
+     * \param tUserEditArgument [in] The tUserEdit of the database to Create. 
+     * \return tUserEditReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtUserEdit( tUserEditArgument ) returns (tUserEditReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tUserEdit in the database 
+     * \param tUserEditArgument [in] The tUserEdit of the database to Read. 
+     * \return tUserEditReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtUserEdit( tUserEditArgument ) returns (tUserEditReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tUserEdit in the database 
+     * \param tUserEditArgument [in] The tUserEdit of the database to Update. 
+     * \return tUserEditReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetUserEdit( tUserEditArgument ) returns (tUserEditReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tUserEdit in the database 
+     * \param tUserEditArgument [in] The tUserEdit of the database to Delete. 
+     * \return tUserEditReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetUserEdit( tUserEditArgument ) returns (tUserEditReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tAuthFloorMap in the database 
+     * \param tAuthFloorMapArgument [in] The tAuthFloorMap of the database to Create. 
+     * \return tAuthFloorMapReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtAuthFloorMap( tAuthFloorMapArgument ) returns (tAuthFloorMapReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tAuthFloorMap in the database 
+     * \param tAuthFloorMapArgument [in] The tAuthFloorMap of the database to Read. 
+     * \return tAuthFloorMapReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtAuthFloorMap( tAuthFloorMapArgument ) returns (tAuthFloorMapReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tAuthFloorMap in the database 
+     * \param tAuthFloorMapArgument [in] The tAuthFloorMap of the database to Update. 
+     * \return tAuthFloorMapReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetAuthFloorMap( tAuthFloorMapArgument ) returns (tAuthFloorMapReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tAuthFloorMap in the database 
+     * \param tAuthFloorMapArgument [in] The tAuthFloorMap of the database to Delete. 
+     * \return tAuthFloorMapReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetAuthFloorMap( tAuthFloorMapArgument ) returns (tAuthFloorMapReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tCommunications in the database 
+     * \param tCommunicationsArgument [in] The tCommunications of the database to Create. 
+     * \return tCommunicationsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtCommunications( tCommunicationsArgument ) returns (tCommunicationsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tCommunications in the database 
+     * \param tCommunicationsArgument [in] The tCommunications of the database to Read. 
+     * \return tCommunicationsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtCommunications( tCommunicationsArgument ) returns (tCommunicationsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tCommunications in the database 
+     * \param tCommunicationsArgument [in] The tCommunications of the database to Update. 
+     * \return tCommunicationsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetCommunications( tCommunicationsArgument ) returns (tCommunicationsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tCommunications in the database 
+     * \param tCommunicationsArgument [in] The tCommunications of the database to Delete. 
+     * \return tCommunicationsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetCommunications( tCommunicationsArgument ) returns (tCommunicationsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tAreaGroups in the database 
+     * \param tAreaGroupsArgument [in] The tAreaGroups of the database to Create. 
+     * \return tAreaGroupsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtAreaGroups( tAreaGroupsArgument ) returns (tAreaGroupsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tAreaGroups in the database 
+     * \param tAreaGroupsArgument [in] The tAreaGroups of the database to Read. 
+     * \return tAreaGroupsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtAreaGroups( tAreaGroupsArgument ) returns (tAreaGroupsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tAreaGroups in the database 
+     * \param tAreaGroupsArgument [in] The tAreaGroups of the database to Update. 
+     * \return tAreaGroupsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetAreaGroups( tAreaGroupsArgument ) returns (tAreaGroupsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tAreaGroups in the database 
+     * \param tAreaGroupsArgument [in] The tAreaGroups of the database to Delete. 
+     * \return tAreaGroupsReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetAreaGroups( tAreaGroupsArgument ) returns (tAreaGroupsReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tBand_FallBack in the database 
+     * \param tBand_FallBackArgument [in] The tBand_FallBack of the database to Create. 
+     * \return tBand_FallBackReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtBand_FallBack( tBand_FallBackArgument ) returns (tBand_FallBackReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tBand_FallBack in the database 
+     * \param tBand_FallBackArgument [in] The tBand_FallBack of the database to Read. 
+     * \return tBand_FallBackReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtBand_FallBack( tBand_FallBackArgument ) returns (tBand_FallBackReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tBand_FallBack in the database 
+     * \param tBand_FallBackArgument [in] The tBand_FallBack of the database to Update. 
+     * \return tBand_FallBackReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetBand_FallBack( tBand_FallBackArgument ) returns (tBand_FallBackReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tBand_FallBack in the database 
+     * \param tBand_FallBackArgument [in] The tBand_FallBack of the database to Delete. 
+     * \return tBand_FallBackReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetBand_FallBack( tBand_FallBackArgument ) returns (tBand_FallBackReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tCustomTelco in the database 
+     * \param tCustomTelcoArgument [in] The tCustomTelco of the database to Create. 
+     * \return tCustomTelcoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtCustomTelco( tCustomTelcoArgument ) returns (tCustomTelcoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tCustomTelco in the database 
+     * \param tCustomTelcoArgument [in] The tCustomTelco of the database to Read. 
+     * \return tCustomTelcoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtCustomTelco( tCustomTelcoArgument ) returns (tCustomTelcoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tCustomTelco in the database 
+     * \param tCustomTelcoArgument [in] The tCustomTelco of the database to Update. 
+     * \return tCustomTelcoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetCustomTelco( tCustomTelcoArgument ) returns (tCustomTelcoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tCustomTelco in the database 
+     * \param tCustomTelcoArgument [in] The tCustomTelco of the database to Delete. 
+     * \return tCustomTelcoReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetCustomTelco( tCustomTelcoArgument ) returns (tCustomTelcoReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Create the tPanelConfig in the database 
+     * \param tPanelConfigArgument [in] The tPanelConfig of the database to Create. 
+     * \return tPanelConfigReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc createtPanelConfig( tPanelConfigArgument ) returns (tPanelConfigReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Read the tPanelConfig in the database 
+     * \param tPanelConfigArgument [in] The tPanelConfig of the database to Read. 
+     * \return tPanelConfigReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc readtPanelConfig( tPanelConfigArgument ) returns (tPanelConfigReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Update the tPanelConfig in the database 
+     * \param tPanelConfigArgument [in] The tPanelConfig of the database to Update. 
+     * \return tPanelConfigReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc updatetPanelConfig( tPanelConfigArgument ) returns (tPanelConfigReturn);
+    /*! 
+     ******************************************************************** 
+     * \brief Delete the tPanelConfig in the database 
+     * \param tPanelConfigArgument [in] The tPanelConfig of the database to Delete. 
+     * \return tPanelConfigReturn Success or failure indications, plus objects
+     *          and their IDs. 
+     ******************************************************************** 
+     */
+    rpc deletetPanelConfig( tPanelConfigArgument ) returns (tPanelConfigReturn);
+
+    /*! 
+     ******************************************************************** 
+     * \brief Firmware update rpc calls.
+     ******************************************************************** 
+     */
+    rpc FwGetVersions ( firmwareVoidArgument ) returns ( firmwareVersionsReturn ) ;
+    rpc FwUpdateInitiate ( firmwareUpdateInitiateArg ) returns ( firmwareUpdateInitiateReturn );
+    rpc FwTransferComponent ( firmwareTransferComponentArg ) returns ( firmwareTransferComponentReturn );
+    rpc FwCommit ( firmwareVoidArgument ) returns ( firmwareCommitReturn ) ;
+    rpc FwCheckConsistency ( firmwareVoidArgument ) returns ( firmwareCheckConsistencyReturn ) ;
+}

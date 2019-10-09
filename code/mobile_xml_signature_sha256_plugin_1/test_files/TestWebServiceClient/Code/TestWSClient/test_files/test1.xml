@@ -1,0 +1,23 @@
+<Config>
+  <Namespace name="TopCoder.Security.Cryptography.Mobile">
+    <Property name="canonicalizers">
+      <Value>http://www.w3.org/TR/2001/REC-xml-c14n-20010315,TopCoder.Security.Cryptography.Mobile.Canonicalizers.StandardFormCanonicalizer</Value>
+    </Property>
+    <Property name="signers">
+        <Value>xml:dig:signer:rsa-dsa,TopCoder.Security.Cryptography.Mobile.Signers.DSASigner</Value>
+    </Property>
+    <Property name="transformers">
+      <Value>xml:dig:transformer:dummy,TopCoder.Security.Cryptography.Mobile.Transformers.DummyTransformer</Value>
+    </Property>
+    <Property name="digesters">
+      <Value>http://www.w3.org/2000/09/xmldsig#sha1,TopCoder.Security.Cryptography.Mobile.Digesters.SHA1Digester</Value>
+    </Property>
+    <Property name="reference_loaders">
+      <Value>http,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.WebBasedReferenceLoader</Value>
+      <Value>soap,TopCoder.Security.Cryptography.Mobile.ReferenceLoaders.SoapMessageReferenceLoader</Value>
+    </Property>
+    <Property name="key_info_providers">
+      <Value>testKeyInfoProvider,TopCoder.Security.Cryptography.Mobile.DummyKeyInfoProvider</Value>
+    </Property>
+  </Namespace>
+</Config>

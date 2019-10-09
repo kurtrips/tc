@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.MessageParserManager">
+    <property name="MessageParsers">
+      <value>XmlMessageParser</value>
+      <value>CsvMessageParser</value>
+    </property>
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector</value>
+      <value>CsvMessageTypeDetector</value>
+    </property>
+  </namespace>
+
+  
+  <!--Tests config for XmlMessageParser-->
+  <namespace name="message.parser.XmlMessageParser">
+    <property name="MessageTypeDetectors">
+      <value>XmlMessageTypeDetector</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.XmlMessageTypeDetector">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/accuracyTests/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+  
+  <!--Tests config for XmlMessageTypeDetector-->
+  <namespace name="type.detector.XmlMessageTypeDetector.DuplicateTypes">
+    <!--Note 1: The message_type_ postfix can contain any value (SRequest) but must be same as the xpath_value for sake of consistency. For example see below.-->
+    <property name="message_type_ThisValueIsNotUsedAnyWhere">
+      <value>type_recipe_file=../../test_files/accuracyTests/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+    <property name="message_type_CouldBeAnything">
+      <value>type_recipe_file=../../test_files/accuracyTests/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+    </property>
+  </namespace>
+
+  <namespace name="type.detector.XmlMessageTypeDetectorWithValidator">
+    <property name="message_type_SRequest">
+      <value>type_recipe_file=../../test_files/accuracyTests/testRecipe.xml</value>
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SRequest</value>
+      <value>validator=TypeValidator</value>
+    </property>
+  </namespace>
+  <!--END - Tests config for XmlMessageTypeDetector-->
+
+  
+  <namespace name="message.parser.CsvMessageParser">
+    <property name="MessageTypeDetectors">
+      <value>CsvMessageTypeDetector</value>
+    </property>
+  </namespace>
+  <namespace name="type.detector.CsvMessageTypeDetector">
+    <property name="message_type_SomeValue">
+      <value>xpath=/ServiceRequest/@Type</value>
+      <value>xpath_value=SomeValue</value>
+      <value>type_recipe_file=../../test_files/accuracyTests/testCsvRecipe.xml</value>
+    </property>
+  </namespace>
+  
+</ConfigManager>

@@ -1,0 +1,5 @@
+bin\Debug\WcfCommonsMock.dll
+bin\Debug\WcfCommonsMock.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WcfCommonsMock.dll
+obj\Debug\WcfCommonsMock.pdb

@@ -1,0 +1,63 @@
+1)
+Mocks have been compiled to Astraea.Inframap.Data.dll and TopCoder.Graph.Layout.dll.
+These are present in test_files/dlls folder along with all other dll needed for this component.
+
+2)
+The source for the Astraea.Inframap.Data.dll and TopCoder.Graph.Layout.dll mocks is present in the test_files folder.
+
+
+
+FOR FINAL FIX 1:
+
+Changes made to ACCURACY tests:
+1) Changed the "TestGraphLayouterToken/type_name" config property from TopCoder.Graph.Layout.Layouter.TimeFocussedLayouter to
+TopCoder.Graph.Layout.Layouter.MockLayouter in the accuracy test config file. I think this can be done without loss of generality.
+
+2) Changed lines 166, 177, 188, 198 in LayoutEngineAccuracyTests class from
+Assert.AreEqual("1000", link1.Attributes[0].Name, "The original link attributes should be copied.");
+to Assert.AreEqual("origLinkId", link1.Attributes[0].Name, "The original link attributes should be copied.");
+This is as per the changes requested by PM in forum.
+
+3) LayoutEngineAccuracyTests lines 97,106,115:
+Removed 669+i to 669, because as long as new nodes are not added to the mapdata, GenerateUniqueId must return the same new id.
+
+
+The updated files are presnet in the respective folders at the normal locations.
+
+
+
+FOR FINAL FIX 2:
+Fixed issues as per forum thread. Some accuracy and stress tests will need to be changed for this.
+
+
+
+FOR FINAL FIX 3:
+Changes made to accuracy tests: See note for Final Fix 1.
+Changes made to stress tests: Loading of config files moved from preload.xml to Setup and TearDown functions.
+Changed some of my own tests too.
+
+Please find the updated tests and their test files in the respective folders at the normal locations.
+
+
+
+FOR FINAL FIX 4:
+
+Reviewer Response: Your submission didn't:
+copy the attributes of the original link to these links, create a new attribute to store the original link id, and remove the original link.
+
+Fixed as per PM suggestion.
+
+
+Reviewer Response: BaseLayoutEngine#GenerateLastUsedUniqueIds:
+the algo is wrong. you should clac new max id but not use cached one
+since the passed mapdatas may be different.
+
+This was already fixed. PLease contact PM if there are any issues.
+
+
+3.1.1- Reviewer Response: private method can be declared as static
+e.g. LayoutEngine#
+private void CreateLabelsForNonSyntheticNodes(MapData mapdata)
+
+This is not possible as it uses DefaultFontSize, CharacterUnits which are non static entities.
+

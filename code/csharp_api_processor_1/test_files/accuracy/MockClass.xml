@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MockClass</name>
+    </assembly>
+    <members>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass">
+            <summary>
+            A sample class, <see cref="T:System.Object"/>.
+            </summary>
+            <seealso cref="T:System.Exception"/>
+            <author>
+            cnettel
+            </author>
+            <version>
+            1.0
+            </version>
+            <copyright>
+            Copyright (C) 2007 TopCoder Inc., All rights reserved.
+            </copyright>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.privateField">
+            <summary>
+            This is a private field.
+            </summary>
+            <seealso cref="F:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.privateStaticField"/>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.engine">
+            <summary>
+            This is a public field.
+            </summary>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.privateStaticField">
+            <summary>
+            This is a private static field.
+            </summary>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.internalStaticField">
+            <summary>
+            This is an internal static field.
+            </summary>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.VirtMethod">
+            <summary>
+            A virtual method.
+            </summary>
+        </member>
+        <member name="E:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.staticEvent">
+            <summary>
+            A static event.
+            </summary>
+        </member>
+        <member name="E:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.protectedEvent">
+            <summary>
+            A protected event.
+            </summary>
+        </member>
+        <member name="E:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.privateEvent">
+            <summary>
+            A private event, almost like <see cref="E:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.staticEvent"/>.
+            </summary>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.Property">
+            <summary>
+            A property.
+            </summary>
+            <value>
+            No actual value.
+            </value>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.StaticProperty">
+            <summary>
+            A property.
+            </summary>
+            <value>
+            No actual value.
+            </value>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateProperty">
+            <summary>
+            A property.
+            </summary>
+            <value>
+            No actual value.
+            </value>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateStaticProperty">
+            <summary>
+            A property, but this is private, not like <see cref="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateProperty"/>.
+            </summary>
+            <value>
+            No actual value.
+            </value>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.Item(System.Int32)">
+            <summary>
+            A public indexer.
+            </summary>
+            <param name="x">Some index.</param>
+            <value>The value.</value>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.Item(System.String)">
+            <summary>
+            A private indexer.
+            </summary>
+            <param name="x">Some index.</param>
+            <value>The value.</value>
+        </member>
+        <member name="P:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.Item(System.Double)">
+            <summary>
+            A private indexer.
+            </summary>
+            <param name="x">Some index.</param>
+            <value>The value.</value>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.DelegateHere">
+            <summary>
+            A delegate that can be used.
+            </summary>
+            <param name="arrayParam">An array parameter.</param>
+            <returns>The result.</returns>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.DelegateThere">
+            <summary>
+            A delegate that can be used, just like <see cref="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.DelegateHere"/>.
+            </summary>
+            <param name="arrayParam">A nested array parameter.</param>
+            <returns>The result.</returns>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner">
+            <summary>
+            A nested (inner) class.
+            </summary>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.#ctor(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass)">
+            <summary>
+            A public constructor, but almost like <see cref="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.#ctor"/>.
+            </summary>
+            <param name="mock">An argument.</param>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.#ctor">
+            <summary>
+            A private constructor, somewhat like <see cref="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.#ctor(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass)"/>.
+            </summary>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.Method(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass[])">
+            <summary>
+            This is an abstract method.
+            </summary>
+            <param name="paramList">An array parameter.</param>
+            <exception cref="T:System.IO.FileNotFoundException">A cref to an exception.</exception>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.op_Explicit(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner)~System.Double">
+            <summary>
+            Explicit conversion.
+            </summary>
+            <param name="x">Param.</param>
+            <returns>41.0</returns>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.op_Implicit(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner)~System.String">
+            <summary>
+            Implicit conversion.
+            </summary>
+            <param name="x">Param.</param>
+            <returns>41.0</returns>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.op_Increment(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner)">
+            <summary>
+            "Real" operatover overloading.
+            </summary>
+            <param name="x">The argument.</param>
+            <returns>Itself.</returns>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.SomeCollection">
+            <summary>
+            Another juicy interface.
+            </summary>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.AnotherInner">
+            <summary>
+            An inner form of the outer abstract class.
+            </summary>
+        </member>
+        <member name="M:TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass.PrivateInner.AnotherInner.Method(TopCoder.CodeDoc.CSharp.AccuracyTests.MockClass[])">
+            <summary>
+            The abstract method incarnated.
+            </summary>
+            <param name="paramList">Parameter list.</param>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.Struct">
+            <summary>
+            A struct.
+            </summary>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.Struct.x">
+            <summary>
+            A field.
+            </summary>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.Struct.Hej">
+            <summary>
+            Inner enums can exist in anything.
+            </summary>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.Struct.Hoj">
+            <summary>
+            Inner classes can exist in anything.
+            </summary>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.Enum">
+            <summary>
+            An enum.
+            </summary>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.Enum.x">
+            <summary>
+            x is 42.
+            </summary>
+        </member>
+        <member name="F:TopCoder.CodeDoc.CSharp.AccuracyTests.Enum.y">
+            <summary>
+            y is 43
+            </summary>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.AnInterface">
+            <summary>
+            An interface. A very empty one, but here is some inheritance.
+            </summary>
+        </member>
+        <member name="T:TopCoder.CodeDoc.CSharp.AccuracyTests.ADelegate">
+            <summary>
+            A delegate that can be used.
+            </summary>
+            <param name="param">A parameter.</param>
+            <returns>The result.</returns>
+        </member>
+    </members>
+</doc>

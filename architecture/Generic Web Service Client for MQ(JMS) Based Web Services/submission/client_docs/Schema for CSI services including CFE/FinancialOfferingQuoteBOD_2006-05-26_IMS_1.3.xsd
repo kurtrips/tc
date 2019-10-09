@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /cvsroot/ims/ims/gen/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26/pbi/FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd,v 1.13 2012/02/09 18:38:23 ltian Exp $ -->
+<!-- This is a derived work based on the OAGIS(R) messaging specification. License information
+     for this file is provided in the LICENSE.TXT file that accompanies this OAGIS(R) release:
+     ** Revision: 8.0 **
+     ** Date: 05 April 2002 **
+     Open Applications Group XSD
+     Copyright 1998-2002, All Rights Reserved
+-->
+<!-- From ps/ps.xsd -->
+<xsd:schema xmlns:ims="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:oa="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26"
+    elementFormDefault="qualified"
+    version="0.02">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Title - FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd
+      Publisher - IBM Enterprise Integration Messaging Specification (EIMS)
+      Creator - EIMS Team http://w3.ibm.com/transform/cio.nsf/main/ws_eims
+      Date.Created - 2006-05-26
+      Format - text/xml
+      Language - en-US
+      Identifier - http://w3.ibm.com/standards/xml/ibmww/ims/1.3/PBI/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd
+      Keywords - EIMS, Enterprise Integration Messaging Specification, FinancialOfferingQuote, FinancialOfferingQuoteBOD
+      Description - 
+	      FinancialOfferingQuote related information
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26" schemaLocation="FinancialOfferingQuoteBOD_2006-05-26_OAGIS_8.2.xsd"/>
+  <xsd:element name="FinancialOfferingQuoteBOD">
+    <xsd:annotation>
+      <xsd:documentation>
+A generic authorization report class which contains common report header information needed for the user validation process. 
+			In R2.2, an Internal User Validation Report will be created which specializes this information for internal users. 
+			Post R2.2, once external user access is added to SCI, it is envisioned that external user validation reports such as a Coordinator External User Validation Report 
+			and a Customer Security Officer User Validation Report can also extend the generic capabilities provided by the User Validation Report.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:annotation>
+        <xsd:documentation>Global element for requesting FinancialOfferingQuote information from another application</xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+        <xsd:element ref="ims:ApplicationArea"/>
+        <xsd:element name="DataArea">
+          <xsd:annotation>
+            <xsd:documentation>
+Is where the information that the BOD message carries is provided, in this case FinancialOfferingQuoteBOD.
+							The information consists choice from multiple verbs and one noun
+							The verb indicates the action to be performed on the Noun (FinancialOfferingQuote).
+            </xsd:documentation>
+          </xsd:annotation>
+          <xsd:complexType>
+            <xsd:annotation>
+              <xsd:documentation>Is where the information that the message carries is provided. This is done by using the Verb which indicates the action to be performed on the Noun and 1 or more Nouns, which is the object that the action is to be performed.</xsd:documentation>
+              <xsd:documentation>Global element for exchanging FinancialOfferingQuote data</xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence>
+              <xsd:element ref="ims:Operation" minOccurs="0"/>
+              <xsd:element ref="ims:FinancialOfferingQuote" maxOccurs="unbounded"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="revision" use="required">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\p{N}\.\p{N}\.\p{N}"/>
+            <xsd:pattern value="\p{N}\.\p{N}"/>
+            <xsd:pattern value="\p{N}\p{N}\.\p{N}\.\p{N}"/>
+            <xsd:pattern value="\p{N}\p{N}\.\p{N}"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="AggregationMethod" type="xsd:string"/>
+  <xsd:element name="AgreementType" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Terms and conditions input description, re: lease, loan or purchase.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Amortization" type="ims:AmortizationType"/>
+  <xsd:element name="Application" type="ims:Application">
+    <xsd:annotation>
+      <xsd:documentation>Element for exchanging application specific parameters for this interaction</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ApplicationArea" type="ims:ApplicationArea">
+    <xsd:annotation>
+      <xsd:documentation>Element for extending OAGi application area</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ApplicationStatus" type="ims:Status">
+    <xsd:annotation>
+      <xsd:documentation>Element for applications error transport</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AssetCost" type="oa:Amount"/>
+  <xsd:element name="AssetId" type="ims:AssetId">
+    <xsd:annotation>
+      <xsd:documentation>Identifies an asset.  It includes a serial number with zero or more supplementary Id&apos;s, e.g., asset tags assigned by customers, distributors, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="AssetOwner" type="ims:AssetOwner"/>
+  <xsd:element name="BackSolveIndicator" type="xsd:string"/>
+  <xsd:element name="Base" type="ims:BaseType"/>
+  <xsd:element name="BaseEndExpenseOffset" type="xsd:string"/>
+  <xsd:element name="BillingDate" type="xsd:string"/>
+  <xsd:element name="BillingDetails" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Describes details that impact billing, re: Rounding, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="BlendedGroupNumber" type="xsd:string"/>
+  <xsd:element name="BlendedRateContribution" type="ims:PercentDecimal"/>
+  <xsd:element name="CalendarInterval" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Global element for calendar intervals of time re; day, week, month, Qtr...</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CashFlow" type="ims:CashFlowType"/>
+  <xsd:element name="CloseDate" type="xsd:string"/>
+  <xsd:element name="ComplexDetails" type="ims:ComplexDetailsType"/>
+  <xsd:element name="ContactDetails" type="ims:ContactDetailsType"/>
+  <xsd:element name="CustomerAgreementInd" type="xsd:string"/>
+  <xsd:element name="CustomerCurrency" type="oa:Currency">
+    <xsd:annotation>
+      <xsd:documentation>Customer currency code</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DaysInMonth" type="xsd:decimal"/>
+  <xsd:element name="DaySource" type="xsd:string"/>
+  <xsd:element name="DealAmounts" type="oa:Amount">
+    <xsd:annotation>
+      <xsd:documentation>Indicates the different monetary values for the deal, re; size, financed, etc. - uses attribute type to define meaning of amount</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DealGuarantee" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Indicator for the type of guarantee or warrantee within deal to customer</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DealType" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Defines specific types of financial deals, re: End of Lease, Prime Period, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DebtCostUpLift" type="oa:Id"/>
+  <xsd:element name="DepreciationDetails" type="ims:DepreciationDetailsType"/>
+  <xsd:element name="DownPayment">
+    <xsd:annotation>
+      <xsd:documentation>Element for the amount of any downpayment</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="oa:Amount"/>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="DownPaymentInd" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>
+An indication if the down payment amount is to be considered a
+			reduction of amount financed, or as a prepayment.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DownPaymentPercent" type="ims:PercentDecimal">
+    <xsd:annotation>
+      <xsd:documentation>
+The down payment percentage which is to be applied to the Net Purchase
+			Price.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DownPaymentPercentInd" type="ims:PercentDecimal"/>
+  <xsd:element name="Duration" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Global element for calendar unit of measure</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="EffectiveDate" type="oa:DateTime"/>
+  <xsd:element name="EfficiencyPercent" type="ims:PercentDecimal"/>
+  <xsd:element name="EndDate" type="xsd:string"/>
+  <xsd:element name="EndOfLeaseEndDate" type="oa:DateTime"/>
+  <xsd:element name="EndOfLeaseStartDate" type="oa:DateTime"/>
+  <xsd:element name="EquipmentAvailableDate" type="oa:DateTime"/>
+  <xsd:element name="ErrorCode">
+    <xsd:annotation>
+      <xsd:documentation>Application error code</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="lineNumber" type="oa:LineNumber" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ErrorDescription" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Error description</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ExemptionCode" type="ims:ExemptionCode"/>
+  <xsd:element name="ExpectedProfit" type="oa:Amount"/>
+  <xsd:element name="ExpenseRule">
+    <xsd:annotation>
+      <xsd:documentation>ROE Adjustment Percent</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ExtensionTime">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate desired extension on existing lease</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="oa:Duration">
+          <xsd:attribute name="extendedLease" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ExternalRateName" type="xsd:string"/>
+  <xsd:element name="Fasb7DPercent" type="ims:PercentDecimal"/>
+  <xsd:element name="Fasb7DRule" type="xsd:string"/>
+  <xsd:element name="Fasb7dThreshold" type="xsd:string"/>
+  <xsd:element name="Feature" type="ims:LeaseLineBase">
+    <xsd:annotation>
+      <xsd:documentation>Indicates features associated with the line item</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FinancePreferences" type="ims:FinancePreferences">
+    <xsd:annotation>
+      <xsd:documentation>Global element for payment preferences</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FinanceTax">
+    <xsd:annotation>
+      <xsd:documentation>Element used to describe including tax in a finance transaction</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="ims:FinanceTax">
+          <xsd:attribute name="FinanceTax" type="xsd:boolean" use="optional"/>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="FinancialOfferingQuote" type="ims:FinancialOfferingQuote">
+    <xsd:annotation>
+      <xsd:documentation>Business object describing the prices of goods or services provided.  The FinancialOfferingQuote includes the terms of the purchase, delivery proposals, identification of goods or services ordered, financial arrangement as well as their quantities.The FinancialOfferingQuote noun is used in conjunction with the Get and Show verbs to form a Business-to-Business negotiation dialogue concerning the goods or services specified.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FinancialTermsandConditions" type="ims:FinancialTermsandConditions">
+    <xsd:annotation>
+      <xsd:documentation>Element for including Terms and Conditions</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FirstYearTaxRule" type="xsd:string"/>
+  <xsd:element name="FiscalStartDay" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate the fiscal start day used</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FiscalStartMonth" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate the fiscal calendar month used</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FloatingRateDetails" type="ims:InstrumentDetailsType"/>
+  <xsd:element name="FloatNotifyDays" type="xsd:string"/>
+  <xsd:element name="FloatReferenceFrequency" type="xsd:string"/>
+  <xsd:element name="FloatStartDate" type="oa:DateTime"/>
+  <xsd:element name="FMVDetails" type="ims:FMVDetailsType"/>
+  <xsd:element name="FunctionRequestCode" type="xsd:string"/>
+  <xsd:element name="GracePeriod" type="xsd:string"/>
+  <xsd:element name="Header" type="ims:FinancialQuoteHeader">
+    <xsd:annotation>
+      <xsd:documentation>Information that applies to the entire quote.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ImpliedInterestRate">
+    <xsd:annotation>
+      <xsd:documentation>Element for Implied Interedt Rates (percentages)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="ims:PercentDecimal">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ImpliedInterestRateCode" type="oa:Id"/>
+  <xsd:element name="IndexDetails" type="ims:InstrumentDetailsType"/>
+  <xsd:element name="InitialStartDate" type="oa:DateTime"/>
+  <xsd:element name="InitialTerm" type="xsd:string"/>
+  <xsd:element name="InstallDate">
+    <xsd:annotation>
+      <xsd:documentation>ROE Adjustment Percent</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="oa:DateTime">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="InteractingApplication" type="ims:ApplicationDetails">
+    <xsd:annotation>
+      <xsd:documentation>Element for detailing interacting applications</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ItemLagDays" type="xsd:string"/>
+  <xsd:element name="ItemPriceDate" type="oa:DateTime"/>
+  <xsd:element name="LeaseCompetitor" type="ims:LeaseCompetitor">
+    <xsd:annotation>
+      <xsd:documentation>Lease related deatils for a competitor</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeaseCredit" type="ims:LeaseCreditType"/>
+  <xsd:element name="LeaseEndDate" type="oa:DateTime">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating when and item comes off lease</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeaseExpenses" type="oa:Amount"/>
+  <xsd:element name="LeaseExtension" type="ims:LeaseExtensions">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating extensions for leasing</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeaseInd" type="oa:Id"/>
+  <xsd:element name="LeaseOfferPackage" type="ims:LeaseOfferPackage">
+    <xsd:annotation>
+      <xsd:documentation>Root element for leasing offers</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeaseOption" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element to note the type of lease option for this offer</xsd:documentation>
+      <xsd:documentation>Element to note the type of lease option for this offer</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeaseSubLine" type="ims:LeaseSubLineBase"/>
+  <xsd:element name="LeaseTerms" type="ims:TermsPerPeriod">
+    <xsd:annotation>
+      <xsd:documentation>Leasing terms</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeasingFinancialAttributes" type="ims:LeasingFinancialAttributes">
+    <xsd:annotation>
+      <xsd:documentation>Root element for adding leasing financial attributes</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LeasingPaymentOptions" type="ims:LeasingPayments">
+    <xsd:annotation>
+      <xsd:documentation>Root element for quote package options financial summary information</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LessorEarnings" type="oa:Amount"/>
+  <xsd:element name="LeverageFactor" type="ims:PercentDecimal"/>
+  <xsd:element name="Line" type="ims:FinancialQuoteLine">
+    <xsd:annotation>
+      <xsd:documentation>The item or product quoted along with quantity, price and other descriptive information.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="LineCount" type="xsd:integer"/>
+  <xsd:element name="LineOfFinanceTerm" type="xsd:string"/>
+  <xsd:element name="LineOfFinancingExpirationDate" type="oa:DateTime"/>
+  <xsd:element name="Local" type="ims:LocalType">
+    <xsd:annotation>
+      <xsd:documentation>Locally defined fields</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="MaintenanceAdder" type="xsd:string"/>
+  <xsd:element name="MaintenanceInterestRate" type="ims:PercentDecimal"/>
+  <xsd:element name="MESDetails" type="ims:MESDetailsType"/>
+  <xsd:element name="MethodPercentBased" type="xsd:string"/>
+  <xsd:element name="MinimumAmortizationGrid" type="xsd:string"/>
+  <xsd:element name="Mode" type="xsd:string"/>
+  <xsd:element name="NominalStartDay">
+    <xsd:annotation>
+      <xsd:documentation>ROE Adjustment Percent</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="NominalStartMonth" type="xsd:string"/>
+  <xsd:element name="NormalizedTaxPay" type="xsd:string"/>
+  <xsd:element name="ObjectId" type="oa:Currency">
+    <xsd:annotation>
+      <xsd:documentation>Customer currency code</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Operation" type="ims:OperationType" substitutionGroup="oa:Verb">
+    <xsd:annotation>
+      <xsd:documentation>Generic Operation Verb which contains all features of verbs of oa.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OrderItem" type="ims:OrderItem">
+    <xsd:annotation>
+      <xsd:documentation>Provides information on the Orderable Item. When associated with an order like a Purchase Order, it identifies the item being ordered at the associated Line.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OriginalLease" type="ims:LeaseLineBase">
+    <xsd:annotation>
+      <xsd:documentation>Indicates original lease details associated with the line item</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="OwnerStatus" type="xsd:string"/>
+  <xsd:element name="ParameterMonthNumber" type="xsd:integer"/>
+  <xsd:element name="PartialPaymentApproved" type="xsd:boolean">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate if partial payment for this item is desired or allowed</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PartialPaymentRule" type="xsd:string"/>
+  <xsd:element name="PayFrequency" type="xsd:string"/>
+  <xsd:element name="PaymentAdjustDays" type="xsd:string"/>
+  <xsd:element name="PaymentMethod" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate preference of type of payment desired (credit, check, etc.)</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PaymentPreferences" type="ims:PaymentPreferences">
+    <xsd:annotation>
+      <xsd:documentation>Global element for payment preferences</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Payments">
+    <xsd:annotation>
+      <xsd:documentation>Element for collecting all the payment infomation</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ims:PaymentPreferences" minOccurs="0"/>
+        <xsd:element ref="ims:PaymentTotal" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PaymentStartDateMethod" type="xsd:string"/>
+  <xsd:element name="PaymentStep" type="ims:PaymentStep">
+    <xsd:annotation>
+      <xsd:documentation>Global element for step payments</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PaymentStream" type="ims:PaymentStreamType"/>
+  <xsd:element name="PaymentStyle">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating style of payment - advanced or arrears</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="ims:PaymentStyle"/>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PaymentTerms">
+    <xsd:annotation>
+      <xsd:documentation>Payment terms by time period</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="ims:TermsPerPeriod"/>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PaymentTermsStatus" type="ims:PaymentTermsStatusType">
+    <xsd:annotation>
+      <xsd:documentation>Global element for PaymentStatus</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PaymentTotal">
+    <xsd:annotation>
+      <xsd:documentation>Element used to portray the total of all payments involved with a lease</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="oa:Amounts"/>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PeriodTerms" type="oa:Amounts">
+    <xsd:annotation>
+      <xsd:documentation>Element used to define the actual payment relative to the LeaseTimeParameters</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PeriodTime" type="ims:LeaseTime">
+    <xsd:annotation>
+      <xsd:documentation>Element used to define time parameters</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PrepaymentApproved" type="xsd:boolean">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate if prepayment for this item is desired or allowed</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PriceRemainingNetInvestmentBalance" type="oa:Amount"/>
+  <xsd:element name="PriceType" type="xsd:string"/>
+  <xsd:element name="PricingOperation" type="xsd:string"/>
+  <xsd:element name="ProcessMethod" type="xsd:string"/>
+  <xsd:element name="QuoteDates">
+    <xsd:annotation>
+      <xsd:documentation>Dates for this quote, re: valid until, quote created on, etc. - use attribute type to define date meaning</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="oa:DateTime">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="QuotedDeal" type="ims:QuotedDeal">
+    <xsd:annotation>
+      <xsd:documentation>Global element for financing deal</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="QuoteStatus" type="oa:Status">
+    <xsd:annotation>
+      <xsd:documentation>Indicator for the status of the quote</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Rate">
+    <xsd:annotation>
+      <xsd:documentation>Element used to carry financial rates as percentage decimals (2.9%)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="ims:Rate">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+          <xsd:attribute name="duration" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RateAdjustment" type="ims:RateAdjustmentType"/>
+  <xsd:element name="RateByDuration" type="ims:RateByDurationType"/>
+  <xsd:element name="RatePerAmount" type="ims:RatePerAmount">
+    <xsd:annotation>
+      <xsd:documentation>Element used to describe the actual leasing rate per 1000 of the currency valuation</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RateProtection" type="xsd:string"/>
+  <xsd:element name="RateProtectionTerm" type="xsd:string"/>
+  <xsd:element name="RateUplift" type="xsd:string"/>
+  <xsd:element name="RecapturePercent">
+    <xsd:annotation>
+      <xsd:documentation>ROE Adjustment Percent</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="ims:PercentDecimal">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RelatedItem" type="ims:RelatedItem">
+    <xsd:annotation>
+      <xsd:documentation>Provides for multiple level of Item handling. Indicates type of relationship such as Component Of, Downgrade, Predecessor, Replace, Successor, Upgrade</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="RepetitionCount" type="xsd:integer"/>
+  <xsd:element name="RequestUserId" type="xsd:string"/>
+  <xsd:element name="ResaleDate" type="oa:DateTime"/>
+  <xsd:element name="ResidualValue" type="ims:ResidualValueType"/>
+  <xsd:element name="RetroValidPeriod" type="xsd:string"/>
+  <xsd:element name="ROE" type="oa:Amount"/>
+  <xsd:element name="ROEAdjustmentPercent">
+    <xsd:annotation>
+      <xsd:documentation>ROE Adjustment Percent</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ROEDetails" type="ims:ROEDetailsType"/>
+  <xsd:element name="ROEUserGroup" type="xsd:string"/>
+  <xsd:element name="SalesInformation" type="ims:SalesInformation">
+    <xsd:annotation>
+      <xsd:documentation>Communicates the information about the sale.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SelectAgreementAccountCode" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Select government account</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Settlement" type="ims:SettlementType"/>
+  <xsd:element name="Severity" type="ims:Severity">
+    <xsd:annotation>
+      <xsd:documentation>Global element for severity indications</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SinkFund" type="ims:SinkFundType"/>
+  <xsd:element name="SinKFundNetCashFlow" type="ims:SinKFundNetCashFlowType"/>
+  <xsd:element name="SpecialAssistanceRequiredInd" type="xsd:string"/>
+  <xsd:element name="SplitCapital" type="ims:PaymentStep"/>
+  <xsd:element name="Ssap21Percent" type="ims:PercentDecimal"/>
+  <xsd:element name="StartDate" type="oa:DateTime">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating the start of an event</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="StartDateBase" type="xsd:string"/>
+  <xsd:element name="StepFactor" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Global element for step factors</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="StepLevelPaymentPercent" type="ims:PercentDecimal"/>
+  <xsd:element name="StepPayAddFactor" type="oa:Amount">
+    <xsd:annotation>
+      <xsd:documentation>A positive or negative amount added to the base lease payment for a  step structure lease.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="StepRateAddFactor" type="ims:PercentDecimal">
+    <xsd:annotation>
+      <xsd:documentation>A factor used in specifying a step payment structure. It is expressed as a rate, and is added to the calculated rate as part of the calculation to obtain the customer payment. It is in percent decimal (e.g., 7.125% will be 7.125).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TaxCredit" type="ims:TaxCreditType"/>
+  <xsd:element name="TaxPayMethodFlag" type="xsd:string"/>
+  <xsd:element name="TaxStatus" type="ims:TaxStatus">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating the tax status of a line item</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TaxTreatmentIncome" type="xsd:string"/>
+  <xsd:element name="TCName">
+    <xsd:annotation>
+      <xsd:documentation>Element indicating the name, type and verison of the Ts and Cs</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+          <xsd:attribute name="version" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="TCNewIndicator" type="xsd:boolean">
+    <xsd:annotation>
+      <xsd:documentation>Element for identifying if the offeing is new - with a positive indicating that Ts and Cs is new</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TCOfferingId" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element for identifying the offering this Ts and Cs is relative to</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Term">
+    <xsd:annotation>
+      <xsd:documentation>Term</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="TimingReference" type="ims:TimingReferenceType"/>
+  <xsd:element name="ToleranceIRR" type="xsd:decimal"/>
+  <xsd:element name="ToleranceRate" type="ims:PercentDecimal"/>
+  <xsd:element name="ToleranceROE" type="xsd:decimal"/>
+  <xsd:element name="TradeInDate" type="oa:DateTime">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating disposition of tradein value</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TradeInPreference" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element for indicating disposition of tradein value</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="TransactionSortOrder" type="xsd:string"/>
+  <xsd:element name="TransactionType">
+    <xsd:annotation>
+      <xsd:documentation>Indicator for the type of transaction</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:string">
+          <xsd:attribute name="IdOrigin" type="xsd:string" use="optional"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="TypeModelCount" type="xsd:integer"/>
+  <xsd:element name="TypeOfFinance" type="ims:TypeOfFinanceType"/>
+  <xsd:element name="UnevenRentTest" type="xsd:string"/>
+  <xsd:element name="UnitLeaseTerms" type="ims:TermsPerPeriod">
+    <xsd:annotation>
+      <xsd:documentation>Leasing terms by unit</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="UpfrontExpenseOffset" type="oa:Amount"/>
+  <xsd:element name="UpfrontExpensePassPercent" type="ims:PercentDecimal"/>
+  <xsd:element name="UpgradeAction" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation>Element to indicate action taken for an upgrade</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ValidPeriod" type="xsd:string"/>
+  <xsd:element name="WeightedAverageCostOfCapital" type="oa:Amount"/>
+  <xsd:element name="WholesaleRetailUplift" type="oa:Amount"/>
+  <xsd:complexType name="AmortizationType">
+    <xsd:sequence>
+      <xsd:element name="PaymentNumber" type="oa:Id" minOccurs="0"/>
+      <xsd:element name="BillingFromDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="BillingToDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="PayDueDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="PaymentAmount" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="PaymentAmountRegular" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="FinanceCharge" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="Principal" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="RemainingBalance" type="oa:Amount" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Application">
+    <xsd:annotation>
+      <xsd:documentation>Global type object for exchanging application specific parameters for this interaction</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:InteractingApplication" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:ApplicationStatus" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ApplicationArea">
+    <xsd:annotation>
+      <xsd:documentation>Global extension of OAGi application areas</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:ApplicationArea">
+        <xsd:sequence>
+          <xsd:element ref="ims:Application" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ApplicationDetails">
+    <xsd:annotation>
+      <xsd:documentation>Type for detailing actor specific application data</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ApplicationLogicalId" type="oa:LogicalId" minOccurs="0"/>
+      <xsd:element name="UserId" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Element for indicating application user Id</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ServiceOperation" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The service that is being performed. Example: In the HR-IB Services Hub, this would be &quot;expertiseUpdate&quot;, or &quot;learningActivityUpdate&quot;.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AssetId">
+    <xsd:annotation>
+      <xsd:documentation>Identifies an asset.  It includes a serial number with zero or more supplementary Id&apos;s, e.g., asset tags assigned by customers, distributors, etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="SerialNumber" type="oa:SerialNumber">
+        <xsd:annotation>
+          <xsd:documentation>Identifies the serial number, usually assigned by the manufacturer, of the asset.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AssetOwner">
+    <xsd:annotation>
+      <xsd:documentation>Is the AssetOwner</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="BaseType">
+    <xsd:sequence>
+      <xsd:element name="Term" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="PayStartDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="BaseEnhancement" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="BaseEnhancementPassThruPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="BaseEnhancementPassPercent" type="ims:PercentDecimal" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CalendarInterval">
+    <xsd:annotation>
+      <xsd:documentation>Type for calendar intervals of time re:day, week, month Qtr...</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="CashFlowType">
+    <xsd:sequence>
+      <xsd:element name="TCNewInd" type="oa:Indicator" minOccurs="0"/>
+      <xsd:element name="Year" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Month" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="WeightedAverageCostOfCapital" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="FlowEarn" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="PresentValueFactor" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="type" type="xsd:string" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PresentValueFactorWACC" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="InternalPresentValueFactor" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="type" type="xsd:string" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PresentValueOfNetCashFlow" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="KnownPayment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="UnknownPayment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="KnowPaymentNormalized" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="UnknownPaymentNormalized" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="InterestIncome" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="Expense" type="oa:Amount" minOccurs="0"/>
+      <xsd:element ref="ims:AssetCost" minOccurs="0"/>
+      <xsd:element name="ResidualValueHedge" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="ResidualValue" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="InternalTransferPayment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="TaxKnownPayment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="TaxUnknownPayment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="TaxExpense" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="TaxResidualValue" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="TaxInternalTransferPayment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="TaxLumpsum" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="Depreciation" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="InvestmentTaxCredit" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="SinkFundAdjustment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element ref="ims:SinkFund" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ComplexDetailsType">
+    <xsd:sequence>
+      <xsd:element name="ComplexNumber" minOccurs="0">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="type" type="xsd:string" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ComplexVersion" minOccurs="0">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="type" type="xsd:decimal" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ContactDetailsType">
+    <xsd:complexContent>
+      <xsd:extension base="oa:Contact">
+        <xsd:sequence>
+          <xsd:element name="ContactNode" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="PROFSId" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="ReceiveCopyInd" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="QuotePrintFormat" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DepreciationDetailsType">
+    <xsd:sequence>
+      <xsd:element name="TotalDepreciation" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="PvDepreciation" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="DurationDepreciation" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="FirstYearRule" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="NetBookValueWriteOff" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="NetBalanceValueWriteOff" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="LookupYear" type="oa:Year" minOccurs="0"/>
+      <xsd:element name="DepreciationMethod" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RemainingValue" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="SalvageValueUplift" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="StartDates" type="oa:DateTime" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Document">
+    <xsd:complexContent>
+      <xsd:extension base="oa:Noun">
+        <xsd:sequence>
+          <xsd:element ref="ims:Header" minOccurs="0"/>
+          <xsd:element ref="ims:Line" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentLine">
+    <xsd:sequence>
+      <xsd:element name="LineNumber" type="oa:LineNumber" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the Line Number of the given Line Component within the document. LineNumbers are assigned by the sending system.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Action" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Used with Change verb.  Indicates the action that is applied to this line.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Add"/>
+            <xsd:enumeration value="Change"/>
+            <xsd:enumeration value="Delete"/>
+            <xsd:enumeration value="Replace"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentOrderHeader">
+    <xsd:sequence>
+      <xsd:element name="Note" type="oa:Note" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Is Note for the document in which it is contained.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="oa:DocumentReferences" minOccurs="0"/>
+      <xsd:element ref="oa:Attachments" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Duration">
+    <xsd:annotation>
+      <xsd:documentation>Type for calendar unit of measure</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ExemptionCode">
+    <xsd:annotation>
+      <xsd:documentation>Type for any kind of Exemption Code. ex:Opportunity Exemption Code</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="type" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="FinancePreferences">
+    <xsd:annotation>
+      <xsd:documentation>Global type to carry payment preferences</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:PaymentStyle" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FinanceTax">
+    <xsd:annotation>
+      <xsd:documentation>Global type for indicating the desire to finance tax</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="oa:Tax" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FinancialOfferingQuote">
+    <xsd:complexContent>
+      <xsd:extension base="ims:Lease">
+        <xsd:sequence>
+          <xsd:element name="AggrLine" type="ims:FinancialQuoteAggrLine" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FinancialQuoteAggrLine">
+    <xsd:complexContent>
+      <xsd:extension base="ims:LeaseLineBase">
+        <xsd:sequence>
+          <xsd:element ref="ims:LineCount" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:AggregationMethod" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:QuotedDeal" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FinancialQuoteHeader">
+    <xsd:complexContent>
+      <xsd:extension base="ims:LeaseHeader">
+        <xsd:sequence>
+          <xsd:element ref="ims:QuoteDates" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:QuoteStatus" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:QuotedDeal" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:LeaseCompetitor" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:SalesInformation" minOccurs="0"/>
+          <xsd:element ref="ims:ExemptionCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:CustomerCurrency" minOccurs="0"/>
+          <xsd:element ref="ims:ObjectId" minOccurs="0"/>
+          <xsd:element ref="ims:SelectAgreementAccountCode" minOccurs="0"/>
+          <xsd:element ref="ims:Mode" minOccurs="0"/>
+          <xsd:element ref="ims:EndOfLeaseStartDate" minOccurs="0"/>
+          <xsd:element ref="ims:EndOfLeaseEndDate" minOccurs="0"/>
+          <xsd:element ref="ims:AssetCost" minOccurs="0"/>
+          <xsd:element ref="ims:ToleranceIRR" minOccurs="0"/>
+          <xsd:element ref="ims:ToleranceRate" minOccurs="0"/>
+          <xsd:element ref="ims:ToleranceROE" minOccurs="0"/>
+          <xsd:element ref="ims:DaysInMonth" minOccurs="0"/>
+          <xsd:element ref="ims:Fasb7dThreshold" minOccurs="0"/>
+          <xsd:element ref="ims:ValidPeriod" minOccurs="0"/>
+          <xsd:element ref="ims:RetroValidPeriod" minOccurs="0"/>
+          <xsd:element ref="ims:ContactDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:CustomerAgreementInd" minOccurs="0"/>
+          <xsd:element ref="ims:LineOfFinancingExpirationDate" minOccurs="0"/>
+          <xsd:element ref="ims:LineOfFinanceTerm" minOccurs="0"/>
+          <xsd:element ref="ims:RequestUserId" minOccurs="0"/>
+          <xsd:element ref="ims:ROEUserGroup" minOccurs="0"/>
+          <xsd:element ref="ims:SpecialAssistanceRequiredInd" minOccurs="0"/>
+          <xsd:element ref="ims:LeaseInd" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FinancialQuoteLine">
+    <xsd:complexContent>
+      <xsd:extension base="ims:LeaseLine"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FinancialTermsandConditions">
+    <xsd:annotation>
+      <xsd:documentation>Global type for including terms and conditions</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:TCName" minOccurs="0"/>
+      <xsd:element ref="ims:TCOfferingId" minOccurs="0"/>
+      <xsd:element ref="ims:TCNewIndicator" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FMVDetailsType">
+    <xsd:sequence>
+      <xsd:element name="FMVAmount" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="FMVPercent" type="ims:FMVPercentType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="FMVUplift" type="ims:FMVUpLiftType" minOccurs="0"/>
+      <xsd:element name="Version" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Date" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="FMVSelectionMethod" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FMVPercentType">
+    <xsd:annotation>
+      <xsd:documentation>Is the AssetOwner</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="FMVUpLiftType">
+    <xsd:annotation>
+      <xsd:documentation>Is the AssetOwner</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="InstrumentDetailsType">
+    <xsd:sequence>
+      <xsd:element name="Name" type="oa:Indicator" minOccurs="0"/>
+      <xsd:element name="RemainingPrincipal" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="RemainingTerm" type="xsd:string" minOccurs="0"/>
+      <xsd:element ref="ims:StartDateBase" minOccurs="0"/>
+      <xsd:element name="InvoiceLineIndicator" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="StartDisplacement" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="RatesFixedDayOfTheMonth" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ReferenceDisplacement" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ReferenceFixedDayOfTheMonth" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="StartDayFixedDate" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="ReferenceDatabase" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="ReferenceDayFixDate" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="BillingUnits" type="oa:Indicator" minOccurs="0"/>
+      <xsd:element name="ComplementaryBillingType" type="oa:Indicator" minOccurs="0"/>
+      <xsd:element name="BuySellName" type="oa:Indicator" minOccurs="0"/>
+      <xsd:element name="StartDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="RateType" type="oa:Indicator" minOccurs="0"/>
+      <xsd:element name="ReferenceFrequency" type="ims:CalendarInterval" minOccurs="0"/>
+      <xsd:element name="InvoiceAdjustmentFrequency" type="ims:CalendarInterval" minOccurs="0"/>
+      <xsd:element name="Spread" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="RelativeIndexationFactor" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="FutureIndex" type="xsd:decimal" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Lease">
+    <xsd:annotation>
+      <xsd:documentation>Global type for lease business object</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ims:Document"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseCompetitor">
+    <xsd:sequence>
+      <xsd:element name="CompetitorInd" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CompetitorVendorname" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CompetitorVendorPrice" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CompetitorVendorEquipment" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="VendorRentInd" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="VendorAdvanceArrearInd" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseCreditType">
+    <xsd:sequence>
+      <xsd:element name="CreditApprovalNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CreditExpiryDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="Amount" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="CreditRate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CreditApprovalCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CreditConditionCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="CreditRequiredDate" type="oa:DateTime" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseExtensions">
+    <xsd:annotation>
+      <xsd:documentation>Global type for indicating options for extending a lease</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:LeaseEndDate" minOccurs="0"/>
+      <xsd:element ref="ims:UpgradeAction" minOccurs="0"/>
+      <xsd:element ref="ims:ExtensionTime" minOccurs="0"/>
+      <xsd:element ref="ims:TypeOfFinance" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseHeader" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>Global type for lease business object header</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ims:DocumentOrderHeader">
+        <xsd:sequence>
+          <xsd:element name="ReasonCode" type="oa:ReasonCode" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Is used as a reason indicator for any type of business event or activity.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element ref="ims:BillingDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="oa:Parties" minOccurs="0"/>
+          <xsd:element ref="ims:LeaseCredit" minOccurs="0"/>
+          <xsd:element ref="ims:Local" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseLine">
+    <xsd:annotation>
+      <xsd:documentation>Global type for lease business object line</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ims:LeaseLineBase">
+        <xsd:sequence>
+          <xsd:element ref="ims:Feature" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:OriginalLease" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:LeaseSubLine" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseLineBase">
+    <xsd:annotation>
+      <xsd:documentation>Global type for lease business object line base type</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ims:DocumentLine">
+        <xsd:sequence>
+          <xsd:element ref="ims:OrderItem" minOccurs="0"/>
+          <xsd:element name="OrderQuantity" type="oa:Quantity" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicates the number of ordered items for the given line..</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="UnitPrice" type="oa:AmountPerQuantity" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+              <xsd:documentation>Indicates the price per unit of the items ordered including the price of the sublines.   Iterations can represent differing pricing levels based on the &quot;type&quot; attribute.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="TotalAmount" type="oa:Amount" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+              <xsd:documentation>Indicates the total cost of the ordered items for this line.This includes any additional charges or handling fees.   Iterations can represent differing pricing levels based on the &quot;type&quot; attribute.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="Amount" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="PlannedInstallationDate" type="oa:DateTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicates the date the order line is expected to be installed at the customer.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="PromisedShipDate" type="oa:DateTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Indicates the date in which the order line was promised to be shipped from the supplier to the customer.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element ref="ims:TaxStatus" minOccurs="0"/>
+          <xsd:element ref="oa:Note" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:LeaseExtension" minOccurs="0"/>
+          <xsd:element ref="ims:LeaseOfferPackage" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="LeaseOverrides" type="ims:LeaseOfferPackage" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:ImpliedInterestRate" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:ImpliedInterestRateCode" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:Rate" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:LeasingPaymentOptions" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:Payments" minOccurs="0"/>
+          <xsd:element ref="ims:TransactionType" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="oa:Parties" minOccurs="0"/>
+          <xsd:element ref="oa:DocumentReferences" minOccurs="0"/>
+          <xsd:element ref="ims:SalesInformation" minOccurs="0"/>
+          <xsd:element ref="ims:FinancialTermsandConditions" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:Local" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:CashFlow" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:ComplexDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:ResidualValue" minOccurs="0"/>
+          <xsd:element ref="ims:SplitCapital" minOccurs="0"/>
+          <xsd:element ref="ims:BlendedGroupNumber" minOccurs="0"/>
+          <xsd:element ref="ims:MaintenanceAdder" minOccurs="0"/>
+          <xsd:element ref="ims:MaintenanceInterestRate" minOccurs="0"/>
+          <xsd:element ref="ims:ItemPriceDate" minOccurs="0"/>
+          <xsd:element ref="ims:FunctionRequestCode" minOccurs="0"/>
+          <xsd:element ref="ims:DebtCostUpLift" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:DepreciationDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:AssetOwner" minOccurs="0"/>
+          <xsd:element ref="ims:OwnerStatus" minOccurs="0"/>
+          <xsd:element ref="ims:BaseEndExpenseOffset" minOccurs="0"/>
+          <xsd:element ref="ims:EndDate" minOccurs="0"/>
+          <xsd:element ref="ims:EffectiveDate" minOccurs="0"/>
+          <xsd:element ref="ims:EquipmentAvailableDate" minOccurs="0"/>
+          <xsd:element ref="ims:PayFrequency" minOccurs="0"/>
+          <xsd:element ref="ims:LeaseExpenses" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:TaxCredit" minOccurs="0"/>
+          <xsd:element ref="ims:TaxTreatmentIncome" minOccurs="0"/>
+          <xsd:element ref="ims:NormalizedTaxPay" minOccurs="0"/>
+          <xsd:element ref="ims:FirstYearTaxRule" minOccurs="0"/>
+          <xsd:element ref="ims:EfficiencyPercent" minOccurs="0"/>
+          <xsd:element ref="ims:BlendedRateContribution" minOccurs="0"/>
+          <xsd:element ref="ims:FMVDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:LeaseCredit" minOccurs="0"/>
+          <xsd:element ref="ims:LeaseInd" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:InitialStartDate" minOccurs="0"/>
+          <xsd:element ref="ims:ExternalRateName" minOccurs="0"/>
+          <xsd:element ref="ims:ItemLagDays" minOccurs="0"/>
+          <xsd:element ref="ims:FloatingRateDetails" minOccurs="0"/>
+          <xsd:element ref="ims:IndexDetails" minOccurs="0"/>
+          <xsd:element ref="ims:GracePeriod" minOccurs="0"/>
+          <xsd:element ref="ims:UpfrontExpensePassPercent" minOccurs="0"/>
+          <xsd:element ref="ims:Fasb7DRule" minOccurs="0"/>
+          <xsd:element ref="ims:ROEDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:PaymentAdjustDays" minOccurs="0"/>
+          <xsd:element ref="ims:TimingReference" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:WholesaleRetailUplift" minOccurs="0"/>
+          <xsd:element ref="ims:NominalStartDay" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:Base" minOccurs="0"/>
+          <xsd:element ref="ims:InstallDate" minOccurs="0"/>
+          <xsd:element ref="ims:InitialTerm" minOccurs="0"/>
+          <xsd:element ref="ims:FloatReferenceFrequency" minOccurs="0"/>
+          <xsd:element ref="ims:RateProtectionTerm" minOccurs="0"/>
+          <xsd:element ref="ims:FloatNotifyDays" minOccurs="0"/>
+          <xsd:element ref="ims:PriceType" minOccurs="0"/>
+          <xsd:element ref="ims:PricingOperation" minOccurs="0"/>
+          <xsd:element ref="ims:BackSolveIndicator" minOccurs="0"/>
+          <xsd:element ref="ims:PaymentStartDateMethod" minOccurs="0"/>
+          <xsd:element ref="ims:StartDateBase" minOccurs="0"/>
+          <xsd:element ref="ims:MethodPercentBased" minOccurs="0"/>
+          <xsd:element ref="ims:MinimumAmortizationGrid" minOccurs="0"/>
+          <xsd:element ref="ims:NominalStartMonth" minOccurs="0"/>
+          <xsd:element ref="ims:RecapturePercent" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:ExpenseRule" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:PartialPaymentRule" minOccurs="0"/>
+          <xsd:element ref="ims:RateAdjustment" minOccurs="0"/>
+          <xsd:element ref="ims:RateProtection" minOccurs="0"/>
+          <xsd:element ref="ims:RateUplift" minOccurs="0"/>
+          <xsd:element ref="ims:ResaleDate" minOccurs="0"/>
+          <xsd:element ref="ims:TransactionSortOrder" minOccurs="0"/>
+          <xsd:element ref="ims:ProcessMethod" minOccurs="0"/>
+          <xsd:element ref="ims:TaxPayMethodFlag" minOccurs="0"/>
+          <xsd:element ref="ims:DealAmounts" minOccurs="0"/>
+          <xsd:element ref="ims:FloatStartDate" minOccurs="0"/>
+          <xsd:element ref="ims:TypeModelCount" minOccurs="0"/>
+          <xsd:element ref="ims:Amortization" minOccurs="0"/>
+          <xsd:element ref="ims:Settlement" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:LessorEarnings" minOccurs="0"/>
+          <xsd:element ref="ims:Fasb7DPercent" minOccurs="0"/>
+          <xsd:element ref="ims:Ssap21Percent" minOccurs="0"/>
+          <xsd:element ref="ims:UnevenRentTest" minOccurs="0"/>
+          <xsd:element ref="ims:StepLevelPaymentPercent" minOccurs="0"/>
+          <xsd:element ref="ims:BillingDate" minOccurs="0"/>
+          <xsd:element ref="ims:CloseDate" minOccurs="0"/>
+          <xsd:element ref="ims:ExpectedProfit" minOccurs="0"/>
+          <xsd:element ref="ims:UpfrontExpenseOffset" minOccurs="0"/>
+          <xsd:element ref="ims:PaymentStream" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:Term" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:PriceRemainingNetInvestmentBalance" minOccurs="0"/>
+          <xsd:element ref="ims:MESDetails" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="ims:RateByDuration" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element name="LastCashFlow" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EarningLessUplift" type="oa:Amount" minOccurs="0"/>
+          <xsd:element name="ComboCode" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="RateCardUniqueId" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseOfferPackage">
+    <xsd:annotation>
+      <xsd:documentation>Global type object for leasing offers</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="OfferId" type="oa:Id" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Element for identifying a specific offer - used in conjunction with line item for tracking offers</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LeaseOfferId" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Element to note the Total Offer Package that this offer is part of</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="OfferValidity" type="oa:TimePeriod" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Element to provide the time period that the offer is valid for</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ims:LeaseOption" minOccurs="0"/>
+      <xsd:element ref="ims:LeasingFinancialAttributes" minOccurs="0"/>
+      <xsd:element ref="ims:LeasingPaymentOptions" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:Local" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:LeaseInd" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="PrestateBaseField" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseSubLineBase">
+    <xsd:annotation>
+      <xsd:documentation>Global type for lease subline</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ims:LeaseLineBase"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="LeaseTime">
+    <xsd:annotation>
+      <xsd:documentation>Unit relative to leasing - include interval/duration</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:Duration" minOccurs="0"/>
+      <xsd:element ref="ims:CalendarInterval" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LeasingFinancialAttributes">
+    <xsd:annotation>
+      <xsd:documentation>Global type object for leasing financial attributes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:FinancePreferences" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LeasingPayments">
+    <xsd:annotation>
+      <xsd:documentation>Global type object for leasing payment details</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:LeaseOption" minOccurs="0"/>
+      <xsd:element ref="ims:LeaseTerms" minOccurs="0"/>
+      <xsd:element ref="ims:UnitLeaseTerms" minOccurs="0"/>
+      <xsd:element ref="ims:PaymentTerms" minOccurs="0"/>
+      <xsd:element ref="ims:RatePerAmount" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocalAmountType">
+    <xsd:sequence>
+      <xsd:element name="Amount" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="Precision" type="xsd:decimal" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LocalType">
+    <xsd:sequence>
+      <xsd:element name="NameValue" type="oa:NameValuePair" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="LocalAmount" type="ims:LocalAmountType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="LocalDate" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>User defined dates</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="oa:DateTime">
+              <xsd:attribute name="type" type="xsd:string" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="LocalRate" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Locally defined rates</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="ims:PercentDecimal">
+              <xsd:attribute name="type" type="xsd:string" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="MESDetailsType">
+    <xsd:sequence>
+      <xsd:element ref="ims:OrderItem" minOccurs="0"/>
+      <xsd:element name="InitialInstallDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="OriginalInstallDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="OriginalEndDate" type="oa:DateTime" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OperationType">
+    <xsd:annotation>
+      <xsd:documentation>
+The extension hierarchy:
+          ConfirmableVerb extends Verb.
+          RequestVerb which extends ConfirmableVerb.
+          AcknowledgeVerbs also extends ConfirmableVerb.
+          Confirmable verbs are: Add, Allocate, Cancel, Change, Create, Issue,Post, Show, and Sync.
+          Acknowledge verbs is: Process.
+          Request verbs are: Get, and GetList (Deprecated).
+          Extends directly from verbs are: Acknowledge, Confirm, Load, Notify, Respond, and Update.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:Verb">
+        <xsd:sequence>
+          <xsd:element name="Type" type="ims:VerbType">
+            <xsd:annotation>
+              <xsd:documentation>Type of the verb or operation.  This should behavior the same for those OAGIS verbs.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OrderItem">
+    <xsd:annotation>
+      <xsd:documentation>Provides information on the Orderable Item. When associated with an order like a Purchase Order, it identifies the item being ordered at the associated Line.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="oa:ItemIds" minOccurs="0"/>
+      <xsd:element name="ItemCategoryId" type="oa:ItemCategoryId" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Is a reference to a description of a group of products.  The products may be products that you formally describe in your system as a part number, or you may transact only the category.  An example of a simple classification of an item may be under Office Supplies.  An example of a complex classification of an item may be for engineering supplies:  Engineering Discipline - Electrical  Equipment Type - Process Control Equipment Equipment Sub Type - Flow Control Equipment Use - Flow/No Flow Indicators</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ItemType" type="oa:Type" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indentifies a type of Item.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Description" type="oa:Description" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Describes the OrderItem.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:choice>
+        <xsd:element name="SerialNumber" type="oa:SerialNumber" minOccurs="0" maxOccurs="unbounded">
+          <xsd:annotation>
+            <xsd:documentation>Identifies the instances of the OrderItem one serial number for each up to potentially OrderQuantity.  Note: This field is deplecated.  New field is AssetId.  Once all migrated, the choice structure will be removed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element ref="ims:AssetId" minOccurs="0" maxOccurs="unbounded">
+          <xsd:annotation>
+            <xsd:documentation>Identifies the instances of the OrderItem one asset Id (i.e., a serial number and zero or more Id&apos;s, e.g., asset tags) for each up to potentially OrderQuantity.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+      <xsd:element ref="oa:FeatureValue" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:RelatedItem" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OrderItemBase">
+    <xsd:annotation>
+      <xsd:documentation>Provides information on the Orderable Item. When associated with an order like a Purchase Order, it identifies the item being ordered at the associated Line.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="oa:ItemIds" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element name="SerialNumber" type="oa:SerialNumber" minOccurs="0" maxOccurs="unbounded">
+          <xsd:annotation>
+            <xsd:documentation>Identifies the instances of the OrderItem one serial number for each up to potentially OrderQuantity.  Note: This field is deplecated.  New field is AssetId.  Once all migrated, the choice structure will be removed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentPreferences">
+    <xsd:annotation>
+      <xsd:documentation>Global type for indicating payment preferences</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:FinanceTax" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:PaymentStyle" minOccurs="0"/>
+      <xsd:element ref="ims:PaymentMethod" minOccurs="0"/>
+      <xsd:element ref="ims:TradeInPreference" minOccurs="0"/>
+      <xsd:element ref="ims:TradeInDate" minOccurs="0"/>
+      <xsd:element ref="ims:FiscalStartDay" minOccurs="0"/>
+      <xsd:element ref="ims:FiscalStartMonth" minOccurs="0"/>
+      <xsd:element ref="ims:PrepaymentApproved" minOccurs="0"/>
+      <xsd:element ref="ims:PartialPaymentApproved" minOccurs="0"/>
+      <xsd:element ref="ims:StartDate" minOccurs="0"/>
+      <xsd:element ref="ims:DownPaymentInd" minOccurs="0"/>
+      <xsd:element ref="ims:DownPayment" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:DownPaymentPercentInd" minOccurs="0"/>
+      <xsd:element ref="ims:DownPaymentPercent" minOccurs="0"/>
+      <xsd:element name="DeferralPeriod" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Interval for deferring payments</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:complexContent>
+            <xsd:extension base="oa:DatePeriod">
+              <xsd:attribute name="deferraltype" type="xsd:string" use="optional"/>
+            </xsd:extension>
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ref="ims:PaymentTerms" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:PaymentStep" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentStep">
+    <xsd:annotation>
+      <xsd:documentation>Type for stepped payments</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="StepProfileLine" type="oa:Id" minOccurs="0"/>
+      <xsd:element name="StepTerm" type="ims:LeaseTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Duration for this step</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StepPayment" type="oa:Amount" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Actual payment amount for this step</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StepRate" type="ims:PercentDecimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Rate for this step in the payment cycle</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ims:StepRateAddFactor" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:StepFactor" minOccurs="0"/>
+      <xsd:element ref="ims:StepPayAddFactor" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentStreamType">
+    <xsd:complexContent>
+      <xsd:extension base="ims:PaymentStep">
+        <xsd:sequence>
+          <xsd:element ref="ims:DaySource" minOccurs="0"/>
+          <xsd:element name="Month" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="Year" type="xsd:string" minOccurs="0"/>
+          <xsd:element ref="ims:EndDate" minOccurs="0"/>
+          <xsd:element ref="ims:RepetitionCount" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentStyle">
+    <xsd:annotation>
+      <xsd:documentation>Type for denoting style of payment - advanced or arrears</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="Advanced" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="Arrears" type="xsd:boolean" minOccurs="0"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="PaymentTermsStatusType">
+    <xsd:annotation>
+      <xsd:documentation>PaymentStatus indicated the total number of payments and the number of the next payment</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="TotalInstallments" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Total number of installmens</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PercentDecimal">
+    <xsd:annotation>
+      <xsd:documentation>Indicates the percentage with decimal.  For instance, 7.125% will be represented as 7.125</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="QuotedDeal">
+    <xsd:annotation>
+      <xsd:documentation>Type to describe a financing deal</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:DealType" minOccurs="0"/>
+      <xsd:element ref="ims:AgreementType" minOccurs="0"/>
+      <xsd:element ref="ims:DealAmounts" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:DealGuarantee" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Rate">
+    <xsd:annotation>
+      <xsd:documentation>GlobalType for carrying financial rates - usually expressed in percentage decimals (2.9%)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="RateAdjustmentType">
+    <xsd:sequence>
+      <xsd:element name="ChangePoints" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="Date" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="Factor" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="InterestPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="Period" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RateByDurationType">
+    <xsd:sequence>
+      <xsd:element name="RateType" type="xsd:string" minOccurs="0"/>
+      <xsd:element ref="ims:Rate" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RatePerAmount">
+    <xsd:annotation>
+      <xsd:documentation>Type for describing rates per amounts</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:Rate" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RelatedItem">
+    <xsd:annotation>
+      <xsd:documentation>Type for multiple levels of item information</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ims:OrderItemBase">
+        <xsd:attribute name="relationshipType" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ResidualValueType">
+    <xsd:sequence>
+      <xsd:element name="RVAmount" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="PriceRVAmountAdjusted" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="PriceRVPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="PercentAdjusted" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="BaseRVPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="RVMethodPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="MaximumRVPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="RVPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="AccountRVPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="RVOperator" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVHedge" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVInterpretation" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVOffset" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVProductCategory" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVRecognitionShift" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVSelectionMethod" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVTaxLiability" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="AccountRVBase" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="PricingRVBase" type="oa:AmountPerQuantity" minOccurs="0"/>
+      <xsd:element name="MinimumRVTerm" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="RVDate" type="oa:DateTime" minOccurs="0"/>
+      <xsd:element name="TotalRV" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="RVDuration" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="RVAdjustment" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="RVOption" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="EndOfLeaseRVPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="PresentValueRV" type="oa:Amount" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ROEDetailsType">
+    <xsd:sequence>
+      <xsd:element name="ROE" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="ItemCategoryId" type="oa:ItemCategoryId" minOccurs="0"/>
+      <xsd:element ref="ims:ROEAdjustmentPercent" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="EarningLessUplift" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="UserId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="UserGroup" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SalesInformation">
+    <xsd:annotation>
+      <xsd:documentation>Communicates the Sales Information relative to this sale, re; sales person, their commision, their local sales organizations, global organization and their commision rates.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="SalesOrganization" type="oa:SalesOrganization" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indicates Sales Organization involved in the sale.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="GlobalOrganization" type="oa:SalesOrganization" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indicates the global unit involved in the sale.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SettlementType">
+    <xsd:sequence>
+      <xsd:element ref="ims:LeaseInd" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="SettlementType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SettlementDay" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="MonthAdder" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="PayMethod" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SupplierType" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SupplierNumber" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SettlementDataBase" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SettlementPercentBase" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="SettlementPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="SettlementAmount" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="InternalTransferPaymentEffect" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="InternalTransferPaymentEffectBase" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Severity">
+    <xsd:annotation>
+      <xsd:documentation>Type for generic error severity notation</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="Notice" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="Warning" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="Fatal" type="xsd:boolean" minOccurs="0"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="SinKFundNetCashFlowType">
+    <xsd:sequence>
+      <xsd:element name="PresentValueSinkFundRate" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="PresentValueWacc" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="WACCNetCashFlow" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="SinkFundCashFlow" type="oa:Amount" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SinkFundType">
+    <xsd:sequence>
+      <xsd:element name="UseOfInFlow" type="oa:Amount" minOccurs="0"/>
+      <xsd:element name="NeedToSave" type="oa:Amount" minOccurs="0"/>
+      <xsd:element ref="ims:SinKFundNetCashFlow" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Status">
+    <xsd:annotation>
+      <xsd:documentation>Type for generic status</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="LineNumber" type="oa:LineNumber" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Element for indicating line number referenced by this status</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ims:Severity" minOccurs="0"/>
+      <xsd:element ref="ims:ErrorCode" minOccurs="0"/>
+      <xsd:element ref="ims:ErrorDescription" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TaxCreditType">
+    <xsd:sequence>
+      <xsd:element name="Duration" type="ims:Duration" minOccurs="0"/>
+      <xsd:element name="TaxCreditPercent" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="TaxCreditPercentBase" type="ims:PercentDecimal" minOccurs="0"/>
+      <xsd:element name="RecaptureInd" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="Amount" type="oa:Amount" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TaxStatus">
+    <xsd:annotation>
+      <xsd:documentation>Type for indicating tax status of a line item</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="ItemTaxCode" type="oa:TaxCode" minOccurs="0"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="TermsPerPeriod">
+    <xsd:annotation>
+      <xsd:documentation>Global type object for leasing time payments denoted by time periods</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="ims:PeriodTerms" minOccurs="0"/>
+      <xsd:element ref="ims:PeriodTime" minOccurs="0"/>
+      <xsd:element ref="ims:PaymentTermsStatus" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TimingReferenceType">
+    <xsd:sequence>
+      <xsd:element ref="ims:ROE" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ims:ParameterMonthNumber" minOccurs="0"/>
+      <xsd:element ref="ims:LeverageFactor" minOccurs="0"/>
+      <xsd:element ref="ims:WeightedAverageCostOfCapital" minOccurs="0"/>
+      <xsd:element name="DebtCost" type="ims:PercentDecimal" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>The borrowing cost; expressed as a nominal annual interest rate.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="ims:ROEAdjustmentPercent" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TypeOfFinanceType">
+    <xsd:annotation>
+      <xsd:documentation>
+Type of financing is a user defined code which represents standard
+			terms and conditions which the organization supports. For ICFS some
+			examples are Fair Market Value Leases, Full Payout Lease, etc.
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="VerbType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Acknowledge"/>
+      <xsd:enumeration value="Add"/>
+      <xsd:enumeration value="Allocate"/>
+      <xsd:enumeration value="Cancel"/>
+      <xsd:enumeration value="Change"/>
+      <xsd:enumeration value="Confirm"/>
+      <xsd:enumeration value="Create"/>
+      <xsd:enumeration value="Get"/>
+      <xsd:enumeration value="Issue"/>
+      <xsd:enumeration value="Load"/>
+      <xsd:enumeration value="Notify"/>
+      <xsd:enumeration value="Post"/>
+      <xsd:enumeration value="Process"/>
+      <xsd:enumeration value="Respond"/>
+      <xsd:enumeration value="Show"/>
+      <xsd:enumeration value="Sync"/>
+      <xsd:enumeration value="Update"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

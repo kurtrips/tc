@@ -1,0 +1,8 @@
+bin\Debug\MockLibrary.dll
+bin\Debug\MockLibrary.pdb
+bin\Debug\BaseLibrary.dll
+bin\Debug\BaseLibrary.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MockLibrary.dll
+obj\Debug\MockLibrary.pdb
+bin\Debug\MockLibrary.XML

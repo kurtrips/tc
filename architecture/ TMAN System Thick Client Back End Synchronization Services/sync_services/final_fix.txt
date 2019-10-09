@@ -1,0 +1,57 @@
+>>For downloadData, userName argument should be added according to the architecture UML.
+
+No response still in the forum. I think if there is some change, we can deal with it in approval phase
+
+>>Printing XML documents via StringBuilder is not reliable. XML features of Java should be used.
+java.beans.XMLEncoder and XMLDecoder is a better option, because it's reliable and much more simple and RS says: "The XML format for the transfers should be a simple serialization of the entities between their object/ERD and XML states".
+
+Now using Java DOM classes (Document, Node etc)
+Fixed the SD as well
+BTW, "simple serialization of the entities between their object/ERD and XML states" is not valid as we are not using entities at all.
+
+>>Details on XML parsing is needed, sample code is fine, eg: use SAXParser or DOMParser, etc.
+
+Added note at end of CS 1.3.4
+
+>>Relations for all use cases, except for logging, must be extend, but not include.
+
+Removed the abstract use cases. Have added 2 comments though.
+
+>>Using a name for the type in XML would be much better than using a magic number.
+The XML is a verbose format, so there is no reason to use a number (except for the Java correspondent values).
+
+It is much better to use the int. It is directly convertible to java.sql.Typ. See http://docs.oracle.com/javase/6/docs/api/java/sql/Types.html (they are all static int)
+
+>>LocalDataSynchronizationServiceImpl and DataSynchronizationServiceEJB share a lot of thigns in common.
+
+Recommended item not fixed
+
+>>EJB method should be annotated with @Stateless.
+
+It is already there in the class doc.
+
+>>The services should also throw ColumnValueXmlConverterException.
+Write and Read exceptions are for write and read, not conversion.
+
+Fixed in TCUML diagram and method docs as well.
+
+>>Remote EJB must have remote interface with @Remote annotation.
+
+It is already there in the class doc.
+
+>>JdbcTemplate should be used instead of DataSource. JdbcTemplate is simpler to use and better integrates with Spring.
+
+Fixed
+
+>>"@param start - The start date of the time range (inclusive) @param end - The end date of the time range (inclusive)" Hm there is no such param.
+
+Fixed
+
+>>Missing logger in configuration parameters.
+
+Fixed
+
+>>There should only be 1 Logger class in the class diagram in which all aggregates to it. Similarly, there needs to be only 1 com.ibm.tman.service package. Otherwise, it is not obvious if they are actually the same object/package.
+
+This should really be recommended. Just using 1 Logger and 1 namespace will make the diagram much more confusing because of all the criss crossing lines.
+

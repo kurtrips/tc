@@ -1,0 +1,482 @@
+/*********************************************************************************************************
+/*
+/* Filename: schedule_item.pkg
+/* Component: Hermes Schedule Item Persistence
+/* Package: schedule_item
+/* Designer: argolite
+/* Developer: TCSDeveloper
+/* Version: 1.0
+/* Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+/*
+/* Description: The package header of the schedule_item package.
+/*              Contains the data types and specifications of the procedures of the schedule_item package.
+/*
+/*********************************************************************************************************/
+CREATE OR REPLACE PACKAGE schedule_item AS
+
+
+   /*********************************************************************************************************
+   /** An equivalent of a typedef for the REF CURSOR oracle type.
+   /*********************************************************************************************************/
+   TYPE T_CURSOR_TYPE IS REF CURSOR;
+   
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_save_activity_group
+   /** Description: Creates or updates an activity group record depending on
+   /**              whether record with id as p_activity_group_ID exists or not.
+   /** In: p_activity_group_ID - The ID of the activity group.
+   /** In: p_last_modified_dt - The last modified date.
+   /** In: p_last_modified_by - The user by whom it was last modified.
+   /** In: p_act_grp_abbr - The abbreviation of the activity group.
+   /** In: p_act_grp_nm - The name of the activity group.
+   /*********************************************************************************************************/
+   PROCEDURE sp_save_activity_group
+   (
+      p_activity_group_ID  view_activity_group.ACTIVITY_GROUP_ID%TYPE,
+      p_last_modified_dt   view_activity_group.ACT_GRP_LAST_MODIFIED_DT%TYPE,
+      p_last_modified_by   view_activity_group.ACT_GRP_LAST_MODIFIED_BY%TYPE,
+      p_act_grp_abbr       view_activity_group.ACT_GRP_ABBR%TYPE,
+      p_act_grp_nm         view_activity_group.ACT_GRP_NM%TYPE
+   );
+    
+    
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_activity_group
+   /** Description: Deletes an activity group record with id as p_activity_group_ID.
+   /** In: p_activity_group_ID - The ID of the activity group.
+   /** InOut: p_rows_affected - The number of rows deleted.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_activity_group
+   (
+      p_activity_group_ID   view_activity_group.ACTIVITY_GROUP_ID%TYPE,
+      p_rows_affected       IN OUT NUMBER
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_activity_group
+   /** Description: Gets the data of an activity group record with id as p_activity_group_ID.
+   /** In: p_activity_group_ID - The ID of the activity group.
+   /** Out: p_results_cursor - Cursor containing the row data for the given id.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_activity_group
+   (
+      p_activity_group_ID  view_activity_group.ACTIVITY_GROUP_ID%TYPE,
+      p_results_cursor     OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_all_activity_groups
+   /** Description: Gets the data of all activity group records in the database.
+   /** Out: p_results_cursor - Cursor containing the data for all activity groups.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_all_activity_groups
+   (
+       p_results_cursor        OUT T_CURSOR_TYPE
+   );
+    
+    
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_save_activity_type
+   /** Description: Creates or updates an activity type record depending on
+   /**              whether record with id as p_activity_type_ID exists or not.
+   /** In: p_activity_type_ID - The ID of the activity type.
+   /** In: p_activity_group_ID - The ID of the activity group for the activity type.
+   /** In: p_activity_type_abbr - The abbreviation of the activity type.   
+   /** In: p_last_modified_date - The last modified date.
+   /** In: p_last_modified_by - The user by whom it was last modified.
+   /** In: p_activity_type_nm - The name of the activity type.
+   /*********************************************************************************************************/
+   PROCEDURE sp_save_activity_type
+   (
+      p_activity_type_ID    view_activity_type.ACTIVITY_TYPE_ID%TYPE,
+      p_activity_group_ID   view_activity_type.ACTIVITY_GROUP_ID%TYPE,
+      p_activity_type_abbr  view_activity_type.ACTIVITY_TYPE_ABBR%TYPE,
+      p_last_modified_date  view_activity_type.ACT_TYP_LAST_MODIFIED_DT%TYPE,
+      p_last_modified_by    view_activity_type.ACT_TYP_LAST_MODIFIED_BY%TYPE,
+      p_activity_type_nm    view_activity_type.ACTIVITY_TYPE_NM%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_activity_type
+   /** Description: Deletes an activity type record with id as p_activity_type_ID.
+   /** In: p_activity_type_ID - The ID of the activity type to delete.
+   /** InOut: p_rows_affected - The number of rows deleted.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_activity_type
+   (
+      p_activity_type_ID    view_activity_type.ACTIVITY_TYPE_ID%TYPE,
+      p_rows_affected       IN OUT NUMBER
+   );
+    
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_activity_type
+   /** Description: Gets the data of an activity type record with id as p_activity_type_ID.
+   /** In: p_activity_type_ID - The ID of the activity type.
+   /** Out: p_results_cursor - Cursor containing the row data for the given id.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_activity_type
+   (
+      p_activity_type_ID      view_activity_type.ACTIVITY_TYPE_ID%TYPE,
+      p_results_cursor        OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_all_activity_types
+   /** Description: Gets the data of all activity type records in the database.
+   /** Out: p_results_cursor - Cursor containing the data for all activity types.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_all_activity_types
+   (
+      p_results_cursor        OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_save_schedule_item_status
+   /** Description: Creates or updates an schedule item status record depending on
+   /**              whether record with id as p_sched_status_ID exists or not.
+   /** In: p_sched_status_ID - The ID of the schedule item status.
+   /** In: p_last_modified_dt - The last modified date.
+   /** In: p_last_modified_by - The user by whom it was last modified.
+   /** In: p_status_desc - The description of the schedule item status.
+   /** In: p_status_abbr - The abbreviation of the schedule item status.
+   /*********************************************************************************************************/
+   PROCEDURE sp_save_schedule_item_status
+   (
+      p_sched_status_ID       view_schedule_item_status.SCHED_STATUS_ID%TYPE,
+      p_last_modified_dt      view_schedule_item_status.S_LAST_MODIFIED_DT%TYPE,
+      p_last_modified_by      view_schedule_item_status.S_LAST_MODIFIED_BY%TYPE,
+      p_status_desc           view_schedule_item_status.S_STATUS_DESC%TYPE,
+      p_status_abbr           view_schedule_item_status.S_STATUS_ABBR%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_schedule_item_status
+   /** Description: Deletes an schedule item status record with id as p_sched_status_ID.
+   /** In: p_sched_status_ID - The ID of the schedule item status to delete.
+   /** InOut: p_rows_affected - The number of rows deleted.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_schedule_item_status
+   (
+      p_sched_status_ID       view_schedule_item_status.SCHED_STATUS_ID%TYPE,
+      p_rows_affected         IN OUT NUMBER
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_schedule_item_status
+   /** Description: Gets the data of an schedule item status record with id as p_sched_status_ID.
+   /** In: p_sched_status_ID - The ID of the schedule item status.
+   /** Out: p_results_cursor - Cursor containing the row data for the given id.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_schedule_item_status
+   (
+      p_sched_status_ID      view_schedule_item_status.SCHED_STATUS_ID%TYPE,
+      p_results_cursor       OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_all_sched_item_stats
+   /** Description: Gets the data of all schedule item status records in the database.
+   /** Out: p_results_cursor - Cursor containing the data for all schedule item statuses.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_all_sched_item_stats
+   (
+      p_results_cursor        OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_save_sched_item_req_stat
+   /** Description: Creates or updates an schedule item request status record depending on
+   /**              whether record with id as p_sched_req_status_ID exists or not.
+   /** In: p_sched_req_status_ID - The ID of the schedule item request status.
+   /** In: p_last_modified_dt - The last modified date.
+   /** In: p_last_modified_by - The user by whom it was last modified.
+   /** In: p_status_desc - The description of the schedule item request status.
+   /** In: p_status_abbr - The abbreviation of the schedule item request status.
+   /*********************************************************************************************************/
+   PROCEDURE sp_save_sched_item_req_stat
+   (
+      p_sched_req_status_ID   view_sched_item_req_status.SCHED_REQUEST_STATUS_ID%TYPE,
+      p_last_modified_dt      view_sched_item_req_status.RS_LAST_MODIFIED_DT%TYPE,
+      p_last_modified_by      view_sched_item_req_status.RS_LAST_MODIFIED_BY%TYPE,
+      p_status_desc           view_sched_item_req_status.RS_STATUS_DESC%TYPE,
+      p_status_abbr           view_sched_item_req_status.RS_STATUS_ABBR%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_sched_item_req_stat
+   /** Description: Deletes an schedule item request status record with id as p_sched_req_status_ID.
+   /** In: p_sched_req_status_ID - The ID of the schedule item request status to delete.
+   /** InOut: p_rows_affected - The number of rows deleted.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_sched_item_req_stat
+   (
+      p_sched_req_status_ID   view_sched_item_req_status.SCHED_REQUEST_STATUS_ID%TYPE,
+      p_rows_affected         IN OUT NUMBER
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_sched_item_req_stat
+   /** Description: Gets the data of an schedule item request status record with id as p_sched_req_status_ID.
+   /** In: p_sched_req_status_ID - The ID of the schedule item request status.
+   /** Out: p_results_cursor - Cursor containing the row data for the given id.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_sched_item_req_stat
+   (
+      p_sched_req_status_ID   view_sched_item_req_status.SCHED_REQUEST_STATUS_ID%TYPE,
+      p_results_cursor        OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_all_sched_item_req_stat
+   /** Description: Gets the data of all schedule item request status records in the database.
+   /** Out: p_results_cursor - Cursor containing the data for all schedule item request statuses.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_all_sched_item_req_stat
+   (
+       p_results_cursor        OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_save_activity
+   /** Description: Creates or updates an activity record depending on
+   /**              whether record with id as p_activity_id exists or not.
+   /** In: p_activity_id - The ID of the activity.
+   /** In: p_activity_type_id - The ID of the activity type of the activity.
+   /** In: p_default_start_time - The default start time of the activity.
+   /** In: p_last_modified_dt - The last modified date.
+   /** In: p_default_expire_days - The default expire days of the activity.
+   /** In: p_last_modified_by - The user by whom it was last modified.
+   /** In: p_work_day_amt - The work day amount of the activity.
+   /** In: p_duration - The duration of the activity.
+   /** In: p_activity_nm - The activity name of the activity.
+   /** In: p_enabled_ind - Whether the activity is enabled(1) or disabled(0).
+   /** In: p_activity_abbr - The abbreviation of the activity.
+   /** In: p_exclusive_ind - Whether the activity is exclusive(1) or not(0).
+   /*********************************************************************************************************/
+   PROCEDURE sp_save_activity
+   (
+      p_activity_id           view_activity.ACTIVITY_ID%TYPE,
+      p_activity_type_id      view_activity.ACTIVITY_TYPE_ID%TYPE,
+      p_default_start_time    view_activity.DEFAULT_START_TIME%TYPE,
+      p_last_modified_dt      view_activity.ACT_LAST_MODIFIED_DT%TYPE,
+      p_default_expire_days   view_activity.DEFAULT_EXPIRE_DAYS%TYPE,
+      p_last_modified_by      view_activity.ACT_LAST_MODIFIED_BY%TYPE,
+      p_work_day_amt          view_activity.ACT_WORK_DAY_AMT%TYPE,
+      p_duration              view_activity.ACT_DURATION%TYPE,
+      p_activity_nm           view_activity.ACTIVITY_NM%TYPE,
+      p_enabled_ind           view_activity.ENABLED_IND%TYPE,
+      p_activity_abbr         view_activity.ACTIVITY_ABBR%TYPE,
+      p_exclusive_ind         view_activity.EXCLUSIVE_IND%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_activity
+   /** Description: Deletes an activity record with id as p_activity_id.
+   /** In: p_activity_id - The ID of the activity to delete.
+   /** InOut: p_rows_affected - The number of rows deleted.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_activity
+   (
+      p_activity_id         view_activity.ACTIVITY_ID%TYPE,
+      p_rows_affected       IN OUT NUMBER
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_activity
+   /** Description: Gets the data of an activity record with id as p_activity_id.
+   /** In: p_activity_id - The ID of the activity.
+   /** Out: p_results_cursor - Cursor containing the row data for the given id.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_activity
+   (
+      p_activity_id        view_activity.ACTIVITY_ID%TYPE,
+      p_results_cursor     OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_all_activities
+   /** Description: Gets the data of all activity records in the database.
+   /** In: p_hideDisabled - Whether to hide(1) or show(0) disabled activities.
+   /** Out: p_results_cursor - Cursor containing the data for all schedule item request statuses.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_all_activities
+   (
+      p_hideDisabled       view_activity.ENABLED_IND%TYPE,
+      p_results_cursor     OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_save_sched_item
+   /** Description: Creates or updates a schedule item record depending on
+   /**              whether record with id as p_schedule_item_id exists or not.
+   /** In: p_schedule_item_id - The ID of the schedule item.
+   /** In: p_sched_request_status_id - The ID of the request status of the schedule item.
+   /** In: p_sched_status_id - The ID of the status of the schedule item.
+   /** In: p_note_id - The ID of the Hermes Generic Note of the schedule item.
+   /** In: p_sched_role_note_id - The ID of the Hermes Generic Note of the schedule item.
+   /** In: p_activity_id - The ID of the activity of the schedule item.   
+   /** In: p_last_modified_dt - The last modified date.
+   /** In: p_work_day_amt - The work day amount for the schedule item.
+   /** In: p_last_modified_by - The user by whom it was last modified.
+   /** In: p_version - The version of the schedule item.
+   /** In: p_duration - The duration of the schedule item.
+   /** In: p_exception_ind - The exception indicator of the schedule item.
+   /** In: p_expire_dt - The expiration date of the schedule item.
+   /** In: p_work_dt - The work date of the schedule item.
+   /*********************************************************************************************************/
+   PROCEDURE sp_save_sched_item
+   (
+      p_schedule_item_id         view_schedule_item.SCHEDULE_ITEM_ID%TYPE,
+      p_sched_request_status_id  view_schedule_item.SCHED_REQUEST_STATUS_ID%TYPE,
+      p_sched_status_id          view_schedule_item.SCHED_STATUS_ID%TYPE,
+      p_note_id                  view_schedule_item.NOTE_ID%TYPE,
+      p_sched_role_note_id       view_schedule_item.SCHED_ROLE_NOTE_ID%TYPE,
+      p_activity_id              view_schedule_item.ACTIVITY_ID%TYPE,
+      p_last_modified_dt         view_schedule_item.LAST_MODIFIED_DT%TYPE,
+      p_work_day_amt             view_schedule_item.WORK_DAY_AMT%TYPE,
+      p_last_modified_by         view_schedule_item.LAST_MODIFIED_BY%TYPE,
+      p_version                  view_schedule_item.VERSION%TYPE,
+      p_duration                 view_schedule_item.DURATION%TYPE,
+      p_exception_ind            view_schedule_item.EXCEPTION_IND%TYPE,
+      p_expire_dt                view_schedule_item.EXPIRE_DT%TYPE,
+      p_work_dt                  view_schedule_item.WORK_DT%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_sched_item
+   /** Description: Deletes an schedule item record with id as p_schedule_item_id.
+   /** In: p_schedule_item_id - The ID of the schedule item to delete.
+   /** InOut: p_rows_affected - The number of rows deleted.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_sched_item
+   (
+      p_schedule_item_id        view_schedule_item.SCHEDULE_ITEM_ID%TYPE,
+      p_rows_affected           IN OUT NUMBER
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_sched_item
+   /** Description: Gets the data of an schedule item record with id as p_schedule_item_id.
+   /** In: p_schedule_item_id - The ID of the schedule item.
+   /** Out: p_results_cursor - Cursor containing the row data for the given id.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_sched_item
+   (
+      p_schedule_item_id        view_schedule_item.SCHEDULE_ITEM_ID%TYPE,
+      p_results_cursor          OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_all_sched_items
+   /** Description: Gets the data of all schedule item records in the database.
+   /** Out: p_results_cursor - Cursor containing the data for all schedule items.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_all_sched_items
+   (
+      p_results_cursor     OUT T_CURSOR_TYPE
+   );
+   
+   
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_relate_sched_items
+   /** Description: Forms a parent - edit copy  relation between 2 schedule items.
+   /** In: p_published_schedule_item_id - The parent schedule item.
+   /** In: p_edit_schedule_item_id - The edit copy schedule item.
+   /** In: p_last_modified_dt - The last modification date of this relation.
+   /** In: p_last_modified_by - The user who performed the last modification.
+   /*********************************************************************************************************/
+   PROCEDURE sp_relate_sched_items
+   (
+      p_published_schedule_item_id     view_publish_xref.PUBLISHED_SCHEDULE_ITEM_ID%TYPE,
+      p_edit_schedule_item_id          view_publish_xref.EDIT_SCHEDULE_ITEM_ID%TYPE,
+      p_last_modified_dt               view_publish_xref.LAST_MODIFIED_DT%TYPE,
+      p_last_modified_by               view_publish_xref.LAST_MODIFIED_BY%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_delete_sched_item_relation
+   /** Description: Deletes a parent - edit copy relation between 2 schedule items.
+   /** In: p_edit_schedule_item_id - The id of the edit copy schedule item for which to delete the relation.
+   /*********************************************************************************************************/
+   PROCEDURE sp_delete_sched_item_relation
+   (
+      p_edit_schedule_item_id       view_publish_xref.EDIT_SCHEDULE_ITEM_ID%TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_sched_item_edit_copy
+   /** Description: Gets the edit copy for a given parent schedule item.
+   /** In: p_published_schedule_item_id - The id of the parent schedule item for which to get the edit copy.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_sched_item_edit_copy
+   (
+      p_published_schedule_item_id  view_publish_xref.PUBLISHED_SCHEDULE_ITEM_ID%TYPE,
+      p_results_cursor              OUT T_CURSOR_TYPE
+   );
+
+
+   /*********************************************************************************************************
+   /**
+   /** Procedure: sp_get_sched_item_parent
+   /** Description: Gets the parent for a given edit copy schedule item.
+   /** In: p_published_schedule_item_id - The id of the edit copy schedule item for which to get the parent.
+   /*********************************************************************************************************/
+   PROCEDURE sp_get_sched_item_parent
+   (
+      p_edit_schedule_item_ID    view_publish_xref.EDIT_SCHEDULE_ITEM_ID%TYPE,
+      p_results_cursor           OUT T_CURSOR_TYPE
+   );
+   
+END schedule_item;
+/

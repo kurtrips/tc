@@ -1,0 +1,533 @@
+<apispec>
+  <package name="MockLibrary">
+    <class name="NormalClass" visibility="public">
+      <doc>
+        <summary>
+          A normal non generic class.
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <class name="GenericCollection-1" visibility="public">
+      <doc>
+        <summary>
+          A generic class
+        </summary>
+        <typeparam name="T">The type of elements in collection</typeparam>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <class name="GenericList-2" visibility="public">
+      <doc>
+        <summary>
+          This is a generic class called <see cref="T:MockLibrary.GenericList`2" />
+          It derives from <see cref="T:MockLibrary.GenericCollection`1" />
+          1st overload for Pop is <see cref="M:MockLibrary.GenericList`2.Pop``3(`0,`1)" />
+          2nd overload for Pop is <see cref="M:MockLibrary.GenericList`2.Pop``2(`0,`1)" />
+          It conatins a property called <see cref="P:MockLibrary.GenericList`2.GenericProperty1" />
+        </summary>
+        <typeparam name="T">The generic type paramter</typeparam>
+        <typeparam name="U">Another generic type paramter</typeparam>
+      </doc>
+      <annotation>System.Reflection.DefaultMemberAttribute</annotation>
+      <parent>MockLibrary.GenericCollection`1{System.Int32}</parent>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor
+          </summary>
+        </doc>
+      </constructor>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor 2
+          </summary>
+        </doc>
+        <param name="gen" typevaluespec="MockLibrary.GenericList`2{T, U}">MockLibrary.GenericList`2{T, U}</param>
+      </constructor>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor 4
+          </summary>
+        </doc>
+        <param name="gen" typevaluespec="MockLibrary.GenericList`2{System.String, U}">MockLibrary.GenericList`2{System.String, U}</param>
+      </constructor>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor 5
+          </summary>
+        </doc>
+        <param name="gen" typevaluespec="MockLibrary.GenericList`2{System.String, System.Int32}">MockLibrary.GenericList`2{System.String, System.Int32}</param>
+      </constructor>
+      <constructor name=".ctor" visibility="public">
+        <doc>
+          <summary>
+            Constructor 5
+          </summary>
+        </doc>
+        <param name="gen" typevaluespec="MockLibrary.GenericList`2{MockLibrary.NormalClass, MockLibrary.NormalClass}">MockLibrary.GenericList`2{MockLibrary.NormalClass, MockLibrary.NormalClass}</param>
+      </constructor>
+      <method name="Pop--3" visibility="public">
+        <doc>
+          <summary>
+            A generic method.
+          </summary>
+          <returns>A generic value</returns>
+          <typeparam name="X">A generic type param</typeparam>
+          <typeparam name="Y">A generic type param</typeparam>
+          <typeparam name="Z">A generic type param</typeparam>
+        </doc>
+        <return>System.String</return>
+        <param name="id1" typevaluespec="-0">-0</param>
+        <param name="id2" typevaluespec="-1">-1</param>
+      </method>
+      <method name="Pop--2" visibility="public">
+        <doc>
+          <summary>
+            A generic method.
+          </summary>
+          <returns>A generic value</returns>
+          <typeparam name="X">The generic type param</typeparam>
+          <typeparam name="Y">The generic type param</typeparam>
+        </doc>
+        <return>MockLibrary.NormalClass</return>
+        <param name="id1" typevaluespec="-0">-0</param>
+        <param name="id2" typevaluespec="-1">-1</param>
+      </method>
+      <method name="AMethod" visibility="public">
+        <doc>
+          <summary>
+            A method
+          </summary>
+          <param name="p"></param>
+          <returns></returns>
+        </doc>
+        <return>System.String</return>
+        <param name="p" typevaluespec="MockLibrary.IGenericBaseInterface`2{System.String, U}">MockLibrary.IGenericBaseInterface`2{System.String, U}</param>
+      </method>
+      <method name="AMethod" visibility="public">
+        <doc>
+          <summary>
+            A method
+          </summary>
+          <param name="p"></param>
+          <returns></returns>
+        </doc>
+        <return>System.String</return>
+        <param name="p" typevaluespec="MockLibrary.IGenericBaseInterface`2{T, U}">MockLibrary.IGenericBaseInterface`2{T, U}</param>
+      </method>
+      <method name="Add" visibility="public">
+        <doc>
+          <summary>
+            A method with 2 generic parameters.
+            Has a parameter of type <see cref="!:IGenericBaseInterface&lt;GenericCollection&lt;T&gt;, U&gt;" />
+          </summary>
+          <param name="input">A generic parameter</param>
+          <param name="input2">Another generic parameter</param>
+        </doc>
+        <return>T</return>
+        <param name="input" typevaluespec="-0">-0</param>
+        <param name="input2" typevaluespec="MockLibrary.IGenericBaseInterface`2{MockLibrary.GenericCollection`1{MockLibrary.NestedList`1{T}}, U}">MockLibrary.IGenericBaseInterface`2{MockLibrary.GenericCollection`1{MockLibrary.NestedList`1{T}}, U}</param>
+      </method>
+      <method name="Add" visibility="public">
+        <doc>
+          <summary>
+            A method with generic parameters.
+          </summary>
+          <param name="input">A generic parameter</param>
+        </doc>
+        <return>MockLibrary.GenericCollection`1{T}</return>
+        <param name="input" typevaluespec="-0">-0</param>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <property name="GenericProperty1" visibility="public" modifiers="read-write">
+        <doc>
+          <summary>
+            A generic property.
+          </summary>
+        </doc>
+        <return>MockLibrary.GenericStruct`2{T, U}</return>
+      </property>
+      <property name="GenericProperty2" visibility="public" modifiers="read-write">
+        <doc>
+          <summary>
+            Another generic property.
+          </summary>
+        </doc>
+        <return>T</return>
+      </property>
+      <property name="GenericProperty3" visibility="public" modifiers="read-write">
+        <doc>
+          <summary>
+            Another generic property.
+          </summary>
+        </doc>
+        <return>MockLibrary.GenericStruct`2{T, System.String}</return>
+      </property>
+      <property name="GenericProperty4" visibility="public" modifiers="read-write">
+        <doc>
+          <summary>
+            Another generic property.
+          </summary>
+        </doc>
+        <return>MockLibrary.GenericStruct`2{System.Int32, System.String}</return>
+      </property>
+      <method name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            Another indexer 5
+          </summary>
+          <param name="idx"></param>
+          <returns></returns>
+        </doc>
+        <return>MockLibrary.GenericCollection`1{System.Int32}</return>
+        <param name="idx" typevaluespec="MockLibrary.IGenericBaseInterface`2{MockLibrary.GenericCollection`1{MockLibrary.NestedList`1{T}}, System.String}">MockLibrary.IGenericBaseInterface`2{MockLibrary.GenericCollection`1{MockLibrary.NestedList`1{T}}, System.String}</param>
+      </method>
+      <method name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            A indexer 0
+          </summary>
+          <param name="idx"></param>
+          <returns></returns>
+        </doc>
+        <return>System.String</return>
+        <param name="idx" typevaluespec="System.Int32">System.Int32</param>
+      </method>
+      <method name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An indexer 1.
+          </summary>
+          <param name="idx"></param>
+          <returns></returns>
+        </doc>
+        <return>T</return>
+        <param name="idx" typevaluespec="System.String">System.String</param>
+      </method>
+      <method name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            An indexer 2
+          </summary>
+          <param name="idx"></param>
+          <returns></returns>
+        </doc>
+        <return>T</return>
+        <param name="idx" typevaluespec="MockLibrary.GenericCollection`1{T}">MockLibrary.GenericCollection`1{T}</param>
+      </method>
+      <method name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            Another indexer 3
+          </summary>
+          <param name="idx"></param>
+          <returns></returns>
+        </doc>
+        <return>T</return>
+        <param name="idx" typevaluespec="MockLibrary.GenericCollection`1{System.Int32}">MockLibrary.GenericCollection`1{System.Int32}</param>
+      </method>
+      <method name="Item" visibility="public" modifiers="read">
+        <doc>
+          <summary>
+            Another indexer 4
+          </summary>
+          <param name="idx"></param>
+          <returns></returns>
+        </doc>
+        <return>MockLibrary.GenericCollection`1{T}</return>
+        <param name="idx" typevaluespec="MockLibrary.GenericCollection`1{System.String}">MockLibrary.GenericCollection`1{System.String}</param>
+      </method>
+      <field name="genericEvent" visibility="Private">
+        <type>MockLibrary.GenericEventHandler`2{T, System.EventArgs}</type>
+      </field>
+      <field name="genericField" visibility="public">
+        <doc>
+          <summary>
+            A generic field
+          </summary>
+        </doc>
+        <type>MockLibrary.IGenericBaseInterface`2{T, U}</type>
+      </field>
+      <field name="bigGenericField" visibility="public">
+        <doc>
+          <summary>
+            A nice and big nested genereic field.
+          </summary>
+        </doc>
+        <type>MockLibrary.IGenericBaseInterface`2{MockLibrary.GenericCollection`1{MockLibrary.NestedList`1{T}}, U}</type>
+      </field>
+      <field name="structField" visibility="public">
+        <doc>
+          <summary>
+            A field of type struct.
+          </summary>
+        </doc>
+        <type>MockLibrary.GenericStruct`2{T, U}</type>
+      </field>
+      <event name="genericEvent" visibility="public">
+        <doc>
+          <summary>
+            Generic event.
+          </summary>
+        </doc>
+        <type>MockLibrary.GenericEventHandler`2{T, System.EventArgs}</type>
+      </event>
+    </class>
+    <class name="NestedList-1" visibility="public">
+      <doc>
+        <summary>
+          A Generic class. It contains a nested class <see cref="T:MockLibrary.NestedList`1.NestedChildList`2" />
+        </summary>
+        <typeparam name="T">type</typeparam>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+      <class name="NestedChildList-2" visibility="public">
+        <doc>
+          <summary>
+            A nested type.
+          </summary>
+          <typeparam name="U">type1</typeparam>
+          <typeparam name="V">type2</typeparam>
+        </doc>
+        <constructor name=".ctor" visibility="public" />
+        <method name="GetType" visibility="public">
+          <return>System.Type</return>
+        </method>
+        <method name="MemberwiseClone" visibility="protected">
+          <return>System.Object</return>
+        </method>
+        <method name="ToString" visibility="public" modifiers="virtual">
+          <return>System.String</return>
+        </method>
+        <method name="Equals" visibility="public" modifiers="virtual">
+          <return>System.Boolean</return>
+          <param name="obj" typevaluespec="System.Object">System.Object</param>
+        </method>
+        <method name="GetHashCode" visibility="public" modifiers="virtual">
+          <return>System.Int32</return>
+        </method>
+        <method name="Finalize" visibility="protected" modifiers="override">
+          <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+          <return>System.Void</return>
+        </method>
+      </class>
+    </class>
+    <class name="NestedChildList-2" visibility="public">
+      <doc>
+        <summary>
+          A nested type.
+        </summary>
+        <typeparam name="U">type1</typeparam>
+        <typeparam name="V">type2</typeparam>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <class name="PartialClass" visibility="public">
+      <doc>
+        <summary>
+          A partial class
+        </summary>
+        <summary>
+          Part 2 of the partial class
+        </summary>
+      </doc>
+      <constructor name=".ctor" visibility="public" />
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="ToString" visibility="public" modifiers="virtual">
+        <return>System.String</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="virtual">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="GetHashCode" visibility="public" modifiers="virtual">
+        <return>System.Int32</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </class>
+    <interface name="IGenericBaseInterface-2" visibility="public">
+      <doc>
+        <summary>
+          Generic interface
+        </summary>
+        <typeparam name="T">a</typeparam>
+        <typeparam name="U">s</typeparam>
+      </doc>
+    </interface>
+    <interface name="IGenericInterface-1" visibility="public">
+      <doc>
+        <summary>
+          This is an interface called <see cref="T:MockLibrary.IGenericInterface`1" />
+        </summary>
+        <typeparam name="T"></typeparam>
+      </doc>
+      <parent>MockLibrary.IGenericBaseInterface`2{System.String, System.Int32}</parent>
+      <method name="GetIt" visibility="public" modifiers="abstract">
+        <doc>
+          <summary>
+            A method
+          </summary>
+          <param name="obj"></param>
+          <returns></returns>
+        </doc>
+        <return>T</return>
+        <param name="obj" typevaluespec="-0">-0</param>
+      </method>
+    </interface>
+    <struct name="GenericStruct-2" visibility="public">
+      <doc>
+        <summary>
+          A generic structure.
+        </summary>
+        <typeparam name="T"></typeparam>
+        <typeparam name="U"></typeparam>
+      </doc>
+      <parent>MockLibrary.IGenericBaseInterface`2{T, U}</parent>
+      <method name="GetHashCode" visibility="public" modifiers="override">
+        <return>System.Int32</return>
+      </method>
+      <method name="Equals" visibility="public" modifiers="override">
+        <return>System.Boolean</return>
+        <param name="obj" typevaluespec="System.Object">System.Object</param>
+      </method>
+      <method name="ToString" visibility="public" modifiers="override">
+        <return>System.String</return>
+      </method>
+      <method name="GetType" visibility="public">
+        <return>System.Type</return>
+      </method>
+      <method name="MemberwiseClone" visibility="protected">
+        <return>System.Object</return>
+      </method>
+      <method name="Finalize" visibility="protected" modifiers="override">
+        <annotation>System.Runtime.ConstrainedExecution.ReliabilityContractAttribute</annotation>
+        <return>System.Void</return>
+      </method>
+    </struct>
+    <delegate name="GenericEventHandler-2" visibility="public">
+      <doc>
+        <summary>
+          Generic event handler
+        </summary>
+        <typeparam name="T">Type of sender</typeparam>
+        <typeparam name="U">Type of event args</typeparam>
+        <param name="sender">sender</param>
+        <param name="eventArgs">args</param>
+      </doc>
+      <return>System.Void</return>
+      <param name="sender" typevaluespec="-0">-0</param>
+      <param name="eventArgs" typevaluespec="-1">-1</param>
+    </delegate>
+  </package>
+</apispec>

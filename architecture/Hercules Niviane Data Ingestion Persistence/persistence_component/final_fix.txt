@@ -1,0 +1,95 @@
+>>The application's main() method, should use System.read.in() tech to wait the user input stop command.
+>>Should not read from the the input "String[] args". It does not make sense.
+
+Fixed. Now we start by default and wait for user input to exit. See updated 1.3.5
+
+>>DataIngestionPersistenceService#insert
+>>Need further confirmation about whether parameter "id" is necessary. No score down.
+
+My assumption was confirmed
+
+>>getter/setter of EntityKey, EntityReverseLookupKey should be shown.
+
+It is not needed. See discussion at the end of CS 1.4
+
+>>CS1.3.7
+>>OperationResult<R> result;
+>>OperationResult<R> is a generic. What's the meaning of "R would be null"?
+
+Fixed
+
+>>CS1.3.7
+>>for (Row<K, C> row : rows.getResult())
+>>What's "rows" here? It's not mentioned how to get "rows", I think you may mean "result" defined above, "OperationResult<R> result;", is it?
+
+Fixed
+
+>>How to convert ColumnList<C> to our result? This should be discussed for each retrieving methods.
+
+Fixed. See updated CS 1.3.7
+
+>>According to ADS, "It will log only errors, at Error level."
+
+Fixed
+
+>>Miss use cases about running/stopping command line application and test application.
+
+Fixed
+
+>>he use case of caching is not shown.
+
+Fixed
+
+>> I think only provides insert entity sequence diagram is not enough, for other service methods also require many interactions.
+
+Added 3 more SDs
+
+>> I noticed you move the code to create KeySpace to configuration section.
+>>Shouldn't you create a class to create KeySpace? Like a singleton-style KeySpaceFactory which takes all the cluster name, keySpace name, connectionPool name, port, seeds configuration and create the KeySpace.
+>>Unless you can prove to me that the creation of KeySpace is taken care by other component.
+
+As I explained in appeal, the KeySpace is not created in another component or by another class.
+It is created in Spring configuration as shown in CS 3.3
+And yes, Spring already does this in s singleton style way as expected by reviewer
+
+>>All constructors of Exceptions should be preserved.
+
+Fixed
+
+>>You should define a custom exception for FileRepository, it will be more flexible. Not just use "standard java IO exceptions".
+>>If you didn't want to create a dedicated exception, it's ok. But you can't throw "standard java IO exceptions"
+
+Now wrapping the standard IO exceptions in DataIngestionException.
+
+>> Service classes's init() methods are used to check configuration, so should be named as checkConfiguration().
+
+Fixed
+
+>>The return value is not described in some method docs.
+>>ConfigurationPersistenceServiceImpl.getParameter, setParameter......
+>> 3. Delete file.....
+
+All fixed
+
+>>You should discuss the @Component annotation in the variables doc of the key classes.
+>>You need also discuss why these variables do not need getters/setters.
+
+Added. See discussion at end of CS 1.4
+
+>>The detail steps of "Make POST request to web service" in SD should be provided.
+
+Added
+
+>> Simple demo for FileRepository and ConfigurationPersistenceService is required.
+
+Added
+
+>>CS1.3.7: "static ColumnFamily<String, String> EntityReverseLookupColumnFamily"
+Fixed.
+
+>>LOY 4.1.6.x
+All fixed
+
+
+P.S. Have also changed the entityId to type String. Fixed in erd, tcuml and CS
+

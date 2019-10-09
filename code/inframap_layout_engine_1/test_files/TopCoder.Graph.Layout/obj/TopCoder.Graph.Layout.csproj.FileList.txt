@@ -1,0 +1,9 @@
+bin\Debug\TopCoder.Graph.Layout.dll
+bin\Debug\TopCoder.Graph.Layout.pdb
+bin\Debug\TopCoder.Util.ExceptionManager.dll
+bin\Debug\TopCoder.Util.ExceptionManager.SDE.dll
+bin\Debug\TopCoder.LoggingWrapper.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TopCoder.Graph.Layout.dll
+obj\Debug\TopCoder.Graph.Layout.pdb
+bin\Debug\TopCoder.Util.ConfigurationManager.dll

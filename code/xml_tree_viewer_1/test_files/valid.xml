@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--This is xml declaration-->
+
+<!--This is a processing instruction-->
+<?name pidata?>
+
+<!-- This is a document type declaration-->
+<!DOCTYPE Message [
+  <!ENTITY number "123">
+]>
+
+<Message Status='Pending' User='John' Security='None'>
+  <!-- Xml Tree View demo Test Comment-->
+  <Entries>
+    <Entry ID='1'>
+      <Date>03/07/2007</Date>
+    </Entry>
+    <Entry ID='2'>
+      <!-- Xml Tree View demo Test Comment 2-->
+      <Date>
+        03/08/2007<!-- Xml Tree View demo Test Comment3-->
+      </Date>
+    </Entry>
+    <![CDATA[Sample cdata ><456>]]>
+
+    <!--Mixed Element-->
+    <Entry>
+      Test with a mixed element <EmptyNode/> content
+    </Entry>
+
+    <!--Entity Reference-->
+    <Entry>Test with an entity: &number;</Entry>
+  </Entries>
+</Message>

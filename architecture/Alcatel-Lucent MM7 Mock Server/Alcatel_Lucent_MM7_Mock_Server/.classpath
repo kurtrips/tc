@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/workspace/Alcatel_Lucent_MM7_Mock_Server/lib/mina-core-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/workspace/Alcatel_Lucent_MM7_Mock_Server/lib/slf4j-api-1.5.11.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/workspace/Alcatel_Lucent_MM7_Mock_Server/lib/slf4j-nop-1.5.11.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/workspace/Alcatel_Lucent_MM7_Mock_Server/lib/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/workspace/Alcatel_Lucent_MM7_Mock_Server/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/workspace/Alcatel_Lucent_MM7_Mock_Server/lib/jaxb-impl.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

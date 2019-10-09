@@ -1,0 +1,6 @@
+name = leaderboard
+description = proof of concept leaderboard
+package = public-action
+version = VERSION
+core = 7.x
+files[] = leaderboard.module

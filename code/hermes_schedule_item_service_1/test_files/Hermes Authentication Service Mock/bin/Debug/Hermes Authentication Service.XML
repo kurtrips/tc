@@ -1,0 +1,3436 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hermes Authentication Service</name>
+    </assembly>
+    <members>
+        <member name="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest">
+            <summary>
+            <para>The unit test for <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/> class.</para>
+            </summary>
+            <author>TCSDEVELOPER</author>
+            <version>1.0</version>
+            <copyright>Copyright (c)2007, TopCoder, Inc. All rights reserved.</copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.SessionId">
+            <summary>
+            <para>The session id</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.SessionTokenAllowed">
+            <summary>
+            <para>The allowed session token.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.SessionTokenDenied">
+            <summary>
+            <para>The denied session token.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.NotExistName">
+            <summary>
+            The not exist name used for testing.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.RoleAllowed">
+            <summary>
+            The allowed role.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.RoleDenied">
+            <summary>
+            The denied role.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.FunctionAllowed">
+            <summary>
+            The allowed function name.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.FunctionDenied">
+            <summary>
+            The denied function name.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.EntityAllowed">
+            <summary>
+            The allowed entity name.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.EntityDenied">
+            <summary>
+            The denied entity name.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.service">
+            <summary>
+            <para>The HermesAuthorizationService instance used for testing.</para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.SetUp">
+            <summary>
+            <para>Set up testing environment.</para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TearDown">
+            <summary>
+            <para>Clear up testing environment.</para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.LoadConfig">
+            <summary>
+            Load configuration.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.ClearConfig">
+            <summary>
+            Clear configuration.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestConstructor_Accuracy1">
+            <summary>
+            Test constructor with default namespace.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestConstructor_Null">
+            <summary>
+            Test constructor with given namespace.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestConstructor_Empty">
+            <summary>
+            Test constructor with given namespace.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestConstructor_Accuracy2">
+            <summary>
+            Test constructor with given namespace.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Null1">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Null2">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Null3">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Empty1">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Empty2">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_InvalidSessionToken">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_NotExist">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Accuracy1">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckRole_Accuracy2">
+            <summary>
+            Test CheckRole method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Null1">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Null2">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Null3">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Empty1">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Empty2">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_InvalidSessionToken">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_NotExist">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Accuracy1">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckFunction_Accuracy2">
+            <summary>
+            Test CheckFunction method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Null1">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Null2">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Null3">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Empty1">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Empty2">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_InvalidSessionToken">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_NotExist">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Accuracy1">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestCheckEntity_Accuracy2">
+            <summary>
+            Test CheckEntity method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Null1">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Null2">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Null3">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Empty1">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Empty2">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_InvalidSessionToken">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_NotExist">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Accuracy1">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetEntityRights_Accuracy2">
+            <summary>
+            Test GetEntityRights method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Null1">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Null2">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Null3">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Empty1">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Empty2">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_InvalidSessionToken">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_NotExist">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Accuracy1">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestGetFunctionAttributes_Accuracy2">
+            <summary>
+            Test GetFunctionAttributes method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestSetApplication_Null1">
+            <summary>
+            Test SetApplication method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestSetApplication_Empty1">
+            <summary>
+            Test SetApplication method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestSetApplication">
+            <summary>
+            Test SetApplication method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestDispose">
+            <summary>
+            Test Dispose method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.TestDispose2">
+            <summary>
+            Test Dispose method.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.AssertInitializedFields(Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService)">
+            <summary>
+            Assert the service has been initialized correctly.
+            </summary>
+            <param name="service">the HermesAuthorizationService instance to check</param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.ConstructExpectedLogins">
+            <summary>
+            Constructs the expected logins for configuration.
+            </summary>
+            <returns>the expected logins.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.ConstructExpectedRoles">
+            <summary>
+            Constructs the expected roles for configuration.
+            </summary>
+            <returns>the expected roles.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.ConstructExpectedFunctions">
+            <summary>
+            Constructs the expected functions for configuration.
+            </summary>
+            <returns>the expected functions.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.ConstructExpectedFunctionsAtributes">
+            <summary>
+            Constructs the expected functions attributes for configuration.
+            </summary>
+            <returns>the expected functions.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.ConstructExpectedEntities">
+            <summary>
+            Constructs the expected entities for configuration.
+            </summary>
+            <returns>the expected entities.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.CompareDictionies``2(System.Collections.Generic.IDictionary{``0,``1},System.Collections.Generic.IDictionary{``0,``1},System.String)">
+            <summary>
+            Compare two dictionaries.
+            </summary>
+            <typeparam name="K">the type of key</typeparam>
+            <typeparam name="V">the type of value</typeparam>
+            <param name="d1">the first dictionary</param>
+            <param name="d2">the second dictionary</param>
+            <param name="name">the name of dictionary</param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.CompareDictionies2``2(System.Collections.Generic.IDictionary{``0,System.Collections.Generic.List{``1}},System.Collections.Generic.IDictionary{``0,System.Collections.Generic.List{``1}},System.String)">
+            <summary>
+            Compare two dictionaries.
+            </summary>
+            <typeparam name="K">the type of key</typeparam>
+            <typeparam name="V">the type of value</typeparam>
+            <param name="d1">the first dictionary</param>
+            <param name="d2">the second dictionary</param>
+            <param name="name">the name of dictionary</param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.CompareList``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Compare given 2 lists.
+            </summary>
+            <typeparam name="V">the type of value</typeparam>
+            <param name="l1">the first list</param>
+            <param name="l2">the second list</param>
+            <param name="name">the name of value</param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationServiceTest.GetField(System.Object,System.String)">
+             <summary>
+             <para>Gets the field in the instance. The field can be private or protected.</para>
+             </summary>
+            
+             <param name="instance">
+             The instance whose field is retrieved.
+             </param>
+             <param name="field">
+             The field to be retrieved.
+             </param>
+            
+             <returns>
+             The value of the field in the instance.
+             </returns>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.MyTest.DemoEndPointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address used for server.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.MyTest.serviceHost">
+            <summary>
+            <para>
+            Represents the host.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.MyTest.client">
+            <summary>
+            <para>
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance for test.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.MyTest.SetUp">
+            <summary>
+            <para>
+            Set up the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.MyTest.TearDown">
+            <summary>
+            <para>
+            Clean the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test">
+             <summary>
+             Test <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/> class, unit test.t.
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.DemoEndPointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address used for server.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.serviceHost">
+            <summary>
+            <para>
+            Represents the host.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.service">
+            <summary>
+            <para>
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance for test.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.SetUp">
+            <summary>
+            <para>
+            Set up the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TearDown">
+            <summary>
+            <para>
+            Clean the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Accuracy">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for accuracy.
+            
+             You can configure the sessionId, sessionToken in configuration.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Null_SessionId">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionId is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Empty_SessionId">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionId is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Null_SessionToken">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionToken is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Null_RoleName">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, the role name is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Empty_RoleName">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the role name is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_LoginFailed">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, login in failed.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_LoginException">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, exception happen during login.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestCheckRole_Auth_Exception">
+             <summary>
+             <para>
+             Test Method <c>CheckRole(string, string, string)</c>
+             for failure.
+            
+             In this case, exception happen in underlying communication.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Accuracy">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string)</c>
+             for accuracy.
+            
+             You can configure the sessionId, sessionToken in configuration.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Null_SessionId">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionId is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Empty_SessionId">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionId is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Null_SessionToken">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionToken is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Null_RoleName">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string)</c>
+             for failure.
+            
+             In this case, the entity name is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Empty_RoleName">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the entity name is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_LoginFailed">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, login in failed.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_LoginException">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string)</c>
+             for failure.
+            
+             In this case, exception happen during login.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImpl2Test.TestGetEntityRights_Auth_Exception">
+             <summary>
+             <para>
+             Test Method <c>GetEntityRights(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, exception happen in underlying communication.
+             </para>
+             </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Helper">
+             <summary>
+             <para>
+             Helper class that defines shared utility methods to do the argument
+             checks and some operations on <see cref="T:TopCoder.Util.ConfigurationManager.ConfigManager"/>.
+             </para>
+             </summary>
+             <remarks>
+             <para>
+             <strong>Thread-safety:</strong>
+             This class is immutable and thread-safe.
+             </para>
+             </remarks>
+            
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Helper.#ctor">
+            <summary>
+            <para>
+            Prevents initializing instance.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Helper.CheckNotNull(System.Object,System.String)">
+             <summary>
+             <para>
+             Checks whether the given object is null.
+             </para>
+             </summary>
+            
+             <param name="value">
+             The object to check.
+             </param>
+             <param name="paramName">
+             The actual parameter name of the argument being checked.
+             </param>
+            
+             <exception cref="T:System.ArgumentNullException">
+             If object is null.
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Helper.CheckString(System.String,System.String)">
+             <summary>
+             <para>
+             Checks whether the given string is null or empty.
+             </para>
+             </summary>
+            
+             <param name="value">
+             The string to check.
+             </param>
+             <param name="paramName">
+             The actual parameter name of the argument being checked.
+             </param>
+            
+             <exception cref="T:System.ArgumentNullException">
+             If string is null.
+             </exception>
+             <exception cref="T:System.ArgumentException">
+             If string is empty after trimming.
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Helper.LoadPropertyString(System.String,System.String,System.Boolean)">
+            <summary>
+            <para>
+            Gets a single string from specified configuration.
+            </para>
+            </summary>
+            <param name="namespace">
+            The namespace to be read.
+            </param>
+            <param name="propertyName">
+            The property's name
+            </param>
+            <param name="required">
+            Whether the attribute is mandatory.
+            </param>
+            <returns>
+            The string value retrieved.
+            </returns>
+            <exception cref="T:System.Configuration.ConfigurationException">
+            If the configuration attribute is absent while it is mandatory
+            or it is not a single non-empty string.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Helper.GetValues(System.String,System.String,System.Boolean)">
+             <summary>
+             Gets a string array from the configuration using the given namespace and property name. The string
+             element in array cannot be empty string. If the property does not exist, return an empty array.
+             </summary>
+            
+             <param name="nameSpace">The namespace where the property value is read.</param>
+             <param name="propertyName">The property name where the property value is read.</param>
+             <param name="allowEmptyString">The flag indicating whether it is allowed that the element in string array 
+             is empty string.</param>
+             <returns>The string array configured, or empty array if the property does not exist.</returns>
+             <exception cref="T:System.Configuration.ConfigurationException">If any string element in array is empty string,
+             or any other error occurs.</exception>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider">
+             <summary>
+             <para>
+             This is class is used to map the functon name and attributes.
+             </para>
+             </summary>
+            
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider.GetFunctionName(System.String)">
+            <summary>
+            <para>
+            Get function name mapped.
+            </para>
+            </summary>
+            <param name="referenceFunctionName">
+            Reference name.
+            </param>
+            <returns>
+            The mapped name.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            if the <paramref name="referenceFunctionName"/> is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            if the <paramref name="referenceFunctionName"/> is empty.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider.GetFunctionAttributeName(System.String,System.String)">
+            <summary>
+            <para>
+            Get function attribute name mapped.
+            </para>
+            </summary>
+            <param name="referenceFunctionName">
+            Reference name.
+            </param>
+            <param name="attribute">
+            Attribute name.
+            </param>
+            <returns>
+            The mapped name.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            if the <paramref name="referenceFunctionName"/> or
+            <paramref name="attribute"/>is null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            if the <paramref name="referenceFunctionName"/> or
+            <paramref name="attribute"/> is empty.
+            </exception>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.AuthorizationServiceException">
+             <summary>
+             <para>
+             This exception is thrown by <see cref="T:Hermes.Services.Security.Authorization.IAuthorization"/> service
+             operations if the underlying authentication service objects throw any
+             exceptions. These exceptions might be related to connectivity, some
+             problem with the authentication service, or any other problems that can
+             occur on method calls to the service.
+             </para>
+             </summary>
+            
+             <remarks>
+             <para>
+             <strong>Thread Safety:</strong>
+             This class derives from <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/>,
+             which is not thread safe, so it is not thread safe.
+             </para>
+             </remarks>
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceException.#ctor">
+            <summary>
+            <para>This is the default constructor for this exception.</para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceException.#ctor(System.String)">
+            <summary>
+            <para>This is a single-argument constructor for this exception that
+            provides a message.</para>
+            </summary>
+            <param name="message">
+            A string representing the message for this exception.
+            This argument is not checked - it may be null or empty.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceException.#ctor(System.String,System.Exception)">
+            <summary>
+            <para>
+            This is a two-argument constructor for this exception that
+            provides a message and a cause.
+            </para>
+            </summary>
+            <param name="message">
+            A string representing the message for this exception. This argument
+            is not checked - it may be null or empty.
+            </param>
+            <param name="cause">
+            An exception representing the cause of the exception. This argument
+            is not checked - it may be null.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            <para>
+            This is the standard constructor for controlling the serialization
+            process.
+            </para>
+            </summary>
+            <param name="info">
+            Stores all the data needed to serialize or deserialize an object.
+            This argument is not checked for null - it is passed to the
+            constructor of the base class.
+            </param>
+            <param name="context">
+            Describes the source and destination of a given serialized stream,
+            and provides an additional caller-defined context.
+            This argument is a struct, and cannot be null- it is passed to the
+            constructor of the base class.
+            </param>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient">
+             <summary>
+             <para>
+             This is a custom client that can be used to configure a service
+             endpoint through <see cref="T:TopCoder.Util.ConfigurationManager.ConfigManager"/>.
+             </para>
+             </summary>
+             <remarks>
+             <p>
+             It can be used if the user has a reason to prefer the
+             <see cref="T:TopCoder.Util.ConfigurationManager.ConfigManager"/> based client to one generated by
+             svcutils.exe.
+             It is similar to a client generated by svcutils.exe, except that it
+             doesn't have any public constructors but provides two GetClient methods
+             that return new <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> objects
+             with properties read from configuration. Static methods are used rather
+             than constructors so that the configuration properties can be read
+             before passing the required objects on to the base class constructor.
+             All of the service methods simply pass the arguments along to the
+             corresponding method on the underlying Channel.
+             </p>
+             </remarks>
+            
+             <remarks>
+             <p>
+             <strong>Thread Safety:</strong>
+             Since the base class <see cref="T:System.ServiceModel.ClientBase`1"/> is not thread
+             safe, this class is not thread safe.
+             </p>
+             </remarks>
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.IAuthorization">
+             <summary>
+             <para>
+             This interface specifies the <see cref="T:System.ServiceModel.ServiceContractAttribute"/>
+             for Hermes authorization services.
+             The operations specified by this contract will be executed by the
+             service and accessed through a WCF client.
+             </para>
+             </summary>
+            
+             <remarks>
+             <para>
+             Implementations of this interface enforce security at three levels.
+             Security can be enforced By Role, By Function, and By Entity.
+             </para>
+            
+             <para>
+             Each method that checks security takes a session id and session token
+             that uniquely identify  a valid session.
+             Roles are the general groups of functionality that a user belongs to,
+             such as Maintenance or IT.
+             Functions are specific pieces of functionality that a user has rights
+             to perform, such as Save User Data, or Load Schedule Data.
+             Entities are the low-level permissions assigned to fields, objects and
+             collections of data.
+             </para>
+            
+             <para>
+             Users may have Read, Insert, Update, Delete, and Execute permissions on
+             individual entities.
+             There are two ways to query for Entity permissions. The first method is
+             to pass an enumeration  representing the specific rights requested in
+             the <see cref="T:Hermes.Services.Security.Authorization.Rights"/> enumeration.
+             If all of the requested rights are available to the user, then the
+             result will be a bool with  a value of true.
+             If any of the requested rights are not available to the user, then it
+             return will be false.
+             The second method to determine entity permissions is to request an
+             enumeration that reflects the permissions for the specified entity.
+             </para>
+            
+             <para>
+             All exceptions caught in the service methods are wrapped in a
+             <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/> (if the exception caught isn't
+             one already) and then published using the exceptionManager member
+             variable. As this class is a WCF hosted service, it must throw
+             <see cref="T:System.ServiceModel.FaultException"/> (a system class) instances, created from
+             <see cref="T:TopCoder.Services.WCF.TCFaultException"/> instances from the WCF Base component.
+             This class should use the <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/> class
+             to generate the information needed for the fault exception. When any
+             exception is caught in this class, this class should create a
+             <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/> containing the message inform-
+             ation from the exception caught, as well as state information about
+             parameters to the method given and the state of the member variables in
+             this class.  After the <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/> has been
+             created and "Pinned", a <see cref="T:TopCoder.Services.WCF.TCFaultException"/> should be creat-
+             ed, and then added to a <see cref="T:System.ServiceModel.FaultException"/> and then thrown.
+             </para>
+            
+             <para>
+             Note that if the exception caught is a
+             <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/>, the methods in this class
+             should pin their data to that exception, instead of creating a new one.
+             </para>
+             </remarks>
+            
+             <remarks>
+             <p>
+             <strong>Thread Safety:</strong>
+             Services implementing this interface need to be used in a thread safe
+             manner. If they are designed to handle requests per call or per session
+             , thread safety isn't required; if they are designed use a single
+             instance for all calls, thread safety is required.
+             </p>
+             </remarks>
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.IAuthorization.CheckRole(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Check if the user for the specified session belongs to the
+             specified role.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="roleName">the name of the role to check</param>
+             <return>
+             true if the user belongs to the role; false otherwise
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/>
+             or <paramref name="roleName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.IAuthorization.CheckFunction(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Check if the user for the specified session can execute the
+             specified function.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="functionName">the name of the function to check</param>
+             <return>
+             true if the current user has rights to perform the specified
+             function
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="functionName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.IAuthorization.CheckEntity(System.String,System.String,System.String,Hermes.Services.Security.Authorization.Rights)">
+             <summary>
+             <para>
+             Check if the user for the current session has a specified set of
+             rights to a given entity.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="entityName">the name of the entity to check</param>
+             <param name="rights">
+             an enumeration of all the rights to check
+             </param>
+             <return>
+             true if the current user has all of the specified rights for the
+             given entity
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.IAuthorization.GetEntityRights(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Retrieve all of the rights a user has for a given entity.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="entityName">the name of the entity to check</param>
+             <return>
+             all of the rights the user has for the given entity
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.IAuthorization.GetFunctionAttributes(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Get the attributes from the specified function.
+             </para>
+             </summary>
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="functionName">
+             the name of the function.
+             </param>
+             <returns>
+             The name-value pairs of the Attributes property for a specific
+             wrapped service FunctionalAttribute instance.
+             </returns>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="functionName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.IAuthorization.SetApplication(System.String)">
+            <summary>
+            <para>
+            Set the applicaton id.
+            </para>
+            </summary>
+            <param name="appId">
+            The applicaton id to be set.
+            </param>
+            <exception cref="T:System.ServiceModel.FaultException`1">
+            The inner exception contains:
+            <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+            <see cref="T:System.ArgumentException"/> (if <paramref name="appId"/>
+            is empty),
+            <see cref="T:System.ObjectDisposedException"/>(if the object has been
+            disposed).
+            </exception>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.ObjectFactoryNamespace">
+            <summary>
+            <para>
+            Represents the object factory namespace.(optional)
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.Binding">
+            <summary>
+            <para>
+            Represents the binding key in object factory configuration.
+            (required)
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.EndpointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address key in object factory
+            configuration.(required)
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
+            <summary>
+            <para>
+            Creates a new <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/>
+            with the given <see cref="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.Binding"/> and
+            <see cref="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.EndpointAddress"/>.
+            </para>
+            </summary>
+            <param name="binding">
+            The binding with which to make calls to the service
+            </param>
+            <param name="remoteAddress">
+            The address of the service endpoint
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            if either argument is null
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.GetClient">
+            <summary>
+            <para>
+            Create a <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> configured
+            from the default namespace.
+            </para>
+            </summary>
+            <return>
+            fully configured <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/>
+            </return>
+            <exception cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException">
+            Inner Exception:
+            <see cref="T:System.Configuration.ConfigurationException"/>(if a required
+            configuration parameter is missing or if there's a problem getting
+            the namespace or constructing the configured objects with
+            <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/>).
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.GetClient(System.String)">
+             <summary>
+             <para>
+             Creates a <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> from the
+             specified namespace.
+             </para>
+             </summary>
+             <param name="namespace">
+             <see cref="T:TopCoder.Util.ConfigurationManager.ConfigManager"/> namespace from which to read
+             configuration.
+             </param>
+             <return>
+             a fully configured <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/>
+             </return>
+            
+             <exception cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException">
+             Inner Exception:
+             <see cref="T:System.ArgumentNullException"/> (if the argument is null),
+             <see cref="T:System.ArgumentException"/> (if the argument is empty after
+             trim), <see cref="T:System.Configuration.ConfigurationException"/>(if a required
+             configuration parameter is missing or if there's a problem getting
+             the namespace or constructing the configured objects with
+             <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/>).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.WrapSDE(System.Exception,System.String,System.String)">
+             <summary>
+             <para>
+             Wraps the given exception into a SDE.
+             </para>
+             </summary>
+            
+             <remarks>
+             <para>
+             This method only be invoked in <see cref="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.GetClient(System.String)"/>.
+             </para>
+             </remarks>
+             <param name="e">
+             <see cref="T:System.Exception"/> instance.
+             </param>
+             <param name="namespace">
+             namespace string.
+             </param>
+             <param name="message">
+             Error message.
+             </param>
+             <returns>
+             <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/> instance.
+             </returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.CreateObjectFactory(System.String)">
+            <summary>
+            <para>
+            Create <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/> instance using
+            <paramref name="ns"/>.
+            </para>
+            </summary>
+            <param name="ns">
+            namespace string.
+            </param>
+            <returns>
+            <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/> instance created.
+            </returns>
+            <exception cref="T:System.Configuration.ConfigurationException">
+            If some property is missing in the config file.
+            </exception>
+            <exception cref="T:TopCoder.Util.ObjectFactory.ObjectSourceException">
+            Wraps a configuration specific exception(Configuration Manager exception) or
+            could signal a missing property or parsing error.
+            </exception>
+            <exception cref="T:TopCoder.Util.ObjectFactory.ObjectCreationException">
+            Wraps an object creation exception (reflection exception) or signals an object creation problem.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.CreateBinding(TopCoder.Util.ObjectFactory.ObjectFactory,System.String)">
+            <summary>
+            <para>
+            Create <see cref="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.Binding"/> instance using the
+            <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/> from configuration.
+            </para>
+            </summary>
+            <param name="of">
+            <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/> instance.
+            </param>
+            <param name="ns">
+            namespace string.
+            </param>
+            <returns>
+            <see cref="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.Binding"/> instance created.
+            </returns>
+            <exception cref="T:System.Configuration.ConfigurationException">
+            If some property is missing in the config file.
+            </exception>
+            <exception cref="T:TopCoder.Util.ObjectFactory.ObjectSourceException">
+            Wraps an implementation specific exception (SQL exception for a database implementation,
+            Configuration Manager exception for a configuration file implementation, etc) or could
+            signal an implementation specific problem (missing property, parse error, etc)
+            </exception>
+            <exception cref="T:TopCoder.Util.ObjectFactory.ObjectCreationException">
+            Wraps an object creation exception (reflection exception) or signals an object creation problem.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.CreateEndpointAddress(TopCoder.Util.ObjectFactory.ObjectFactory,System.String)">
+            <summary>
+            <para>
+            Create <see cref="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.EndpointAddress"/> instance using the
+            <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/> from configuration.
+            </para>
+            </summary>
+            <param name="of">
+            <see cref="T:TopCoder.Util.ObjectFactory.ObjectFactory"/> instance.
+            </param>
+            <param name="ns">
+            namespace string.
+            </param>
+            <returns>
+            <see cref="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.EndpointAddress"/> instance created.
+            </returns>
+            <exception cref="T:System.Configuration.ConfigurationException">
+            If some property is missing in the config file.
+            </exception>
+            <exception cref="T:TopCoder.Util.ObjectFactory.ObjectSourceException">
+            Wraps an implementation specific exception (SQL exception for a database implementation,
+            Configuration Manager exception for a configuration file implementation, etc) or could
+            signal an implementation specific problem (missing property, parse error, etc)
+            </exception>
+            <exception cref="T:TopCoder.Util.ObjectFactory.ObjectCreationException">
+            Wraps an object creation exception (reflection exception) or signals an object creation problem.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.CheckEntity(System.String,System.String,System.String,Hermes.Services.Security.Authorization.Rights)">
+             <summary>
+             <para>
+             Check if the user for the current session has a specified set of
+             rights to a given entity.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="entityName">the name of the entity to check</param>
+             <param name="rights">
+             an enumeration of all the rights to check
+             </param>
+             <return>
+             true if the current user has all of the specified rights for the
+             given entity
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/>
+             or <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.CheckFunction(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Check if the user for the specified session can execute the
+             specified function.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">
+             token for the current session
+             </param>
+             <param name="functionName">
+             the name of the function to check
+             </param>
+             <return>
+             true if the current user has rights to perform the
+             specified function.
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/>
+             or <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.CheckRole(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Check if the user for the specified session belongs to the
+             specified role.
+             </para>
+             </summary>
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="roleName">the name of the role to check</param>
+             <return>
+             true if the user belongs to the role; false otherwise
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/>
+             or <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.GetEntityRights(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Retrieve all of the rights a user has for a given entity.
+             </para>
+             </summary>
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="entityName">the name of the entity to check</param>
+             <return>
+             all of the rights the user has for the given entity
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/>
+             or <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.GetFunctionAttributes(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Get the attributes from the specified function.
+             </para>
+             </summary>
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="functionName">
+             the name of the function.
+             </param>
+             <returns>
+             The name-value pairs of the Attributes property for a specific
+             wrapped FunctionalAttribute instance.
+             </returns>
+            
+             <exception cref="T:System.ServiceModel.FaultException">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="functionName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient.SetApplication(System.String)">
+            <summary>
+            <para>
+            Set the applicaton id.
+            </para>
+            </summary>
+            <param name="appId">
+            The applicaton id to be set.
+            </param>
+            <exception cref="T:System.ServiceModel.FaultException">
+            The inner exception contains:
+            <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+            <see cref="T:System.ArgumentException"/> (if <paramref name="appId"/>
+            is empty),
+            <see cref="T:System.ObjectDisposedException"/>(if the object has been
+            disposed).
+            </exception>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.IAuthorizationGenerated">
+            <summary>
+            <para>
+            Class generated from svcUtil.exe
+            </para>
+            </summary>
+            <author>TCSDEVELOPER</author>
+            <version>1.0</version>
+            <copyright>
+            Copyright (c)2007, TopCoder, Inc. All rights reserved.
+            </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.IAuthorizationGenerated.CheckRole(System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="roleName">Role name.</param>
+            <returns>Check result.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.IAuthorizationGenerated.CheckFunction(System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="functionName">function name.</param>
+            <returns>Check result.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.IAuthorizationGenerated.CheckEntity(System.String,System.String,System.String,Hermes.Services.Security.Authorization.Rights)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="entityName">entity name.</param>
+            <param name="rights">
+            user right.
+            </param>
+            <returns>Check result.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.IAuthorizationGenerated.GetEntityRights(System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="entityName">entity name.</param>
+            <returns>user right.</returns>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.IAuthorizationGeneratedChannel">
+            <summary>
+            <para>
+            Class generated from svcUtil.exe
+            </para>
+            </summary>
+            <author>TCSDEVELOPER</author>
+            <version>1.0</version>
+            <copyright>
+            Copyright (c)2007, TopCoder, Inc. All rights reserved.
+            </copyright>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.AuthorizationClient">
+            <summary>
+            <para>
+            Class generated from svcUtil.exe
+            </para>
+            </summary>
+            <author>TCSDEVELOPER</author>
+            <version>1.0</version>
+            <copyright>
+            Copyright (c)2007, TopCoder, Inc. All rights reserved.
+            </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.#ctor">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.#ctor(System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.#ctor(System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.#ctor(System.String,System.ServiceModel.EndpointAddress)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.CheckRole(System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="roleName">Role name.</param>
+            <returns>Check result.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.CheckFunction(System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="functionName">function name.</param>
+            <returns>Check result.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.CheckEntity(System.String,System.String,System.String,Hermes.Services.Security.Authorization.Rights)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="entityName">entity name.</param>
+            <param name="rights">
+            user right.
+            </param>
+            <returns>Check result.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.AuthorizationClient.GetEntityRights(System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Method Generated from svcUtil.
+            </para>
+            </summary>
+            <param name="sessionId">Session id</param>
+            <param name="sessionToken">
+            Session token
+            </param>
+            <param name="entityName">entity name.</param>
+            <returns>user right.</returns>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.Common.FunctionalAbilitiesAttribute">
+             <summary>
+             <para>
+             This the class represent the function attributes.
+             </para>
+             </summary>
+            
+             <remarks>
+             <p>
+             <strong>Thread Safety:</strong>
+             This class is not thread safe.
+             </p>
+             </remarks>
+            
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.Common.FunctionalAbilitiesAttribute._FunctionalAbilities">
+            <summary>
+            <para>
+            Represents the list of function ability.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.FunctionalAbilitiesAttribute.#ctor(System.String[])">
+            <summary>
+            <para>
+            Create new <see cref="T:Hermes.Services.Security.Authorization.Client.Common.FunctionalAbilitiesAttribute"/> instance with
+            <paramref name="functionalAbilities"/>.
+            </para>
+            </summary>
+            <param name="functionalAbilities">
+            The abilities to be assigned.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            if <paramref name="functionalAbilities"/> is null.
+            </exception>
+        </member>
+        <member name="P:Hermes.Services.Security.Authorization.Client.Common.FunctionalAbilitiesAttribute.FunctionalAbilities">
+            <summary>
+            <para>
+            Getter for function abilities.
+            </para>
+            </summary>
+            <value>
+            The list of function ability.
+            </value>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.TestHelper">
+             <summary>
+             Defines helper methods used for tests.
+             </summary>
+            
+             <threadsafety>
+             All static methods are thread safe.
+             </threadsafety>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TestHelper.LoadConfig">
+            <summary>
+            <para>
+            Loads configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TestHelper.LoadConfig(System.String)">
+             <summary>
+             <para>
+             Loads configuration.
+             </para>
+             </summary>
+            
+             <param name="serviceConfig">
+             config file name.
+             </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TestHelper.AddConfig(System.String)">
+             <summary>
+             <para>
+             Add configuration.
+             </para>
+             </summary>
+            
+             <param name="serviceConfig">
+             Config File name.
+             </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TestHelper.ClearConfig">
+            <summary>
+            <para>
+            Clears configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TestHelper.GetField``1(Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService,System.String)">
+            <summary>
+            <para>
+            Use reflect to get the value of service.
+            </para>
+            </summary>
+            <typeparam name="T">
+            Field type.
+            </typeparam>
+            <param name="service">
+            <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/> object.
+            </param>
+            <param name="fieldName">
+            field name.
+            </param>
+            <returns>The field value in service.</returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TestHelper.Invoke(Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService,System.String)">
+            <summary>
+            <para>
+            Use reflect to invoke method.
+            </para>
+            </summary>
+            <param name="service">
+            <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/> object.
+            </param>
+            <param name="methodName">
+            method name.
+            </param>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Demo">
+            <summary>
+            <para>
+            A demo class shows how to use the component.
+            </para>
+            </summary>
+            <author>TCSDEVELOPER</author>
+            <version>1.0</version>
+            <copyright>
+            Copyright (c)2007, TopCoder, Inc. All rights reserved.
+            </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Demo.DemoEndPointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address used for demo.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Demo.serviceHost">
+            <summary>
+            <para>
+            Represents the host.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.SetUp">
+            <summary>
+            <para>
+            Set up the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.TearDown">
+            <summary>
+            <para>
+            Clean the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.testDemo">
+            <summary>
+            <para>
+            A Demo shows the usage of running the component
+            as a hosted WCF service.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.CheckEntity(Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient)">
+            <summary>
+            <para>
+            Show <c>CheckEntity</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.CheckRole(Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient)">
+            <summary>
+            <para>
+            Show <c>CheckRole</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.CheckFunction(Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient)">
+            <summary>
+            <para>
+            Show <c>CheckFunction</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo.GetEntityRights(Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient)">
+            <summary>
+            <para>
+            Show <c>GetEntityRights</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.RightsTest">
+             <summary>
+             Test <see cref="T:Hermes.Services.Security.Authorization.Rights"/> class, unit test.
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.RightsTest.TestRead">
+            <summary>
+            Test Rights.Read.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.RightsTest.TestInsert">
+            <summary>
+            Test Rights.Insert.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.RightsTest.TestUpdate">
+            <summary>
+            Test Rights.Update.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.RightsTest.TestDelete">
+            <summary>
+            Test Rights.Delete.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.RightsTest.TestExecute">
+            <summary>
+            Test Rights.Execute.
+            </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest">
+             <summary>
+             Test <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/> class, unit test.
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.message">
+            <summary>
+            Message string for test.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.cause">
+            <summary>
+            Exception instance for test.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtor">
+             <summary>
+             Test InvalidSessionException().
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorMessage_Null">
+             <summary>
+             Test InvalidSessionException(string),
+             by passing a null reference.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorMessage_Valid">
+             <summary>
+             Test InvalidSessionException(string),
+             by passing an error message.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorMessageInner_Null3">
+             <summary>
+             Test InvalidSessionException(string, Exception),
+             by passing null references.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorMessageInner_Null1">
+             <summary>
+             Test InvalidSessionException(string, Exception),
+             by passing an error message and a null reference.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorMessageInner_Null2">
+             <summary>
+             Test InvalidSessionException(string, Exception),
+             by passing a null reference and an inner exception.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorMessageInner_Valid">
+             <summary>
+             Test InvalidSessionException(string, Exception),
+             by passing an error message and an inner exception.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionExceptionTest.TestCtorInfoContext">
+             <summary>
+             Test
+             InvalidSessionException(SerializationInfo, StreamingContext).
+            
+             Desterilized instance should have same property as it before
+             serialization.
+             </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Demo2">
+             <summary>
+             <para>
+             A demo class shows how to use the component.
+             </para>
+             </summary>
+            
+             <remarks>
+             <para>
+             This class will use generated client class.
+             </para>
+             </remarks>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Demo2.DemoEndPointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address used for demo.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Demo2.serviceHost">
+            <summary>
+            <para>
+            Represents the host.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.SetUp">
+            <summary>
+            <para>
+            Set up the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.TearDown">
+            <summary>
+            <para>
+            Clean the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.testDemo">
+            <summary>
+            <para>
+            A Demo shows the usage of running the component
+            as a hosted WCF service.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.CheckEntity(Hermes.Services.Security.Authorization.Client.AuthorizationClient)">
+            <summary>
+            <para>
+            Show <c>CheckEntity</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.CheckRole(Hermes.Services.Security.Authorization.Client.AuthorizationClient)">
+            <summary>
+            <para>
+            Show <c>CheckRole</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.CheckFunction(Hermes.Services.Security.Authorization.Client.AuthorizationClient)">
+            <summary>
+            <para>
+            Show <c>CheckFunction</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Demo2.GetEntityRights(Hermes.Services.Security.Authorization.Client.AuthorizationClient)">
+            <summary>
+            <para>
+            Show <c>GetEntityRights</c> function usage.
+            </para>
+            </summary>
+            <param name="client">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest">
+             <summary>
+             Test <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/> class, unit test.
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.message">
+            <summary>
+            Message string for test.
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.cause">
+            <summary>
+            Exception instance for test.
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtor">
+             <summary>
+             Test AuthorizationServiceException().
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorMessage_Null">
+             <summary>
+             Test AuthorizationServiceException(string),
+             by passing a null reference.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorMessage_Valid">
+             <summary>
+             Test AuthorizationServiceException(string),
+             by passing an error message.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorMessageInner_Null3">
+             <summary>
+             Test AuthorizationServiceException(string, Exception),
+             by passing null references.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorMessageInner_Null1">
+             <summary>
+             Test AuthorizationServiceException(string, Exception),
+             by passing an error message and a null reference.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorMessageInner_Null2">
+             <summary>
+             Test AuthorizationServiceException(string, Exception),
+             by passing a null reference and an inner exception.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorMessageInner_Valid">
+             <summary>
+             Test AuthorizationServiceException(string, Exception),
+             by passing an error message and an inner exception.
+            
+             Should be correct.
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.AuthorizationServiceExceptionTest.TestCtorInfoContext">
+             <summary>
+             Test
+             AuthorizationServiceException(SerializationInfo, StreamingContext).
+            
+             Desterilized instance should have same property as it before
+             serialization.
+             </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator">
+             <summary>
+             <para>
+             This class is used to help mediate method.
+             </para>
+             </summary>
+            
+             <remarks>
+             <p>
+             <strong>Thread Safety:</strong>
+             static class is thread safe, and a synchronize object is used for
+             configuration object.
+             </p>
+             </remarks>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.AuthorizationMappingProvider">
+            <summary>
+            <para>
+            Represents the key in object factory configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator._Configuration">
+            <summary>
+            <para>
+            The configuration used to create
+            <see cref="T:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider"/> instance.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator._SyncObj">
+            <summary>
+            <para>
+            Syhchrnoization object for configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.MediateMethod(System.String,System.String,System.String,System.Reflection.MethodBase)">
+            <summary>
+            <para>
+            Check function's attributes.
+            </para>
+            </summary>
+            <param name="applicationId">
+            Application id.
+            </param>
+            <param name="sessionID">id of the current session</param>
+            <param name="sessionToken">token for the current session</param>
+            <param name="methodBase">the method to be mediate.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If the <paramref name="methodBase"/> is null.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.MediateObject(System.String,System.String,System.String,System.Type)">
+            <summary>
+            <para>
+            Check type's attributes.
+            </para>
+            </summary>
+            <param name="applicationId">
+            Application id.
+            </param>
+            <param name="sessionID">id of the current session</param>
+            <param name="sessionToken">token for the current session</param>
+            <param name="type">the type to be mediate.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If the <paramref name="type"/> is null.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.CheckFunctionalAttributes(System.String,System.String,System.String,Hermes.Services.Security.Authorization.Client.Common.FunctionalAbilitiesAttribute[])">
+            <summary>
+            <para>
+            Check functions.
+            </para>
+            </summary>
+            <param name="applicationId">
+            application id.
+            </param>
+            <param name="sessionID">id of the current session</param>
+            <param name="sessionToken">token for the current session</param>
+            <param name="attributes">the attributes to be checked.</param>
+            <returns>
+            true if all attributes pass check, otherwise false.
+            </returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.GetFunctionAttributes(System.String,System.String,System.String,System.String)">
+            <summary>
+            <para>
+            Get the function name using the <paramref name="referenceFunctionName"/>.
+            </para>
+            </summary>
+            <param name="applicationId">
+            application id.
+            </param>
+            <param name="sessionId">id of the current session</param>
+            <param name="sessionToken">token for the current session</param>
+            <param name="referenceFunctionName">
+            Reference function name.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.CreateMapper">
+            <summary>
+            <para>
+            Create <see cref="T:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider"/> with
+            <see cref="T:TopCoder.Util.ObjectFactory.ConfigurationAPIObjectFactory"/>.
+            </para>
+            </summary>
+            <returns>
+            The <see cref="T:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider"/> instance.
+            </returns>
+        </member>
+        <member name="P:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator.Configuration">
+            <summary>
+            <para>
+            Sets the configuration object which is used for creating
+            <see cref="T:Hermes.Services.Security.Authorization.Client.Common.IAuthorizationMappingProvider"/> instance.
+            </para>
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            If the value is null.
+            </exception>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Rights">
+             <summary>
+             <para>
+             This is an enumeration of the rights that a user can have to an entity.
+             Users may have <see cref="F:Hermes.Services.Security.Authorization.Rights.Read"/>, <see cref="F:Hermes.Services.Security.Authorization.Rights.Insert"/>,
+             <see cref="F:Hermes.Services.Security.Authorization.Rights.Update"/>, <see cref="F:Hermes.Services.Security.Authorization.Rights.Delete"/>, and <see cref="F:Hermes.Services.Security.Authorization.Rights.Execute"/>
+             permissions on individual entities.
+             </para>
+            
+             </summary>
+             <remarks>
+             <p>
+             The 'or' operator may be used to combine enumeration members into one
+             and the 'and' operator can be used to test for common members between
+             different enumerations.
+             </p>
+             </remarks>
+            
+             <remarks>
+             <p>
+             <strong>Thread Safety:</strong>
+             Enumerations are thread safe.
+             </p>
+             </remarks>
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Rights.Read">
+            <summary>
+            <para>
+            Flag indicating right to Read an entity.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Rights.Insert">
+            <summary>
+            <para>
+            Flag indicating right to Insert an entity.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Rights.Update">
+            <summary>
+            <para>
+            Flag indicating right to Update an entity.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Rights.Delete">
+            <summary>
+            <para>
+            Flag indicating right to Delete an entity.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Rights.Execute">
+            <summary>
+            <para>
+            Flag indicating right to Execute an entity.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService">
+            <summary>
+            <para>The HermesAuthorizationService provided by TopCoder for the purpose of testing.</para>
+            <para>In its constructor, it will read values from configuration file. And all behaviors
+            of this class depends on configuration.</para>
+            </summary>
+            
+            <author>TCSDEVELOPER</author>
+            <version>1.0</version>
+            <copyright>Copyright (c)2007, TopCoder, Inc. All rights reserved.</copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.LoginNamespaceProperty">
+            <summary>
+            <para>The string representation for 'login_namespace' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.RoleNamespaceProperty">
+            <summary>
+            <para>The string representation for 'role_namespace' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.FunctionNamespaceProperty">
+            <summary>
+            <para>The string representation for 'function_namespace' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.EntityNamespaceProperty">
+            <summary>
+            <para>The string representation for 'entity_namespace' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.SessionIdsProperty">
+            <summary>
+            <para>The string representation for 'sessionIds' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.AllowPostfix">
+            <summary>
+            <para>The string representation for '_allow' postfix.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.DenyPostfix">
+            <summary>
+            <para>The string representation for '_deny' postfix.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.RoleNamesProperty">
+            <summary>
+            <para>The string representation for 'roleNames' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.PermissionPostfix">
+            <summary>
+            <para>The string representation for '_permission' postfix.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.FunctionNamesProperty">
+            <summary>
+            <para>The string representation for 'funtionNames' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.AttributeNamesPostfix">
+            <summary>
+            <para>The string representation for '_attributeNames' postfix.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.AttributeValuesPostfix">
+            <summary>
+            <para>The string representation for '_attributeValues' postfix.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.EntityNamesProperty">
+            <summary>
+            <para>The string representation for 'entityNames' property.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.RightsPostfix">
+            <summary>
+            <para>The string representation for '_rights' postfix.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._Logins">
+            <summary>
+            <para>Maps from 'sessionId' and 'sessionToken' pair to permission.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._Roles">
+            <summary>
+            <para>Maps from  role name to permission.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._Functions">
+            <summary>
+            <para>Maps from  function name to permission.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._FunctionsAttributes">
+            <summary>
+            <para>Maps from  funtion name to a list of attributes defined. The list of attributes
+            consisted of 'attribute name' and 'attribute value' pairs.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._Entities">
+            <summary>
+            <para>Maps from  entity name to its Rights enum value.</para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._AppId">
+            <summary>
+            <para>The application id. It is initialized as empty string and can be set via 
+            SetApplicationId(string) method. When setting, it is not allowed to be null or empty string.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService._IsDisposed">
+            <summary>
+            <para>This is a flag to indicate if this object has been disposed or not.</para>
+            </summary>
+            <remarks>
+            <para>It is initialized to false, and set to true in the <see cref="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.Dispose(System.Boolean)"/> method. 
+            It is checked by all of the public service operations, which will throw 
+            <see cref="T:System.ObjectDisposedException"/> if it's true.</para>
+            <para>Reads and writes to this field are atomic, but it's marked as volitile since it's assumed 
+            that <see cref="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.Dispose"/> may be called from a different thread than the main operations.</para>
+            </remarks>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.#ctor">
+            <summary>
+            <para>The constructor which will load configuration from default namespace:
+            "Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService".
+            </para>
+            </summary>
+            <exception cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException">
+            Inner exception:
+            <see cref="T:System.Configuration.ConfigurationException"/> (if a required parameter is m-
+            issing or if there's a problem reading the given namespace from co-
+            nfiguration).
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.#ctor(System.String)">
+            <summary>
+            <para>The constructor which will load configuration from given namespace.</para>
+            </summary>
+            <param name="nameSpace">the namespace to load configuration</param>
+            <exception cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException">
+            Inner exception:
+            <see cref="T:System.Configuration.ConfigurationException"/> (if a required parameter is m-
+            issing or if there's a problem reading the given namespace from co-
+            nfiguration), <see cref="T:System.ArgumentNullException"/> (if the
+            <paramref name="nameSpace"/> is null),
+            <see cref="T:System.ArgumentException"/>(if the <paramref name="nameSpace"/>
+            is trimmed empty).
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.InitializeLogins(System.String)">
+            <summary>
+            <para>Initialize _Logins with configuration from given namespace.</para>
+            </summary>
+            <param name="nameSpace">the namespace to load configuration</param>
+            <exception cref="T:System.Configuration.ConfigurationException">if any property value is empty string,
+            or if error occurs while reading configuration</exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.InitializeRoles(System.String)">
+            <summary>
+            <para>Initialize _Roles with configuration from given namespace.</para>
+            </summary>
+            <param name="nameSpace">the namespace to load configuration</param>
+            <exception cref="T:System.Configuration.ConfigurationException">if any property value is empty string,
+            or if error occurs while reading configuration</exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.InitializeFunctions(System.String)">
+            <summary>
+            <para>Initialize _Functions and _FuntionAttributes with configuration from given namespace.</para>
+            </summary>
+            <param name="nameSpace">the namespace to load configuration</param>
+            <exception cref="T:System.Configuration.ConfigurationException">if any property value is empty string,
+            or if error occurs while reading configuration</exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.InitializeEntities(System.String)">
+            <summary>
+            <para>Initialize _Entities with configuration from given namespace.</para>
+            </summary>
+            <param name="nameSpace">the namespace to load configuration</param>
+            <exception cref="T:System.Configuration.ConfigurationException">if any property value is empty string,
+            or if error occurs while reading configuration</exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.CheckRole(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Check if the user for the specified session belongs to the
+             specified role.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="roleName">the name of the role to check</param>
+             <return>
+             true if the user belongs to the role; false otherwise
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/>
+             or <paramref name="roleName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.AuthLogin(System.String,System.String)">
+            <summary>
+            <para>Use session id and session token to login.</para>
+            </summary>
+            <param name="sessionId">The session id.</param>
+            <param name="sessionToken">The session token.</param>
+            <exception cref="T:Hermes.Services.Security.Authorization.InvalidSessionException">If login with <paramref name="sessionId"/> and
+            <paramref name="sessionToken"/> failed.</exception>
+            <exception cref="T:System.ArgumentNullException">if <paramref name="sessionId"/> or <paramref name="sessionToken"/>
+            is null.</exception>
+            <exception cref="T:System.ArgumentException">if <paramref name="sessionId"/> is empty.</exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.CheckFunction(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Check if the user for the specified session can execute the
+             specified function.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="functionName">the name of the function to check</param>
+             <return>
+             true if the current user has rights to perform the specified
+             function
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="functionName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service), 
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.CheckEntity(System.String,System.String,System.String,Hermes.Services.Security.Authorization.Rights)">
+             <summary>
+             <para>
+             Check if the user for the current session has a specified set of
+             rights to a given entity.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="entityName">the name of the entity to check</param>
+             <param name="rights">
+             an enumeration of all the rights to check
+             </param>
+             <return>
+             true if the current user has all of the specified rights for the
+             given entity
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service), 
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.GetEntityRights(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Retrieve all of the rights a user has for a given entity.
+             </para>
+             </summary>
+            
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="entityName">the name of the entity to check</param>
+             <return>
+             all of the rights the user has for the given entity
+             </return>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="entityName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service), 
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.GetFunctionAttributes(System.String,System.String,System.String)">
+             <summary>
+             <para>
+             Get the attributes from the specified function.
+             </para>
+             </summary>
+             <param name="sessionId">id of the current session</param>
+             <param name="sessionToken">token for the current session</param>
+             <param name="functionName">
+             the name of the function.
+             </param>
+             <returns>
+             The name-value pairs of the Attributes property for a specific
+             wrapped FunctionalAttribute instance.
+             </returns>
+            
+             <exception cref="T:System.ServiceModel.FaultException`1">
+             The inner exception contains:
+             <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+             <see cref="T:System.ArgumentException"/> (if <paramref name="sessionId"/> or
+             <paramref name="functionName"/> is empty),
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/>(if the specified session is
+             not valid), <see cref="T:Hermes.Services.Security.Authorization.AuthorizationServiceException"/>(if there's
+             a problem interacting with the wrapped authentication service),
+             <see cref="T:System.ObjectDisposedException"/>(if the object has been
+             disposed).
+             </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.SetApplication(System.String)">
+            <summary>
+            <para>
+            Set the applicaton id.
+            </para>
+            </summary>
+            <param name="appId">
+            The applicaton id to be set.
+            </param>
+            <exception cref="T:System.ServiceModel.FaultException`1">
+            The inner exception contains:
+            <see cref="T:System.ArgumentNullException"/> (if any argument is null),
+            <see cref="T:System.ArgumentException"/> (if <paramref name="appId"/>
+            is empty), 
+            <see cref="T:System.ObjectDisposedException"/>(if the object has been
+            disposed).
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.HostUpdated">
+            <summary>
+            <para>
+            This method isn't needed by this service.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.CheckDisposed">
+             <summary>
+             <para>
+             Checks this service has been disposed.
+             </para>
+             </summary>
+            
+             <exception cref="T:System.ObjectDisposedException">If it has been disposed.</exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.Dispose">
+            <summary>
+            <para>
+            Disposes of this object and related resources.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.Dispose(System.Boolean)">
+            <summary>
+            <para>
+            Disposes of the resources held by this class.
+            </para>
+            </summary>
+            <param name="disposing">
+            indicates whether the object is disposing (true) or in the destructor (false)
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.Finalize">
+            <summary>
+            <para>Destructor for this class disposes recourse used.</para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.CheckRights(Hermes.Services.Security.Authorization.Rights,System.String)">
+            <summary>
+            <para>
+            Validate value is <see cref="T:Hermes.Services.Security.Authorization.Rights"/>.
+            </para>
+            </summary>
+            <param name="value">
+            The <see cref="T:Hermes.Services.Security.Authorization.Rights"/> instance to be validated.
+            </param>
+            <param name="paramName">
+            The actual parameter name of the argument being checked.
+            </param>
+            <exception cref="T:System.ArgumentException">
+            If the value is not valid <see cref="T:Hermes.Services.Security.Authorization.Rights"/> instance.
+            </exception>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService.PopulateSDE(System.String,System.Exception,System.String,System.String[],System.Object[],System.String[],System.Object[],System.String[],System.Object[])">
+             <summary>
+             Throw an instance of <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/>.
+             </summary>
+            
+             <param name="msg">
+             The message for exception.
+             </param>
+             <param name="e">
+             The cause.
+             </param>
+             <param name="methodName">
+             The method name.
+             </param>
+             <param name="paramNames">
+             The parameter names.
+             </param>
+             <param name="paramValues">
+             The parameter values.
+             </param>
+             <param name="localNames">
+             The local variable names.
+             </param>
+             <param name="localValues">
+             The local variable values.
+             </param>
+             <param name="instanceNames">
+             The instance variable names.
+             </param>
+             <param name="instanceValues">
+             The instance variable values.
+             </param>
+             <returns>
+             An instance of <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/>.
+             </returns>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.InvalidSessionException">
+             <summary>
+             <para>
+             This exception is thrown by <see cref="T:Hermes.Services.Security.Authorization.IAuthorization"/> service
+             operations if the given session id and session token don't correspond
+             to a valid and active session.
+             In <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/>, the given session
+             information is used in an attempt to log into the underlying wrapped
+             service; if the login attempt fails, an
+             <see cref="T:Hermes.Services.Security.Authorization.InvalidSessionException"/> is thrown.
+             </para>
+             </summary>
+            
+             <remarks>
+             <para>
+             <strong>Thread Safety:</strong>
+             This class derives from <see cref="T:TopCoder.Util.ExceptionManager.SDE.SelfDocumentingException"/>,
+             which is not thread safe, so it is not thread safe.
+             </para>
+             </remarks>
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionException.#ctor">
+            <summary>
+            <para>This is the default constructor for this exception.</para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionException.#ctor(System.String)">
+            <summary>
+            <para>This is a single-argument constructor for this exception that
+            provides a message.</para>
+            </summary>
+            <param name="message">
+            A string representing the message for this exception.
+            This argument is not checked - it may be null or empty.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionException.#ctor(System.String,System.Exception)">
+            <summary>
+            <para>
+            This is a two-argument constructor for this exception that
+            provides a message and a cause.
+            </para>
+            </summary>
+            <param name="message">
+            A string representing the message for this exception. This argument
+            is not checked - it may be null or empty.
+            </param>
+            <param name="cause">
+            An exception representing the cause of the exception. This argument
+            is not checked - it may be null.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.InvalidSessionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            <para>
+            This is the standard constructor for controlling the serialization
+            process.
+            </para>
+            </summary>
+            <param name="info">
+            Stores all the data needed to serialize or deserialize an object.
+            This argument is not checked for null - it is passed to the
+            constructor of the base class.
+            </param>
+            <param name="context">
+            Describes the source and destination of a given serialized stream,
+            and provides an additional caller-defined context.
+            This argument is a struct, and cannot be null- it is passed to the
+            constructor of the base class.
+            </param>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest">
+             <summary>
+             Test <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/> class, unit test.
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.DemoEndPointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address used for server.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.serviceHost">
+            <summary>
+            <para>
+            Represents the host.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.SetUp">
+            <summary>
+            <para>
+            Set up the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TearDown">
+            <summary>
+            <para>
+            Clean the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClient_Accuracy">
+            <summary>
+            <para>
+            Test <c>GetClient()</c> for Accuracy
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClient_Without_ObjectFactory">
+            <summary>
+            <para>
+            Test <c>GetClient()</c> for Accuracy
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_Accuracy">
+            <summary>
+            <para>
+            Test <c>GetClient(string)</c> for Accuracy
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_Null_Namespace">
+             <summary>
+             <para>
+             Test <c>GetClient(string)</c> for Failure.
+            
+             In this case, the param is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_Empty_Namespace">
+             <summary>
+             <para>
+             Test <c>GetClient(string)</c> for Failure.
+            
+             In this case, the param is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_WithoutBinding">
+             <summary>
+             <para>
+             Test <c>GetClient()</c> for Failure.
+            
+             In this case, the binding is not set int configuration.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_WrongBinding">
+             <summary>
+             <para>
+             Test <c>GetClient()</c> for Failure.
+            
+             In this case, the binding is invalid.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_WithoutAddress">
+             <summary>
+             <para>
+             Test <c>GetClient()</c> for Failure.
+            
+             In this case, the remote address is not set int configuration.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.TestGetClientString_WrongAddress">
+             <summary>
+             <para>
+             Test <c>GetClient()</c> for Failure.
+            
+             In this case, the binding is invalid.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientTest.ValidateFields(Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient)">
+            <summary>
+            <para>
+            Validate fields in <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/>.
+            </para>
+            </summary>
+            <param name="c">
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance.
+            </param>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.CoverageExcludeAttribute">
+             <summary>
+             <para>
+             This class is used to exclude test cases from coverage report.
+             It is empty class simply extending from System.Attribute class.
+             </para>
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest">
+             <summary>
+             Test <see cref="T:Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService"/> class, unit test.
+             </summary>
+            
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c) 2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.DemoEndPointAddress">
+            <summary>
+            <para>
+            Represents the endpoint address used for server.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.serviceHost">
+            <summary>
+            <para>
+            Represents the host.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.service">
+            <summary>
+            <para>
+            <see cref="T:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClient"/> instance for test.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.SetUp">
+            <summary>
+            <para>
+            Set up the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TearDown">
+            <summary>
+            <para>
+            Clean the environment.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Accuracy">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for accuracy.
+            
+             You can configure the sessionId, sessionToken in configuration.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Null_SessionId">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the sessionId is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Empty_SessionId">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the sessionId is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Null_SessionToken">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the sessionToken is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Null_EntityName">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the entity name is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Empty_EntityName">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the entity name is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_LoginFailed">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, login failed.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_LoginException">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, exception happen during login.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_None_Entity">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the entity can not be found.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Invalid_Rights1">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the rights value is invalid.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckEntity_Auth_Exception">
+             <summary>
+             <para>
+             Test Method <c>CheckEntity(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, exception happen in underlying communication.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Accuracy">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for accuracy.
+            
+             You can configure the sessionId, sessionToken in configuration.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Null_SessionId">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionId is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Empty_SessionId">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionId is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Null_SessionToken">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, the sessionToken is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Null_FunctionName">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, the function name is null.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Empty_FunctionName">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string, Rights)</c>
+             for failure.
+            
+             In this case, the function name is empty.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_LoginFailed">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, login in failed.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_LoginException">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, exception happen during login.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.HermesAuthorizationServiceClientImplTest.TestCheckFunction_Auth_Exception">
+             <summary>
+             <para>
+             Test Method <c>CheckFunction(string, string, string)</c>
+             for failure.
+            
+             In this case, exception happen in underlying communication.
+             </para>
+             </summary>
+        </member>
+        <member name="T:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException">
+             <summary>
+             <para>
+             The excepton is thrown by <see cref="T:Hermes.Services.Security.Authorization.Client.Common.HermesAuthorizationMediator"/>,
+             if it can not find functinal attribute.
+             </para>
+             </summary>
+            
+             <threadsafety>
+             This class is not thread safe.
+             </threadsafety>
+            
+             <author>TCSDESIGNER</author>
+             <author>TCSDEVELOPER</author>
+             <version>1.0</version>
+             <copyright>
+             Copyright (c)2007, TopCoder, Inc. All rights reserved.
+             </copyright>
+        </member>
+        <member name="F:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException._MethodBase">
+            <summary>
+            <para>
+            Represents the method info.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException.#ctor(System.Reflection.MethodBase)">
+            <summary>
+            <para>
+            Create new <see cref="T:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException"/> with
+            <paramref name="info"/>.
+            </para>
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException.#ctor(System.Reflection.MethodBase,System.String)">
+            <summary>
+            <para>
+            Create new <see cref="T:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException"/> with
+            <paramref name="info"/> and <paramref name="message"/>.
+            </para>
+            </summary>
+            <param name="info">
+            The method info.
+            </param>
+            <param name="message">
+            error message.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException.#ctor(System.String)">
+            <summary>
+            <para>
+            Create new <see cref="T:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException"/> with
+            <paramref name="message"/>.
+            </para>
+            </summary>
+            <param name="message">
+            error message.
+            </param>
+        </member>
+        <member name="M:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException.#ctor">
+            <summary>
+            <para>
+            Create new <see cref="T:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException"/>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Hermes.Services.Security.Authorization.Client.Common.NoFunctionalAttributeException.Method">
+            <summary>
+            <para>
+            Gets the method info.
+            </para>
+            </summary>
+            <value>
+            The method info.
+            </value>
+        </member>
+    </members>
+</doc>

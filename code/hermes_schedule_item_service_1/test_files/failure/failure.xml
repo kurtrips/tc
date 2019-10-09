@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ConfigManager>
+  <namespace name="HermesNS.TC.Services.ScheduleItem.HermesScheduleItemService">
+    <property name="objectFactoryNamespace">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+    <property name="auditClientKey">
+      <value>TestAuditClientKey</value>
+    </property>
+    <property name="genericNotesClientKey">
+      <value>TestGenericNotesClientKey</value>
+    </property>
+    <property name="persistence">
+      <value>TestPersistenceKey</value>
+    </property>
+    <property name="hermesLoggerKey">
+      <value>TestHermesLoggerKey</value>
+    </property>
+  </namespace>
+
+  <namespace name="TopCoder.Util.ObjectFactory.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="TopCoder.Util.ObjectFactory.default.parameters">
+    <property name="p1:string">
+      <value>HermesScheduleItemService</value>
+    </property>
+  </namespace>
+
+  <namespace name="HermesScheduleItemService.TestPersistenceKey">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+
+  <namespace name="HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceProvider">
+    <property name="objectFactoryNamespace">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+    <property name="connectionName">
+      <value>Data Source=XE;User ID=SYSTEM;Password=oracle10g</value>
+    </property>
+    <property name="helper">
+      <value>TestHelper</value>
+    </property>
+  </namespace>
+
+  <namespace name="HermesScheduleItemService.TestHelper">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceHelper</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+
+  <!--Object definition for the HermesLogger-->
+  <namespace name="HermesScheduleItemService.TestHermesLoggerKey">
+    <property name="type_name">
+      <value>HermesNS.TC.LoggingWrapperPublisher.HermesLogger</value>
+    </property>
+    <property name="assembly">
+      <value>Hermes_Services_for_TopCoder.dll</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.TestHermesLoggerKey.parameters">
+    <property name="p1:string">
+      <value>SomeLogger</value>
+    </property>
+  </namespace>
+  <namespace name="HermesNS.TC.DAAB">
+    <property name="default_profile_key">
+      <value>ProfileKey</value>
+    </property>
+  </namespace>
+  <namespace name="HermesNS.TC.LoggingWrapperPublisher">
+    <property name="object_factory_namespace">
+      <value>TopCoder.Util.ObjectFactory</value>
+    </property>
+    <property name="generic_exception_manager_key">
+      <value>GenericExceptionManagerKey</value>
+    </property>
+  </namespace>
+  <namespace name="HermesScheduleItemService.GenericExceptionManagerKey">
+    <property name="type_name">
+      <value>HermesNS.TC.LoggingWrapperPublisher.DefaultGenericExceptionManager</value>
+    </property>
+    <property name="assembly">
+      <value>Hermes_Services_for_TopCoder.dll</value>
+    </property>
+  </namespace>
+</ConfigManager>

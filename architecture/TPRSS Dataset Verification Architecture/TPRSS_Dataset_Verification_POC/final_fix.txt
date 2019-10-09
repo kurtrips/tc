@@ -1,0 +1,60 @@
+>>Fix the issue in this thread (no point taken):
+http://apps.topcoder.com/forums/?module=Thread&threadID=771983&start=0&mc=3#1649739
+All user info should be compared. 
+
+Fixed
+
+>>Please export the pdf & word documents' content into plain text files first,
+and then load the data from the plain text files.
+We want this flexibility in case the pdf/word parsing fails in the future, then we can create the plain text files manually.
+(no point taken). 
+
+Fixed
+
+>>Flexibility requirement for data processing is not covered. A pluggable approach is needed.
+
+Introduced the interfaces.
+
+>>Configuration was not addressed at all, but there is a must to achieve flexibility on the data processing. The configuration is a major requirement.
+
+Updated. The interfaces are now initalized using their class names from proeprties file.
+
+>>Matching of parsed master file with the data from parsed input reference files is not covered. Major issue.
+
+See ADS 1.5
+
+>>Writing output report file and the format of that file is not covered. Major issue.
+
+See ADS 1.5
+Format of final output file is not defined formally. But it is evident from the comparison logic in ADS 1.5
+
+>>The chapter "2.4 Logging" of the submission doesn't cover those issues are all. Sorry, but very major logging requirement is missed here.
+
+Added note as per http://apps.topcoder.com/forums/?module=Thread&threadID=772658&start=0
+
+>>external components missed: log4j, apache poi, pdfbox. - the related section is needed, not just deployment constraints.
+
+added
+
+>>Assembly specs should be clear on the following requirements:
+“We will need desktop application installation directions including which software we need on our machines, and how to install it.”
+“We will also need directions if we need to build or compile the tool at all.”
+
+Added this to GUI AS
+
+>>Performance issues
+
+Left as is as per forum discussion
+
+>>MiG-29 3.1.2 spelling mistakes
+
+Some are fixed, some i cannot find
+UID and GRP need not be defined. They are constants from the Word doc dataset table
+
+>> Colors on assembly and sequence diagrams are wrong.
+
+Fixed. And also fixed the SD
+
+
+Other items are duplicates IMO
+

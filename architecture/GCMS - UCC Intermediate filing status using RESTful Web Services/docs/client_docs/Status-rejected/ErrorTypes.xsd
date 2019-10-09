@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><schema targetNamespace="http://w3.ibm.com/xmlns/ibmww/gcms/docgen/ErrorTypes" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://w3.ibm.com/xmlns/ibmww/igf/docgen/ErrorTypes">
+
+	<complexType abstract="true" name="BaseErrorType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="faultName" type="string"/>
+			<!-- faultName. Conveys the application-specific name of the error to the service consumer application. For example, if the service consumer application passes in a null or empty string for the stock symbol parameter, the fault name returned to that application could be "Invalid symbol format fault." --> 
+			
+			<element maxOccurs="1" minOccurs="0" name="message" type="string"/>  
+			<!-- Provides a deeper explanation and indication of corrective action to be taken.  For example, "Null or empty symbol. Please pass a valid stock symbol to the getQuote operation." -->
+		</sequence>
+	</complexType>
+
+	<complexType name="BusinessErrorType">
+		<complexContent>
+			<extension base="tns:BaseErrorType">
+				<sequence>
+					<element maxOccurs="1" minOccurs="1" name="errorCode" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="SystemErrorType">
+		<complexContent>
+			<extension base="tns:BaseErrorType">
+				<sequence>
+					<element maxOccurs="1" minOccurs="1" name="errorCode" type="string"/>
+					<element maxOccurs="1" minOccurs="1" name="originatingError" type="string"/>
+					<element maxOccurs="unbounded" minOccurs="0" name="trace" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<element name="businessError" type="tns:BusinessErrorType"/>
+
+	<element name="systemError" type="tns:SystemErrorType"/>	
+
+</schema>

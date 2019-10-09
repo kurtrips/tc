@@ -1,0 +1,26 @@
+1.1.3.1 >>In the Hercules_Niviane_Data_Ingestion_Application_Persistence_Requirements_Specification.rtf,
+the DataIngestionPersistenceService should have a configured list of endpoints to DataClientCacheWebService,
+and cache should be updated for each of such configured remote cache.
+
+This is actually not required. The purpose of this requirement was to facilitate cache replication.
+However I am using ehcache's replication strategy. It provides for automatic peer discovery and replication. This is done with the help of TCP multicasting.
+See updated assembly spec in Client Service Module. It states
+"We will use Automatic Peer Discovery i.e. if a new machine is added to the cluster, then it will be automatically be discovered and its cache will be brought up to date with the other machines the cluster. The only requirement is that TCP multicasting should be enabled on the machines as well as the routers."
+
+
+1.1.3.2 and 2.4.2.1
+
+Added the CacheKey class.
+hashCode and equals methods.have been provided with doc in TCUML
+Various caching API have been updated to CRUD by CacheKey.
+
+
+3.1.1.1
+All fixed
+
+3.1.1.2
+Fixed
+
+3.1.1.3
+removed
+

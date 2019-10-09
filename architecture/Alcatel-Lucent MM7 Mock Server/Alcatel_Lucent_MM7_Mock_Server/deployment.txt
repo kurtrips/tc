@@ -1,0 +1,2 @@
+1. Simply run "ant clean" followed by "ant run_server"
+This will start the server.

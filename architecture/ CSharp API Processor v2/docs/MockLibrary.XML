@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MockLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:MockLibrary.NormalClass">
+            <summary>
+            A normal non generic class.
+            </summary>
+        </member>
+        <member name="T:MockLibrary.GenericCollection`1">
+            <summary>
+            A generic class
+            </summary>
+            <typeparam name="T">The type of elements in collection</typeparam>
+        </member>
+        <member name="T:MockLibrary.GenericList`2">
+            <summary>
+            This is a generic class called <see cref="T:MockLibrary.GenericList`2"/>
+            It derives from <see cref="T:MockLibrary.GenericCollection`1"/>
+            1st overload for Pop is <see cref="M:MockLibrary.GenericList`2.Pop``3(`0,`1)"/>
+            2nd overload for Pop is <see cref="M:MockLibrary.GenericList`2.Pop``2(`0,`1)"/>
+            It conatins a property called <see cref="P:MockLibrary.GenericList`2.GenericProperty1"/>
+            </summary>
+            <typeparam name="T">The generic type paramter</typeparam>
+            <typeparam name="U">Another generic type paramter</typeparam>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.#ctor(MockLibrary.GenericList{`0,`1})">
+            <summary>
+            Constructor 2
+            </summary>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.#ctor(MockLibrary.GenericList{System.String,`1})">
+            <summary>
+            Constructor 3
+            </summary>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.#ctor(MockLibrary.GenericList{System.String,System.Int32})">
+            <summary>
+            Constructor 4
+            </summary>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.#ctor(MockLibrary.GenericList{MockLibrary.NormalClass,MockLibrary.NormalClass})">
+            <summary>
+            Constructor 5
+            </summary>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.AMethod(MockLibrary.IGenericBaseInterface{System.String,`1})">
+            <summary>
+            A method
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.AMethod(MockLibrary.IGenericBaseInterface{`0,`1})">
+            <summary>
+            A method
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.Pop``3(`0,`1)">
+            <summary>
+            A generic method.
+            </summary>
+            <returns>A generic value</returns>
+            <typeparam name="X">A generic type param</typeparam>
+            <typeparam name="Y">A generic type param</typeparam>
+            <typeparam name="Z">A generic type param</typeparam>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.Pop``2(`0,`1)">
+            <summary>
+            A generic method.
+            </summary>
+            <returns>A generic value</returns>
+            <typeparam name="X">The generic type param</typeparam>
+            <typeparam name="Y">The generic type param</typeparam>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.Add(`0,MockLibrary.IGenericBaseInterface{MockLibrary.GenericCollection{MockLibrary.NestedList{`0}},`1})">
+            <summary>
+            A method with 2 generic parameters.
+            </summary>
+            <param name="input">A generic parameter</param>
+            <param name="input2">Another generic parameter</param>
+        </member>
+        <member name="M:MockLibrary.GenericList`2.Add(`0)">
+            <summary>
+            A method with generic parameters.
+            </summary>
+            <param name="input">A generic parameter</param>
+        </member>
+        <member name="F:MockLibrary.GenericList`2.genericField">
+            <summary>
+            A generic field
+            </summary>
+        </member>
+        <member name="F:MockLibrary.GenericList`2.bigGenericField">
+            <summary>
+            A nice and big nested genereic field.
+            </summary>
+        </member>
+        <member name="F:MockLibrary.GenericList`2.structField">
+            <summary>
+            A field of type struct.
+            </summary>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.GenericProperty1">
+            <summary>
+            A generic property.
+            </summary>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.GenericProperty2">
+            <summary>
+            Another generic property.
+            </summary>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.GenericProperty3">
+            <summary>
+            Another generic property.
+            </summary>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.GenericProperty4">
+            <summary>
+            Another generic property.
+            </summary>
+        </member>
+        <member name="E:MockLibrary.GenericList`2.genericEvent">
+            <summary>
+            Generic event.
+            </summary>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.Item(MockLibrary.IGenericBaseInterface{MockLibrary.GenericCollection{MockLibrary.NestedList{`0}},System.String})">
+            <summary>
+            Another indexer 5
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.Item(System.Int32)">
+            <summary>
+            A indexer 0
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.Item(System.String)">
+            <summary>
+            An indexer 1. 
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.Item(MockLibrary.GenericCollection{`0})">
+            <summary>
+            An indexer 2
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.Item(MockLibrary.GenericCollection{System.Int32})">
+            <summary>
+            Another indexer 3
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MockLibrary.GenericList`2.Item(MockLibrary.GenericCollection{System.String})">
+            <summary>
+            Another indexer 4
+            </summary>
+            <param name="idx"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MockLibrary.IGenericBaseInterface`2">
+            <summary>
+            Generic interface
+            </summary>
+            <typeparam name="T">a</typeparam>
+            <typeparam name="U">s</typeparam>
+        </member>
+        <member name="T:MockLibrary.IGenericInterface`1">
+            <summary>
+            This is an interface called <see cref="T:MockLibrary.IGenericInterface`1"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MockLibrary.IGenericInterface`1.GetIt(`0)">
+            <summary>
+            A method
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MockLibrary.GenericEventHandler`2">
+            <summary>
+            Generic event handler
+            </summary>
+            <typeparam name="T">Type of sender</typeparam>
+            <typeparam name="U">Type of event args</typeparam>
+            <param name="sender">sender</param>
+            <param name="eventArgs">args</param>
+        </member>
+        <member name="T:MockLibrary.NestedList`1">
+            <summary>
+            A Generic class. It contains a nested class <see cref="T:MockLibrary.NestedList`1.NestedChildList`2"/>
+            </summary>
+            <typeparam name="T">type</typeparam>
+        </member>
+        <member name="T:MockLibrary.NestedList`1.NestedChildList`2">
+            <summary>
+            A nested type.
+            </summary>
+            <typeparam name="U">type1</typeparam>
+            <typeparam name="V">type2</typeparam>
+        </member>
+        <member name="T:MockLibrary.PartialClass">
+            <summary>
+            A partial class
+            </summary>
+            <summary>
+            Part 2 of the partial class
+            </summary>
+        </member>
+        <member name="T:MockLibrary.GenericStruct`2">
+            <summary>
+            A generic structure.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="U"></typeparam>
+        </member>
+    </members>
+</doc>

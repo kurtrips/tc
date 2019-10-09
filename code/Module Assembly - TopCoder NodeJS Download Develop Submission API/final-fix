@@ -1,0 +1,47 @@
+>>Admin should be abble to download every submission
+I asked copilot but got no response. 
+As already satted in my appeal, I don't see any reason why this is required
+Not fixing it. anyway it is recommended
+
+>> For the 'deleted' upload, there should be some roles can download it.
+Fixed and added test
+
+>>The logic in the following java code is NOT implemented in nodejs
+>>// Regular reviewers can view checkpoint submissions only after the Review phase has started
+Fixed and added test
+
+>>js - you should add inline comment in code for "-unparam" option
+fixed
+
+>>loggedIn = (!_.isUndefined(connection.caller) && !_.isNull(connection.caller) && _.contains(_.keys(connection.caller), 'userId'))
+>>This is not needed. connection.caller is always defined.
+fixed
+
+>>if (errr) {.... can be simplify to
+fixed
+
+>>In initializers/helper.js, there is already helper.checkMaxInt function, you can use it directly.
+fixed
+
+>>There are many place use the string......
+fixed
+
+>>apiary.apib not updated
+fixed
+
+>>Test invalid parameters (missing, negative, zero, etc).
+fixed. missing cannot be tested because actionhero automatically rejects it
+
+>>25 passing (14s)
+>>3 failing
+I cannot reporoduce this. I have added even more tests. Now there are 34 insetad of 28 and all of them pass
+
+>>no test for case:
+>> For checkpoint submissions, post mortem reviewer can also view all submissions
+Added
+
+>>you should clear data in 'after' hook
+fixed
+
+>>in 5.3 submission/tc_api  => submission/tc-api
+fixed

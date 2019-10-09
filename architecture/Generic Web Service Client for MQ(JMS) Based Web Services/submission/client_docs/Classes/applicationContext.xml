@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!--
+  - Application context definition for business layer.
+  - Contains bean references to the transaction manager and to the DAOs in
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!--
+		Find below examples which show how webservices and clients will be configured in DGS. <bean id="createDocumentWebService" class="" parent="dgsWebService"> <property name="asfServiceClient" ref="asfServiceClient"/> </bean> <bean
+		id="persistDocumentWebService" class="" parent="dgsWebService" /> </bean>
+	-->
+	<!-- 
+	****************
+	CLIENT SIDE BEAN
+	******************
+	-->
+	<!-- This is the defination for DGSBaseClient. All other webservices clients extends this class to 
+	    	get common functionalities -->
+	<bean id="dgsClient" class="financing.tools.docgen.service.DGSClient" abstract="true">
+		<property name="properties" ref="docgenProperties" />
+	</bean>
+
+	<bean id="asfServiceClient" class="financing.tools.docgen.client.asf.AsfClient" parent="dgsClient" />
+	<bean id="pdserviceClient" class="financing.tools.docgen.client.persist.PersistDocumentWebServiceClient" parent="dgsClient" />
+	<bean id="dcserviceClient" class="financing.tools.docgen.client.create.DocumentCreationWebServiceClient" parent="dgsClient" />
+	<bean id="cmserviceClient" class="financing.tools.docgen.client.cm.CMBGenericWebServiceProxy" />
+
+
+
+	<!-- 
+	Utility bean for managing the cm schemas
+	 -->
+	<bean id="cmAttributeMapper" class="financing.tools.docgen.client.cm.impl.ItemAttributeMapper">
+		<property name="schemas" >
+			<list>
+				<bean id="devCmbSchema" class="financing.tools.docgen.client.cm.impl.SchemaParm">
+					<property name="env" value="DEV" />
+					<property name="path" value="properties/cm/DEV/cmbschema.xml" />
+				</bean>
+				<bean id="uatCmbSchema" class="financing.tools.docgen.client.cm.impl.SchemaParm">
+					<property name="env" value="UAT" />
+					<property name="path" value="properties/cm/UAT/cmbschema.xml" />
+				</bean>
+				<bean id="betaprimeCmbSchema" class="financing.tools.docgen.client.cm.impl.SchemaParm">
+					<property name="env" value="BETAPRIME" />
+					<property name="path" value="properties/cm/UAT/cmbschema.xml" />
+				</bean>
+				<bean id="prdCmbSchema" class="financing.tools.docgen.client.cm.impl.SchemaParm">
+					<property name="env" value="PRD" />
+					<property name="path" value="properties/cm/PRD/cmbschema.xml" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!-- 
+	****************
+	SERVICE SIDE BEAN
+	******************
+	 -->
+	<!-- Integrating HibernateSession  -->
+	<bean id="docGenSessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation" value="classpath:properties/hibernate/hibernate.cfg.xml" />
+	</bean>
+
+	<!-- This bean defination is used to load properties file -->
+	<bean id="docgenProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location">
+			<value>classpath:properties/docgen/docgenMessages.properties</value>
+		</property>
+	</bean>
+
+
+	<!-- This is the defination for DGSBaseService. All other webservices extends this class to 
+	    	get common functionalities -->
+	<bean id="dgsWebService" class="financing.tools.docgen.service.DGSWebService" abstract="true">
+		<property name="sessionFactory" ref="docGenSessionFactory" />
+		<property name="properties" ref="docgenProperties" />
+	</bean>
+
+	<bean id="persistDocumentWebService" class="financing.tools.docgen.service.persist.impl.PersistDocumentWebService" parent="dgsWebService">
+		<property name="cmbSchemaLocation" ref="cmAttributeMapper" />
+	</bean>
+
+	<bean id="createDocumentWebService" class="financing.tools.docgen.service.create.CreateDocumentWebService" parent="dgsWebService">
+		<property name="asfServiceClient" ref="asfServiceClient" />
+	</bean>
+
+	<bean id="aggregateWebService" class="financing.tools.docgen.service.aggregate.AggregateWebService" parent="dgsWebService">
+		<property name="dcserviceClient" ref="dcserviceClient" />
+		<property name="pdserviceClient" ref="pdserviceClient" />
+	</bean>
+
+	<bean id="templateManagementWebService" class="financing.tools.docgen.service.templatemgt.impl.TemplateManagementWebService" parent="dgsWebService" />
+
+	<!-- 
+		<bean id="asfServiceClient" class="" parent="dgsClient" />
+	 -->
+</beans>

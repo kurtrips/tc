@@ -1,0 +1,11 @@
+1.
+The statements in time_oltp_data_setup.sql contains the sequences and data setup statements that need to be added to 
+https://coder.topcoder.com/internal/database/scripts/trunk/time_oltp/02_time_oltp_data_setup.sql
+
+The unique contsraint on client.customer_number is included but is commented out because there are currently rows which violate the data.
+
+2.
+There are also audit tables for client, address and contact which are client_audit, address_audit and contact_audit respectively.
+I am not writing to these tables as there are existing triggers which insert into these tables when data is added to the main table.
+However the tests do check whether the data is added properly to these tables and that only one row exists (there would be 2 if we inserted the data ourselves)
+

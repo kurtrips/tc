@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConfigManager>
+    <namespace name="TopCoder.Util.ConfigurationManager">
+		<property name="preload">
+    </property>
+  </namespace>
+</ConfigManager>

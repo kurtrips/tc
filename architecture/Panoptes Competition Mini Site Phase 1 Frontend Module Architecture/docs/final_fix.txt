@@ -1,0 +1,27 @@
+nikolay83
+1.1.1.1 - As per response on that thread, I have updated the ResetPasswordAction. See updated sections 2.5.2 and added 2.5.3 in Auth Related Actions assembly
+1.1.1.2 - My understanding of this feature is correct. Updated in 2.2.3.6 of Video and Assignments assembly
+1.1.1.3 - Added method to TCUML
+1.1.1.4 - Added section 2.4.3. downloadHowToDocument() and downloadReadmeDocument() in Miscellaneous Actions
+1.1.1.5 - Please read section 5.3 of SDS for Phase 1 and 2 scopes.
+1.1.2.1 - 1.1.2.4 - Added these (pointless) SDs
+1.1.4.2 - Mentioned this at start of section 2 of video and assignments assembly. Thread safety discussion added in the ADS section for thread safety.
+3.1.1.1 - fixed
+3.1.2.1 - fixed
+3.1.2.2 - fixed
+3.2.3.1 - fixed
+3.3.2.1 - duplicate
+
+vangavroche
+1.1.1.1 - Added a field registrationConfirmationCode:UUID to User.It is set in SubmitRegister action and checked in ConfirmRegister action.
+1.1.1.3 - Added actions for widgets. Please see section 2.2.4 last para of Miscellaneous actions. Also see the impl details of all the widget actions.
+1.1.2.1 - Added View Dashboard SD. Please also see section 2.1 and 2.2.4 in Miscellaneous Actions.
+1.2.1.1 - Not using tags anymore. Removed all the references. Instead using JSPs with snippets for the widget. See updated section 2.1 and 2.2.4 in Miscellaneous Actions.
+2.2.1.1 - See updated section 2.1 and 2.2.4 in Miscellaneous Actions. Using <s:action> instead of <jsp:include> now
+3.1.1.1 - fixed
+3.1.2.1 - fixed (phew!)
+
+DanLazar
+3.1.1.1 - Fixed
+3.2.1.1 - Fixed
+3.2.3.1 - fixed

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigManager>  
+    <namespace name="TopCoder.Services.WCF.TCWcfServiceHost">
+        <property name="object_factory_namespace">
+            <value>TopCoder.Util.ObjectFactory</value>
+        </property>
+        <property name="logger_object_name">
+            <value>logger</value>
+        </property>
+    </namespace>
+    
+    <namespace name="TopCoder.Services.WCF.Loggers.DefaultTCWcfLogger">
+        <property name="log_namespace">
+            <value>TopCoder.LoggingWrapper</value>
+        </property>
+    </namespace>
+    
+</ConfigManager>

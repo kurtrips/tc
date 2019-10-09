@@ -1,0 +1,18 @@
+<ConfigManager>
+  <namespace name="TopCoder.MSMQ.MessageProcessingWorkflow.Parsers.XmlMessageParser">
+	    <property name="MessageTypeDetectors">
+	      <value>XmlMessageTypeDetector</value>
+	    </property>
+	    <property name="ConversationManagerPersistence">
+	      <value>MyPersistence</value>
+	    </property>
+   </namespace>
+
+  <namespace name="type.detector.XmlMessageTypeDetector">
+	    <property name="message_type_SRequest">
+          <value>xpath=/ServiceRequest/@Type</value>
+          <value>xpath_value=SRequest</value>
+          <value>type_recipe_file=../../test_files/accuracyTests/recipe/ServiceRequest.xml</value>
+      </property>
+   </namespace>
+</ConfigManager>

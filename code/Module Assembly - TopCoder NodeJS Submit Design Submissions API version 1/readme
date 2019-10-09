@@ -1,0 +1,18 @@
+1. As discussed in forum, there is a bug in actionhero for arrays parameters in multipart request. So the || delimited values are being used.
+This is already confirmed with copilot
+
+2. I am using 3 new libraries: adm-zip for reading zip files, mkdirp for recursively creating direectories like the Java mkdirs, archiver for writing zip files.
+adm-zip cannot be used for writing as it's writing functions fail.
+
+3. some queries are being reused such as insert_submission, insert_upload etc. They are not included in the submission.
+existing submission and upload sequences are being reused but they are included in the db-scripts in case they do not already exist in your VM.
+
+4. In the current code there is a validation after creating the unified zip using UnifiedSubmissionValidator
+This is completely redundant.
+The individual validators using SourceSubmissionValidator and ImageSubmissionValidator already check most of the same thing.
+And the way that generateUnifiedSubmissionFile is created, the submission and source folder is always created.
+So the UnifiedSubmissionValidator cannot fail after this. Hence this piece is left out in my submission.
+
+5. adm-zip is synchronous in nature, so the code in generateUnifiedSubmissionFile method uses some synchronous fs operations as well.
+Other than this no other synchronous methods are used anywhere.
+

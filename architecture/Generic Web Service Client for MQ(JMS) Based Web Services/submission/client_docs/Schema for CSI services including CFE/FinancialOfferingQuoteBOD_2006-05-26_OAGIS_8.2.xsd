@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /cvsroot/ims/ims/gen/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26/pbi/FinancialOfferingQuoteBOD_2006-05-26_OAGIS_8.2.xsd,v 1.13 2012/02/09 18:38:23 ltian Exp $ -->
+<!-- This is a derived work based on the OAGIS(R) messaging specification. License information
+     for this file is provided in the LICENSE.TXT file that accompanies this OAGIS(R) release:
+     ** Revision: 8.0 **
+     ** Date: 05 April 2002 **
+     Open Applications Group XSD
+     Copyright 1998-2002, All Rights Reserved
+-->
+<!-- From ps/ps_openapplications.org.oagis.xsd -->
+<xsd:schema xmlns:oa="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26"
+    elementFormDefault="qualified"
+    version="0.02">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+      Title - FinancialOfferingQuoteBOD_2006-05-26_OAGIS_8.2.xsd
+      Publisher - IBM Enterprise Integration Messaging Specification (EIMS)
+      Creator - EIMS Team http://w3.ibm.com/transform/cio.nsf/main/ws_eims
+      Date.Created - 2006-05-26
+      Format - text/xml
+      Language - en-US
+      Identifier - http://w3.ibm.com/standards/xml/ibmww/ims/1.3/PBI/FinancialOfferingQuote/FinancialOfferingQuoteBOD_2006-05-26_OAGIS_8.2.xsd
+      Keywords - EIMS, Enterprise Integration Messaging Specification, FinancialOfferingQuote, FinancialOfferingQuoteBOD
+      Description - 
+	      FinancialOfferingQuote related Information
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Addresses" type="oa:Addresses">
+    <xsd:annotation>
+      <xsd:documentation>Associated address(es) for this party.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Attachment" type="oa:Attachment">
+    <xsd:annotation>
+      <xsd:documentation>The Attachment represents binary data files that may be included within a BOD. These files replace the paper specifications and drawings attached to a BOD definition to clearly communicate design requirements. This Data Type is optional.  Attachment usage is further defined by its position.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Attachments" type="oa:Attachments">
+    <xsd:annotation>
+      <xsd:documentation>Attachments allows any number of Attachment components to be associated with a Component or Noun. These Attachments use semantic names in order to provide meaning for the Attachment. The combination of the semantic name and position provide context for the Attachment.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Business" type="oa:OrganizationalUnit">
+    <xsd:annotation>
+      <xsd:documentation>This is used to identify the buisness entity that is involved in a transaction. The structure of the business entity is represented within here. Each application may have a different aproach to defining this entity</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ContactAbs" type="oa:Contact"/>
+  <xsd:element name="Contacts" type="oa:Contacts">
+    <xsd:annotation>
+      <xsd:documentation>Associated contacts for this party.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ContractDocumentReference" type="oa:OrderDocumentReference"/>
+  <xsd:element name="CorrespondenceLanguage" type="xsd:language">
+    <xsd:annotation>
+      <xsd:documentation>The language(s) that can be used in some written or spoken correspondence.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="CustomerDocumentId" type="oa:PartyDocumentId"/>
+  <xsd:element name="CustomerParty" type="oa:PartyInstitutional"/>
+  <xsd:element name="DocumentIds" type="oa:DocumentIds">
+    <xsd:annotation>
+      <xsd:documentation>Is the identifier for the document. It is possible to carry the document identifier for the other Parties. These DocumentIds are referenced by party-specific names.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="DocumentReferences" type="oa:DocumentReferences">
+    <xsd:annotation>
+      <xsd:documentation>Allows references to other business transactions to be referenced by the document/component that includes DocumentReferences. These references make use of semantic names in order to capture the purpose of the references. This in combination with the relative position with in a business document provide context for their use.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FeatureValue" type="oa:FeatureValue">
+    <xsd:annotation>
+      <xsd:documentation>Identifies pair wise features that the Orderable Item may have.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="InstalledAtParty" type="oa:PartyInstitutional"/>
+  <xsd:element name="InvoiceDocumentReference" type="oa:OrderDocumentReference"/>
+  <xsd:element name="ItemId" type="oa:ItemIdType">
+    <xsd:annotation>
+      <xsd:documentation>Identifies Item code. This can be a UPC or an EAN or a company assigned Id. Along with a revision number of the Item.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ItemIds" type="oa:ItemIds">
+    <xsd:annotation>
+      <xsd:documentation>Identifies the ItemIds associated with the Order Items.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="ManufacturerParty" type="oa:PartyInstitutional"/>
+  <xsd:element name="NameValueBase" type="oa:NameValueBase" abstract="true"/>
+  <xsd:element name="Note" type="oa:Note"/>
+  <xsd:element name="Noun" type="oa:Noun" abstract="true"/>
+  <xsd:element name="OpportunityDocumentReference" type="oa:GenericDocumentReference"/>
+  <xsd:element name="Parties" type="oa:Parties">
+    <xsd:annotation>
+      <xsd:documentation>Grouping of semantically named Parties.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PartyAssignedItemId" type="oa:PartyAssignedItemId" abstract="true"/>
+  <xsd:element name="Person">
+    <xsd:annotation>
+      <xsd:documentation>Indentifies the person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:extension base="oa:Person"/>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PrimaryAddress" type="oa:Address">
+    <xsd:annotation>
+      <xsd:documentation>The primary address</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="PurchaseOrderDocumentReference" type="oa:OrderDocumentReference"/>
+  <xsd:element name="Qualification" type="oa:NameValue">
+    <xsd:annotation>
+      <xsd:documentation>Represents the response to selection criteria that will be used to evaluate  the Party. It may also represent capabilities the party offers which are not requested. Examples include quality certifications (ISO-9000), CAD data compatibility (Pro/E), manufacturing operations (JIT), company size, and performance ratings.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="QuoteDocumentReference" type="oa:OrderDocumentReference"/>
+  <xsd:element name="SoldToParty" type="oa:PartyInstitutional"/>
+  <xsd:element name="StatusValue" type="oa:NameValue">
+    <xsd:annotation>
+      <xsd:documentation>Represents the value of a status element identifed by the name attribute.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SupplierDocumentId" type="oa:PartyDocumentId"/>
+  <xsd:element name="SupplierItemId" type="oa:PartyAssignedItemId">
+    <xsd:annotation>
+      <xsd:documentation>Identifies the Supplier&apos;s Item identification for the given Item.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="SupplierParty" type="oa:PartyInstitutional"/>
+  <xsd:element name="Tax" type="oa:Tax">
+    <xsd:annotation>
+      <xsd:documentation>Allows for taxes on tax.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="Verb" type="oa:Verb" abstract="true"/>
+  <xsd:complexType name="Address">
+    <xsd:annotation>
+      <xsd:documentation>Address,</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:PostalAddressBase"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Addresses">
+    <xsd:sequence>
+       <xsd:element ref="oa:PrimaryAddress" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AddressLine">
+    <xsd:annotation>
+      <xsd:documentation>Permits greater specification of address</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Line" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Inidicates the address via multiple lines.  Requires the use of the sequence attribute to track multiple lines</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="sequence" type="xsd:positiveInteger" use="required"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:sequence>
+        <xsd:element name="StreetName" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation>The Street Name where the building/ house is located</xsd:documentation>
+          </xsd:annotation>
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="xsd:string"/>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Amount">
+    <xsd:annotation>
+      <xsd:documentation>Simple content with the currency as an attrbute</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="currency" type="oa:Currency" use="required">
+          <xsd:annotation>
+            <xsd:documentation>Identifies the currency of the amount.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="type" type="xsd:string" use="optional"/>
+        <xsd:attribute name="basis" type="xsd:string" use="optional"/>
+        <xsd:attribute name="discount" type="xsd:decimal" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="AmountPerQuantity">
+    <xsd:annotation>
+      <xsd:documentation>Indicates the cost or price of something represented as a value per a number of units. The price of eggs for example would be 1.29 per 1 dozen.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Amount">
+        <xsd:annotation>
+          <xsd:documentation>Indicates the Amount. In the example, 1.29 is carried as the value of Amount and the currency would be USD, in the case of purchasing a dozen eggs in with US Dollars.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="oa:Amount"/>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="PerQuantity" type="oa:Quantity">
+        <xsd:annotation>
+          <xsd:documentation>Indicates the PerQuantity side of this Amount. In the example above 1 would be carried as the value of PerQuantity with the uom attribute being dozen.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Amounts">
+    <xsd:sequence>
+      <xsd:element name="Actual" type="oa:Amount">
+        <xsd:annotation>
+          <xsd:documentation>Identifies that amount in the currency of the transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ApplicationArea">
+    <xsd:sequence>
+      <xsd:element name="Sender" type="oa:Sender" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Identifies characteristics and control identifiers that relate to the application that created the Business Object Document.  The sender area can indicate the logical location of the application and/or database server, the application, and the task that was processing to create the BOD.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CreationDateTime" type="xsd:dateTime">
+        <xsd:annotation>
+          <xsd:documentation>is the date time stamp that the given instance of the Business Object Document was created.  This date must not be modified during the life of the Business Object Document.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="BODId" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The BODId provides a place to carry a Globally Unique Identifier (GUID) that will make each Business Object Document instance uniquely identifiable.  This is a critical success factor to enable software developers to use the Globally Unique Identifier (GUID) to build the following services or capabilities: 1. Legally binding transactions, 2. Transaction logging, 3. Exception handling, 4. Re-sending, 5. Reporting, 6. Confirmations, 7. Security.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Attachment">
+    <xsd:annotation>
+      <xsd:documentation>Attachment allows supporting documents to be attached to the BOD. This is for reference and management of binary/non-XML documents such as spreadsheets, CAD files, graphics, etc.  Defines information about the attachement which may be inline, a MIME part or an external URI</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="EmbeddedData" type="oa:EmbeddedData" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation>Allows the data to be embedded directly into the BOD instance.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="FileName" type="xsd:string" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation>Indicates the name of the File being referenced.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+      <xsd:element name="Description" type="oa:Description" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Description of the Attachment.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Attachments">
+    <xsd:sequence>
+      <xsd:element ref="oa:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Code">
+    <xsd:annotation>
+      <xsd:documentation>Base type for a Code of any kind</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Contact">
+    <xsd:annotation>
+      <xsd:documentation>A business Party contact is a person and has a specific role.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="oa:Person" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="JobTitle" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Identifies contact&apos;s job function for this contact mode</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Telephone" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="oa:TelephoneNumber">
+              <xsd:attribute name="sequence" type="xsd:positiveInteger" use="required"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EMailAddress" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="oa:EMailAddress">
+              <xsd:attribute name="sequence" type="xsd:positiveInteger" use="required"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Fax" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="oa:TelephoneNumber">
+              <xsd:attribute name="sequence" type="xsd:positiveInteger" use="required"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Contacts">
+    <xsd:sequence>
+      <xsd:element ref="oa:ContactAbs" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Country">
+    <xsd:simpleContent>
+      <xsd:extension base="oa:Country_e">
+        <xsd:attribute name="IdOrigin" type="xsd:string" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>To specific the source of the country code.  If absent, Standard values from ISO 3166-3:1999 Part 1 is used.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Country_e">
+    <xsd:annotation>
+      <xsd:documentation>Standard values from ISO 3166-3:1999 Part 1</xsd:documentation>
+      <xsd:documentation>Codes for the representation of names of countries and their subdivisions - Part 1: Country codes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="Currency">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="DatePeriod">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="Duration" type="oa:Duration" minOccurs="0"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="DateTime">
+    <xsd:restriction base="xsd:dateTime">
+      <xsd:pattern value="\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(Z|(\+|-)\d\d:\d\d)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="Description">
+    <xsd:annotation>
+      <xsd:documentation>Free-form text description of the Noun or Componenet in which the description occurs. The lang attribute indicates the language the description is in. Owner inidcates the user or entity that provided teh description..</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="oa:LingualString">
+        <xsd:attribute name="owner" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentIds">
+    <xsd:sequence>
+      <xsd:element ref="oa:SupplierDocumentId" minOccurs="0" maxOccurs="unbounded"/> <xsd:element ref="oa:CustomerDocumentId" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentIdType">
+    <xsd:sequence>
+      <xsd:element name="Id" type="oa:Id" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the identifier of the semantically named document. The position of the Id further defines it&apos;s context and meaning,</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Revision" type="oa:Revision" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the revision of Document Idenifier. The combination of the Id and it&apos;s revision uniquely identifies a document from the AssigningParty.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentReference">
+    <xsd:annotation>
+      <xsd:documentation>Identifies another document within the scope of the OAGIS specification, such as a PurchaseOrder or Invoice that maybe associated with a particular Business Object Document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentReferences">
+    <xsd:sequence>
+       <xsd:element ref="oa:InvoiceDocumentReference" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:ContractDocumentReference" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:OpportunityDocumentReference" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:PurchaseOrderDocumentReference" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:QuoteDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Duration">
+    <xsd:restriction base="xsd:duration"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="EMailAddress">
+    <xsd:annotation>
+      <xsd:documentation>Format based on ?</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="EmbeddedData">
+    <xsd:annotation>
+      <xsd:documentation>Holds the contents of an inline attachment.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Data" type="xsd:anyType">
+        <xsd:annotation>
+          <xsd:documentation>Container to carry the embedded data.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="encoding" type="oa:Encoding" use="required"/>
+  </xsd:complexType>
+  <xsd:simpleType name="Encoding">
+    <xsd:restriction base="oa:EncodingBase"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="EncodingBase">
+    <xsd:annotation>
+      <xsd:documentation>The standard set of encoding types from ???</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="base64"/>
+      <xsd:enumeration value="binary"/>
+      <xsd:enumeration value="octal"/>
+      <xsd:enumeration value="plainText"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="FeatureValue">
+    <xsd:complexContent>
+      <xsd:extension base="oa:NameValueBase"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="GenericDocumentReference">
+    <xsd:complexContent>
+      <xsd:extension base="oa:DocumentReference">
+        <xsd:sequence>
+          <xsd:element ref="oa:DocumentIds" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Id">
+    <xsd:annotation>
+      <xsd:documentation>Generic identifier type with open qualifyingAgency.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="IdOrigin" type="xsd:string" use="optional"/>
+        <xsd:attribute name="type" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="Indicator">
+    <xsd:annotation>
+      <xsd:documentation>Indicates if the semantic name is needed or not.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:boolean"/>
+  </xsd:simpleType>
+  <xsd:complexType name="ItemCategoryId">
+    <xsd:simpleContent>
+      <xsd:extension base="oa:Id"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ItemIdBase">
+    <xsd:sequence>
+      <xsd:element name="Id" type="oa:Id" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Is the Identifier of the Item.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemIds">
+    <xsd:sequence>
+      <xsd:element ref="oa:ItemId" minOccurs="0"/>
+      <xsd:element ref="oa:SupplierItemId" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ItemIdType">
+    <xsd:complexContent>
+      <xsd:extension base="oa:ItemIdBase"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="LineNumber">
+    <xsd:annotation>
+      <xsd:documentation>Identifies the instance of a Line within a given document.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="LingualString">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="lang" type="xsd:language"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="LogicalId">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Name">
+    <xsd:simpleContent>
+      <xsd:extension base="oa:LingualString"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="NameValue">
+    <xsd:complexContent>
+      <xsd:extension base="oa:NameValueBase"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="NameValueBase">
+    <xsd:sequence>
+      <xsd:element name="NameValue" type="oa:NameValuePair" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the tag and information of the new information to be passed.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NameValuePair">
+    <xsd:annotation>
+      <xsd:documentation>Is the tag and information of the new information to be passed.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="name" type="oa:Tag" use="required">
+          <xsd:annotation>
+            <xsd:documentation>Is the name of the tag for the information being passed.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="type" type="oa:Type" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>Is the type of the information being passed in the NameValue.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Note">
+    <xsd:annotation>
+      <xsd:documentation>A free form note. The lang attribute identifies the language that the note is in. The author identifies the author of the note. The enrtyDate indicates the date the note was entered or last modified.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="oa:LingualString">
+        <xsd:attribute name="author" type="xsd:string"/>
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Noun"/>
+  <xsd:complexType name="OrderDocumentReference">
+    <xsd:complexContent>
+      <xsd:extension base="oa:DocumentReference">
+        <xsd:sequence>
+          <xsd:element ref="oa:DocumentIds" minOccurs="0"/>
+          <xsd:element name="DocumentDate" type="oa:DateTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>The Datetime of the referenced document.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+         <xsd:element name="Status" type="oa:Status" minOccurs="0"><xsd:annotation><xsd:documentation>Indiactes the state of the document being referenced.</xsd:documentation></xsd:annotation></xsd:element><xsd:element name="Note" type="oa:Note" minOccurs="0" maxOccurs="unbounded"><xsd:annotation><xsd:documentation>Allows a note about the document being referenced.</xsd:documentation></xsd:annotation></xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OrganizationalUnit">
+    <xsd:annotation>
+      <xsd:documentation>A fully generic means of identifying an organizational unit. Can be an actual business unit (at any level) or an area of responsibility. Each is described with respect to others, via the ProximalUnit construct.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:OrganizationalUnitBase"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OrganizationalUnitBase">
+    <xsd:annotation>
+      <xsd:documentation>A fully generic means of identifying an organizational unit. Can be an actual business unit (at any level) or an area of responsibility. Each is described with respect to others, via the ProximalUnit construct.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Id" type="oa:OrganizationalUnitId" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="OrganizationalUnitId">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Parties">
+    <xsd:sequence>
+       <xsd:element ref="oa:CustomerParty" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:InstalledAtParty" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:ManufacturerParty" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:SoldToParty" minOccurs="0" maxOccurs="unbounded"/><xsd:element ref="oa:SupplierParty" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PartyAssignedItemId">
+    <xsd:annotation>
+      <xsd:documentation>Identifies an Items identifier that has been assigned by another Party.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:ItemIdType"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PartyBase" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>A mininmal Party type, as root to Party subst group type hierarchy</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:Noun">
+        <xsd:sequence>
+          <xsd:element name="PartyId" type="oa:PartyIdType" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PartyDocumentId">
+    <xsd:annotation>
+      <xsd:documentation>Document specific identifier type.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:DocumentIdType"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PartyId">
+    <xsd:simpleContent>
+      <xsd:extension base="oa:PartyIdAny">
+        <xsd:attribute name="IdOrigin" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PartyIdAny" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>The abstracty type for the head element of a PartyId substitution group. Must be compatible with all derivations.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PartyIdType">
+    <xsd:sequence>
+      <xsd:element name="Id" type="oa:PartyId" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Id type for generic Party Ids.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PartyInstitutional">
+    <xsd:annotation>
+      <xsd:documentation>A business entity that plays some role in the transaction, either actively or  by reference (active parties  in a purchase might be the CustomerParty or the SupplierParty, while Manufacturer would be referenced Party  that plays no active role in the transaction).  The Party type carries with it all of the identifying and descriptive information about the party.   A specific Party&apos;s role name is captured in the corresponding element&apos;s name, following the so-called &quot;semantically-named element substitution group&quot; design pattern. The instance is named [rolename]Party, as in SupplierParty, CustomerParty, etc. Each is of type Party, or of some derived type.  Need to bring more Party elements into PartyBase, once reg testing can be broken for a little while. mdf</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="oa:PartyBase">
+        <xsd:sequence>
+          <xsd:element name="Name" type="oa:Name" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+              <xsd:documentation>Name of the Party.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element ref="oa:Business" minOccurs="0"/>
+          <xsd:element name="TaxExemptInd" type="oa:Indicator" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>Inidicates whether the Party is Tax exempt.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element ref="oa:Addresses" minOccurs="0"/>
+          <xsd:element ref="oa:Contacts" minOccurs="0"/>
+          <xsd:element ref="oa:CorrespondenceLanguage" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="oa:Qualification" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Person">
+    <xsd:sequence>
+      <xsd:element name="PersonCode" type="oa:PersonCode" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the identifying code that uniquely identifyies a person.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PersonName" type="oa:PersonName" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Person Name.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PersonCode">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonName">
+    <xsd:annotation>
+      <xsd:documentation>Full specification for a persons name.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="GivenName" type="oa:Name" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Is the Persons given name or first name.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FormattedName" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Different formats for the persons name.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="oa:Name"/>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PostalAddressBase">
+    <xsd:sequence>
+      <xsd:element name="AddressLine" type="oa:AddressLine" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Permits multiple methods of indcating the postal address</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="City" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the City of the Address.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StateOrProvince" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the State or Province of a given Address.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Country" type="oa:Country" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Conuntry in which the Address is in.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PostalCode" type="oa:PostalCode" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Postal Code of the Address.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="PostalCode">
+    <xsd:annotation>
+      <xsd:documentation>A local postal code such as US Zipcode.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Quantity">
+    <xsd:annotation>
+      <xsd:documentation>A decimal value.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="uom" type="oa:UOM" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="ReasonCode">
+    <xsd:annotation>
+      <xsd:documentation>Used as a reason indicator for any type of business event or activity.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="oa:Code"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ReferenceId">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Revision">
+    <xsd:annotation>
+      <xsd:documentation>Is the revision code that can be associated with an Item, an order, a Bill of Material. The revision code indicates that the say item has been modified or updated in some way.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SalesOrganization">
+    <xsd:annotation>
+      <xsd:documentation>Idenitifies the SalesOrganizations.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="type" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Sender">
+    <xsd:sequence>
+      <xsd:element name="LogicalId" type="oa:LogicalId" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Provides the logical location of the server and applications from which the Business Object Document originated. It can be used to establish a logical to physical mapping, however its use is optional.  Each system or combination of systems should maintain an external central reference table containing the logical names or logical addresses of the application systems in the integration configuration.  This enables the logical names to be mapped to the physical network addresses of the resources needed on the network.    Note:  The technical implementation of this Domain Naming Service is not dictated by this specification.   This logical to physical mapping may be done at execution time by the application itself or by a middleware transport mechanism, depending on the integration architecture used.  This provides for a simple but effective directory access capability while maintaining application independence from the physical location of those resources on the network</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Component" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Provides a finer level of control than Logical Identifier and represents the business application that issued the Business Object Document.  Its use is optional.  The Open Applications Group has not constructed the list of valid Component names.  A suggestion for naming is to use the application component names used in the scenario diagrams in section two of OAGIS. Example Components may be Inventory, or Payroll.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ReferenceId" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Enables the sending application to indicate the instance identifier of the event or task that caused the BOD to be created. This allows drill back from the BOD message into the sending application. The may be required in environments where an audit trail must be maintained for all transactions.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="oa:ReferenceId"/>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="SerialNumber">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Status">
+    <xsd:sequence>
+      <xsd:element name="Code" type="oa:Code" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Is the Code to indicate the status for the Noun or Component in which the Status Component occurs.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="oa:StatusValue" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Tag">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Tax">
+    <xsd:annotation>
+      <xsd:documentation>Identifies a type of tax on order related BODs</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="PercentQuantity" type="oa:Quantity" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Identifyies the tax percentage that is applied to the TaxBaseAmount to get the TaxAmount.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TaxCode">
+    <xsd:annotation>
+      <xsd:documentation>The tax identifier for an ITEM.  Possible values are: VAT1, VAT2, VAT3, VAT4, VAT5, US Federal Tax.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TelephoneNumber">
+    <xsd:annotation>
+      <xsd:documentation>Format based on canonical form +### (###) #######</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="TimePeriod">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="To" type="oa:DateTime" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation>Is the ending timestamp of the event.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="Type">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="UOM">
+    <xsd:annotation>
+      <xsd:documentation>Standard values from ISO / SI ????</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:NMTOKEN"/>
+  </xsd:simpleType>
+  <xsd:complexType name="Verb"/>
+  <xsd:simpleType name="Year">
+    <xsd:restriction base="xsd:gYear"/>
+  </xsd:simpleType>
+</xsd:schema>

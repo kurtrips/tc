@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="build" name="Alcatel_Lucent_MM7_Mock_Server">
+    <property environment="env"/>
+    <property name="target" value="1.5"/>
+    <property name="source" value="1.5"/>
+    
+    <path id="project_classpath">
+        <pathelement location="bin"/>
+        <pathelement location="lib/mina-core-2.0.0.jar"/>
+        <pathelement location="lib/slf4j-api-1.5.11.jar"/>
+        <pathelement location="lib/slf4j-nop-1.5.11.jar"/>
+        <pathelement location="lib/apache-mime4j-0.6.jar"/>
+        <pathelement location="lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="lib/jaxb-impl.jar"/>
+    </path>
+    
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="project_classpath"/>
+        </javac>
+    </target>
+    
+    <target name="run_server" depends="build-project">
+	<java classname="com.topcoder.alu.mock.mm7.MM7MockServer" failonerror="true" fork="yes">
+		<classpath refid="project_classpath"/>
+		<arg value="6768" />
+	</java>
+    </target>
+    
+    <target name="run_client">
+	<java classname="com.topcoder.alu.mock.mm7.MM7MockClientTests" failonerror="true" fork="yes">
+		<classpath refid="project_classpath"/>
+		<arg value="6768" />
+	</java>
+    </target>
+</project>

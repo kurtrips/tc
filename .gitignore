@@ -1,0 +1,6 @@
+*.zip
+architecture/*/src
+architecture/*/test
+*.gz
+*.sh
+

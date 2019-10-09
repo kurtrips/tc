@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\FifthArcticMonkey\Development\XmlTreeViewer\build\classes\TopCoder.Web.Controls.XmlViewer.Test.dll" total="166" failures="0" not-run="0" date="2007-05-17" time="09:17:25">
+  <environment nunit-version="2.2.8.0" clr-version="2.0.50727.42" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="D:\FifthArcticMonkey\Development\XmlTreeViewer" machine-name="ASEEM" user="Administrator" user-domain="ASEEM" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="D:\FifthArcticMonkey\Development\XmlTreeViewer\build\classes\TopCoder.Web.Controls.XmlViewer.Test.dll" success="True" time="1.016" asserts="0">
+    <results>
+      <test-suite name="D:\FifthArcticMonkey\Development\XmlTreeViewer\build\classes\TopCoder.Web.Controls.XmlViewer.Test.dll" success="True" time="1.000" asserts="0">
+        <results>
+          <test-suite name="TopCoder" success="True" time="1.000" asserts="0">
+            <results>
+              <test-suite name="TopCoder.Web" success="True" time="1.000" asserts="0">
+                <results>
+                  <test-suite name="TopCoder.Web.Controls" success="True" time="1.000" asserts="0">
+                    <results>
+                      <test-suite name="TopCoder.Web.Controls.XmlViewer" success="True" time="1.000" asserts="0">
+                        <results>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests" success="True" time="0.375" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeNameCSSClassFail2" executed="True" success="True" time="0.031" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeNameCSSClassGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeNameCSSClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeNameCSSClassSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeValueCSSClassFail2" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeValueCSSClassGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeValueCSSClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestAttributeValueCSSClassSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestCommentCSSClassGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestCommentCSSClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestCommentCSSClassSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestCommentCSSClassSetFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestConstructor" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat" executed="True" success="True" time="0.234" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail10" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail4" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail6" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail7" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail8" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormat_Fail9" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestFormatCustom" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestIndentationFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestIndentationGet" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestIndentationSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestInnerTextCSSClassGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestInnerTextCSSClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestInnerTextCSSClassSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestInnerTextCSSClassSetFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestNodeNameCSSClassGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestNodeNameCSSClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestNodeNameCSSClassSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestNodeNameCSSClassSetFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestTagCSSClassGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestTagCSSClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestTagCSSClassSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTests.TestTagCSSClassSetFail2" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTestsProtected" success="True" time="0.094" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTestsProtected.TestFormatNode" executed="True" success="True" time="0.094" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTestsProtected.TestFormatNodeFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.CssXmlFormatterTestsProtected.TestFormatNodeFail2" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.DefaultXmlTreeViewTypeTests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.DefaultXmlTreeViewTypeTests.XmlTreeViewTypeAccuracy" executed="True" success="True" time="0.000" asserts="6" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.Demo" success="True" time="0.219" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.Demo.Demonstartion" executed="True" success="True" time="0.219" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsProtected" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsProtected.TestLoadNodeChildren" executed="True" success="True" time="0.000" asserts="12" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsProtected.TestLoadNodeChildrenFail" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic" success="True" time="0.063" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail10" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail6" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail7" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail8" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestConstructor2_Fail9" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestGetXml" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadChildren" executed="True" success="True" time="0.000" asserts="13" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadChildrenFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadChildrenFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadChildrenFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadChildrenFail4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadTree" executed="True" success="True" time="0.000" asserts="12" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestLoadTreeFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail10" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail2" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail6" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail7" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail8" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.GenericXmlTreeLoaderTestsPublic.TestSetXml_Fail9" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.HelperTests" success="True" time="0.063" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNonNegativeAccuracy" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNonNegativeFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotEmptyAccuracy" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotEmptyFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotNullAccuracy" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotNullFail" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotNullNotEmptyAccuracy" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotNullNotEmptyFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateNotNullNotEmptyFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Accuracy" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail3" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail6" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail7" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.HelperTests.ValidateWellFormedXml_Fail8" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.InvalidXmlExceptionTests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.InvalidXmlExceptionTests.ConstructorSerializationTest" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.InvalidXmlExceptionTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.InvalidXmlExceptionTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.InvalidXmlExceptionTests.TestConstructor3" executed="True" success="True" time="0.000" asserts="4" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests" success="True" time="0.156" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestConstructor" executed="True" success="True" time="0.000" asserts="9" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestCssClassesGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestCssClassesSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestCssClassesSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestCssClassesSetFail2" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestCssClassesSetFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingCssClassFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingCssClassFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingCssClassGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingCssClassSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingFailureTextFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingFailureTextFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingFailureTextGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingFailureTextSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingIconUrlFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingIconUrlFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingIconUrlGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingIconUrlSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingTextFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingTextFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingTextGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestExpandingTextSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestFolderIconUrlFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestFolderIconUrlFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestFolderIconUrlGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestFolderIconUrlSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestFormatterGet" executed="True" success="True" time="0.047" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestFormatterSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestGenericPrefixGetter" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestGenericPrefixSetter" executed="True" success="True" time="0.000" asserts="14" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestGetXml" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestLeafIconUrlFail1" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestLeafIconUrlFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestLeafIconUrlGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestLeafIconUrlSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestPrefixesGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestPrefixesSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestPrefixesSetFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestPrefixesSetFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestPrefixesSetFail3" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveButtonIconUrlFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveButtonIconUrlFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveButtonIconUrlGet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveButtonIconUrlSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveFileNameFail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveFileNameFail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveFileNameGet" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSaveFileNameSet" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail1" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail10" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail2" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail3" executed="True" success="True" time="0.047" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail4" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail5" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail6" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail7" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail8" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestSetXml_Fail9" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestViewTypeGetter" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestViewTypeSetter" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewControlTests.TestViewTypeSetterFail" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewExceptionTests" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewExceptionTests.ConstructorSerializationTest" executed="True" success="True" time="0.016" asserts="1" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewExceptionTests.TestConstructor1" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewExceptionTests.TestConstructor2" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="TopCoder.Web.Controls.XmlViewer.XmlTreeViewExceptionTests.TestConstructor3" executed="True" success="True" time="0.000" asserts="4" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

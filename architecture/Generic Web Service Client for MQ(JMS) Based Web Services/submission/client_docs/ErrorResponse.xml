@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+ <soapenv:Header>
+  <wsa:To>jms:/queue?destination=jms/GCMSFinancialOfferingQuoteBODIT1I</wsa:To>
+  <wsa:Action>jms:/targetService=FinancialOfferingQuoteBOD</wsa:Action>
+  <Destination>jms:/queue?destination=jms/GCMSFinancialOfferingQuoteBODIT1I</Destination>
+  <RefId>2005-04-30-14.51.35.573000</RefId>
+  <RelatesTo>wmq:c3e2d840d5d7c4f44040404040404040c60bd814dd9a7a09</RelatesTo>
+  <Format>FinancialOfferingQuoteBOD</Format>
+ </soapenv:Header>
+ <soapenv:Body>
+  <ims:FinancialOfferingQuoteBOD xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ims="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26" xmlns:oa="http://www.openapplications.org/oagis/8.2/FinancialOfferingQuoteBOD_2006-05-26" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ibm.com/xmlns/ims/1.3/FinancialOfferingQuoteBOD_2006-05-26 FinancialOfferingQuoteBOD_2006-05-26_IMS_1.3.xsd" revision="1.3.0">
+   <ims:ApplicationArea>
+    <oa:Sender>
+     <oa:LogicalId>GCMS</oa:LogicalId>
+     <oa:Component>GCMS</oa:Component>
+    </oa:Sender>
+    <oa:CreationDateTime>2006-07-27T21:17:00-00:00</oa:CreationDateTime>
+    <oa:BODId>1184782222958</oa:BODId>
+    <ims:Application>
+     <ims:InteractingApplication>
+      <ims:ApplicationLogicalId>GCMS0000</ims:ApplicationLogicalId>
+      <ims:UserId></ims:UserId>
+      <ims:ServiceOperation>MODEL_SUBSTITUTE</ims:ServiceOperation>
+     </ims:InteractingApplication>
+     <ims:ApplicationStatus>
+      <ims:ErrorCode>JFC0027</ims:ErrorCode>
+      <ims:ErrorDescription>DB2 error</ims:ErrorDescription>
+     </ims:ApplicationStatus>
+    </ims:Application>
+   </ims:ApplicationArea>
+   
+  </ims:FinancialOfferingQuoteBOD>
+ </soapenv:Body>
+</soapenv:Envelope>

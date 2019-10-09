@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigManager>
+  <!--Configuration for HermesAuthorizationService, consisted with four namespaces part-->
+  <namespace name="Hermes.Services.Security.Authorization.TopCoder.HermesAuthorizationService">
+    <property name="login_namespace">
+      <value>HermesAuthorizationService.Login</value>
+    </property>
+
+    <property name="role_namespace">
+      <value>HermesAuthorizationService.Role</value>
+    </property>
+
+    <property name="function_namespace">
+      <value>HermesAuthorizationService.Function</value>
+    </property>
+
+    <property name="entity_namespace">
+      <value>HermesAuthorizationService.Entity</value>
+    </property>
+  </namespace>
+
+  <!--Configuration for logins part, it lists all session ids in 'sessionIds' property.
+      And for each session id, there would be two additional properties under namespace for them, 
+      they are: '<sessionId>_allow' and '<sessionId>_deny' properties, where it will list all allowed
+      session tokens for that session id and all denied session tokens for that session id. 
+      (NOTE, 1. <sessionId> above means the value of session id.
+             2. the value of session token is allowed to be empty string)
+  -->
+  <namespace name="HermesAuthorizationService.Login">
+    <!--list all session ids-->
+    <property name="sessionIds">
+      <value>1</value>
+      <value>2</value>
+      <value>3</value>
+    </property>
+
+    <!--all allowed session tokens for session id 1.-->
+    <property name="1_allow">
+      <value>101</value>
+      <value>102</value>
+    </property>
+    <!--all denied session tokens for session id 1.-->
+    <property name="1_deny">
+      <value>104</value>
+      <value></value>
+    </property>
+
+    <!--all allowed session tokens for session id 2.-->
+    <property name="2_allow">
+      <value></value>
+      <value>104</value>
+      <value>107</value>
+    </property>
+
+    <!--all denied session tokens for session id 3.-->
+    <property name="3_deny">
+      <value>109</value>
+      <value>105</value>
+    </property>
+  </namespace>
+
+  <!--Configuration for roles part. It lists all role names in 'roleNames' property.
+      And for each role name, there would be one optional '<roleName>_permission>' property which 
+      represents whether role is permitted. If '<roleName>_permission>' property is missing, 
+      the default value is false. 
+      (NOTE, <roleName> above means the value of role name.)
+  -->
+  <namespace name="HermesAuthorizationService.Role">
+    <!--list of all role names.-->
+    <property name="roleNames">
+      <value>Admin</value>
+      <value>HR</value>
+      <value>Employee</value>
+    </property>
+
+    <!--the permission for Admin role-->
+    <property name="Admin_permission">
+      <value>true</value>
+    </property>
+    
+    <!--the property of permission for HR role is missing, default is false-->
+
+    <!--the permission for Employee role-->
+    <property name="Employee_permission">
+      <value>false</value>
+    </property>
+  </namespace>
+
+  <!--Configuration for functions part. It lists all function names in 'functionNames' property.
+      And for each function name, there would be three optional properties. They are:
+      '<functionName>_permission' which indicates the permission of function name. (default is false.)
+      '<functionName>_attributesNames' which list all attribute names of that function name.
+      '<functionName>_attributesValues' which list all attribute values of that function name.
+      NOTE: 1) <functionName> means the name of function. 
+            2) the number of values in '<functionName>_attributesNames' property must be the same as
+               the number of values in '<functionName>_attributesValues' property. And they are matched as
+               attributeName->attributeValue one by one.
+   -->
+  <namespace name="HermesAuthorizationService.Function">
+    <!--list all function names-->
+    <property name="functionNames">
+      <value>Enter Competition</value>
+      <value>Post Components</value>
+    </property>
+
+    <!--the permission for Enter Competition function. It is optional, default is false.-->
+    <property name="Enter Competition_permission">
+      <value>true</value>
+    </property>
+    <!--list all attribute names for Enter Competition function-->
+    <property name="Enter Competition_attributesNames">
+      <value>Allowed Competitiones</value>
+      <value>Registered Number</value>
+    </property>
+    <!--list values for attribute names listed in 'Enter Competition_attributeNames' property-->
+    <property name="Enter Competition_attributesValues">
+      <value>Algorithm Competition, Component Competition</value>
+      <value>10/15</value>
+    </property>
+
+    <!--the permission for Post Components function. It is optional, default is false.-->
+    <property name="Post Components_permission">
+      <value>false</value>
+    </property>
+    <!--list all attribute names for Post Components function-->
+    <property name="Post Components_attributesNames">
+      <value>Components Ready</value>
+      <value>Components Developing</value>
+    </property>
+    <!--list values for attribute names listed in 'Post Components_attributeNames' property-->
+    <property name="Post Components_attributesValues">
+      <value>ConfigurationManager, ObjectFactory</value>
+      <value>Hermes Project</value>
+    </property>
+  </namespace>
+
+  <!--Configuration for entities part. It lists all entity names in 'entityNames' property. 
+      And for each entity name, there would be an optional property '<entityName>_rights' where it will 
+      list of values for allowed rights on it. The default for rights of entity is none of Rights (value of 0).
+      The allowed right value should be one of following: Read, Insert, Update, Delete and Execute, and they 
+      are corresponding to Rights enum.
+   -->
+  <namespace name="HermesAuthorizationService.Entity">
+    <!-- list of all entity names-->
+    <property name="entityNames">
+      <value>SomeEntity1</value>
+      <value>SomeEntity2</value>
+      <value>SomeEntity3</value>
+    </property>
+
+    <!-- list of allowed rights on SomeEntity1-->
+    <property name="SomeEntity1_rights">      
+      <value>Read</value>
+      <value>Insert</value>
+    </property>
+    <!-- list of allowed rights on SomeEntity2-->
+    <property name="SomeEntity2_rights">
+      <value>Update</value>
+      <value>Delete</value>
+      <value>Execute</value>
+    </property>
+    <!-- no list of allowed rights defined on SomeEntity3, then there is no rights allowed for it.-->
+  </namespace>
+</ConfigManager>

@@ -1,0 +1,132 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Some Form Name</title>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/resources/dojo.css">
+    </link>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dijit/themes/claro/claro.css">
+    </link>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"
+        data-dojo-config='parseOnLoad: true, isDebug:true'></script>
+    <script type="text/javascript">
+        var formObject =
+        {
+            "id": "ctrl1",
+            "formSection":
+            {
+                "id": "ctrl2",
+                "formFields":
+                [
+                    {
+                        "id": "ctrl3",
+                        "value": ""
+                    },
+                    {
+                        "id": "ctrl4"
+                    }
+                ]
+            }
+        };
+
+
+
+        dojo.require("dijit.form.Form");
+        dojo.require("dijit.form.TextBox");
+        dojo.require("dijit.form.DateTextBox");
+        dojo.require("dijit.form.ValidationTextBox");
+        dojo.require("dijit.form.CheckBox");
+        dojo.require("dojox.form.DropDownSelect");
+        dojo.require("dijit.form.MultiSelect");
+        dojo.require("dojox.validate.web");
+        dojo.require("dijit.form.Button");
+
+        require(["dojo/ready", "dijit/registry", "dojo/domReady!"], function (ready, registry) {
+            ready(function () {
+
+                //Update the JSON value when textbox value is updated
+                var textBox = registry.byId("ctrl3");
+                textBox.on("blur", function () {
+                    formObject.formSection.formFields[0].value = this.value;
+                });
+            });
+        });
+
+
+
+    </script>
+</head>
+<body class="claro">
+    <div id="ctrl1" data-dojo-type="dijit.form.Form" data-dojo-id="myForm" action="http://localhost:6583/examples/servlets/servlet/RequestParamExample"
+        method="post">
+        <script type="dojo/on" data-dojo-event="submit">
+            if(this.validate()){
+                dojo.byId("hidJsonData").value = JSON.stringify(formObject);
+                return true;
+            }else{
+                return false;
+            }
+        </script>
+        <table id="ctrl2">
+
+            <tr>
+                <td>
+                    <input type="text" name="ctrl3" data-dojo-type="dijit.form.TextBox" id="ctrl3" required="true" />
+                    <br />
+                    <br />
+                    <input type="text" name="dateTest" id="dateTest" data-dojo-type="dijit.form.DateTextBox"
+                        required="true" />
+                    <br />
+                    <br />
+                    <input type="text" name="emailTest" data-dojo-type="dijit.form.ValidationTextBox"
+                        id="emailTest" data-dojo-props="validator:dojox.validate.isEmailAddress, invalidMessage:'This is not a valid email!'"
+                        required="true" />
+                    <br />
+                    <br />
+                    <input type="text" name="phoneTest" data-dojo-type="dijit.form.ValidationTextBox"
+                        id="phoneTest" data-dojo-props="validator:dojox.validate.isNumberFormat, constraints: {format: '(###) ###-####'}, invalidMessage:'This is not a valid phone!'"
+                        required="true" />
+                    <br />
+                    <br />
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="drink" id="radio2"
+                        value="coffee" />
+                    <label for="radio2">
+                        Coffee</label>
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="drink" id="radio1"
+                        value="tea" />
+                    <label for="radio1">
+                        Tea</label>
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="drink" id="radio3"
+                        value="whisky" />
+                    <label for="radio1">
+                        Whisky</label>
+                    <br />
+                    <br />
+                    <select data-dojo-type="dijit.form.MultiSelect" id="fruit" name="fruit" size="4">
+                        <option value="AP">Apples</option>
+                        <option value="OR">Oranges</option>
+                        <option value="PE" selected="selected">Pears</option>
+                    </select>
+                    <br />
+                    <br />
+                    <select name="select" data-dojo-type="dojox.form.DropDownSelect">
+                        <option value="TN">Tennessee</option>
+                        <option value="VA" selected="selected">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="FL">Florida</option>
+                        <option value="CA">California</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button data-dojo-type="dijit.form.Button" type="submit" id="ctrl4" name="ctrl4">
+                        Submit</button>
+                    <button data-dojo-type="dijit.form.Button" type="button" id="ctrl5" name="ctrl5">
+                        Save as Draft</button>
+                </td>
+            </tr>
+        </table>
+        <input id="hidJsonData" type="hidden" />
+        <input id="postbackSrcId" type="hidden" />
+    </div>
+</body>
+</html>

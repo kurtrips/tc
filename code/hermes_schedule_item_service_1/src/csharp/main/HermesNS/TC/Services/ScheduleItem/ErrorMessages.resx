@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HermesScheduleItemService.CreateActivity" xml:space="preserve">
+    <value>Unable to create activity.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateActivityGroup" xml:space="preserve">
+    <value>Unable to create activity group.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateActivityType" xml:space="preserve">
+    <value>Unable to create activity type.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateScheduleItem" xml:space="preserve">
+    <value>Unable to create schedule item.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateScheduleItemEditCopy" xml:space="preserve">
+    <value>Unable to create schedule item edit copy.\n Reason: {0}\n Parent Id: {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateScheduleItemPublishEditCopyRelationship" xml:space="preserve">
+    <value>Unable to create publish and edit copy relation.\n Reason: {0}\n Parent Id: {1}\n Edit Copy Id: {2}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateScheduleItemRequestStatus" xml:space="preserve">
+    <value>Unable to create schedule item request status.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.CreateScheduleItemStatus" xml:space="preserve">
+    <value>Unable to create schedule item status.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteActivities" xml:space="preserve">
+    <value>Unable to delete activities.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteActivity" xml:space="preserve">
+    <value>Unable to delete activity.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteActivityGroup" xml:space="preserve">
+    <value>Unable to delete activity group.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteActivityGroups" xml:space="preserve">
+    <value>Unable to delete activity groups.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteActivityType" xml:space="preserve">
+    <value>Unable to delete activity type.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteActivityTypes" xml:space="preserve">
+    <value>Unable to delete activity types.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItem" xml:space="preserve">
+    <value>Unable to delete schedule item.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItemPublishEditCopyRelationship" xml:space="preserve">
+    <value>Unable to delete publish and edit copy relation.\n Reason: {0}\n Parent Id: {1}\n Edit Copy Id: {2}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItemRequestStatus" xml:space="preserve">
+    <value>Unable to delete schedule item request status.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItemRequestStatuses" xml:space="preserve">
+    <value>Unable to delete schedule item request statuses.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItems" xml:space="preserve">
+    <value>Unable to delete schedule items.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItemStatus" xml:space="preserve">
+    <value>Unable to delete schedule item status.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.DeleteScheduleItemStatuses" xml:space="preserve">
+    <value>Unable to delete schedule item statuses.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetActivity" xml:space="preserve">
+    <value>Unable to get activity.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetActivityGroup" xml:space="preserve">
+    <value>Unable to get activity group.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetActivityType" xml:space="preserve">
+    <value>Unable to get activity type.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetAllActivities" xml:space="preserve">
+    <value>Unable to get all activities.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetAllActivityGroups" xml:space="preserve">
+    <value>Unable to get all activity groups.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetAllActivityTypes" xml:space="preserve">
+    <value>Unable to get all activity types.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetAllScheduleItemRequestStatuses" xml:space="preserve">
+    <value>Unable to get all schedule item request statuses.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetAllScheduleItemStatuses" xml:space="preserve">
+    <value>Unable to get all schedule item statuses.\n Reason: {0}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetScheduleItem" xml:space="preserve">
+    <value>Unable to get schedule item.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetScheduleItemEditCopy" xml:space="preserve">
+    <value>Unable to get edit copy.\n  Reason: {0}\n Parent Id: {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetScheduleItemParentCopy" xml:space="preserve">
+    <value>Unable to get parent copy.\n  Reason: {0}\n Edit Copy Id: {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetScheduleItemRequestStatus" xml:space="preserve">
+    <value>Unable to get schedule item request status.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.GetScheduleItemStatus" xml:space="preserve">
+    <value>Unable to get schedule item status.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.PublishScheduleItem" xml:space="preserve">
+    <value>Unable to publish schedule item.\n Reason: {0}\n Edit Copy Id: {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveActivities" xml:space="preserve">
+    <value>Unable to save activities.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveActivity" xml:space="preserve">
+    <value>Unable to save activity.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveActivityGroup" xml:space="preserve">
+    <value>Unable to save activity group.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveActivityGroups" xml:space="preserve">
+    <value>Unable to save activity groups.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveActivityType" xml:space="preserve">
+    <value>Unable to save activity type.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveActivityTypes" xml:space="preserve">
+    <value>Unable to save activity types.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveScheduleItem" xml:space="preserve">
+    <value>Unable to save schedule item.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveScheduleItemRequestStatus" xml:space="preserve">
+    <value>Unable to save schedule item request status.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveScheduleItemRequestStatuses" xml:space="preserve">
+    <value>Unable to save schedule item request statuses.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveScheduleItems" xml:space="preserve">
+    <value>Unable to save schedule items.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveScheduleItemStatus" xml:space="preserve">
+    <value>Unable to save schedule item status.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+  <data name="HermesScheduleItemService.SaveScheduleItemStatuses" xml:space="preserve">
+    <value>Unable to save schedule item statuses.\n Reason: {0}\n Entity Id(s): {1}\n</value>
+  </data>
+</root>

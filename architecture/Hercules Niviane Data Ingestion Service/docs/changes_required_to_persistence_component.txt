@@ -1,0 +1,7 @@
+1. The persistence service needs a method +purgeAfter(entityType:String, afterTimestamp:long, timestamp:long)
+This method will remove all entities of the given entity type which were added to the database after the afterTimestamp. The timestamp is just the current timestamp.
+
+2. The FielStorage needs a method +delete(name:String)
+This method will delete teh file with given name
+
+3. The getAllEntityTypes method proposed earlier is no longer required

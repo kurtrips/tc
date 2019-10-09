@@ -1,0 +1,60 @@
+/////////////////FINAL FIX 2//////////////////////////
+1. Logging SD is now provided
+2. Fixed the anonymous issue
+3. Created a concrete Job class (NotificationPusherJob) with the option for designer to use their discretion on how/whether to use it as long as functionality is met.
+4. Notification SD - changed Scheduler Job to NotificationPusherJob
+
+
+
+/////////////////FINAL FIX 1//////////////////////////
+
+nikolay83 1.1.1.1 - The link in section 1.3.4 already points to the RijndaelManaged class doc.
+
+nikolay83 1.1.1.2 - Added a line in 1.3.5 with an example from msdn.
+
+nikolay83 1.1.1.3 - This is already met.
+
+nikolay83 1.1.1.4, BLE 1.1.1 and DanLazar 1.1.1 - 
+Remember Me option is now completely done at client side. See last paragraph of ADS 1.3.4. 
+Also updated application_didFinishLaunchingWithOptions, LoginViewController.loginButtonClicked and BaseViewController.logoutClicked. 
+Removed the relevant session maintenance code at server side.
+
+nikolay83 1.1.2.1 and BLE 1.1.2.1 - Added a new lifeline at start of SD for session maintenance
+
+nikolay83 1.1.2.2 - Added the SD
+
+DanLazar 1.1.2.1 - Added the SD
+
+BLE 1.1.2.2 - 
+Not fixing this. 
+Configuration SD is usually required when there is considerable configuration logic in a constructor or some other method. 
+However here configuration is scattered i.e. AD configuration will only be needed when we connect to AD, APN configuration will only be needed when we send notification. 
+So it is not all in one place.
+So all I can show in SD is just 2 lifelines, one is 'calling code' and other is 'configuration file'. This is too simple an SD to be required. 
+
+nikolay83 1.1.4.1 - Added classes to class diagram.
+
+nikolay83 1.2.3.1 - Recommended item not fixed.
+
+nikolay83 1.2.4.1 - 
+This is met using the client authentication using digital certificates. 
+Only clients with the expected digital certificate (installed by client) will be able to make call to teh service. 
+See ADS 1.3.4.1 for more details.
+
+DanLazar 1.2.4.1 - Added in 1.3.4
+
+nikolay83 2.1.4.1 - Added in ADS 1.4
+
+nikolay83 2.1.4.2 - Added in ADS 1.4
+
+DanLazar 2.4.2 -  Recommended item not fixed.
+
+nikolay83 3.2.1.1 - Added separate SD for this.
+
+DanLazar 3.2.1.1 - Changed 'device token and other info' to 'device token, username, password'.
+
+DanLazar 3.2.1.2 - Added a note in the SD stating that there will be a DAO class in between the Scheduler Job and DB.
+
+BLE 3.2.2.1 - Fixed
+
+nikolay83 3.2.3.1 - Fixed

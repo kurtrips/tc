@@ -1,0 +1,13 @@
+1.
+As described in http://apps.topcoder.com/forums/?module=Thread&threadID=812707&start=0
+The folder already consists 2 zips, one for full submissions and one for preview
+The preview zip is basically the submission file minus the sources.
+There are also extracted and watermarked files in this folder
+
+So depending on the request, we need to directly serve either the full zip or the preview zip or individual files.
+There is no need to actuall look inside a zip folder and extract the needed content.
+
+2.
+Design submissions always have zip format (both the full and preview submission)
+See https://coder.topcoder.com/internal/web_module/trunk/src/main/com/topcoder/web/studio/controller/request/Submit.java, where the zip is created in code
+So there is no need to test any other formats such tar.gz, 7z etc.

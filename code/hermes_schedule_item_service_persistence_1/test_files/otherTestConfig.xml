@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConfigManager>
+  <!--Configuration properties for non-default namespace-->
+  <namespace name="SomeComponentLevelNamespace">
+    <property name="objectFactoryNamespace">
+      <value>SomeOFNamespace</value>
+    </property>
+    <property name="connectionName">
+      <value>SomeConnectionString</value>
+    </property>
+    <property name="helper">
+      <value>SomeHelperDefinition</value>
+    </property>
+  </namespace>
+
+  <!--Object Factory's own namespace-->
+  <namespace name="SomeOFNamespace.default">
+    <property name="type_name">
+      <value>TopCoder.Util.ObjectFactory.ConfigurationObjectFactory</value>
+    </property>
+  </namespace>
+  <namespace name="SomeOFNamespace.default.parameters">
+    <property name="p1:string">
+      <value>AnotherTest</value>
+    </property>
+  </namespace>
+
+  <!--Object Definition for helper class-->
+  <namespace name="AnotherTest.SomeHelperDefinition">
+    <property name="type_name">
+      <value>HermesNS.TC.Services.ScheduleItem.Persistence.HermesScheduleItemPersistenceHelper</value>
+    </property>
+    <property name="assembly">
+      <value>HermesNS.TC.Services.ScheduleItem.Test.dll</value>
+    </property>
+  </namespace>
+
+  
+  <!--Configuration properties for failure when connectionName is missing-->
+  <namespace name="ConnectionNameMissingNamespace">
+    <property name="objectFactoryNamespace">
+      <value>SomeOFNamespace</value>
+    </property>
+    <property name="helper">
+      <value>SomeHelperDefinition</value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for failure when connectionName has empty string value-->
+  <namespace name="ConnectionNameEmptyNamespace">
+    <property name="objectFactoryNamespace">
+      <value>SomeOFNamespace</value>
+    </property>
+    <property name="connectionName">
+      <value>       </value>
+    </property>
+    <property name="helper">
+      <value>SomeHelperDefinition</value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for failure when helper is missing-->
+  <namespace name="HelperMissingNamespace">
+    <property name="objectFactoryNamespace">
+      <value>SomeOFNamespace</value>
+    </property>
+    <property name="connectionName">
+      <value>SomeConnectionString</value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for failure when helper has empty string value-->
+  <namespace name="HelperEmptyNamespace">
+    <property name="objectFactoryNamespace">
+      <value>SomeOFNamespace</value>
+    </property>
+    <property name="connectionName">
+      <value>SomeConnection</value>
+    </property>
+    <property name="helper">
+      <value>        </value>
+    </property>
+  </namespace>
+
+  <!--Configuration properties for failure when helper points to object of incorrect type-->
+  <namespace name="WrongHelperTypeNamespace">
+    <property name="objectFactoryNamespace">
+      <value>SomeOFNamespace</value>
+    </property>
+    <property name="connectionName">
+      <value>SomeConnection</value>
+    </property>
+    <property name="helper">
+      <value>WrongHelperType</value>
+    </property>
+  </namespace>
+
+  <!--Object Definition for helper class of wrong type-->
+  <namespace name="AnotherTest.WrongHelperType">
+    <property name="type_name">
+      <value>System.String</value>
+    </property>
+  </namespace>
+
+</ConfigManager>

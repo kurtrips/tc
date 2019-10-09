@@ -1,0 +1,5 @@
+C:\Users\Aiman\Documents\Visual Studio 2005\Projects\TestProfileProvider\TestLibrary\bin\Debug\TestLibrary.dll
+C:\Users\Aiman\Documents\Visual Studio 2005\Projects\TestProfileProvider\TestLibrary\bin\Debug\TestLibrary.pdb
+C:\Users\Aiman\Documents\Visual Studio 2005\Projects\TestProfileProvider\TestLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Aiman\Documents\Visual Studio 2005\Projects\TestProfileProvider\TestLibrary\obj\Debug\TestLibrary.dll
+C:\Users\Aiman\Documents\Visual Studio 2005\Projects\TestProfileProvider\TestLibrary\obj\Debug\TestLibrary.pdb

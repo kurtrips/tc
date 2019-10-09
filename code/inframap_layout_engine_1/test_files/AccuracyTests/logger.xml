@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ConfigManager>
+  <!-- Example default configuration for Logger using DiagnosticImpl -->
+  <namespace name="TestLoggerNamespace">
+    <!-- the full classname of the Logger subclass, required -->
+    <property name="logger_class">
+      <Value>TopCoder.LoggingWrapper.DiagnosticImpl</Value>
+    </property>
+
+    <!-- log name of Logger, required -->
+    <property name="logger_name">
+      <Value>logger</Value>
+    </property>
+
+    <!-- default log level, optional -->
+    <property name="default_level">
+      <Value>DEBUG</Value>
+    </property>
+
+    <!-- source for the EventLog, required -->
+    <property name="source">
+      <Value>testsource</Value>
+    </property>
+  </namespace>
+</ConfigManager>

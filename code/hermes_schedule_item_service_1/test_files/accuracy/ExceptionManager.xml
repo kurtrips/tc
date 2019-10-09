@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE ConfigManager SYSTEM "cm.dtd">
+
+<ConfigManager>
+
+	<namespace name="TopCoder.Util.ExceptionManager.ExceptionPublishManager">
+
+		<!-- the namespace to config the DefaultExcetpionPublisher, optional -->
+		<property name="DefaultPublisherNamespace">
+			<value>TopCoder.Util.ExceptionManager.DefaultExceptionPublisher</value>
+		</property>
+
+		<!-- short names for all the exceptions to manage, required -->
+		<property name="ExceptionShortNames">
+			<value>base</value>
+		</property>
+
+		<!-- short names of all the publisher used by exceptions, required -->
+		<property name="PublisherShortNames">
+			<value>default</value>
+		</property>
+
+		<!-- ************************************************************************************************* -->
+
+		<!-- class name of the exception, required -->
+		<property name="base_ExceptionClassName">
+			<value>TopCoder.Util.ExceptionManager.BaseException</value>
+		</property>
+		<!-- the corresponding publisher name of the exception, required -->
+		<property name="base_ExceptionPublisher">
+			<value>default</value>
+		</property>
+
+		<!-- ************************************************************************************************* -->
+
+		<!-- class name of the publisher, required -->
+		<property name="default_PublisherClassName">
+			<value>TopCoder.Util.ExceptionManager.DefaultExceptionPublisher</value>
+		</property>
+
+		<!-- the config namespace of the publisher, used in the constructor, optional -->
+		<property name="default_PublisherConfigNamespace">
+			<value>TopCoder.Util.ExceptionManager.DefaultExceptionPublisher</value>
+		</property>
+	</namespace>
+
+	<!-- namespace for the default publisher -->
+	<namespace name="TopCoder.Util.ExceptionManager.DefaultExceptionPublisher">
+
+		<!-- logger namespace of the DefaultExceptionPublisher, required -->
+		<property name="LoggerNamespace">
+			<value>TopCoder.LoggingWrapper</value>
+		</property>
+
+		<!-- class name of the formatter. required. -->
+		<property name="FormatterClassName">
+			<value>TopCoder.Util.ExceptionManager.TextFormatter</value>
+		</property>
+
+		<!-- attributes set by the client -->
+		<property name="CustomAttributeNames">
+		</property>
+	</namespace>
+</ConfigManager>
