@@ -22,7 +22,7 @@
     "ldapjs": "git://github.com/mcavage/node-ldapjs.git#2f1b0790f6d5dd201468a3d5cb9674c3e2623f24",
     "nodemailer": "0.5.7",
     "email-templates": "0.1.1",
-    "bcrypt": "0.7.7",
+    "bcrypt": "5.0.0",
     "bigdecimal": "0.6.1",
     "bignum": "0.6.2",
     "java": "0.2.9",
